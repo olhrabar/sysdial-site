@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -50,11 +51,12 @@
 
 <main>
   <section class="hero">
+    <div class="glow" aria-hidden="true"><i></i><i></i></div>
     <div class="wrap">
       <div>
-        <h1>Your Mac, at a glance, in the menu bar.</h1>
-        <p class="lede">SysDial shows processor, memory, disk, network and battery as live numbers in the menu bar, warns you before things slow down, and stays light while it does.</p>
-        <div class="cta">
+        <h1 aria-label="Your Mac, at a glance, in the menu bar."><span class="w" style="--i:0"><span>Your</span></span> <span class="w" style="--i:1"><span>Mac,</span></span> <span class="w" style="--i:2"><span>at</span></span> <span class="w" style="--i:3"><span>a</span></span> <span class="w" style="--i:4"><span>glance,</span></span> <span class="w" style="--i:5"><span>in</span></span> <span class="w" style="--i:6"><span>the</span></span> <span class="w" style="--i:7"><span>menu</span></span> <span class="w" style="--i:8"><span>bar.</span></span></h1>
+        <p class="lede" data-hero style="--d:480ms">SysDial shows processor, memory, disk, network and battery as live numbers in the menu bar, warns you before things slow down, and stays light while it does.</p>
+        <div class="cta" data-hero style="--d:620ms">
           <span class="button" role="link" aria-disabled="true">Download for Mac</span>
           <span class="note">Coming soon for macOS 14 and later.
             <a href="mailto:support@sysdial.app?subject=Tell%20me%20when%20SysDial%20is%20out">Tell me when it's out</a></span>
@@ -69,12 +71,12 @@
 
   <section id="features">
     <div class="wrap">
-      <h2>Everything you check, in one place</h2>
-      <p class="intro">Pick what you want in the menu bar and in what order. Click it to open a panel of cards with the details.</p>
-      <div class="groups">
+      <h2 data-reveal>Everything you check, in one place</h2>
+      <p class="intro" data-reveal style="--d:80ms">Pick what you want in the menu bar and in what order. Click it to open a panel of cards with the details.</p>
+      <div class="groups" data-stagger>
         <div>
           <h3>System</h3>
-          <ul>
+          <ul data-stagger>
             <li><b>Processor</b> with every efficiency and performance core</li>
             <li><b>Memory</b> with pressure, swap and what it's used for</li>
             <li><b>GPU</b> load and video memory</li>
@@ -84,7 +86,7 @@
         </div>
         <div>
           <h3>Network</h3>
-          <ul>
+          <ul data-stagger>
             <li><b>Download and upload speed</b> with your public and local IP</li>
             <li><b>Data transferred</b> today, this week and in your billing month</li>
             <li><b>Internet quality</b>: latency, jitter, packet loss and outages</li>
@@ -92,7 +94,7 @@
         </div>
         <div>
           <h3>Apps</h3>
-          <ul>
+          <ul data-stagger>
             <li><b>Top processes</b> by processor and memory</li>
             <li><b>Watched apps</b>: follow one app's CPU and memory for days, with a memory alert</li>
             <li><b>Leftover dev processes</b> that keep running after a terminal or editor closes</li>
@@ -100,7 +102,7 @@
         </div>
         <div>
           <h3>Alerts</h3>
-          <ul>
+          <ul data-stagger>
             <li><b>A runaway app</b> keeping the processor busy</li>
             <li><b>High CPU load</b> and <b>memory pressure</b></li>
             <li><b>Low disk space</b> and <b>internet outages</b></li>
@@ -112,13 +114,13 @@
 
   <section class="light">
     <div class="wrap">
-      <svg class="dial" viewBox="0 0 220 150" role="img" aria-label="Under 1 percent CPU in the background">
+      <svg class="dial" id="dial" viewBox="0 0 220 150" role="img" aria-label="Under 1 percent CPU in the background">
         <path class="track" d="M 30 130 A 80 80 0 1 1 190 130" fill="none" stroke-width="14" stroke-linecap="round"/>
-        <path class="arc" d="M 30 130 A 80 80 0 0 1 30.1 125.8" fill="none" stroke-width="14" stroke-linecap="round"/>
-        <text x="110" y="112" text-anchor="middle">&lt;1%</text>
+        <path class="arc" id="dialarc" pathLength="100" d="M 30 130 A 80 80 0 1 1 190 130" fill="none" stroke-width="14" stroke-linecap="round" style="stroke-dasharray:1.2 100"/>
+        <text id="dialv" x="110" y="112" text-anchor="middle">&lt;1%</text>
         <text class="unit" x="110" y="134" text-anchor="middle">CPU in the background</text>
       </svg>
-      <div>
+      <div data-reveal style="--d:120ms">
         <h2>Light enough to forget it's running</h2>
         <p class="intro" style="margin:0">With live numbers in the menu bar and the panel closed, SysDial uses under 1% of the processor and under 100 MB of memory, even while watching several apps. Measured on a MacBook Pro with Apple M3 Pro, running on battery. It reads the same system counters as Activity Monitor and does nothing in the background that it doesn't need to.</p>
       </div>
@@ -127,12 +129,12 @@
 
   <section id="pro">
     <div class="wrap">
-      <h2>Free, with Pro when you need more</h2>
-      <p class="intro">The menu bar, the panel, alerts, widgets and Shortcuts are free. Pro adds the window, history and tools for when something goes wrong.</p>
+      <h2 data-reveal>Free, with Pro when you need more</h2>
+      <p class="intro" data-reveal style="--d:80ms">The menu bar, the panel, alerts, widgets and Shortcuts are free. Pro adds the window, history and tools for when something goes wrong.</p>
       <div class="table-scroll">
         <table class="plans">
           <thead><tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col" class="pro">Pro</th></tr></thead>
-          <tbody>
+          <tbody data-stagger>
             <tr><td>Live numbers in the menu bar, in your order</td><td class="yes">✓</td><td class="yes">✓</td></tr>
             <tr><td>Panel with processor, memory, GPU, disk, network, data and battery</td><td class="yes">✓</td><td class="yes">✓</td></tr>
             <tr><td>Alerts for runaway apps, CPU, memory, disk space and internet</td><td class="yes">✓</td><td class="yes">✓</td></tr>
@@ -150,7 +152,7 @@
           </tbody>
         </table>
       </div>
-      <figure class="shot window-shot" style="margin-inline:0">
+      <figure class="shot window-shot" style="margin-inline:0" data-scrub>
         <img src="images/window.png" alt="The SysDial window showing the Overview with every card"
              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'Window screenshot'}))">
       </figure>
@@ -159,9 +161,9 @@
 
   <section id="privacy" class="privacy">
     <div class="wrap">
-      <h2>Your data stays on your Mac</h2>
-      <p>SysDial has no accounts, no analytics and no tracking. Readings, history and the apps you watch are stored only on your Mac. It goes online for two things: to show your public IP, which you can turn off, and to check internet quality.</p>
-      <p><a href="privacy.html">Read the privacy policy</a></p>
+      <h2 data-reveal>Your data stays on your Mac</h2>
+      <p data-reveal style="--d:80ms">SysDial has no accounts, no analytics and no tracking. Readings, history and the apps you watch are stored only on your Mac. It goes online for two things: to show your public IP, which you can turn off, and to check internet quality.</p>
+      <p data-reveal style="--d:160ms"><a href="privacy.html">Read the privacy policy</a></p>
     </div>
   </section>
 </main>
@@ -177,24 +179,88 @@
 </footer>
 
 <script>
-  // Годинник і «живі» цифри в рядку меню — як у SysDial, раз на 2 секунди.
-  const clock = document.getElementById('clock');
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (id) => document.getElementById(id);
+  const ease = (t) => 1 - Math.pow(1 - t, 3);   // м'яке уповільнення наприкінці, як у macOS
+  const tween = (from, to, ms, step, done) => {
+    const t0 = performance.now();
+    const f = (now) => {
+      const t = Math.min(1, (now - t0) / ms);
+      step(from + (to - from) * ease(t));
+      if (t < 1) requestAnimationFrame(f); else if (done) done();
+    };
+    requestAnimationFrame(f);
+  };
+
+  // Годинник у рядку меню
+  const clock = $('clock');
   const fmt = new Intl.DateTimeFormat('en-US', { weekday: 'short', hour: 'numeric', minute: '2-digit' });
   const tick = () => { clock.textContent = fmt.format(new Date()); };
   tick(); setInterval(tick, 30000);
 
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const state = { cpu: 12, mem: 64, ping: 18 };
-    const walk = (v, step, min, max) => Math.min(max, Math.max(min, v + (Math.random() - 0.5) * step));
+  // «Живі» цифри в рядку меню: плавно перетікають до нових значень
+  if (!reduce) {
+    const items = [
+      { el: $('cpu'),  v: 12, step: 8, min: 3,  max: 38, out: (v) => Math.round(v) + '%' },
+      { el: $('mem'),  v: 64, step: 2, min: 58, max: 72, out: (v) => Math.round(v) + '%' },
+      { el: $('ping'), v: 18, step: 4, min: 12, max: 30, out: (v) => Math.round(v) + ' ms' },
+    ];
     setInterval(() => {
-      state.cpu = walk(state.cpu, 8, 3, 38);
-      state.mem = walk(state.mem, 2, 58, 72);
-      state.ping = walk(state.ping, 4, 12, 30);
-      document.getElementById('cpu').textContent = Math.round(state.cpu) + '%';
-      document.getElementById('mem').textContent = Math.round(state.mem) + '%';
-      document.getElementById('ping').textContent = Math.round(state.ping) + ' ms';
-    }, 2000);
+      items.forEach((it) => {
+        const to = Math.min(it.max, Math.max(it.min, it.v + (Math.random() - 0.5) * it.step));
+        const from = it.v; it.v = to;
+        tween(from, to, 800, (x) => { it.el.textContent = it.out(x); });
+      });
+    }, 2400);
   }
+
+  // Поява при прокрутці
+  const targets = document.querySelectorAll('[data-reveal],[data-stagger]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    targets.forEach((el) => el.classList.add('in'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    targets.forEach((el) => io.observe(el));
+  }
+
+  // Спідометр: пік навантаження, який заспокоюється до <1%
+  const arc = $('dialarc'), val = $('dialv');
+  const setDial = (v) => {
+    arc.style.strokeDasharray = v.toFixed(2) + ' 100';
+    val.textContent = v < 1.6 ? '<1%' : Math.round(v) + '%';
+  };
+  if (!reduce && 'IntersectionObserver' in window) {
+    setDial(26);
+    const dio = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        dio.disconnect();
+        setTimeout(() => tween(26, 1.2, 2600, setDial), 250);
+      }
+    }, { threshold: 0.7 });
+    dio.observe($('dial'));
+  }
+
+  // Скрін вікна наближається під час прокрутки; рядок меню густішає
+  const shot = document.querySelector('[data-scrub]');
+  const bar = document.querySelector('.menubar');
+  let queued = false;
+  const update = () => {
+    queued = false;
+    bar.classList.toggle('scrolled', scrollY > 8);
+    if (shot && !reduce) {
+      const r = shot.getBoundingClientRect(), vh = innerHeight;
+      const p = Math.min(1, Math.max(0, (vh * 0.98 - r.top) / (vh * 0.6)));
+      shot.style.setProperty('--p', p.toFixed(3));
+    }
+  };
+  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+  addEventListener('scroll', queue, { passive: true });
+  addEventListener('resize', queue);
+  update();
+})();
 </script>
 </body>
 </html>
