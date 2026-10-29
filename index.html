@@ -7,7 +7,7 @@
   <meta name="description" content="SysDial shows your Mac's processor, memory, disk, network and battery right in the menu bar, warns you before things slow down, and stays light in the background.">
   <meta property="og:title" content="SysDial — system monitor for the Mac menu bar">
   <meta property="og:description" content="Live numbers in the menu bar, a panel of cards, alerts and history. Light on your Mac, private by design.">
-  <meta property="og:image" content="https://sysdial.app/images/panel.png">
+  <meta property="og:image" content="https://sysdial.app/images/og.png">
   <meta property="og:url" content="https://sysdial.app/">
   <link rel="icon" href="images/icon.png">
   <link rel="apple-touch-icon" href="images/icon.png">
@@ -24,7 +24,9 @@
   <a class="site" href="/"><img src="images/icon.png" alt="" onerror="this.remove()">SysDial</a>
   <nav aria-label="Sections">
     <a href="#features">Features</a>
-    <a href="#pro">Free and Pro</a>
+    <a href="#themes">Themes</a>
+    <a href="#pro">Pro</a>
+    <a href="#plans">Plans</a>
     <a href="#privacy">Privacy</a>
     <a href="mailto:support@sysdial.app">Support</a>
   </nav>
@@ -112,6 +114,69 @@
     </div>
   </section>
 
+
+  <!-- Конструктор рядка меню: модулі вмикаються, перетягуються, живі цифри -->
+  <section id="menubar" class="builder">
+    <div class="wrap bld">
+      <div class="bld-main">
+        <h2 data-reveal>Your menu bar, your way</h2>
+        <p class="intro" data-reveal style="--d:80ms">Switch modules on and off and drag them into the order you like, or keep only the icon. Try it here, it works the same way in the app.</p>
+        <div class="bld-ui" id="builder" data-reveal style="--d:140ms"></div>
+        <figure class="real" data-reveal style="--d:200ms">
+          <img src="images/app/menubar.webp" width="766" height="64" loading="lazy" decoding="async" alt="SysDial's compact info in a real macOS menu bar: processor 21%, memory 80%, disk 285 GB, internet 18 ms and network speed">
+          <figcaption>The same thing in a real menu bar.</figcaption>
+        </figure>
+      </div>
+      <figure class="bld-panel" data-reveal style="--d:160ms">
+        <img src="images/app/panel-settings.webp" width="922" height="1926" loading="lazy" decoding="async" alt="SysDial settings: theme picker, update interval, and the menu bar and panel modules with drag handles">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Теми -->
+  <section id="themes" class="themes" data-themes style="--accent:#71d99c">
+    <div class="wrap">
+      <h2 data-reveal>Nine themes, one tap</h2>
+      <p class="intro" data-reveal style="--d:80ms">Every theme recolours the panel and the window. Pick one in Settings and it changes straight away.</p>
+      <div class="tstage" data-reveal style="--d:120ms">
+        <div class="tglow" aria-hidden="true"></div>
+        <div class="tshots">
+          <img data-t="amber"  src="images/app/overview-amber.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="SysDial Overview in the Amber theme">
+          <img data-t="lime"   src="images/app/overview-lime.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="SysDial Overview in the Lime theme">
+          <img data-t="ocean"  src="images/app/overview-ocean.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="SysDial Overview in the Ocean theme">
+          <img data-t="coral"  src="images/app/overview-coral.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="SysDial Overview in the Coral theme">
+          <img data-t="mint"   class="on" src="images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="SysDial Overview in the Mint theme">
+          <img data-t="mono"   src="images/app/overview-mono.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="SysDial Overview in the Mono theme">
+          <img data-t="neon"   src="images/app/overview-neon.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="SysDial Overview in the Neon theme">
+          <img data-t="acid"   src="images/app/overview-acid.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="SysDial Overview in the Acid theme">
+          <img data-t="violet" src="images/app/overview-violet.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="SysDial Overview in the Violet theme">
+        </div>
+      </div>
+      <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme" data-reveal style="--d:160ms"></div>
+    </div>
+  </section>
+
+  <!-- Віджети і Shortcuts -->
+  <section id="widgets" class="widgets">
+    <div class="wrap wd">
+      <div class="wd-copy">
+        <h2 data-reveal>On your desktop, and in your shortcuts</h2>
+        <p class="intro" data-reveal style="--d:80ms">Put the numbers where you already look, or hand them to your own automations.</p>
+        <ul class="wd-list" data-stagger>
+          <li><b>Small widget</b> shows processor and memory.</li>
+          <li><b>Medium widget</b> adds disk and battery.</li>
+          <li><b>Shortcuts</b> can read processor, memory, disk and battery in your automations.</li>
+          <li><b>Siri</b> can open SysDial for you.</li>
+        </ul>
+        <p class="fine" data-reveal style="--d:200ms">Right-click the desktop, choose Edit Widgets and search for SysDial. macOS refreshes widgets about every 15 minutes.</p>
+      </div>
+      <div class="desk" id="desk" data-stagger aria-label="SysDial widgets on a Mac desktop">
+        <div class="wgt wgt-s"><div class="par"><img src="images/app/widget-small.webp" width="328" height="328" loading="lazy" decoding="async" alt="Small SysDial widget with processor 16% and memory 84% gauges"></div></div>
+        <div class="wgt wgt-m"><div class="par"><img src="images/app/widget-medium.webp" width="688" height="328" loading="lazy" decoding="async" alt="Medium SysDial widget with processor, memory, disk and battery gauges"></div></div>
+      </div>
+    </div>
+  </section>
+
   <section class="light">
     <div class="wrap">
       <svg class="dial" id="dial" viewBox="0 0 220 150" role="img" aria-label="Under 1 percent CPU in the background">
@@ -127,7 +192,67 @@
     </div>
   </section>
 
-  <section id="pro">
+  <!-- Pro: прикріплений блок, що перемикається прокруткою -->
+  <section id="pro" class="show" data-show>
+    <div class="wrap">
+      <h2 data-reveal>Pro opens the window</h2>
+      <p class="intro" data-reveal style="--d:80ms">The menu bar and the panel are the quick look. Pro adds a full window for when you need to know what happened and why.</p>
+    </div>
+    <div class="show-track" style="--n:7">
+      <div class="show-pin">
+        <div class="wrap show-grid">
+          <ol class="steps">
+          <li class="step on" data-i="0">
+            <h3><button type="button" class="step-btn" aria-current="true"><span class="n">01</span><span class="t">Every card, one window</span></button></h3>
+            <p>The panel’s cards plus load average and fans, together in one window you can leave open on a second display.</p>
+            <img class="step-img" src="images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="The SysDial window on Overview: cards for processor, load average, disk, network transfer, Wi-Fi, memory, battery, alerts, internet quality, GPU, top processes and fans">
+          </li>
+          <li class="step" data-i="1">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">02</span><span class="t">Find what’s eating your Mac</span></button></h3>
+            <p>Search, sort, reveal and quit any process. Apps you watch get their own cards with processor, memory, the day’s memory peak and an alert level. SysDial also looks for leftover dev processes, like terraform, node and python, that kept running after a terminal closed.</p>
+            <img class="step-img" src="images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Processes page: cards for watched apps and a sortable list of every running process">
+          </li>
+          <li class="step" data-i="2">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">03</span><span class="t">Plain-language insights</span></button></h3>
+            <p>Insights explain what is slowing your Mac, like swap in use and the apps using the most, with a button to free up memory. Alerts keep a seven-day log of runaway apps, processor, memory, disk and internet or DNS outages.</p>
+            <img class="step-img" src="images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Alerts page: an insight about swap memory and a log of DNS outages and memory alerts">
+          </li>
+          <li class="step" data-i="3">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">04</span><span class="t">Look back through 30 days</span></button></h3>
+            <p>Processor, memory, network and internet latency on one timeline, with alerts marked where they happened. Switch between 1 hour, 24 hours, 7 days or any period you pick, and export what you see to CSV.</p>
+            <img class="step-img" src="images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial History page: charts of processor and memory, network speed and internet latency over 24 hours">
+          </li>
+          <li class="step" data-i="4">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">05</span><span class="t">Follow one app for days</span></button></h3>
+            <p>Each watched app gets its own chart of memory and processor, with every launch marked and your memory alert drawn as a line, so you can see exactly when it crossed.</p>
+            <img class="step-img" src="images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Per-app charts on the History page: memory peak and processor for Activity Monitor, Google Chrome Helper and Google Chrome, with an alert line at 19 GB">
+          </li>
+          <li class="step" data-i="5">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">06</span><span class="t">Spikes, already found</span></button></h3>
+            <p>Runaway processes and load peaks are listed with the time, how long they lasted and which app caused them, so you don’t have to hunt through a chart for them.</p>
+            <img class="step-img" src="images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The Notable moments list on the History page, with runaway and load events by time, length and app">
+          </li>
+          <li class="step" data-i="6">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">07</span><span class="t">Clean up what’s safe</span></button></h3>
+            <p>App caches, logs, simulator caches and npm or Terraform caches, sized and ticked for you. Items go to the Trash, so you can put them back. The Spotlight index can be reset when it grows too large.</p>
+            <img class="step-img" src="images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial Storage page: safe-to-clean items with sizes, Xcode archives to review, and a Spotlight index reset">
+          </li>
+          </ol>
+          <div class="stage" aria-hidden="true">
+          <img class="on" src="images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="The SysDial window on Overview: cards for processor, load average, disk, network transfer, Wi-Fi, memory, battery, alerts, internet quality, GPU, top processes and fans">
+          <img src="images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Processes page: cards for watched apps and a sortable list of every running process">
+          <img src="images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Alerts page: an insight about swap memory and a log of DNS outages and memory alerts">
+          <img data-wipe src="images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial History page: charts of processor and memory, network speed and internet latency over 24 hours">
+          <img data-wipe src="images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Per-app charts on the History page: memory peak and processor for Activity Monitor, Google Chrome Helper and Google Chrome, with an alert line at 19 GB">
+          <img src="images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The Notable moments list on the History page, with runaway and load events by time, length and app">
+          <img src="images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial Storage page: safe-to-clean items with sizes, Xcode archives to review, and a Spotlight index reset">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans">
     <div class="wrap">
       <h2 data-reveal>Free, with Pro when you need more</h2>
       <p class="intro" data-reveal style="--d:80ms">The menu bar, the panel, alerts, widgets and Shortcuts are free. Pro adds the window, history and tools for when something goes wrong.</p>
@@ -152,10 +277,6 @@
           </tbody>
         </table>
       </div>
-      <figure class="shot window-shot" style="margin-inline:0" data-scrub>
-        <img src="images/window.png" alt="The SysDial window showing the Overview with every card"
-             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'Window screenshot'}))">
-      </figure>
     </div>
   </section>
 
@@ -192,6 +313,7 @@
     };
     requestAnimationFrame(f);
   };
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
   // Годинник у рядку меню
   const clock = $('clock');
@@ -199,34 +321,238 @@
   const tick = () => { clock.textContent = fmt.format(new Date()); };
   tick(); setInterval(tick, 30000);
 
-  // «Живі» цифри в рядку меню: плавно перетікають до нових значень
+  // «Живі» цифри: плавно перетікають до нових значень (один таймер на всю сторінку)
+  const live = [];
+  const addLive = (it) => { it.v = it.v0; live.push(it); };
+  addLive({ v0: 12, step: 8, min: 3,  max: 38, els: [$('cpu')],  out: (v) => Math.round(v) + '%' });
+  addLive({ v0: 64, step: 2, min: 58, max: 72, els: [$('mem')],  out: (v) => Math.round(v) + '%' });
+  addLive({ v0: 18, step: 4, min: 12, max: 30, els: [$('ping')], out: (v) => Math.round(v) + ' ms' });
   if (!reduce) {
-    const items = [
-      { el: $('cpu'),  v: 12, step: 8, min: 3,  max: 38, out: (v) => Math.round(v) + '%' },
-      { el: $('mem'),  v: 64, step: 2, min: 58, max: 72, out: (v) => Math.round(v) + '%' },
-      { el: $('ping'), v: 18, step: 4, min: 12, max: 30, out: (v) => Math.round(v) + ' ms' },
-    ];
     setInterval(() => {
-      items.forEach((it) => {
-        const to = Math.min(it.max, Math.max(it.min, it.v + (Math.random() - 0.5) * it.step));
+      live.forEach((it) => {
+        const to = clamp(it.v + (Math.random() - 0.5) * it.step, it.min, it.max);
         const from = it.v; it.v = to;
-        tween(from, to, 800, (x) => { it.el.textContent = it.out(x); });
+        tween(from, to, 800, (x) => { const s = it.out(x); it.els.forEach((el) => { el.textContent = s; }); });
       });
     }, 2400);
   }
 
   // Поява при прокрутці
-  const targets = document.querySelectorAll('[data-reveal],[data-stagger]');
-  if (reduce || !('IntersectionObserver' in window)) {
-    targets.forEach((el) => el.classList.add('in'));
-  } else {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-    targets.forEach((el) => io.observe(el));
+  const io = ('IntersectionObserver' in window) && !reduce
+    ? new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' })
+    : null;
+  const watch = () => document.querySelectorAll('[data-reveal]:not(.in),[data-stagger]:not(.in)').forEach((el) => {
+    if (io) io.observe(el); else el.classList.add('in');
+  });
+
+  /* ---------------- Конструктор рядка меню ---------------- */
+  const svg = (inner, fill) => `<svg viewBox="0 0 16 16" ${fill ? 'fill="currentColor"' : 'fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"'} aria-hidden="true">${inner}</svg>`;
+  const MODS = [
+    { id: 'cpu',  name: 'CPU',        on: true,  v0: 21, step: 8,  min: 4,  max: 44, out: (v) => Math.round(v) + '%',
+      icon: svg('<rect x="4" y="4" width="8" height="8" rx="1.5"/><path d="M6 1.5v2M10 1.5v2M6 12.5v2M10 12.5v2M1.5 6h2M1.5 10h2M12.5 6h2M12.5 10h2"/>') },
+    { id: 'mem',  name: 'Memory',     on: true,  v0: 80, step: 2,  min: 74, max: 86, out: (v) => Math.round(v) + '%',
+      icon: svg('<rect x="1.5" y="4.5" width="13" height="7" rx="1.2"/><path d="M4.5 7v2M7 7v2M9.5 7v2M12 7v2M4 11.5v2M12 11.5v2"/>') },
+    { id: 'gpu',  name: 'GPU',        on: false, v0: 9,  step: 6,  min: 2,  max: 26, out: (v) => Math.round(v) + '%',
+      icon: svg('<rect x="1.5" y="4" width="13" height="8" rx="1.5"/><circle cx="8" cy="8" r="2.3"/>') },
+    { id: 'disk', name: 'Disk',       on: true,  v0: 285, fixed: '285 GB',
+      icon: svg('<rect x="1.5" y="5" width="13" height="6.5" rx="1.6"/><path d="M4 9h1M11.5 9h.5"/>') },
+    { id: 'ping', name: 'Internet',   on: true,  v0: 18, step: 4,  min: 12, max: 30, out: (v) => Math.round(v) + ' ms',
+      icon: svg('<rect x="2" y="10" width="2.2" height="4" rx=".6"/><rect x="5.6" y="7.5" width="2.2" height="6.5" rx=".6"/><rect x="9.2" y="5" width="2.2" height="9" rx=".6"/><rect x="12.8" y="2.5" width="2.2" height="11.5" rx=".6" opacity=".35"/>', true) },
+    { id: 'net',  name: 'Network',    on: true,  two: true,
+      icon: svg('<path d="M5 13V3M5 3L2.6 5.4M5 3l2.4 2.4M11 3v10M11 13l-2.4-2.4M11 13l2.4-2.4"/>') },
+    { id: 'data', name: 'Data today', on: false, fixed: '1.4 GB',
+      icon: svg('<path d="M8 2v7M5 6.5L8 9.5l3-3M3 12.5h10"/>') },
+    { id: 'batt', name: 'Battery',    on: false, fixed: '100%',
+      icon: svg('<rect x="1.5" y="4.5" width="12" height="7" rx="1.8"/><path d="M15 7v2"/><rect x="3.2" y="6.2" width="8.6" height="3.6" rx=".8" fill="currentColor" stroke="none"/>') },
+    { id: 'alrt', name: 'Alerts',     on: false, fixed: '1',
+      icon: svg('<path d="M8 2.2a3.8 3.8 0 0 0-3.8 3.8v2.2L3 10.5h10l-1.2-2.3V6A3.8 3.8 0 0 0 8 2.2zM6.6 12.5a1.5 1.5 0 0 0 2.8 0"/>') },
+  ];
+
+  const ui = $('builder');
+  if (ui) {
+    const byId = Object.fromEntries(MODS.map((m) => [m.id, m]));
+    let order = MODS.map((m) => m.id);
+    let mode = 'info';
+
+    ui.innerHTML = `
+      <div class="wall">
+        <div class="bar" id="bar" data-mode="info" aria-label="Menu bar preview">
+          <span class="appicon" aria-hidden="true"><img src="images/icon.png" alt=""></span>
+          ${MODS.map((m) => `<span class="m${m.on ? '' : ' off'}" data-id="${m.id}" title="${m.name}">${m.icon}${
+            m.two ? '<span class="v two"><span data-v="down">45 kbit/s</span><span data-v="up">104 kbit/s</span></span>'
+                  : `<span class="v" data-v>${m.fixed || m.out(m.v0)}</span>`}</span>`).join('')}
+          <span class="bclock" id="bclock"></span>
+        </div>
+      </div>
+      <div class="seg" role="group" aria-label="Menu bar style">
+        <button type="button" data-mode="icon" aria-pressed="false">Icon</button>
+        <button type="button" data-mode="info" aria-pressed="true">Compact info</button>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Menu bar modules">
+        ${MODS.map((m) => `<div class="chip${m.on ? ' on' : ''}" data-id="${m.id}" role="checkbox" tabindex="0" aria-checked="${m.on}" aria-label="${m.name}">
+          <span class="box" aria-hidden="true"></span><span class="nm">${m.name}</span>
+          <span class="grip" aria-hidden="true" title="Drag to reorder"><i></i><i></i></span></div>`).join('')}
+      </div>
+      <p class="hint">Drag ≡ to change the order. From the keyboard, press Space to switch a module and Alt with an arrow key to move it.</p>`;
+
+    const bar = $('bar'), chipsEl = $('chips'), bclock = $('bclock');
+    const chip = Object.fromEntries([...chipsEl.children].map((el) => [el.dataset.id, el]));
+    const bm = Object.fromEntries([...bar.querySelectorAll('.m')].map((el) => [el.dataset.id, el]));
+    const tickB = () => { bclock.textContent = fmt.format(new Date()); };
+    tickB(); setInterval(tickB, 30000);
+
+    // живі значення модулів у конструкторі
+    MODS.forEach((m) => {
+      if (m.out) addLive({ v0: m.v0, step: m.step, min: m.min, max: m.max, out: m.out, els: [bm[m.id].querySelector('[data-v]')] });
+    });
+    addLive({ v0: 45,  step: 40, min: 6,  max: 180, out: (v) => Math.round(v) + ' kbit/s', els: [bm.net.querySelector('[data-v="down"]')] });
+    addLive({ v0: 104, step: 60, min: 10, max: 260, out: (v) => Math.round(v) + ' kbit/s', els: [bm.net.querySelector('[data-v="up"]')] });
+
+    const refreshMode = () => {
+      const any = order.some((id) => byId[id].on);
+      bar.dataset.mode = (mode === 'icon' || !any) ? 'icon' : 'info';
+    };
+
+    // FLIP: елементи плавно переїжджають на нові місця
+    let dragEl = null;
+    const applyOrder = (animate) => {
+      const all = [...chipsEl.children, ...bar.querySelectorAll('.m')];
+      const first = new Map(all.map((el) => [el, el.getBoundingClientRect()]));
+      order.forEach((id, i) => { chip[id].style.order = i; bm[id].style.order = i; });
+      if (!animate || reduce) return;
+      all.forEach((el) => {
+        if (el === dragEl) return;
+        const a = first.get(el), b = el.getBoundingClientRect();
+        const dx = a.left - b.left, dy = a.top - b.top;
+        if (!dx && !dy) return;
+        el.animate([{ transform: `translate(${dx}px,${dy}px)` }, { transform: 'none' }], { duration: 460, easing: 'cubic-bezier(.16,1,.3,1)' });
+      });
+    };
+    applyOrder(false);
+
+    const toggle = (id) => {
+      const m = byId[id]; m.on = !m.on;
+      chip[id].classList.toggle('on', m.on);
+      chip[id].setAttribute('aria-checked', String(m.on));
+      bm[id].classList.toggle('off', !m.on);
+      refreshMode();
+    };
+    chipsEl.addEventListener('click', (e) => {
+      const c = e.target.closest('.chip');
+      if (!c || e.target.closest('.grip') || c.dataset.justDragged) return;
+      toggle(c.dataset.id);
+    });
+    const move = (id, delta) => {
+      const i = order.indexOf(id), j = clamp(i + delta, 0, order.length - 1);
+      if (i === j) return;
+      order.splice(i, 1); order.splice(j, 0, id); applyOrder(true);
+    };
+    chipsEl.addEventListener('keydown', (e) => {
+      const c = e.target.closest('.chip'); if (!c) return;
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(c.dataset.id); }
+      else if (e.altKey && /^Arrow/.test(e.key)) {
+        e.preventDefault();
+        move(c.dataset.id, (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ? -1 : 1);
+        c.focus();
+      }
+    });
+    ui.querySelectorAll('.seg button').forEach((b) => b.addEventListener('click', () => {
+      mode = b.dataset.mode;
+      ui.querySelectorAll('.seg button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      refreshMode();
+    }));
+
+    // Перетягування за ≡ (pointer events: миша, дотик, перо)
+    let drag = null;
+    chipsEl.addEventListener('pointerdown', (e) => {
+      const grip = e.target.closest('.grip'); if (!grip || e.button > 0) return;
+      const el = grip.closest('.chip'); e.preventDefault();
+      drag = { id: el.dataset.id, el, px: e.clientX, py: e.clientY, r0: el.getBoundingClientRect(), pid: e.pointerId };
+      dragEl = el; el.classList.add('drag'); grip.setPointerCapture(e.pointerId);
+    });
+    chipsEl.addEventListener('pointermove', (e) => {
+      if (!drag || e.pointerId !== drag.pid) return;
+      const base = chipsEl.getBoundingClientRect();
+      const x = e.clientX - base.left, y = e.clientY - base.top;
+      for (const id of order) {
+        if (id === drag.id) continue;
+        const o = chip[id];   // offset* — місце в сітці без урахування анімацій
+        if (x >= o.offsetLeft && x <= o.offsetLeft + o.offsetWidth && y >= o.offsetTop && y <= o.offsetTop + o.offsetHeight) {
+          const i = order.indexOf(drag.id), j = order.indexOf(id);
+          order.splice(i, 1); order.splice(j, 0, drag.id); applyOrder(true);
+          break;
+        }
+      }
+      drag.el.style.transform = 'none';
+      const rc = drag.el.getBoundingClientRect();
+      const tx = drag.r0.left + (e.clientX - drag.px) - rc.left, ty = drag.r0.top + (e.clientY - drag.py) - rc.top;
+      drag.el.style.transform = `translate(${tx}px,${ty}px) scale(1.04)`;
+      drag.last = drag.el.style.transform;
+    });
+    const endDrag = (e) => {
+      if (!drag || e.pointerId !== drag.pid) return;
+      const el = drag.el, last = drag.last;
+      el.style.transform = ''; el.classList.remove('drag');
+      if (last && !reduce) el.animate([{ transform: last }, { transform: 'none' }], { duration: 380, easing: 'cubic-bezier(.16,1,.3,1)' });
+      el.dataset.justDragged = '1'; setTimeout(() => { delete el.dataset.justDragged; }, 60);
+      drag = null; dragEl = null;
+    };
+    chipsEl.addEventListener('pointerup', endDrag);
+    chipsEl.addEventListener('pointercancel', endDrag);
+    refreshMode();
   }
 
-  // Спідометр: пік навантаження, який заспокоюється до <1%
+  /* ---------------- Теми ---------------- */
+  const th = document.querySelector('[data-themes]');
+  if (th) {
+    const T = [
+      ['amber', 'Amber', '#e9a845', '#ed744b', '#f9daa7'], ['lime', 'Lime', '#b1e457', '#60bc78', '#e6f6bc'], ['ocean', 'Ocean', '#63a1f8', '#3662e3', '#c5dffc'],
+      ['coral', 'Coral', '#ee8162', '#cf505d', '#f8d4c4'], ['mint', 'Mint', '#71d99c', '#4ba18c', '#d2f4e5'], ['mono', 'Mono', '#e8e8ea', '#9a9ca2', '#5e6067'],
+      ['neon', 'Neon', '#eb4ea9', '#68e2fb', '#f6c4e2'], ['acid', 'Acid', '#e9fe57', '#9d59ef', '#f8ffb9'], ['violet', 'Violet', '#a28cf3', '#743ee4', '#dcd6fb'],
+    ];
+    const box = $('swatches'), shots = [...th.querySelectorAll('.tshots img')];
+    box.innerHTML = T.map(([id, name, a, b, c], i) => `<label class="sw" style="--a:${a};--b:${b};--c:${c}">
+      <input type="radio" name="theme" value="${id}"${id === 'mint' ? ' checked' : ''}><span class="sbar"></span><span class="nm">${name}</span></label>`).join('');
+    const inputs = [...box.querySelectorAll('input')];
+    let auto = null, touched = false;
+    const pick = (id) => {
+      const t = T.find((x) => x[0] === id);
+      shots.forEach((im) => im.classList.toggle('on', im.dataset.t === id));
+      th.style.setProperty('--accent', t[2]);
+      inputs.forEach((inp) => { inp.checked = inp.value === id; });
+    };
+    box.addEventListener('change', (e) => {
+      touched = true; clearInterval(auto); pick(e.target.value);
+    });
+    if (!reduce && 'IntersectionObserver' in window) {
+      let i = T.findIndex((x) => x[0] === 'mint');
+      const aio = new IntersectionObserver((en) => {
+        if (touched) { aio.disconnect(); return; }
+        if (en[0].isIntersecting) {
+          clearInterval(auto);
+          auto = setInterval(() => { i = (i + 1) % T.length; pick(T[i][0]); }, 2200);
+        } else clearInterval(auto);
+      }, { threshold: 0.6 });
+      aio.observe(th.querySelector('.tstage'));
+    }
+  }
+
+  /* ---------------- Віджети: легкий паралакс за курсором ---------------- */
+  const desk = $('desk');
+  if (desk && !reduce && matchMedia('(hover: hover)').matches) {
+    let raf = 0;
+    desk.addEventListener('pointermove', (e) => {
+      const r = desk.getBoundingClientRect();
+      const mx = ((e.clientX - r.left) / r.width - 0.5) * 2, my = ((e.clientY - r.top) / r.height - 0.5) * 2;
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => { desk.style.setProperty('--mx', mx.toFixed(3)); desk.style.setProperty('--my', my.toFixed(3)); });
+    });
+    desk.addEventListener('pointerleave', () => { desk.style.setProperty('--mx', 0); desk.style.setProperty('--my', 0); });
+  }
+
+  /* ---------------- Спідометр ---------------- */
   const arc = $('dialarc'), val = $('dialv');
   const setDial = (v) => {
     arc.style.strokeDasharray = v.toFixed(2) + ' 100';
@@ -243,22 +569,49 @@
     dio.observe($('dial'));
   }
 
-  // Скрін вікна наближається під час прокрутки; рядок меню густішає
-  const shot = document.querySelector('[data-scrub]');
-  const bar = document.querySelector('.menubar');
+  /* ---------------- Pro: прикріплений блок, перемикається прокруткою ---------------- */
+  const show = document.querySelector('[data-show]');
+  const pinMQ = matchMedia('(min-width: 901px) and (min-height: 621px)');
+  let setStep = () => {}, updShow = () => {};
+  if (show) {
+    const track = show.querySelector('.show-track'), pin = track.firstElementChild;
+    const steps = [...show.querySelectorAll('.step')], imgs = [...show.querySelectorAll('.stage img')];
+    const n = steps.length; let cur = 0;
+    const top = 30;   // має збігатися з sticky top у CSS
+    setStep = (i) => {
+      if (i === cur) return; cur = i;
+      steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.step-btn').setAttribute('aria-current', String(k === i)); });
+      imgs.forEach((im, k) => im.classList.toggle('on', k === i));
+    };
+    updShow = () => {
+      if (!pinMQ.matches) return;
+      const total = track.offsetHeight - pin.offsetHeight;
+      const p = clamp((top - track.getBoundingClientRect().top) / total, 0, 0.9999);
+      const i = Math.floor(p * n);
+      setStep(i);
+      steps[i].style.setProperty('--sp', (p * n - i).toFixed(3));
+    };
+    steps.forEach((s, k) => s.querySelector('.step-btn').addEventListener('click', () => {
+      if (!pinMQ.matches) return;
+      const total = track.offsetHeight - pin.offsetHeight;
+      const y = scrollY + track.getBoundingClientRect().top - top + ((k + 0.5) / n) * total;
+      scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+    }));
+    pinMQ.addEventListener('change', () => { steps.forEach((s) => s.style.removeProperty('--sp')); updShow(); });
+  }
+
+  // рядок меню густішає, коли сторінка рухається
+  const bar0 = document.querySelector('.menubar');
   let queued = false;
   const update = () => {
     queued = false;
-    bar.classList.toggle('scrolled', scrollY > 8);
-    if (shot && !reduce) {
-      const r = shot.getBoundingClientRect(), vh = innerHeight;
-      const p = Math.min(1, Math.max(0, (vh * 0.98 - r.top) / (vh * 0.6)));
-      shot.style.setProperty('--p', p.toFixed(3));
-    }
+    bar0.classList.toggle('scrolled', scrollY > 8);
+    updShow();
   };
   const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
   addEventListener('scroll', queue, { passive: true });
   addEventListener('resize', queue);
+  watch();
   update();
 })();
 </script>
