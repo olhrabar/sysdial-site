@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SysDial — system monitor for the Mac menu bar</title>
+  <meta name="description" content="SysDial shows your Mac's processor, memory, disk, network and battery right in the menu bar, warns you before things slow down, and stays light in the background.">
+  <meta property="og:title" content="SysDial — system monitor for the Mac menu bar">
+  <meta property="og:description" content="Live numbers in the menu bar, a panel of cards, alerts and history. Light on your Mac, private by design.">
+  <meta property="og:image" content="https://sysdial.app/images/panel.png">
+  <meta property="og:url" content="https://sysdial.app/">
+  <link rel="icon" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Сторінка починається як верх екрана Mac: рядок меню з модулями SysDial -->
+<header class="menubar">
+  <a class="site" href="/"><img src="images/icon.png" alt="" onerror="this.remove()">SysDial</a>
+  <nav aria-label="Sections">
+    <a href="#features">Features</a>
+    <a href="#pro">Free and Pro</a>
+    <a href="#privacy">Privacy</a>
+    <a href="mailto:support@sysdial.app">Support</a>
+  </nav>
+  <div class="modules" aria-label="Example of SysDial in the menu bar">
+    <span class="mod" title="Processor">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="4" y="4" width="8" height="8" rx="1.5"/><path d="M6 1.5v2M10 1.5v2M6 12.5v2M10 12.5v2M1.5 6h2M1.5 10h2M12.5 6h2M12.5 10h2"/></svg>
+      <span class="v" id="cpu">12%</span>
+    </span>
+    <span class="mod" title="Memory">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="4.5" width="13" height="7" rx="1.2"/><path d="M4.5 7v2M7 7v2M9.5 7v2M12 7v2M4 11.5v2M12 11.5v2"/></svg>
+      <span class="v" id="mem">64%</span>
+    </span>
+    <span class="mod hide-sm" title="Disk">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="5" width="13" height="6.5" rx="1.6"/><path d="M4 9h1M11.5 9h.5"/></svg>
+      <span class="v">244 GB</span>
+    </span>
+    <span class="mod" title="Internet latency">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="2" y="10" width="2.2" height="4" rx=".6"/><rect x="5.6" y="7.5" width="2.2" height="6.5" rx=".6"/><rect x="9.2" y="5" width="2.2" height="9" rx=".6"/><rect x="12.8" y="2.5" width="2.2" height="11.5" rx=".6" opacity=".35"/></svg>
+      <span class="v" id="ping">18 ms</span>
+    </span>
+    <span class="clock" id="clock"></span>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Your Mac, at a glance, in the menu bar.</h1>
+        <p class="lede">SysDial shows processor, memory, disk, network and battery as live numbers in the menu bar, warns you before things slow down, and stays light while it does.</p>
+        <div class="cta">
+          <span class="button" role="link" aria-disabled="true">Download for Mac</span>
+          <span class="note">Coming soon for macOS 14 and later.
+            <a href="mailto:support@sysdial.app?subject=Tell%20me%20when%20SysDial%20is%20out">Tell me when it's out</a></span>
+        </div>
+      </div>
+      <figure class="shot" style="margin:0">
+        <img src="images/panel.png" alt="The SysDial panel open below the menu bar, with cards for processor, memory, network, battery and disk"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'Panel screenshot'}))">
+      </figure>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Everything you check, in one place</h2>
+      <p class="intro">Pick what you want in the menu bar and in what order. Click it to open a panel of cards with the details.</p>
+      <div class="groups">
+        <div>
+          <h3>System</h3>
+          <ul>
+            <li><b>Processor</b> with every efficiency and performance core</li>
+            <li><b>Memory</b> with pressure, swap and what it's used for</li>
+            <li><b>GPU</b> load and video memory</li>
+            <li><b>Disk</b> space, the way Finder counts it</li>
+            <li><b>Battery</b> health, cycles, power draw and time left</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Network</h3>
+          <ul>
+            <li><b>Download and upload speed</b> with your public and local IP</li>
+            <li><b>Data transferred</b> today, this week and in your billing month</li>
+            <li><b>Internet quality</b>: latency, jitter, packet loss and outages</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Apps</h3>
+          <ul>
+            <li><b>Top processes</b> by processor and memory</li>
+            <li><b>Watched apps</b>: follow one app's CPU and memory for days, with a memory alert</li>
+            <li><b>Leftover dev processes</b> that keep running after a terminal or editor closes</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Alerts</h3>
+          <ul>
+            <li><b>A runaway app</b> keeping the processor busy</li>
+            <li><b>High CPU load</b> and <b>memory pressure</b></li>
+            <li><b>Low disk space</b> and <b>internet outages</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="light">
+    <div class="wrap">
+      <svg class="dial" viewBox="0 0 220 150" role="img" aria-label="About 0.3 percent CPU in the background">
+        <path class="track" d="M 30 130 A 80 80 0 1 1 190 130" fill="none" stroke-width="14" stroke-linecap="round"/>
+        <path class="arc" d="M 30 130 A 80 80 0 0 1 30.1 125.8" fill="none" stroke-width="14" stroke-linecap="round"/>
+        <text x="110" y="112" text-anchor="middle">0.3%</text>
+        <text class="unit" x="110" y="134" text-anchor="middle">CPU in the background</text>
+      </svg>
+      <div>
+        <h2>Light enough to forget it's running</h2>
+        <p class="intro" style="margin:0">With live numbers in the menu bar and the panel closed, SysDial uses about 0.3% of the processor and well under 100 MB of memory, measured on a MacBook Pro with Apple M3 Pro. It reads the same system counters as Activity Monitor and does nothing in the background that it doesn't need to.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pro">
+    <div class="wrap">
+      <h2>Free, with Pro when you need more</h2>
+      <p class="intro">The menu bar, the panel, alerts, widgets and Shortcuts are free. Pro adds the window, history and tools for when something goes wrong.</p>
+      <div class="table-scroll">
+        <table class="plans">
+          <thead><tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col" class="pro">Pro</th></tr></thead>
+          <tbody>
+            <tr><td>Live numbers in the menu bar, in your order</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Panel with processor, memory, GPU, disk, network, data and battery</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Alerts for runaway apps, CPU, memory, disk space and internet</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Desktop widgets, Shortcuts and nine colour themes</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Window with every card<small>Including load average and fans</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>History<small>30 days of CPU, memory and network, any period, CSV export</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Internet quality<small>Latency, jitter, packet loss, DNS checks and an outage log</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Process manager<small>Search, sort, reveal and quit any process</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Watched apps<small>An app's CPU and memory across restarts, with memory alerts</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Leftover dev process finder<small>Terraform, node, python and similar tools left running</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Temperatures and fan speeds</td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Insights<small>Plain-language explanations of what's slowing your Mac</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Quit a runaway app straight from the alert</td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Cache and Spotlight cleanup</td><td class="no">—</td><td class="yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="shot window-shot" style="margin-inline:0">
+        <img src="images/window.png" alt="The SysDial window showing the Overview with every card"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'Window screenshot'}))">
+      </figure>
+    </div>
+  </section>
+
+  <section id="privacy" class="privacy">
+    <div class="wrap">
+      <h2>Your data stays on your Mac</h2>
+      <p>SysDial has no accounts, no analytics and no tracking. Readings, history and the apps you watch are stored only on your Mac. It goes online for two things: to show your public IP, which you can turn off, and to check internet quality.</p>
+      <p><a href="privacy.html">Read the privacy policy</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Oleksandr Hrabar. Requires macOS 14 Sonoma or later, Apple silicon or Intel.</span>
+    <nav aria-label="Footer">
+      <a href="mailto:support@sysdial.app">support@sysdial.app</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Годинник і «живі» цифри в рядку меню — як у SysDial, раз на 2 секунди.
+  const clock = document.getElementById('clock');
+  const fmt = new Intl.DateTimeFormat('en-US', { weekday: 'short', hour: 'numeric', minute: '2-digit' });
+  const tick = () => { clock.textContent = fmt.format(new Date()); };
+  tick(); setInterval(tick, 30000);
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const state = { cpu: 12, mem: 64, ping: 18 };
+    const walk = (v, step, min, max) => Math.min(max, Math.max(min, v + (Math.random() - 0.5) * step));
+    setInterval(() => {
+      state.cpu = walk(state.cpu, 8, 3, 38);
+      state.mem = walk(state.mem, 2, 58, 72);
+      state.ping = walk(state.ping, 4, 12, 30);
+      document.getElementById('cpu').textContent = Math.round(state.cpu) + '%';
+      document.getElementById('mem').textContent = Math.round(state.mem) + '%';
+      document.getElementById('ping').textContent = Math.round(state.ping) + ' ms';
+    }, 2000);
+  }
+</script>
+</body>
+</html>
