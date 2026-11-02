@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SysDial — system monitor for the Mac menu bar</title>
-  <meta name="description" content="SysDial shows your Mac's processor, memory, disk, network and battery right in the menu bar, warns you before things slow down, and stays light in the background.">
-  <meta property="og:title" content="SysDial — system monitor for the Mac menu bar">
-  <meta property="og:description" content="Live numbers in the menu bar, a panel of cards, alerts and history. Light on your Mac, private by design.">
+  <title>SysDial — watches your Mac, warns you, remembers what slowed it down</title>
+  <meta name="description" content="SysDial watches your Mac all day, warns you when something runs away, and keeps 30 days of history with the app behind every spike named. Live numbers in the menu bar, light and private.">
+  <meta property="og:title" content="SysDial — your Mac slowed down. It already knows why.">
+  <meta property="og:description" content="Watches your Mac, warns you when something runs away, and remembers every spike for 30 days. Light on your Mac, private by design.">
   <meta property="og:image" content="https://sysdial.app/images/og.png">
   <meta property="og:url" content="https://sysdial.app/">
   <link rel="icon" href="images/icon.png">
@@ -23,9 +23,9 @@
 <header class="menubar">
   <a class="site" href="/"><img src="images/icon.png" alt="" onerror="this.remove()">SysDial</a>
   <nav aria-label="Sections">
-    <a href="#features">Features</a>
+    <a href="#memory">Memory</a>
+    <a href="#menubar">Menu bar</a>
     <a href="#themes">Themes</a>
-    <a href="#pro">Pro</a>
     <a href="#plans">Plans</a>
     <a href="#privacy">Privacy</a>
     <a href="mailto:support@sysdial.app">Support</a>
@@ -55,62 +55,114 @@
   <section class="hero">
     <div class="glow" aria-hidden="true"><i></i><i></i></div>
     <div class="wrap">
-      <div>
-        <h1 aria-label="Your Mac, at a glance, in the menu bar."><span class="w" style="--i:0"><span>Your</span></span> <span class="w" style="--i:1"><span>Mac,</span></span> <span class="w" style="--i:2"><span>at</span></span> <span class="w" style="--i:3"><span>a</span></span> <span class="w" style="--i:4"><span>glance,</span></span> <span class="w" style="--i:5"><span>in</span></span> <span class="w" style="--i:6"><span>the</span></span> <span class="w" style="--i:7"><span>menu</span></span> <span class="w" style="--i:8"><span>bar.</span></span></h1>
-        <p class="lede" data-hero style="--d:480ms">SysDial shows processor, memory, disk, network and battery as live numbers in the menu bar, warns you before things slow down, and stays light while it does.</p>
-        <div class="cta" data-hero style="--d:620ms">
+      <div class="hero-copy">
+        <p class="eyebrow" data-hero style="--d:80ms">Watches · Warns · Remembers</p>
+        <h1 aria-label="Your Mac slowed down. SysDial already knows why."><span class="w" style="--i:0"><span>Your</span></span> <span class="w" style="--i:1"><span>Mac</span></span> <span class="w" style="--i:2"><span>slowed</span></span> <span class="w" style="--i:3"><span>down.</span></span> <span class="w acc" style="--i:4"><span>SysDial</span></span> <span class="w acc" style="--i:5"><span>already</span></span> <span class="w acc" style="--i:6"><span>knows</span></span> <span class="w acc" style="--i:7"><span>why.</span></span></h1>
+        <p class="lede" data-hero style="--d:760ms">SysDial watches your Mac all day and warns you when something runs away. It keeps 30 days of history and names the app behind every spike, so a slowdown is never a mystery.</p>
+        <div class="cta" data-hero style="--d:840ms">
           <span class="button" role="link" aria-disabled="true">Download for Mac</span>
           <span class="note">Coming soon for macOS 14 and later.
             <a href="mailto:support@sysdial.app?subject=Tell%20me%20when%20SysDial%20is%20out">Tell me when it's out</a></span>
         </div>
+        <p class="fine pro-note" data-hero style="--d:1000ms">Watching and alerts are free. History and insights are part of SysDial Pro.</p>
       </div>
-      <figure class="shot" style="margin:0">
-        <img src="images/panel.png" alt="The SysDial panel open below the menu bar, with cards for processor, memory, network, battery and disk"
-             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'Panel screenshot'}))">
-      </figure>
+      <div class="proof">
+        <figure class="pf-main">
+          <img src="images/app/moments-card.webp" width="942" height="376" alt="SysDial's Notable moments list: runaway and load events with the time, how long they lasted and the app behind each one, such as mediaanalysisd for 3 minutes at 225 percent">
+          <i class="hl" aria-hidden="true"></i>
+          <span class="tag" aria-hidden="true">The culprit, found for you</span>
+        </figure>
+        <figure class="pf-note">
+          <img src="images/app/alerts-card.webp" width="922" height="298" alt="The SysDial alert log: memory alerts for a Chrome helper at 19.5 GB, and a DNS outage with the note that the network is up but website names can't be resolved">
+        </figure>
+      </div>
+    </div>
+    <div class="wrap tri-row" data-stagger>
+      <div class="tri"><span class="tri-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 8S4 3.5 8 3.5 14.5 8 14.5 8 12 12.5 8 12.5 1.5 8 1.5 8z"/><circle cx="8" cy="8" r="2"/></svg></span>
+        <h3>Watches <em class="tier free">Free</em></h3>
+        <p>Live numbers in the menu bar, in the order you pick: processor, memory, disk, network and battery. Light enough to leave on all day.</p></div>
+      <div class="tri"><span class="tri-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2a3.8 3.8 0 0 0-3.8 3.8v2.2L3 10.5h10l-1.2-2.3V6A3.8 3.8 0 0 0 8 2.2zM6.6 12.5a1.5 1.5 0 0 0 2.8 0"/></svg></span>
+        <h3>Warns <em class="tier free">Free</em></h3>
+        <p>A notification when an app runs away, the processor stays busy, memory is under pressure, the disk is nearly full or the internet drops. Pro adds a Quit button right in the alert.</p></div>
+      <div class="tri"><span class="tri-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.2 8a5.8 5.8 0 1 1 1.7 4.1M2.2 8V4.8M2.2 8h3.2M8 5v3l2 1.2"/></svg></span>
+        <h3>Remembers <em class="tier pro">Pro</em></h3>
+        <p>Thirty days of history, every spike found with the time and the app behind it, and plain-language insights on what slowed your Mac.</p></div>
     </div>
   </section>
 
-  <section id="features">
+  <!-- Суперсила: пам'ять -->
+  <section id="memory" class="show" data-show>
     <div class="wrap">
-      <h2 data-reveal>Everything you check, in one place</h2>
-      <p class="intro" data-reveal style="--d:80ms">Pick what you want in the menu bar and in what order. Click it to open a panel of cards with the details.</p>
-      <div class="groups" data-stagger>
-        <div>
-          <h3>System</h3>
-          <ul data-stagger>
-            <li><b>Processor</b> with every efficiency and performance core</li>
-            <li><b>Memory</b> with pressure, swap and what it's used for</li>
-            <li><b>GPU</b> load and video memory</li>
-            <li><b>Disk</b> space, the way Finder counts it</li>
-            <li><b>Battery</b> health, cycles, power draw and time left</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Network</h3>
-          <ul data-stagger>
-            <li><b>Download and upload speed</b> with your public and local IP</li>
-            <li><b>Data transferred</b> today, this week and in your billing month</li>
-            <li><b>Internet quality</b>: latency, jitter, packet loss and outages</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Apps</h3>
-          <ul data-stagger>
-            <li><b>Top processes</b> by processor and memory</li>
-            <li><b>Watched apps</b>: follow one app's CPU and memory for days, with a memory alert</li>
-            <li><b>Leftover dev processes</b> that keep running after a terminal or editor closes</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Alerts</h3>
-          <ul data-stagger>
-            <li><b>A runaway app</b> keeping the processor busy</li>
-            <li><b>High CPU load</b> and <b>memory pressure</b></li>
-            <li><b>Low disk space</b> and <b>internet outages</b></li>
-          </ul>
+      <h2 data-reveal>It remembers, so you don’t have to</h2>
+      <p class="intro" data-reveal style="--d:80ms">The menu bar shows now. The Pro window shows what happened, when it happened and which app was behind it. Scroll to see how it works.</p>
+    </div>
+    <div class="show-track" style="--n:7">
+      <div class="show-pin">
+        <div class="wrap show-grid">
+          <ol class="steps">
+          <li class="step on" data-i="0">
+            <h3><button type="button" class="step-btn" aria-current="true"><span class="n">01</span><span class="t">Look back through 30 days</span></button></h3>
+            <p>Processor, memory, network and internet latency on one timeline, with alerts marked where they happened. Switch between 1 hour, 24 hours, 7 days or any period you pick, and export what you see to CSV.</p>
+            <img class="step-img" src="images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial History page: charts of processor and memory, network speed and internet latency over 24 hours">
+          </li>
+          <li class="step" data-i="1">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">02</span><span class="t">Spikes, already found</span></button></h3>
+            <p>Runaway processes and load peaks are listed with the time, how long they lasted and which app caused them, so you don’t have to hunt through a chart for them.</p>
+            <img class="step-img" src="images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The Notable moments list on the History page, with runaway and load events by time, length and app">
+          </li>
+          <li class="step" data-i="2">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">03</span><span class="t">Alerts, explained in plain words</span></button></h3>
+            <p>Insights explain what is slowing your Mac, like swap in use and the apps using the most, with a button to free up memory. Alerts keep a seven-day log of runaway apps, processor, memory, disk and internet or DNS outages.</p>
+            <img class="step-img" src="images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Alerts page: an insight about swap memory and a log of DNS outages and memory alerts">
+          </li>
+          <li class="step" data-i="3">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">04</span><span class="t">Follow one app for days</span></button></h3>
+            <p>Each watched app gets its own chart of memory and processor, with every launch marked and your memory alert drawn as a line, so you can see exactly when it crossed.</p>
+            <img class="step-img" src="images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Per-app charts on the History page: memory peak and processor for Activity Monitor, Google Chrome Helper and Google Chrome, with an alert line at 19 GB">
+          </li>
+          <li class="step" data-i="4">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">05</span><span class="t">Find what’s eating your Mac</span></button></h3>
+            <p>Search, sort, reveal and quit any process. Apps you watch get their own cards with processor, memory, the day’s memory peak and an alert level. SysDial also looks for leftover dev processes, like terraform, node and python, that kept running after a terminal closed.</p>
+            <img class="step-img" src="images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Processes page: cards for watched apps and a sortable list of every running process">
+          </li>
+          <li class="step" data-i="5">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">06</span><span class="t">Every card, one window</span></button></h3>
+            <p>The panel’s cards plus load average and fans, together in one window you can leave open on a second display.</p>
+            <img class="step-img" src="images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="The SysDial window on Overview: cards for processor, load average, disk, network transfer, Wi-Fi, memory, battery, alerts, internet quality, GPU, top processes and fans">
+          </li>
+          <li class="step" data-i="6">
+            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">07</span><span class="t">Clean up what’s safe</span></button></h3>
+            <p>App caches, logs, simulator caches and npm or Terraform caches, sized and ticked for you. Items go to the Trash, so you can put them back. The Spotlight index can be reset when it grows too large.</p>
+            <img class="step-img" src="images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial Storage page: safe-to-clean items with sizes, Xcode archives to review, and a Spotlight index reset">
+          </li>
+          </ol>
+          <div class="stage" aria-hidden="true">
+          <img class="on" data-wipe src="images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial History page: charts of processor and memory, network speed and internet latency over 24 hours">
+          <img src="images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The Notable moments list on the History page, with runaway and load events by time, length and app">
+          <img src="images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Alerts page: an insight about swap memory and a log of DNS outages and memory alerts">
+          <img data-wipe src="images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Per-app charts on the History page: memory peak and processor for Activity Monitor, Google Chrome Helper and Google Chrome, with an alert line at 19 GB">
+          <img src="images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Processes page: cards for watched apps and a sortable list of every running process">
+          <img src="images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="The SysDial window on Overview: cards for processor, load average, disk, network transfer, Wi-Fi, memory, battery, alerts, internet quality, GPU, top processes and fans">
+          <img src="images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial Storage page: safe-to-clean items with sizes, Xcode archives to review, and a Spotlight index reset">
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Живе: рядок меню й панель (безкоштовно) -->
+  <section id="glance" class="glance">
+    <div class="wrap gl">
+      <div class="gl-copy">
+        <h2 data-reveal>And right now, at a glance</h2>
+        <p class="intro" data-reveal style="--d:80ms">The window above is Pro. The part you will see all day is free: live numbers in the menu bar, and a panel of cards one click away.</p>
+        <ul class="tags" data-stagger aria-label="What SysDial reads">
+          <li>Processor</li><li>Memory</li><li>GPU</li><li>Disk</li><li>Battery</li><li>Network speed</li><li>Data used</li><li>Internet quality</li>
+        </ul>
+      </div>
+      <figure class="shot gl-shot" data-reveal style="--d:140ms">
+        <img src="images/panel.png" loading="lazy" decoding="async" alt="The SysDial panel open below the menu bar, with cards for processor, memory, network, battery and disk">
+      </figure>
     </div>
   </section>
 
@@ -198,64 +250,7 @@
   </section>
 
   <!-- Pro: прикріплений блок, що перемикається прокруткою -->
-  <section id="pro" class="show" data-show>
-    <div class="wrap">
-      <h2 data-reveal>Pro opens the window</h2>
-      <p class="intro" data-reveal style="--d:80ms">The menu bar and the panel are the quick look. Pro adds a full window for when you need to know what happened and why.</p>
-    </div>
-    <div class="show-track" style="--n:7">
-      <div class="show-pin">
-        <div class="wrap show-grid">
-          <ol class="steps">
-          <li class="step on" data-i="0">
-            <h3><button type="button" class="step-btn" aria-current="true"><span class="n">01</span><span class="t">Every card, one window</span></button></h3>
-            <p>The panel’s cards plus load average and fans, together in one window you can leave open on a second display.</p>
-            <img class="step-img" src="images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="The SysDial window on Overview: cards for processor, load average, disk, network transfer, Wi-Fi, memory, battery, alerts, internet quality, GPU, top processes and fans">
-          </li>
-          <li class="step" data-i="1">
-            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">02</span><span class="t">Find what’s eating your Mac</span></button></h3>
-            <p>Search, sort, reveal and quit any process. Apps you watch get their own cards with processor, memory, the day’s memory peak and an alert level. SysDial also looks for leftover dev processes, like terraform, node and python, that kept running after a terminal closed.</p>
-            <img class="step-img" src="images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Processes page: cards for watched apps and a sortable list of every running process">
-          </li>
-          <li class="step" data-i="2">
-            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">03</span><span class="t">Plain-language insights</span></button></h3>
-            <p>Insights explain what is slowing your Mac, like swap in use and the apps using the most, with a button to free up memory. Alerts keep a seven-day log of runaway apps, processor, memory, disk and internet or DNS outages.</p>
-            <img class="step-img" src="images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Alerts page: an insight about swap memory and a log of DNS outages and memory alerts">
-          </li>
-          <li class="step" data-i="3">
-            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">04</span><span class="t">Look back through 30 days</span></button></h3>
-            <p>Processor, memory, network and internet latency on one timeline, with alerts marked where they happened. Switch between 1 hour, 24 hours, 7 days or any period you pick, and export what you see to CSV.</p>
-            <img class="step-img" src="images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial History page: charts of processor and memory, network speed and internet latency over 24 hours">
-          </li>
-          <li class="step" data-i="4">
-            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">05</span><span class="t">Follow one app for days</span></button></h3>
-            <p>Each watched app gets its own chart of memory and processor, with every launch marked and your memory alert drawn as a line, so you can see exactly when it crossed.</p>
-            <img class="step-img" src="images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Per-app charts on the History page: memory peak and processor for Activity Monitor, Google Chrome Helper and Google Chrome, with an alert line at 19 GB">
-          </li>
-          <li class="step" data-i="5">
-            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">06</span><span class="t">Spikes, already found</span></button></h3>
-            <p>Runaway processes and load peaks are listed with the time, how long they lasted and which app caused them, so you don’t have to hunt through a chart for them.</p>
-            <img class="step-img" src="images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The Notable moments list on the History page, with runaway and load events by time, length and app">
-          </li>
-          <li class="step" data-i="6">
-            <h3><button type="button" class="step-btn" aria-current="false"><span class="n">07</span><span class="t">Clean up what’s safe</span></button></h3>
-            <p>App caches, logs, simulator caches and npm or Terraform caches, sized and ticked for you. Items go to the Trash, so you can put them back. The Spotlight index can be reset when it grows too large.</p>
-            <img class="step-img" src="images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial Storage page: safe-to-clean items with sizes, Xcode archives to review, and a Spotlight index reset">
-          </li>
-          </ol>
-          <div class="stage" aria-hidden="true">
-          <img class="on" src="images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="The SysDial window on Overview: cards for processor, load average, disk, network transfer, Wi-Fi, memory, battery, alerts, internet quality, GPU, top processes and fans">
-          <img src="images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Processes page: cards for watched apps and a sortable list of every running process">
-          <img src="images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Alerts page: an insight about swap memory and a log of DNS outages and memory alerts">
-          <img data-wipe src="images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial History page: charts of processor and memory, network speed and internet latency over 24 hours">
-          <img data-wipe src="images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Per-app charts on the History page: memory peak and processor for Activity Monitor, Google Chrome Helper and Google Chrome, with an alert line at 19 GB">
-          <img src="images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The Notable moments list on the History page, with runaway and load events by time, length and app">
-          <img src="images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial Storage page: safe-to-clean items with sizes, Xcode archives to review, and a Spotlight index reset">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <section id="plans">
     <div class="wrap">
