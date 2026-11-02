@@ -116,11 +116,12 @@
 
 
   <!-- Конструктор рядка меню: модулі вмикаються, перетягуються, живі цифри -->
-  <section id="menubar" class="builder">
+  <section id="menubar" class="builder" data-bld>
+   <div class="bld-track" style="--n:7"><div class="bld-pin">
     <div class="wrap bld">
       <div class="bld-main">
         <h2 data-reveal>Your menu bar, your way</h2>
-        <p class="intro" data-reveal style="--d:80ms">Switch modules on and off and drag them into the order you like, or keep only the icon. Try it here, it works the same way in the app.</p>
+        <p class="intro" data-reveal style="--d:80ms">Switch modules on and off and drag them into the order you like, or keep only the icon. Scroll to watch how it works, then try it yourself, it works the same way in the app.</p>
         <div class="bld-ui" id="builder" data-reveal style="--d:140ms"></div>
         <figure class="real" data-reveal style="--d:200ms">
           <img src="images/app/menubar.webp" width="766" height="64" loading="lazy" decoding="async" alt="SysDial's compact info in a real macOS menu bar: processor 21%, memory 80%, disk 285 GB, internet 18 ms and network speed">
@@ -131,10 +132,12 @@
         <img src="images/app/panel-settings.webp" width="922" height="1926" loading="lazy" decoding="async" alt="SysDial settings: theme picker, update interval, and the menu bar and panel modules with drag handles">
       </figure>
     </div>
+   </div></div>
   </section>
 
   <!-- Теми -->
   <section id="themes" class="themes" data-themes style="--accent:#71d99c">
+   <div class="th-track" style="--n:9"><div class="th-pin">
     <div class="wrap">
       <h2 data-reveal>Nine themes, one tap</h2>
       <p class="intro" data-reveal style="--d:80ms">Every theme recolours the panel and the window. Pick one in Settings and it changes straight away.</p>
@@ -153,7 +156,9 @@
         </div>
       </div>
       <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme" data-reveal style="--d:160ms"></div>
+      <p class="th-hint" aria-hidden="true">Scroll to flip through all nine, or tap one.</p>
     </div>
+   </div></div>
   </section>
 
   <!-- Віджети і Shortcuts -->
@@ -314,6 +319,11 @@
     requestAnimationFrame(f);
   };
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  // Прикріплені блоки (конструктор, теми, Pro): лише на великому екрані, без reduced-motion і якщо є overflow: clip
+  const pinMQ = matchMedia('(min-width: 901px) and (min-height: 621px)');
+  const canClip = !!(window.CSS && CSS.supports && CSS.supports('overflow', 'clip'));
+  const isPinned = () => pinMQ.matches && !reduce && canClip;
+  const PIN_TOP = 30;   // має збігатися з sticky top у CSS
 
   // Годинник у рядку меню
   const clock = $('clock');
@@ -371,10 +381,30 @@
   ];
 
   const ui = $('builder');
+  let bldUpdate = () => {};
   if (ui) {
     const byId = Object.fromEntries(MODS.map((m) => [m.id, m]));
     let order = MODS.map((m) => m.id);
     let mode = 'info';
+
+    // Сценарій показу. Кожен крок — абсолютний стан, тому прокручувати можна в обидва боки.
+    const SCRIPT = [
+      { title: 'Compact info',        text: 'Live values sit right in the menu bar.' },
+      { title: 'Switch a module on',  text: 'One tap, and GPU joins the bar.',                          a: ['set', 'gpu', true] },
+      { title: 'Switch one off',      text: 'Tap again to hide it. Nothing else moves.',                a: ['set', 'disk', false] },
+      { title: 'Add the battery',     text: 'Battery, Data today and Alerts work the same way.',        a: ['set', 'batt', true] },
+      { title: 'Drag to reorder',     text: 'Hold ≡ and move a module. The bar follows right away.',    a: ['drag', 'net'] },
+      { title: 'Or just the icon',    text: 'Prefer it quiet? Show only the SysDial icon.',             a: ['mode', 'icon'] },
+      { title: 'Back to the numbers', text: 'Switch back whenever you like.',                           a: ['mode', 'info'] },
+    ];
+    const N = SCRIPT.length;
+    const STATES = [{ on: Object.fromEntries(MODS.map((m) => [m.id, m.on])), order: [...order], mode }];
+    SCRIPT.slice(1).forEach((s) => {
+      const p = STATES[STATES.length - 1], n = { on: { ...p.on }, order: [...p.order], mode: p.mode };
+      const [t, a, b] = s.a;
+      if (t === 'set') n.on[a] = b; else if (t === 'mode') n.mode = a; else n.order = [a, ...p.order.filter((x) => x !== a)];
+      STATES.push(n);
+    });
 
     ui.innerHTML = `
       <div class="wall">
@@ -387,19 +417,28 @@
         </div>
       </div>
       <div class="seg" role="group" aria-label="Menu bar style">
+        <i class="thumb" aria-hidden="true"></i>
         <button type="button" data-mode="icon" aria-pressed="false">Icon</button>
         <button type="button" data-mode="info" aria-pressed="true">Compact info</button>
       </div>
       <div class="chips" id="chips" role="group" aria-label="Menu bar modules">
-        ${MODS.map((m) => `<div class="chip${m.on ? ' on' : ''}" data-id="${m.id}" role="checkbox" tabindex="0" aria-checked="${m.on}" aria-label="${m.name}">
+        ${MODS.map((m, i) => `<div class="chip${m.on ? ' on' : ''}" style="--i:${i}" data-id="${m.id}" role="checkbox" tabindex="0" aria-checked="${m.on}" aria-label="${m.name}">
           <span class="box" aria-hidden="true"></span><span class="nm">${m.name}</span>
           <span class="grip" aria-hidden="true" title="Drag to reorder"><i></i><i></i></span></div>`).join('')}
       </div>
-      <p class="hint">Drag ≡ to change the order. From the keyboard, press Space to switch a module and Alt with an arrow key to move it.</p>`;
+      <div class="cap" id="cap" aria-hidden="true">
+        <div class="dots">${SCRIPT.map((s, k) => `<button type="button" class="dot" tabindex="-1" data-k="${k}" aria-label="${s.title}"><i></i></button>`).join('')}</div>
+        <div class="cap-t">${SCRIPT.map((s, k) => `<p${k ? '' : ' class="on"'}><b><i>${k + 1}</i>${s.title}</b><span>${s.text}</span></p>`).join('')}<p class="you"><b>Now it is yours</b><span>Tap, drag ≡, or switch the style. Scroll on whenever you are done.</span></p></div>
+      </div>
+      <p class="hint">Drag ≡ to change the order. From the keyboard, press Space to switch a module and Alt with an arrow key to move it.</p>
+      <span class="cur" id="cur" aria-hidden="true"><svg viewBox="0 0 14 21" width="14" height="21"><path d="M.8.8v15.2l3.6-3.3 2.6 6 2.5-1.1-2.6-5.9h5.1z" fill="#fff" stroke="#14181f" stroke-width="1.3" stroke-linejoin="round"/></svg><i class="rip"></i></span>`;
 
     const bar = $('bar'), chipsEl = $('chips'), bclock = $('bclock');
     const chip = Object.fromEntries([...chipsEl.children].map((el) => [el.dataset.id, el]));
     const bm = Object.fromEntries([...bar.querySelectorAll('.m')].map((el) => [el.dataset.id, el]));
+    const seg = ui.querySelector('.seg'), segBtns = [...seg.querySelectorAll('button')], thumb = seg.querySelector('.thumb');
+    const cursor = $('cur'), rip = cursor.querySelector('.rip');
+    const capEl = $('cap'), capP = [...capEl.querySelectorAll('.cap-t p')], dots = [...capEl.querySelectorAll('.dot')];
     const tickB = () => { bclock.textContent = fmt.format(new Date()); };
     tickB(); setInterval(tickB, 30000);
 
@@ -414,6 +453,19 @@
       const any = order.some((id) => byId[id].on);
       bar.dataset.mode = (mode === 'icon' || !any) ? 'icon' : 'info';
     };
+
+    // ковзний «язичок» перемикача стилю
+    const placeThumb = (instant) => {
+      const b = segBtns.find((x) => x.getAttribute('aria-pressed') === 'true');
+      if (!b || !b.offsetWidth) return;
+      if (instant) thumb.style.transition = 'none';
+      thumb.style.width = b.offsetWidth + 'px';
+      thumb.style.transform = `translateX(${b.offsetLeft}px)`;
+      if (instant) { void thumb.offsetWidth; thumb.style.transition = ''; }
+    };
+    placeThumb(true);
+    addEventListener('resize', () => placeThumb(true));
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => placeThumb(true));
 
     // FLIP: елементи плавно переїжджають на нові місця
     let dragEl = null;
@@ -432,45 +484,161 @@
     };
     applyOrder(false);
 
-    const toggle = (id) => {
-      const m = byId[id]; m.on = !m.on;
-      chip[id].classList.toggle('on', m.on);
-      chip[id].setAttribute('aria-checked', String(m.on));
-      bm[id].classList.toggle('off', !m.on);
+    const setOn = (id, v) => {
+      const m = byId[id]; if (m.on === v) return;
+      m.on = v;
+      chip[id].classList.toggle('on', v);
+      chip[id].setAttribute('aria-checked', String(v));
+      bm[id].classList.toggle('off', !v);
       refreshMode();
     };
-    chipsEl.addEventListener('click', (e) => {
-      const c = e.target.closest('.chip');
-      if (!c || e.target.closest('.grip') || c.dataset.justDragged) return;
-      toggle(c.dataset.id);
-    });
+    const setMode = (m) => {
+      mode = m;
+      segBtns.forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.mode === m)));
+      placeThumb(false);
+      refreshMode();
+    };
     const move = (id, delta) => {
       const i = order.indexOf(id), j = clamp(i + delta, 0, order.length - 1);
       if (i === j) return;
       order.splice(i, 1); order.splice(j, 0, id); applyOrder(true);
     };
+
+    /* ---- показ: курсор, підписи, крапки ---- */
+    let cur = 0, want = 0, gen = 0, manual = false, pumping = null;
+    const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+    const setCap = (k) => {
+      capP.forEach((p, i) => p.classList.toggle('on', i === k));
+      dots.forEach((d, i) => {
+        d.classList.toggle('on', i === k); d.classList.toggle('done', i < k && k < N);
+        if (i !== k) d.style.removeProperty('--sp');
+      });
+    };
+    setCap(0);
+    const snap = (k) => {
+      const S = STATES[k];
+      MODS.forEach((m) => setOn(m.id, S.on[m.id]));
+      setMode(S.mode);
+      if (order.join() !== S.order.join()) { order = [...S.order]; applyOrder(true); }
+    };
+    const pt = (el, fx, fy) => {   // точка всередині елемента в координатах #builder
+      const r = el.getBoundingClientRect(), u = ui.getBoundingClientRect();
+      return [r.left - u.left + r.width * fx, r.top - u.top + r.height * fy];
+    };
+    const curAt = (x, y, ms) => { cursor.style.transitionDuration = ms + 'ms, 350ms'; cursor.style.transform = `translate(${x}px,${y}px)`; };
+    const curOff = () => cursor.classList.remove('on', 'grab');
+    const click = (el) => {
+      rip.animate([{ transform: 'scale(.2)', opacity: .85 }, { transform: 'scale(1.5)', opacity: 0 }], { duration: 540, easing: 'ease-out' });
+      el.animate([{ transform: 'scale(1)' }, { transform: 'scale(.95)' }, { transform: 'scale(1)' }], { duration: 300, easing: 'ease-out' });
+    };
+    const easeIO = (t) => (t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
+
+    const PID = 77;   // умовний номер вказівника для показу
+    const fire = (type, target, x, y) => target.dispatchEvent(new PointerEvent(type, {
+      bubbles: true, cancelable: true, pointerId: PID, pointerType: 'mouse', button: 0, buttons: type === 'pointerup' ? 0 : 1, clientX: x, clientY: y,
+    }));
+    // справжнє перетягування: ті самі обробники, що й для людини
+    const simDrag = async (id, ff, nap) => {
+      const grip = chip[id].querySelector('.grip'), gr = grip.getBoundingClientRect();
+      const sx = gr.left + gr.width / 2, sy = gr.top + gr.height / 2;
+      const f = chip[order[0]].getBoundingClientRect();
+      const tx = f.left + f.width * .42, ty = f.top + f.height / 2;
+      const u0 = ui.getBoundingClientRect();
+      curAt(sx - u0.left, sy - u0.top, ff() ? 0 : 750); await nap(780); if (manual) return;
+      cursor.classList.add('grab'); await nap(160); if (manual) return;
+      fire('pointerdown', grip, sx, sy);
+      await nap(200); if (manual) return;
+      cursor.style.transitionDuration = '0ms, 350ms';
+      await new Promise((res) => {
+        const D = 1300, t0 = performance.now();
+        const frame = (now) => {
+          const t = ff() ? 1 : Math.min(1, (now - t0) / D), e = easeIO(t);
+          const px = sx + (tx - sx) * e, py = sy + (ty - sy) * e;
+          if (!manual) {
+            fire('pointermove', chipsEl, px, py);
+            const u = ui.getBoundingClientRect();
+            cursor.style.transform = `translate(${px - u.left}px,${py - u.top}px)`;
+          }
+          if (t < 1 && !manual) requestAnimationFrame(frame); else res();
+        };
+        requestAnimationFrame(frame);
+      });
+      fire('pointerup', chipsEl, tx, ty);
+      cursor.classList.remove('grab');
+      await nap(380);
+    };
+
+    const playStep = async (k, myGen) => {
+      const [t, a, b] = SCRIPT[k].a, ff = () => gen !== myGen;
+      const nap = (ms) => (ff() ? Promise.resolve() : wait(ms));
+      setCap(k);
+      if (!cursor.classList.contains('on')) {
+        const [x, y] = pt(bar, .96, 1.2); curAt(x, y, 0); void cursor.offsetWidth;
+      }
+      cursor.classList.add('on');
+      if (t === 'drag') await simDrag(a, ff, nap);
+      else {
+        const el = t === 'set' ? chip[a] : segBtns.find((x) => x.dataset.mode === a);
+        const [x, y] = pt(el, t === 'set' ? .3 : .5, .62);
+        curAt(x, y, ff() ? 0 : 800); await nap(820); if (manual) return;
+        el.classList.add('hot'); await nap(150); if (manual) return;
+        click(el); await nap(130); if (manual) return;
+        if (t === 'set') setOn(a, b); else setMode(a);
+        await nap(420); el.classList.remove('hot');
+      }
+      if (manual) return;
+      snap(k);
+      if (k === N - 1) { await nap(500); if (!manual) curOff(); }
+    };
+
+    const pump = async () => {
+      while (!manual && cur !== want) {
+        const target = want, myGen = gen;
+        if (cur !== null && target - cur === 1) await playStep(target, myGen);
+        else { snap(target); setCap(target); curOff(); }
+        if (manual) return;
+        cur = target;
+      }
+    };
+    const goto = (k) => {
+      want = k; gen++;
+      if (!pumping) pumping = pump().finally(() => { pumping = null; });
+      return pumping;
+    };
+    const takeOver = () => {   // людина торкнулась елементів: показ зупиняється
+      if (manual) return;
+      manual = true; gen++; cur = null; curOff();
+      if (drag && drag.pid === PID) endDrag({ pointerId: PID });
+      setCap(N);
+    };
+
+    /* ---- керування людиною ---- */
+    chipsEl.addEventListener('click', (e) => {
+      const c = e.target.closest('.chip');
+      if (!c || e.target.closest('.grip') || c.dataset.justDragged) return;
+      if (e.isTrusted) takeOver();
+      setOn(c.dataset.id, !byId[c.dataset.id].on);
+    });
     chipsEl.addEventListener('keydown', (e) => {
       const c = e.target.closest('.chip'); if (!c) return;
-      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(c.dataset.id); }
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); takeOver(); setOn(c.dataset.id, !byId[c.dataset.id].on); }
       else if (e.altKey && /^Arrow/.test(e.key)) {
-        e.preventDefault();
+        e.preventDefault(); takeOver();
         move(c.dataset.id, (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ? -1 : 1);
         c.focus();
       }
     });
-    ui.querySelectorAll('.seg button').forEach((b) => b.addEventListener('click', () => {
-      mode = b.dataset.mode;
-      ui.querySelectorAll('.seg button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
-      refreshMode();
-    }));
+    segBtns.forEach((b) => b.addEventListener('click', (e) => { if (e.isTrusted) takeOver(); setMode(b.dataset.mode); }));
 
     // Перетягування за ≡ (pointer events: миша, дотик, перо)
     let drag = null;
     chipsEl.addEventListener('pointerdown', (e) => {
       const grip = e.target.closest('.grip'); if (!grip || e.button > 0) return;
+      if (e.isTrusted) takeOver();
       const el = grip.closest('.chip'); e.preventDefault();
       drag = { id: el.dataset.id, el, px: e.clientX, py: e.clientY, r0: el.getBoundingClientRect(), pid: e.pointerId };
-      dragEl = el; el.classList.add('drag'); grip.setPointerCapture(e.pointerId);
+      dragEl = el; el.classList.add('drag');
+      try { grip.setPointerCapture(e.pointerId); } catch (_) { /* показ має умовний вказівник */ }
     });
     chipsEl.addEventListener('pointermove', (e) => {
       if (!drag || e.pointerId !== drag.pid) return;
@@ -502,10 +670,49 @@
     chipsEl.addEventListener('pointerup', endDrag);
     chipsEl.addEventListener('pointercancel', endDrag);
     refreshMode();
+
+    /* ---- Прокрутка керує показом (великий екран) або він іде сам один раз (малий) ---- */
+    const bTrack = document.querySelector('.bld-track'), bPin = bTrack.firstElementChild;
+    const bTotal = () => bTrack.offsetHeight - bPin.offsetHeight;
+    bldUpdate = () => {
+      if (!isPinned()) return;
+      const r = bTrack.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) {       // секція далеко: наступного разу покажемо знову
+        if (manual) { manual = false; cur = null; want = -1; curOff(); }
+        return;
+      }
+      if (manual) return;
+      const p = clamp((PIN_TOP - r.top) / bTotal(), 0, 0.9999);
+      const k = Math.floor(p * N);
+      dots[k].style.setProperty('--sp', (p * N - k).toFixed(3));
+      if (k !== want || cur === null) goto(k);
+    };
+    dots.forEach((d, k) => d.addEventListener('click', () => {
+      if (isPinned()) {
+        if (manual) { manual = false; cur = null; want = -1; }
+        const y = scrollY + bTrack.getBoundingClientRect().top - PIN_TOP + ((k + 0.5) / N) * bTotal();
+        scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+      } else { manual = false; cur = null; goto(k); }
+    }));
+    if (!reduce && 'IntersectionObserver' in window) {
+      const aio = new IntersectionObserver((en) => {
+        if (!en[0].isIntersecting || isPinned()) return;
+        aio.disconnect();
+        (async () => {
+          await wait(900);
+          for (let k = 1; k < N && !manual; k++) {
+            await goto(k); if (manual) return;
+            await wait(k === 4 ? 1100 : 800);
+          }
+        })();
+      }, { threshold: 0.75 });
+      aio.observe(ui);
+    }
   }
 
   /* ---------------- Теми ---------------- */
   const th = document.querySelector('[data-themes]');
+  let thUpdate = () => {};
   if (th) {
     const T = [
       ['amber', 'Amber', '#e9a845', '#ed744b', '#f9daa7'], ['lime', 'Lime', '#b1e457', '#60bc78', '#e6f6bc'], ['ocean', 'Ocean', '#63a1f8', '#3662e3', '#c5dffc'],
@@ -513,26 +720,54 @@
       ['neon', 'Neon', '#eb4ea9', '#68e2fb', '#f6c4e2'], ['acid', 'Acid', '#e9fe57', '#9d59ef', '#f8ffb9'], ['violet', 'Violet', '#a28cf3', '#743ee4', '#dcd6fb'],
     ];
     const box = $('swatches'), shots = [...th.querySelectorAll('.tshots img')];
-    box.innerHTML = T.map(([id, name, a, b, c], i) => `<label class="sw" style="--a:${a};--b:${b};--c:${c}">
+    box.innerHTML = '<i class="sw-thumb" aria-hidden="true"></i>' + T.map(([id, name, a, b, c], i) => `<label class="sw" style="--a:${a};--b:${b};--c:${c};--i:${i}">
       <input type="radio" name="theme" value="${id}"${id === 'mint' ? ' checked' : ''}><span class="sbar"></span><span class="nm">${name}</span></label>`).join('');
-    const inputs = [...box.querySelectorAll('input')];
+    const inputs = [...box.querySelectorAll('input')], labels = [...box.querySelectorAll('.sw')], swThumb = box.firstElementChild;
     let auto = null, touched = false;
+
+    // ковзна підсвітка вибраного свотча
+    const placeSw = (instant) => {
+      const l = labels[inputs.findIndex((x) => x.checked)];
+      if (!l || !l.offsetWidth) return;
+      if (instant) swThumb.style.transition = 'none';
+      swThumb.style.width = l.offsetWidth + 'px'; swThumb.style.height = l.offsetHeight + 'px';
+      swThumb.style.transform = `translate(${l.offsetLeft}px,${l.offsetTop}px)`;
+      if (instant) { void swThumb.offsetWidth; swThumb.style.transition = ''; }
+    };
     const pick = (id) => {
       const t = T.find((x) => x[0] === id);
       shots.forEach((im) => im.classList.toggle('on', im.dataset.t === id));
       th.style.setProperty('--accent', t[2]);
       inputs.forEach((inp) => { inp.checked = inp.value === id; });
+      placeSw(false);
     };
+    placeSw(true);
+    addEventListener('resize', () => placeSw(true));
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => placeSw(true));
     box.addEventListener('change', (e) => {
       touched = true; clearInterval(auto); pick(e.target.value);
     });
+
+    // Великий екран: тема змінюється разом із прокруткою
+    const tTrack = th.querySelector('.th-track'), tPin = tTrack.firstElementChild;
+    let lastIdx = -1;
+    thUpdate = () => {
+      if (!isPinned()) { lastIdx = -1; return; }
+      const r = tTrack.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      const p = clamp((PIN_TOP - r.top) / (tTrack.offsetHeight - tPin.offsetHeight), 0, 0.9999);
+      const i = Math.floor(p * T.length);
+      if (i !== lastIdx) { lastIdx = i; clearInterval(auto); pick(T[i][0]); }
+    };
+
+    // Малий екран: одноразово перебираємо теми самі, доки людина не торкнеться
     if (!reduce && 'IntersectionObserver' in window) {
       let i = T.findIndex((x) => x[0] === 'mint');
       const aio = new IntersectionObserver((en) => {
         if (touched) { aio.disconnect(); return; }
-        if (en[0].isIntersecting) {
+        if (en[0].isIntersecting && !isPinned()) {
           clearInterval(auto);
-          auto = setInterval(() => { i = (i + 1) % T.length; pick(T[i][0]); }, 2200);
+          auto = setInterval(() => { if (isPinned()) { clearInterval(auto); return; } i = (i + 1) % T.length; pick(T[i][0]); }, 2200);
         } else clearInterval(auto);
       }, { threshold: 0.6 });
       aio.observe(th.querySelector('.tstage'));
@@ -571,7 +806,6 @@
 
   /* ---------------- Pro: прикріплений блок, перемикається прокруткою ---------------- */
   const show = document.querySelector('[data-show]');
-  const pinMQ = matchMedia('(min-width: 901px) and (min-height: 621px)');
   let setStep = () => {}, updShow = () => {};
   if (show) {
     const track = show.querySelector('.show-track'), pin = track.firstElementChild;
@@ -607,6 +841,8 @@
     queued = false;
     bar0.classList.toggle('scrolled', scrollY > 8);
     updShow();
+    bldUpdate();
+    thUpdate();
   };
   const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
   addEventListener('scroll', queue, { passive: true });
