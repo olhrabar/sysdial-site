@@ -121,7 +121,9 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 900px) {
   .hero .wrap { grid-template-columns: minmax(0, 1fr); }
+  .proof { padding-bottom: 0; }
   .pf-note { width: 84%; margin-left: 0; }
+  .pf-watch { position: relative; right: auto; bottom: auto; width: 62%; margin: -18px 0 0 auto; }
 }
 
 /* Hero: справжні картки з додатка як доказ */
@@ -129,20 +131,23 @@ img { max-width: 100%; display: block; }
 .proof figure { margin: 0; }
 .proof img { width: 100%; height: auto; filter: var(--shadow); }
 .pf-main { position: relative; }
-.pf-note { position: relative; width: 80%; margin: -22px 0 0 -30px; }
+.proof { padding-bottom: 44px; }
+.pf-note { position: relative; width: 76%; margin: -22px 0 0 -30px; }
+.pf-watch { position: absolute; right: -14px; bottom: 0; width: 46%; }
 .hl { position: absolute; left: 1.2%; right: 1.2%; top: 12.4%; height: 10.4%; border-radius: 9px; border: 2px solid #f2cf3d; pointer-events: none; }
 .tag { position: absolute; right: 16px; top: -14px; padding: 5px 11px; border-radius: 999px; background: #f2cf3d; color: #241d00; font: 650 12.5px var(--font); box-shadow: 0 6px 14px -6px rgba(16, 20, 28, .5); }
 
-.hero .wrap.tri-row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: stretch; margin-top: 46px; }
+.hero .wrap.tri-row { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; align-items: stretch; margin-top: 46px; }
 .tri { padding: 20px 20px 18px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); }
 .tri-ic { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; color: var(--teal); background: color-mix(in srgb, var(--teal) 13%, transparent); }
 .tri-ic svg { width: 18px; height: 18px; }
-.tri h3 { display: flex; align-items: center; gap: 10px; margin: 14px 0 6px; font-size: 19px; font-weight: 650; }
-.tri p { margin: 0; color: var(--muted); font-size: 15.5px; }
+.tri h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 14px 0 6px; font-size: 18px; font-weight: 650; line-height: 1.2; }
+.tri p { margin: 0; color: var(--muted); font-size: 15px; }
 .tier { font: 600 11px var(--mono); font-style: normal; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; }
 .tier.free { color: var(--teal); background: color-mix(in srgb, var(--teal) 14%, transparent); }
 .tier.pro { color: var(--violet); background: color-mix(in srgb, var(--violet) 14%, transparent); }
-@media (max-width: 900px) { .hero .wrap.tri-row { grid-template-columns: minmax(0, 1fr); margin-top: 32px; } }
+@media (max-width: 1000px) { .hero .wrap.tri-row { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 36px; } }
+@media (max-width: 620px) { .hero .wrap.tri-row { grid-template-columns: minmax(0, 1fr); } }
 
 /* Блок «зараз» */
 .gl { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 56px; align-items: center; }
@@ -455,6 +460,8 @@ footer nav { display: flex; gap: 22px; }
 .js [data-hero] { animation: rise 1s var(--ease) var(--d, 0ms) both; }
 .js .pf-main img { transform-origin: 50% 0; animation: panelDrop 1.2s var(--ease) 520ms both; }
 .js .pf-note { animation: rise 1s var(--ease) 1.5s both; }
+.js .pf-watch { animation: rise 1s var(--ease) 2.1s both; }
+.js .pf-watch img { animation: bob 9s ease-in-out 3.2s infinite alternate; }
 .js .pf-note img { animation: bob 8s ease-in-out 2.6s infinite alternate; }
 .js .hl { opacity: 0; animation: hlIn .8s var(--ease) 1.9s forwards, hlPulse 2.4s ease-in-out 2.8s infinite; }
 .js .tag { opacity: 0; animation: tagIn .7s var(--ease) 2.2s forwards; }
