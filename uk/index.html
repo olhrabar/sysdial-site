@@ -252,14 +252,16 @@
             <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Сховище в SysDial: елементи, безпечні для очищення, з розмірами, архіви Xcode для перегляду та скидання індексу Spotlight">
           </li>
           </ol>
+          <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" data-wipe src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Історія в SysDial: графіки процесора й пам’яті, швидкості мережі та затримки інтернету за 24 години">
+          <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Історія в SysDial: графіки процесора й пам’яті, швидкості мережі та затримки інтернету за 24 години">
           <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Список помітних подій на сторінці Історія: випадки некерованого навантаження й піки за часом, тривалістю та застосунком">
           <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Сторінка Сповіщення в SysDial: аналітика про пам’ять swap і журнал збоїв DNS та сповіщень про пам’ять">
           <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Сторінка Процеси в SysDial: картки для відстежуваних застосунків і список усіх запущених процесів із можливістю сортування">
-          <img data-wipe src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Графіки по застосунках на сторінці Історія: пік пам’яті та процесор для Activity Monitor, Google Chrome Helper і Google Chrome, з лінією сповіщення на рівні 19 ГБ">
+          <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Графіки по застосунках на сторінці Історія: пік пам’яті та процесор для Activity Monitor, Google Chrome Helper і Google Chrome, з лінією сповіщення на рівні 19 ГБ">
           <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Вікно SysDial на вкладці Огляд: картки процесора, середнього навантаження, диска, передавання по мережі, Wi-Fi, пам’яті, батареї, сповіщень, якості інтернету, GPU, топ-процесів і вентиляторів">
           <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Сховище в SysDial: елементи, безпечні для очищення, з розмірами, архіви Xcode для перегляду та скидання індексу Spotlight">
+          </div>
           </div>
         </div>
       </div>
@@ -1003,7 +1005,7 @@
     setStep = (i) => {
       if (i === cur) return; cur = i;
       steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.step-btn').setAttribute('aria-current', String(k === i)); });
-      imgs.forEach((im, k) => im.classList.toggle('on', k === i));
+      imgs.forEach((im, k) => { im.classList.toggle('on', k === i); im.classList.toggle('before', k < i); });
     };
     updShow = () => {
       if (!pinMQ.matches) return;

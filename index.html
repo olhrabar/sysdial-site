@@ -251,14 +251,16 @@
             <img class="step-img" src="images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial Storage page: safe-to-clean items with sizes, Xcode archives to review, and a Spotlight index reset">
           </li>
           </ol>
+          <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" data-wipe src="images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial History page: charts of processor and memory, network speed and internet latency over 24 hours">
+          <img class="on" src="images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial History page: charts of processor and memory, network speed and internet latency over 24 hours">
           <img src="images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The Notable moments list on the History page, with runaway and load events by time, length and app">
           <img src="images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Alerts page: an insight about swap memory and a log of DNS outages and memory alerts">
           <img src="images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="The SysDial Processes page: cards for watched apps and a sortable list of every running process">
-          <img data-wipe src="images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Per-app charts on the History page: memory peak and processor for Activity Monitor, Google Chrome Helper and Google Chrome, with an alert line at 19 GB">
+          <img src="images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Per-app charts on the History page: memory peak and processor for Activity Monitor, Google Chrome Helper and Google Chrome, with an alert line at 19 GB">
           <img src="images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="The SysDial window on Overview: cards for processor, load average, disk, network transfer, Wi-Fi, memory, battery, alerts, internet quality, GPU, top processes and fans">
           <img src="images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="The SysDial Storage page: safe-to-clean items with sizes, Xcode archives to review, and a Spotlight index reset">
+          </div>
           </div>
         </div>
       </div>
@@ -1002,7 +1004,7 @@
     setStep = (i) => {
       if (i === cur) return; cur = i;
       steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.step-btn').setAttribute('aria-current', String(k === i)); });
-      imgs.forEach((im, k) => im.classList.toggle('on', k === i));
+      imgs.forEach((im, k) => { im.classList.toggle('on', k === i); im.classList.toggle('before', k < i); });
     };
     updShow = () => {
       if (!pinMQ.matches) return;

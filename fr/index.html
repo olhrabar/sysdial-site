@@ -251,14 +251,16 @@
             <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="La page Stockage de SysDial : éléments sans risque à nettoyer avec leur taille, archives Xcode à vérifier, et une réinitialisation de l’index Spotlight">
           </li>
           </ol>
+          <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" data-wipe src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="La page Historique de SysDial : graphiques du processeur et de la mémoire, de la vitesse réseau et de la latence Internet sur 24 heures">
+          <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="La page Historique de SysDial : graphiques du processeur et de la mémoire, de la vitesse réseau et de la latence Internet sur 24 heures">
           <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="La liste des Moments notables sur la page Historique, avec les emballements et pics de charge classés par heure, durée et application">
           <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="La page Alertes de SysDial : une analyse sur la mémoire swap et un journal des pannes DNS et des alertes mémoire">
           <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="La page Processus de SysDial : des fiches pour les applications suivies et une liste triable de tous les processus en cours">
-          <img data-wipe src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Graphiques par application sur la page Historique : pic de mémoire et processeur pour Activity Monitor, Google Chrome Helper et Google Chrome, avec une ligne d’alerte à 19 Go">
+          <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Graphiques par application sur la page Historique : pic de mémoire et processeur pour Activity Monitor, Google Chrome Helper et Google Chrome, avec une ligne d’alerte à 19 Go">
           <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="La fenêtre SysDial sur Aperçu : fiches pour le processeur, la charge moyenne, le disque, le transfert réseau, le Wi-Fi, la mémoire, la batterie, les alertes, la qualité Internet, le GPU, les principaux processus et les ventilateurs">
           <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="La page Stockage de SysDial : éléments sans risque à nettoyer avec leur taille, archives Xcode à vérifier, et une réinitialisation de l’index Spotlight">
+          </div>
           </div>
         </div>
       </div>
@@ -1002,7 +1004,7 @@
     setStep = (i) => {
       if (i === cur) return; cur = i;
       steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.step-btn').setAttribute('aria-current', String(k === i)); });
-      imgs.forEach((im, k) => im.classList.toggle('on', k === i));
+      imgs.forEach((im, k) => { im.classList.toggle('on', k === i); im.classList.toggle('before', k < i); });
     };
     updShow = () => {
       if (!pinMQ.matches) return;
