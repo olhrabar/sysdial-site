@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — SysDial</title>
   <meta name="description" content="How SysDial handles information on your Mac.">
+  <link rel="canonical" href="https://sysdial.app/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://sysdial.app/privacy.html">
+  <link rel="alternate" hreflang="uk" href="https://sysdial.app/uk/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://sysdial.app/de/privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://sysdial.app/fr/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://sysdial.app/es/privacy.html">
+  <link rel="alternate" hreflang="it" href="https://sysdial.app/it/privacy.html">
+  <link rel="alternate" hreflang="nl" href="https://sysdial.app/nl/privacy.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://sysdial.app/pt/privacy.html">
+  <link rel="alternate" hreflang="pl" href="https://sysdial.app/pl/privacy.html">
+  <link rel="alternate" hreflang="cs" href="https://sysdial.app/cs/privacy.html">
+  <link rel="alternate" hreflang="sk" href="https://sysdial.app/sk/privacy.html">
+  <link rel="alternate" hreflang="hr" href="https://sysdial.app/hr/privacy.html">
+  <link rel="alternate" hreflang="ro" href="https://sysdial.app/ro/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://sysdial.app/privacy.html">
   <link rel="icon" href="images/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +29,31 @@
 <body>
 <header class="menubar">
   <a class="site" href="/"><img src="images/icon.png" alt="" onerror="this.remove()">SysDial</a>
-  <nav aria-label="Sections">
-    <a href="/#features">Features</a>
-    <a href="/#pro">Free and Pro</a>
-    <a href="mailto:support@sysdial.app">Support</a>
-  </nav>
+  <div class="nav-group">
+    <nav aria-label="Sections">
+      <a href="/#features">Features</a>
+      <a href="/#pro">Free and Pro</a>
+      <a href="mailto:support@sysdial.app">Support</a>
+    </nav>
+    <details class="langsw">
+      <summary><span class="label">English</span><svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="list">
+        <span class="now"><span class="ico"><svg class="ck" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>English</span>
+        <a href="/uk/privacy.html"><span class="ico"></span>Українська</a>
+        <a href="/de/privacy.html"><span class="ico"></span>Deutsch</a>
+        <a href="/fr/privacy.html"><span class="ico"></span>Français</a>
+        <a href="/es/privacy.html"><span class="ico"></span>Español</a>
+        <a href="/it/privacy.html"><span class="ico"></span>Italiano</a>
+        <a href="/nl/privacy.html"><span class="ico"></span>Nederlands</a>
+        <a href="/pt/privacy.html"><span class="ico"></span>Português</a>
+        <a href="/pl/privacy.html"><span class="ico"></span>Polski</a>
+        <a href="/cs/privacy.html"><span class="ico"></span>Čeština</a>
+        <a href="/sk/privacy.html"><span class="ico"></span>Slovenčina</a>
+        <a href="/hr/privacy.html"><span class="ico"></span>Hrvatski</a>
+        <a href="/ro/privacy.html"><span class="ico"></span>Română</a>
+      </div>
+    </details>
+  </div>
 </header>
 <main class="doc">
   <div class="wrap">
@@ -122,5 +157,17 @@ Website: https://sysdial.app</p>
     <nav aria-label="Footer"><a href="/">SysDial</a><a href="mailto:support@sysdial.app">support@sysdial.app</a></nav>
   </div>
 </footer>
+<script>
+(() => {
+  // перемикач мови: клік поза межами і Escape закривають відкриту панель
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.langsw[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('.langsw[open]').forEach((d) => { d.open = false; d.querySelector('summary').focus(); });
+  });
+})();
+</script>
 </body>
 </html>

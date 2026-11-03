@@ -9,6 +9,22 @@
   <meta property="og:description" content="Follow any app, set your own alerts, and look back 30 days to see what slowed your Mac. Light on your Mac, private by design.">
   <meta property="og:image" content="https://sysdial.app/images/og.png">
   <meta property="og:url" content="https://sysdial.app/">
+  <meta property="og:locale" content="en_US">
+  <link rel="canonical" href="https://sysdial.app/">
+  <link rel="alternate" hreflang="en" href="https://sysdial.app/">
+  <link rel="alternate" hreflang="uk" href="https://sysdial.app/uk/">
+  <link rel="alternate" hreflang="de" href="https://sysdial.app/de/">
+  <link rel="alternate" hreflang="fr" href="https://sysdial.app/fr/">
+  <link rel="alternate" hreflang="es" href="https://sysdial.app/es/">
+  <link rel="alternate" hreflang="it" href="https://sysdial.app/it/">
+  <link rel="alternate" hreflang="nl" href="https://sysdial.app/nl/">
+  <link rel="alternate" hreflang="pt-BR" href="https://sysdial.app/pt/">
+  <link rel="alternate" hreflang="pl" href="https://sysdial.app/pl/">
+  <link rel="alternate" hreflang="cs" href="https://sysdial.app/cs/">
+  <link rel="alternate" hreflang="sk" href="https://sysdial.app/sk/">
+  <link rel="alternate" hreflang="hr" href="https://sysdial.app/hr/">
+  <link rel="alternate" hreflang="ro" href="https://sysdial.app/ro/">
+  <link rel="alternate" hreflang="x-default" href="https://sysdial.app/">
   <link rel="icon" href="images/icon.png">
   <link rel="apple-touch-icon" href="images/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +38,34 @@
 <!-- Сторінка починається як верх екрана Mac: рядок меню з модулями SysDial -->
 <header class="menubar">
   <a class="site" href="/"><img src="images/icon.png" alt="" onerror="this.remove()">SysDial</a>
-  <nav aria-label="Sections">
-    <a href="#memory">Memory</a>
-    <a href="#menubar">Menu bar</a>
-    <a href="#themes">Themes</a>
-    <a href="#plans">Plans</a>
-    <a href="#privacy">Privacy</a>
-    <a href="mailto:support@sysdial.app">Support</a>
-  </nav>
+  <div class="nav-group">
+    <nav aria-label="Sections">
+      <a href="#memory">Memory</a>
+      <a href="#menubar">Menu bar</a>
+      <a href="#themes">Themes</a>
+      <a href="#plans">Plans</a>
+      <a href="#privacy">Privacy</a>
+      <a href="mailto:support@sysdial.app">Support</a>
+    </nav>
+    <details class="langsw">
+      <summary><span class="label">English</span><svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="list">
+        <span class="now"><span class="ico"><svg class="ck" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>English</span>
+        <a href="/uk/"><span class="ico"></span>Українська</a>
+        <a href="/de/"><span class="ico"></span>Deutsch</a>
+        <a href="/fr/"><span class="ico"></span>Français</a>
+        <a href="/es/"><span class="ico"></span>Español</a>
+        <a href="/it/"><span class="ico"></span>Italiano</a>
+        <a href="/nl/"><span class="ico"></span>Nederlands</a>
+        <a href="/pt/"><span class="ico"></span>Português</a>
+        <a href="/pl/"><span class="ico"></span>Polski</a>
+        <a href="/cs/"><span class="ico"></span>Čeština</a>
+        <a href="/sk/"><span class="ico"></span>Slovenčina</a>
+        <a href="/hr/"><span class="ico"></span>Hrvatski</a>
+        <a href="/ro/"><span class="ico"></span>Română</a>
+      </div>
+    </details>
+  </div>
   <div class="modules" aria-label="Example of SysDial in the menu bar">
     <span class="mod" title="Processor">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="4" y="4" width="8" height="8" rx="1.5"/><path d="M6 1.5v2M10 1.5v2M6 12.5v2M10 12.5v2M1.5 6h2M1.5 10h2M12.5 6h2M12.5 10h2"/></svg>
@@ -60,7 +96,7 @@
         <h1 aria-label="Your Mac slowed down. SysDial already knows why."><span class="w" style="--i:0"><span>Your</span></span> <span class="w" style="--i:1"><span>Mac</span></span> <span class="w" style="--i:2"><span>slowed</span></span> <span class="w" style="--i:3"><span>down.</span></span> <span class="w acc" style="--i:4"><span>SysDial</span></span> <span class="w acc" style="--i:5"><span>already</span></span> <span class="w acc" style="--i:6"><span>knows</span></span> <span class="w acc" style="--i:7"><span>why.</span></span></h1>
         <p class="lede" data-hero style="--d:760ms">SysDial watches your Mac all day, follows any app you pick and warns you when something crosses the limits you set. It keeps 30 days of history and names the app behind every spike.</p>
         <div class="cta" data-hero style="--d:840ms">
-          <span class="button" role="link" aria-disabled="true">Download for Mac</span>
+          <span class="button" role="button" aria-disabled="true">Download for Mac</span>
           <span class="note">Coming soon for macOS 14 and later.
             <a href="mailto:support@sysdial.app?subject=Tell%20me%20when%20SysDial%20is%20out">Tell me when it's out</a></span>
         </div>
@@ -83,16 +119,89 @@
     <div class="wrap tri-row" data-stagger>
       <div class="tri"><span class="tri-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3" width="13" height="9" rx="1.8"/><path d="M5 14h6M4.5 8l2-2.2 2 1.6 2.5-3"/></svg></span>
         <h3>Watches <em class="tier free">Free</em></h3>
-        <p>Live numbers in the menu bar, in the order you pick: processor, memory, disk, network and battery. Light enough to leave on all day.</p></div>
+        <p>Live numbers in the menu bar, in the order you pick: processor, memory, GPU, disk, battery, network speed and data used. Light enough to leave on all day.</p></div>
       <div class="tri"><span class="tri-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 8S4 3.5 8 3.5 14.5 8 14.5 8 12 12.5 8 12.5 1.5 8 1.5 8z"/><circle cx="8" cy="8" r="2"/></svg></span>
         <h3>Follows any app <em class="tier pro">Pro</em></h3>
         <p>Click the eye next to any process and SysDial follows it, up to 12 apps, even across restarts. Processor and memory over time, every launch marked.</p></div>
       <div class="tri"><span class="tri-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2a3.8 3.8 0 0 0-3.8 3.8v2.2L3 10.5h10l-1.2-2.3V6A3.8 3.8 0 0 0 8 2.2zM6.6 12.5a1.5 1.5 0 0 0 2.8 0"/></svg></span>
         <h3>Warns <em class="tier free">Free</em></h3>
-        <p>You set the limits: runaway apps, high CPU, memory pressure, low disk space, internet outages. Pro adds a Quit button in the alert and a memory limit for each app you follow.</p></div>
+        <p>You set the limits: runaway apps, high CPU, memory pressure and low disk space. Pro adds internet outage alerts, Quit buttons on runaway-app alerts, and a memory limit for each app you follow.</p></div>
       <div class="tri"><span class="tri-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.2 8a5.8 5.8 0 1 1 1.7 4.1M2.2 8V4.8M2.2 8h3.2M8 5v3l2 1.2"/></svg></span>
         <h3>Remembers <em class="tier pro">Pro</em></h3>
         <p>Thirty days of history, every spike found with the time and the app behind it, and plain-language insights on what slowed your Mac.</p></div>
+    </div>
+  </section>
+
+  <!-- Сцена: збій і порятунок (під hero) -->
+  <section id="story" class="story" data-story>
+    <div class="wrap">
+      <h2 data-reveal>Your Mac slows down. Here is what happens next.</h2>
+      <p class="intro" data-reveal style="--d:80ms">A runaway process, an alert, and the one window that shows what is behind it. Watch it play out.</p>
+      <div class="sc-box" data-reveal style="--d:140ms">
+        <div class="sc r2 r3 r4 r5 rg z bad" id="sc" aria-hidden="true">
+          <div class="sc-bez"></div>
+          <div class="sc-scr">
+            <div class="sc-wall"></div>
+
+            <div class="sc-app">
+              <div class="sc-ab"><i></i><i></i><i></i><span>Dashboard</span><em class="sc-pill"><u class="sc-pa"><s></s>Live</u><u class="sc-pb"><s></s>Not responding</u></em></div>
+              <div class="sc-aw">
+                <div class="sc-gc sc-gl"><b class="sc-gt">Throughput</b><div class="sc-bars"><i style="--i:0;--h:46%"></i><i style="--i:1;--h:62%"></i><i style="--i:2;--h:38%"></i><i style="--i:3;--h:74%"></i><i style="--i:4;--h:58%"></i><i style="--i:5;--h:84%"></i><i style="--i:6;--h:52%"></i><i style="--i:7;--h:68%"></i><i style="--i:8;--h:44%"></i><i style="--i:9;--h:78%"></i><i style="--i:10;--h:56%"></i><i style="--i:11;--h:64%"></i><i style="--i:12;--h:72%"></i><i style="--i:13;--h:50%"></i></div></div>
+                <div class="sc-gc sc-gm"><b class="sc-gt">Response time</b><div class="sc-lc"><svg viewBox="0 0 480 90" preserveAspectRatio="none" aria-hidden="true"><path class="sc-l1" d="M0 52 C20 40 40 62 60 50 S100 36 120 50 S160 66 180 50 S220 38 240 52 C260 40 280 62 300 50 S340 36 360 50 S400 66 420 50 S460 38 480 52"/><path class="sc-l2" d="M0 70 L14 22 L28 66 L42 12 L56 74 L70 26 L84 64 L98 10 L112 72 L126 20 L140 68 L154 14 L168 70 L182 24 L196 62 L210 8 L224 74 L240 70 L254 22 L268 66 L282 12 L296 74 L310 26 L324 64 L338 10 L352 72 L366 20 L380 68 L394 14 L408 70 L422 24 L436 62 L450 8 L464 74 L480 70"/></svg></div></div>
+                <div class="sc-gc sc-gr"><b class="sc-gt">Capacity</b>
+                  <div class="sc-mt"><span>Queue</span><i><u style="--w:46%"></u></i></div>
+                  <div class="sc-mt"><span>Cache</span><i><u style="--w:62%"></u></i></div>
+                  <div class="sc-mt"><span>Workers</span><i><u style="--w:38%"></u></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sc-win">
+              <img src="images/app/sc-window.webp" width="1413" height="846" alt="" decoding="async">
+              <i class="sc-ring"></i>
+            </div>
+            <div class="sc-dim"></div>
+
+            <div class="sc-pan"><img src="images/app/sc-panel.webp" width="922" height="1338" alt="" decoding="async"><i class="sc-ring2"></i></div>
+
+            <div class="sc-mbar">
+              <span class="sc-ml"><i></i><i></i><i></i><i></i></span>
+              <span class="sc-mr">
+                <span class="sc-mods">
+                  <span class="sc-mm sc-cpu"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="8" height="8" rx="1.5"/><path d="M6 1.5v2M10 1.5v2M6 12.5v2M10 12.5v2M1.5 6h2M1.5 10h2M12.5 6h2M12.5 10h2"/></svg><b data-k="cpu">93%</b></span>
+                  <span class="sc-mm sc-mem"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="4.5" width="13" height="7" rx="1.2"/><path d="M4.5 7v2M7 7v2M9.5 7v2M12 7v2M4 11.5v2M12 11.5v2"/></svg><b data-k="mem">83%</b></span>
+                  <span class="sc-mm sc-dsk"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="5" width="13" height="6.5" rx="1.6"/><path d="M4 9h1M11.5 9h.5"/></svg><b>234 GB</b></span>
+                </span>
+                <span class="sc-clk" id="scClk">15:56</span>
+              </span>
+            </div>
+            <i class="sc-notch"></i>
+
+            <div class="sc-bans">
+              <div class="sc-ban sc-b1"><img src="images/icon.png" alt="" width="72" height="72"><div><b>DNS isn’t responding</b><span>The network is up, but website names can’t be resolved, so pages won’t open. Since 15:54.</span></div></div>
+              <div class="sc-ban sc-b2"><img src="images/icon.png" alt="" width="72" height="72"><div><b>High CPU load</b><span>CPU load has been above 50% for 1 min. Top process: mDNSResponder (93%).</span></div></div>
+            </div>
+
+            <div class="sc-zoom">
+              <img class="sc-card" src="images/app/sc-card.webp" width="566" height="150" alt="" decoding="async">
+              <img class="sc-mom" src="images/app/sc-moment.webp" width="566" height="74" alt="" decoding="async">
+              <img class="sc-menu" src="images/app/sc-menu.webp" width="209" height="119" alt="" decoding="async">
+              <i class="sc-sel"></i>
+              <span class="sc-tag"><span class="sc-t1">The culprit, already found</span><span class="sc-t2">Calm again, and saved to History</span></span>
+            </div>
+
+            <span class="sc-cur"><svg viewBox="0 0 14 21" aria-hidden="true"><path d="M.8.8v15.2l3.6-3.3 2.6 6 2.5-1.1-2.6-5.9h5.1z" fill="#fff" stroke="#14181f" stroke-width="1.3" stroke-linejoin="round"/></svg><i class="sc-rip"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="sc-cap">
+        <div class="cap" id="scap">
+          <div class="dots"><button type="button" class="dot" tabindex="-1" data-k="0" aria-label="All quiet"><i></i></button><button type="button" class="dot" tabindex="-1" data-k="1" aria-label="Then something goes wrong"><i></i></button><button type="button" class="dot" tabindex="-1" data-k="2" aria-label="SysDial warns you"><i></i></button><button type="button" class="dot" tabindex="-1" data-k="3" aria-label="One click opens the panel"><i></i></button><button type="button" class="dot" tabindex="-1" data-k="4" aria-label="It already knows why"><i></i></button><button type="button" class="dot" tabindex="-1" data-k="5" aria-label="One click, calm again"><i></i></button></div>
+          <div class="cap-t"><p><b><i>1</i>All quiet</b><span>SysDial watches in the background. Live numbers sit in your menu bar.</span></p><p><b><i>2</i>Then something goes wrong</b><span>A background process runs away with the processor. Graphs stutter, apps lag and pages stop loading. Nothing says why.</span></p><p><b><i>3</i>SysDial warns you, by name</b><span>More on these alerts below.</span></p><p><b><i>4</i>One click opens the panel</b><span>The same free panel shown below, one click away.</span></p><p class="on"><b><i>5</i>It already knows why <em class="tier pro">Pro</em></b><span>The window finds it — see below.</span></p><p><b><i>6</i>One click, calm again <em class="tier pro">Pro</em></b><span>Quit from the process list, saved to History — more below.</span></p></div>
+        </div>
+        <button type="button" class="replay" id="scReplay"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 1 0 1.8-4.1M2.5 2.5v3.2h3.2"/></svg>Replay</button>
+      </div>
+      <p class="fine sc-note" data-reveal>The CPU alert and the panel are free. Internet alerts, the window, quitting from the process list and History are part of SysDial Pro.</p>
     </div>
   </section>
 
@@ -163,7 +272,7 @@
         <h2 data-reveal>And right now, at a glance</h2>
         <p class="intro" data-reveal style="--d:80ms">The window above is Pro. The part you will see all day is free: live numbers in the menu bar, and a panel of cards one click away.</p>
         <ul class="tags" data-stagger aria-label="What SysDial reads">
-          <li>Processor</li><li>Memory</li><li>GPU</li><li>Disk</li><li>Battery</li><li>Network speed</li><li>Data used</li><li>Internet quality</li>
+          <li>Processor</li><li>Memory</li><li>GPU</li><li>Disk</li><li>Battery</li><li>Network speed</li><li>Data used</li>
         </ul>
       </div>
       <figure class="shot gl-shot" data-reveal style="--d:140ms">
@@ -179,7 +288,7 @@
     <div class="wrap bld">
       <div class="bld-main">
         <h2 data-reveal>Your menu bar, your way</h2>
-        <p class="intro" data-reveal style="--d:80ms">Switch modules on and off and drag them into the order you like, or keep only the icon. Scroll to watch how it works, then try it yourself, it works the same way in the app.</p>
+        <p class="intro" data-reveal style="--d:80ms">Switch modules on and off and drag them into the order you like, or keep only the icon. Scroll to watch how it works. It works the same way in the app.</p>
         <div class="bld-ui" id="builder" data-reveal style="--d:140ms"></div>
         <figure class="real" data-reveal style="--d:200ms">
           <img src="images/app/menubar.webp" width="766" height="64" loading="lazy" decoding="async" alt="SysDial's compact info in a real macOS menu bar: processor 21%, memory 80%, disk 285 GB, internet 18 ms and network speed">
@@ -214,7 +323,7 @@
         </div>
       </div>
       <div class="swatches" id="swatches" role="radiogroup" aria-label="Theme" data-reveal style="--d:160ms"></div>
-      <p class="th-hint" aria-hidden="true">Scroll to flip through all nine, or tap one.</p>
+      <p class="try th-try"><span class="ic" aria-hidden="true"><svg viewBox="0 0 14 21" width="11" height="16"><path d="M.8.8v15.2l3.6-3.3 2.6 6 2.5-1.1-2.6-5.9h5.1z" fill="currentColor"/></svg></span><span>Tap any theme, try it yourself<span class="try-x"> · scroll flips through all nine</span></span></p>
     </div>
    </div></div>
   </section>
@@ -262,13 +371,13 @@
     <div class="wrap">
       <h2 data-reveal>Free, with Pro when you need more</h2>
       <p class="intro" data-reveal style="--d:80ms">The menu bar, the panel, alerts, widgets and Shortcuts are free. Pro adds the window, history and tools for when something goes wrong.</p>
-      <div class="table-scroll">
+      <div class="table-scroll" data-reveal style="--d:100ms">
         <table class="plans">
           <thead><tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col" class="pro">Pro</th></tr></thead>
-          <tbody data-stagger>
+          <tbody>
             <tr><td>Live numbers in the menu bar, in your order</td><td class="yes">✓</td><td class="yes">✓</td></tr>
             <tr><td>Panel with processor, memory, GPU, disk, network, data and battery</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-            <tr><td>Alerts for runaway apps, CPU, memory, disk space and internet<small>With the limits you set</small></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Alerts for runaway apps, CPU, memory and disk space<small>With the limits you set</small></td><td class="yes">✓</td><td class="yes">✓</td></tr>
             <tr><td>Desktop widgets, Shortcuts and nine colour themes</td><td class="yes">✓</td><td class="yes">✓</td></tr>
             <tr><td>Window with every card<small>Including load average and fans</small></td><td class="no">—</td><td class="yes">✓</td></tr>
             <tr><td>History<small>30 days of CPU, memory and network, any period, CSV export</small></td><td class="no">—</td><td class="yes">✓</td></tr>
@@ -417,10 +526,13 @@
           <span class="bclock" id="bclock"></span>
         </div>
       </div>
-      <div class="seg" role="group" aria-label="Menu bar style">
-        <i class="thumb" aria-hidden="true"></i>
-        <button type="button" data-mode="icon" aria-pressed="false">Icon</button>
-        <button type="button" data-mode="info" aria-pressed="true">Compact info</button>
+      <div class="ctl">
+        <div class="seg" role="group" aria-label="Menu bar style">
+          <i class="thumb" aria-hidden="true"></i>
+          <button type="button" data-mode="icon" aria-pressed="false">Icon</button>
+          <button type="button" data-mode="info" aria-pressed="true">Compact info</button>
+        </div>
+        <p class="try"><span class="ic" aria-hidden="true"><svg viewBox="0 0 14 21" width="11" height="16"><path d="M.8.8v15.2l3.6-3.3 2.6 6 2.5-1.1-2.6-5.9h5.1z" fill="currentColor"/></svg></span><span>Press any button, try it yourself</span></p>
       </div>
       <div class="chips" id="chips" role="group" aria-label="Menu bar modules">
         ${MODS.map((m, i) => `<div class="chip${m.on ? ' on' : ''}" style="--i:${i}" data-id="${m.id}" role="checkbox" tabindex="0" aria-checked="${m.on}" aria-label="${m.name}">
@@ -429,7 +541,7 @@
       </div>
       <div class="cap" id="cap" aria-hidden="true">
         <div class="dots">${SCRIPT.map((s, k) => `<button type="button" class="dot" tabindex="-1" data-k="${k}" aria-label="${s.title}"><i></i></button>`).join('')}</div>
-        <div class="cap-t">${SCRIPT.map((s, k) => `<p${k ? '' : ' class="on"'}><b><i>${k + 1}</i>${s.title}</b><span>${s.text}</span></p>`).join('')}<p class="you"><b>Now it is yours</b><span>Tap, drag ≡, or switch the style. Scroll on whenever you are done.</span></p></div>
+        <div class="cap-t">${SCRIPT.map((s, k) => `<p${k ? '' : ' class="on"'}><b><i>${k + 1}</i>${s.title}</b><span>${s.text}</span></p>`).join('')}<p class="you"><b>Now it is yours</b><span>You took over, so the demo stopped. Keep tapping, drag ≡, or switch the style. Scroll on whenever you are done.</span></p></div>
       </div>
       <p class="hint">Drag ≡ to change the order. From the keyboard, press Space to switch a module and Alt with an arrow key to move it.</p>
       <span class="cur" id="cur" aria-hidden="true"><svg viewBox="0 0 14 21" width="14" height="21"><path d="M.8.8v15.2l3.6-3.3 2.6 6 2.5-1.1-2.6-5.9h5.1z" fill="#fff" stroke="#14181f" stroke-width="1.3" stroke-linejoin="round"/></svg><i class="rip"></i></span>`;
@@ -510,6 +622,7 @@
     const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     const setCap = (k) => {
       capP.forEach((p, i) => p.classList.toggle('on', i === k));
+      ui.classList.toggle('mine', k === N);
       dots.forEach((d, i) => {
         d.classList.toggle('on', i === k); d.classList.toggle('done', i < k && k < N);
         if (i !== k) d.style.removeProperty('--sp');
@@ -775,6 +888,79 @@
     }
   }
 
+  /* ---------------- Сцена: збій і порятунок ---------------- */
+  const sc = $('sc');
+  if (sc) {
+    const box = sc.parentElement, capEl = $('scap'), replayBtn = $('scReplay'), clk = $('scClk');
+    const capP = [...capEl.querySelectorAll('.cap-t p')], dots = [...capEl.querySelectorAll('.dot')];
+    const N = capP.length;                                         // 6 кроків
+    const DUR = [2300, 3500, 4300, 3800, 4800, 6600];              // скільки триває кожен крок, мс
+    const TIMED = { 4: [['pn', 1250], ['pr', 2000]], 5: [['rg', 1800], ['z', 2800]], 6: [['mn', 900], ['qh', 1900], ['ok', 2800]] };
+    const CLOCK = ['15:52', '15:53', '15:55', '15:56', '15:56', '15:56'];
+    const CALM = { cpu: 7, mem: 61 }, BAD = { cpu: 93, mem: 83 }, GOOD = { cpu: 8, mem: 62 };
+    const NOISE = { cpu: 3.4, mem: 0.9 };
+    const FMT = { cpu: (v) => Math.round(v) + '%', mem: (v) => Math.round(v) + '%' };
+    const keys = Object.keys(CALM), vEl = Object.fromEntries(keys.map((k) => [k, sc.querySelector(`[data-k="${k}"]`)]));
+    const now = { ...BAD }, tok = { cpu: 0, mem: 0 };               // статичний кадр = крок 5
+    let tgt = BAD, timers = [], vis = false, started = false;
+    const later = (fn, ms) => { timers.push(setTimeout(fn, ms)); };
+    const clearAll = () => { timers.forEach(clearTimeout); timers = []; };
+
+    const moveKey = (k, to, ms) => {
+      const my = ++tok[k];
+      if (reduce || !ms) { now[k] = to; vEl[k].textContent = FMT[k](to); return; }
+      tween(now[k], to, ms, (v) => { if (tok[k] !== my) return; now[k] = v; vEl[k].textContent = FMT[k](v); });
+    };
+    const setTarget = (T, ms) => { tgt = T; keys.forEach((k) => moveKey(k, T[k], ms)); };
+    if (!reduce) setInterval(() => {                                // «жива» дрібна гра цифр
+      if (!vis) return;
+      const bad = sc.classList.contains('bad');
+      keys.forEach((k) => moveKey(k, Math.max(1, tgt[k] + (Math.random() - 0.5) * 2 * NOISE[k] * (bad ? 1 : 0.2)), 560));
+    }, 700);
+
+    const flag = (c) => {
+      sc.classList.add(c);
+      if (c === 'ok') { sc.classList.remove('bad'); setTarget(GOOD, 1500); clk.textContent = '15:57'; }
+    };
+    const apply = (k) => {
+      [2, 3, 4, 5, 6].forEach((n) => sc.classList.toggle('r' + n, k >= n));
+      ['pn', 'pr', 'mn', 'qh', 'ok'].forEach((c) => sc.classList.remove(c));
+      sc.classList.toggle('rg', k >= 6); sc.classList.toggle('z', k >= 6);
+      sc.classList.toggle('bad', k >= 2);
+      clk.textContent = CLOCK[k - 1];
+      capP.forEach((p, i) => p.classList.toggle('on', i === k - 1));
+      dots.forEach((d, i) => { d.classList.toggle('on', i === k - 1); d.classList.toggle('done', i < k - 1); });
+      setTarget(k >= 2 ? BAD : CALM, 1300);
+    };
+    const go = (k, auto) => {
+      clearAll();
+      dots.forEach((d, i) => d.style.setProperty('--dur', auto ? DUR[i] + 'ms' : '0s'));
+      replayBtn.classList.remove('hint');
+      apply(k);
+      (TIMED[k] || []).forEach(([c, ms]) => { if (reduce) flag(c); else later(() => flag(c), ms); });
+      if (auto && k < N) later(() => go(k + 1, true), DUR[k - 1]);
+      if (auto && k === N) later(() => replayBtn.classList.add('hint'), DUR[N - 1]);
+    };
+    const jump = (k, auto) => {                                     // миттєвий перехід без зворотної анімації
+      sc.classList.add('rst'); go(k, auto); void sc.offsetWidth;
+      requestAnimationFrame(() => requestAnimationFrame(() => sc.classList.remove('rst')));
+    };
+
+    dots.forEach((d, i) => d.addEventListener('click', () => go(i + 1, false)));
+    replayBtn.addEventListener('click', () => jump(1, true));
+
+    if (!reduce && 'IntersectionObserver' in window) {
+      jump(1, false);                                               // готова до показу: спокійний кадр
+      const sio = new IntersectionObserver((en) => {
+        const e = en[en.length - 1];
+        vis = e.isIntersecting; sc.classList.toggle('off', !vis);
+        if (!started && e.intersectionRatio >= 0.55) { started = true; later(() => jump(1, true), 500); }
+      }, { threshold: [0, 0.55] });
+      sio.observe(box);
+    }
+    // reduced-motion або без IntersectionObserver: лишається статичний кадр кроку 5, крапки перемикають кроки
+  }
+
   /* ---------------- Віджети: легкий паралакс за курсором ---------------- */
   const desk = $('desk');
   if (desk && !reduce && matchMedia('(hover: hover)').matches) {
@@ -850,6 +1036,15 @@
   addEventListener('resize', queue);
   watch();
   update();
+
+  // перемикач мови: клік поза межами і Escape закривають відкриту панель
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.langsw[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('.langsw[open]').forEach((d) => { d.open = false; d.querySelector('summary').focus(); });
+  });
 })();
 </script>
 </body>
