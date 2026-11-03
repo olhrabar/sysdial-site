@@ -251,14 +251,16 @@
             <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Die SysDial-Speicherplatzseite: sicher zu bereinigende Elemente mit Größenangabe, zu prüfende Xcode-Archive und ein Zurücksetzen des Spotlight-Index">
           </li>
           </ol>
+          <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" data-wipe src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Die SysDial-Verlaufsseite: Diagramme zu Prozessor und Speicher, Netzwerkgeschwindigkeit und Internetlatenz über 24 Stunden">
+          <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Die SysDial-Verlaufsseite: Diagramme zu Prozessor und Speicher, Netzwerkgeschwindigkeit und Internetlatenz über 24 Stunden">
           <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Die Liste bemerkenswerter Momente auf der Verlaufsseite, mit Ausreißer- und Lastereignissen nach Uhrzeit, Dauer und App">
           <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Die SysDial-Warnungsseite: ein Einblick zum Swap-Speicher und ein Protokoll von DNS-Ausfällen und Speicherwarnungen">
           <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Die SysDial-Prozessseite: Karten für verfolgte Apps und eine sortierbare Liste aller laufenden Prozesse">
-          <img data-wipe src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="App-bezogene Diagramme auf der Verlaufsseite: Speicherhöchstwert und Prozessor für Activity Monitor, Google Chrome Helper und Google Chrome, mit einer Warnlinie bei 19 GB">
+          <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="App-bezogene Diagramme auf der Verlaufsseite: Speicherhöchstwert und Prozessor für Activity Monitor, Google Chrome Helper und Google Chrome, mit einer Warnlinie bei 19 GB">
           <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Das SysDial-Fenster unter Übersicht: Karten für Prozessor, Load Average, Festplatte, Netzwerkübertragung, WLAN, Speicher, Akku, Warnungen, Internetqualität, GPU, Top-Prozesse und Lüfter">
           <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Die SysDial-Speicherplatzseite: sicher zu bereinigende Elemente mit Größenangabe, zu prüfende Xcode-Archive und ein Zurücksetzen des Spotlight-Index">
+          </div>
           </div>
         </div>
       </div>
@@ -1002,7 +1004,7 @@
     setStep = (i) => {
       if (i === cur) return; cur = i;
       steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.step-btn').setAttribute('aria-current', String(k === i)); });
-      imgs.forEach((im, k) => im.classList.toggle('on', k === i));
+      imgs.forEach((im, k) => { im.classList.toggle('on', k === i); im.classList.toggle('before', k < i); });
     };
     updShow = () => {
       if (!pinMQ.matches) return;

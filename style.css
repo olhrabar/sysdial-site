@@ -451,6 +451,7 @@ footer nav { display: flex; gap: 22px; }
 .step .n { font: 500 12px var(--mono); color: var(--muted); }
 .step p { margin: 0 0 12px; padding-left: 29px; color: var(--muted); font-size: 15.5px; }
 .step-img { display: block; width: 100%; height: auto; margin: 4px 0 14px; filter: var(--shadow); }
+.stage-shadow { display: contents; }
 .stage { display: none; }
 
 @media (min-width: 901px) and (min-height: 621px) {
@@ -459,12 +460,22 @@ footer nav { display: flex; gap: 22px; }
   .js .show-track { margin: -110px 0 -70px; }
   .js .show-grid { width: min(1200px, 100% - 48px); margin-left: max(24px, calc((100% - 1080px) / 2)); margin-right: 0; display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 40px; align-items: center; }
   .js .step-img { display: none; }
-  .js .stage { display: block; position: relative; aspect-ratio: 2000 / 1357; filter: var(--shadow); }
-  .js .stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transform: translateY(16px) scale(.985);
-    transition: opacity .55s var(--ease), transform 1s var(--ease), clip-path 1.2s var(--ease) .08s; }
-  .js .stage img.on { opacity: 1; transform: none; }
-  .js .stage img[data-wipe] { clip-path: inset(0 100% 0 0); }
-  .js .stage img[data-wipe].on { clip-path: inset(0 0 0 0); }
+  .js .stage-shadow { display: block; filter: var(--shadow); }
+  .js .stage { display: block; position: relative; aspect-ratio: 2000 / 1357; overflow: hidden; }
+  .js .stage img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+    opacity: 0;
+    transform: translateX(-6%) scale(.92);
+    filter: brightness(.5);
+    transition: opacity .65s var(--ease), transform .8s var(--ease), filter .4s var(--ease);
+  }
+  .js .stage img.before { transform: translateX(6%) scale(.85); }
+  .js .stage img.on {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: brightness(1);
+    transition: opacity .55s var(--ease), transform 1s var(--ease), filter .8s var(--ease);
+  }
   .js .step { padding: 14px 0 4px; }
   .js .step-btn { cursor: pointer; margin-bottom: 10px; color: var(--muted); transition: color .35s; font-size: 17px; }
   .js .step-btn:hover { color: var(--ink); }
@@ -801,6 +812,8 @@ html:not(.js) .sc-cur { display: none; }
   .sc-zoom { left: 42.6em; width: 54em; transform: translate(0, 2em) scale(.9); }
   .sc-tag { font-size: 1.5em; }
   .sc.r4 .sc-cur { transform: translate(86em, 17.2em); }
+  .sc.pn .sc-cur { transform: translate(71.5em, 39.6em); }
+  .sc.r5 .sc-cur { transform: translate(71.5em, 39.6em); }
   .sc.rg .sc-cur { transform: translate(62em, 37em); }
   .sc.r6 .sc-cur { transform: translate(44.5em, 34em); }
   .sc.qh .sc-cur { transform: translate(47.3em, 35.6em); }

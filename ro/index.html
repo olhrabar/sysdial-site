@@ -251,14 +251,16 @@
             <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Pagina Stocare din SysDial: elemente sigure de curățat cu dimensiuni, arhive Xcode de revizuit și o resetare a indexului Spotlight">
           </li>
           </ol>
+          <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" data-wipe src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Pagina Istoric din SysDial: grafice ale procesorului și memoriei, vitezei rețelei și latenței internetului pe parcursul a 24 de ore">
+          <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Pagina Istoric din SysDial: grafice ale procesorului și memoriei, vitezei rețelei și latenței internetului pe parcursul a 24 de ore">
           <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Lista Momente notabile din pagina Istoric, cu evenimente de utilizare excesivă și de încărcare, după oră, durată și aplicație">
           <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Pagina Alerte din SysDial: o analiză despre memoria swap și un jurnal al întreruperilor DNS și alertelor de memorie">
           <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Pagina Procese din SysDial: carduri pentru aplicațiile monitorizate și o listă sortabilă a tuturor proceselor active">
-          <img data-wipe src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Grafice per aplicație în pagina Istoric: vârful de memorie și procesorul pentru Activity Monitor, Google Chrome Helper și Google Chrome, cu o linie de alertă la 19 GB">
+          <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Grafice per aplicație în pagina Istoric: vârful de memorie și procesorul pentru Activity Monitor, Google Chrome Helper și Google Chrome, cu o linie de alertă la 19 GB">
           <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Fereastra SysDial în Prezentare generală: carduri pentru procesor, media de încărcare, disc, transfer de rețea, Wi-Fi, memorie, baterie, alerte, calitatea internetului, GPU, procesele principale și ventilatoare">
           <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Pagina Stocare din SysDial: elemente sigure de curățat cu dimensiuni, arhive Xcode de revizuit și o resetare a indexului Spotlight">
+          </div>
           </div>
         </div>
       </div>
@@ -1002,7 +1004,7 @@
     setStep = (i) => {
       if (i === cur) return; cur = i;
       steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.step-btn').setAttribute('aria-current', String(k === i)); });
-      imgs.forEach((im, k) => im.classList.toggle('on', k === i));
+      imgs.forEach((im, k) => { im.classList.toggle('on', k === i); im.classList.toggle('before', k < i); });
     };
     updShow = () => {
       if (!pinMQ.matches) return;

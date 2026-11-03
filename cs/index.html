@@ -251,14 +251,16 @@
             <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka Úložiště v SysDialu: bezpečně smazatelné položky s velikostmi, archivy Xcode k posouzení a reset indexu Spotlightu">
           </li>
           </ol>
+          <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" data-wipe src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka Historie v SysDialu: grafy procesoru a paměti, rychlosti sítě a latence internetu za posledních 24 hodin">
+          <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka Historie v SysDialu: grafy procesoru a paměti, rychlosti sítě a latence internetu za posledních 24 hodin">
           <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Seznam významných událostí na stránce Historie, s ujetými procesy a zátěžovými událostmi podle času, délky trvání a aplikace">
           <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stránka Upozornění v SysDialu: přehled o využití odkládacího souboru a protokol výpadků DNS a upozornění na paměť">
           <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stránka Procesy v SysDialu: karty sledovaných aplikací a řaditelný seznam všech běžících procesů">
-          <img data-wipe src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Grafy jednotlivých aplikací na stránce Historie: vrchol paměti a procesor pro Activity Monitor, Google Chrome Helper a Google Chrome, s čarou upozornění na 19 GB">
+          <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Grafy jednotlivých aplikací na stránce Historie: vrchol paměti a procesor pro Activity Monitor, Google Chrome Helper a Google Chrome, s čarou upozornění na 19 GB">
           <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Okno SysDialu na kartě Přehled: karty pro procesor, průměrné zatížení, disk, přenos dat v síti, Wi-Fi, paměť, baterii, upozornění, kvalitu internetu, GPU, nejvytíženější procesy a ventilátory">
           <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka Úložiště v SysDialu: bezpečně smazatelné položky s velikostmi, archivy Xcode k posouzení a reset indexu Spotlightu">
+          </div>
           </div>
         </div>
       </div>
@@ -1002,7 +1004,7 @@
     setStep = (i) => {
       if (i === cur) return; cur = i;
       steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.step-btn').setAttribute('aria-current', String(k === i)); });
-      imgs.forEach((im, k) => im.classList.toggle('on', k === i));
+      imgs.forEach((im, k) => { im.classList.toggle('on', k === i); im.classList.toggle('before', k < i); });
     };
     updShow = () => {
       if (!pinMQ.matches) return;

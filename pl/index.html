@@ -251,14 +251,16 @@
             <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Pamięć masowa w SysDial: elementy bezpieczne do usunięcia wraz z rozmiarami, archiwa Xcode do przejrzenia oraz reset indeksu Spotlight">
           </li>
           </ol>
+          <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" data-wipe src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Historia w SysDial: wykresy procesora i pamięci, prędkości sieci i opóźnienia internetu w ciągu 24 godzin">
+          <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Historia w SysDial: wykresy procesora i pamięci, prędkości sieci i opóźnienia internetu w ciągu 24 godzin">
           <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Lista Istotnych zdarzeń na stronie Historia, ze zdarzeniami rozpędzonych procesów i obciążenia wraz z godziną, czasem trwania i aplikacją">
           <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Strona Alerty w SysDial: analiza dotycząca pamięci swap oraz dziennik awarii DNS i alertów pamięci">
           <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Strona Procesy w SysDial: karty śledzonych aplikacji oraz sortowalna lista wszystkich uruchomionych procesów">
-          <img data-wipe src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Wykresy dla poszczególnych aplikacji na stronie Historia: szczyt pamięci i procesor dla Monitora aktywności, Google Chrome Helper i Google Chrome, z linią alertu przy 19 GB">
+          <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Wykresy dla poszczególnych aplikacji na stronie Historia: szczyt pamięci i procesor dla Monitora aktywności, Google Chrome Helper i Google Chrome, z linią alertu przy 19 GB">
           <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Okno SysDial na karcie Przegląd: karty procesora, load average, dysku, transferu sieciowego, Wi-Fi, pamięci, baterii, alertów, jakości internetu, GPU, najbardziej obciążających procesów i wentylatorów">
           <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Pamięć masowa w SysDial: elementy bezpieczne do usunięcia wraz z rozmiarami, archiwa Xcode do przejrzenia oraz reset indeksu Spotlight">
+          </div>
           </div>
         </div>
       </div>
@@ -1002,7 +1004,7 @@
     setStep = (i) => {
       if (i === cur) return; cur = i;
       steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.step-btn').setAttribute('aria-current', String(k === i)); });
-      imgs.forEach((im, k) => im.classList.toggle('on', k === i));
+      imgs.forEach((im, k) => { im.classList.toggle('on', k === i); im.classList.toggle('before', k < i); });
     };
     updShow = () => {
       if (!pinMQ.matches) return;

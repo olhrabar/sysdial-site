@@ -251,14 +251,16 @@
             <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stranica Pohrana u SysDialu: stavke sigurne za brisanje s veličinama, Xcode arhive za pregled i ponovno postavljanje Spotlight indeksa">
           </li>
           </ol>
+          <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" data-wipe src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stranica Povijest u SysDialu: grafikoni procesora i memorije, brzine mreže i internetske latencije tijekom 24 sata">
+          <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stranica Povijest u SysDialu: grafikoni procesora i memorije, brzine mreže i internetske latencije tijekom 24 sata">
           <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Popis značajnih trenutaka na stranici Povijest, s događajima odbjeglih procesa i opterećenja prema vremenu, trajanju i aplikaciji">
           <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stranica Upozorenja u SysDialu: uvid o swap memoriji i zapisnik prekida DNS-a i upozorenja o memoriji">
           <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stranica Procesi u SysDialu: kartice za praćene aplikacije i popis svih pokrenutih procesa koji se može razvrstati">
-          <img data-wipe src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Grafikoni po aplikaciji na stranici Povijest: vrhunac memorije i procesor za Activity Monitor, Google Chrome Helper i Google Chrome, s linijom upozorenja na 19 GB">
+          <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Grafikoni po aplikaciji na stranici Povijest: vrhunac memorije i procesor za Activity Monitor, Google Chrome Helper i Google Chrome, s linijom upozorenja na 19 GB">
           <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Prozor SysDiala na Pregledu: kartice za procesor, prosječno opterećenje, disk, prijenos mreže, Wi-Fi, memoriju, bateriju, upozorenja, kvalitetu interneta, GPU, vodeće procese i ventilatore">
           <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stranica Pohrana u SysDialu: stavke sigurne za brisanje s veličinama, Xcode arhive za pregled i ponovno postavljanje Spotlight indeksa">
+          </div>
           </div>
         </div>
       </div>
@@ -1002,7 +1004,7 @@
     setStep = (i) => {
       if (i === cur) return; cur = i;
       steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.step-btn').setAttribute('aria-current', String(k === i)); });
-      imgs.forEach((im, k) => im.classList.toggle('on', k === i));
+      imgs.forEach((im, k) => { im.classList.toggle('on', k === i); im.classList.toggle('before', k < i); });
     };
     updShow = () => {
       if (!pinMQ.matches) return;
