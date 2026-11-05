@@ -104,15 +104,24 @@
       </div>
       <div class="proof">
         <figure class="pf-main">
-          <img src="../images/app/moments-card.webp" width="942" height="376" alt="Zoznam Významné momenty v SysDiale: udalosti nekontrolovaného behu a záťaže s časom vzniku, dĺžkou trvania a appkou, ktorá za nimi stojí, napríklad mediaanalysisd na 3 minúty pri 225 percentách">
+          <picture>
+            <source srcset="../images/app/moments-card-light.webp" media="(prefers-color-scheme: light)">
+            <img src="../images/app/moments-card.webp" width="942" height="376" alt="Zoznam Významné momenty v SysDiale: udalosti nekontrolovaného behu a záťaže s časom vzniku, dĺžkou trvania a appkou, ktorá za nimi stojí, napríklad mediaanalysisd na 3 minúty pri 225 percentách">
+          </picture>
           <i class="hl" aria-hidden="true"></i>
           <span class="tag" aria-hidden="true">Vinník, nájdený za vás</span>
         </figure>
         <figure class="pf-note">
-          <img src="../images/app/alerts-card.webp" width="922" height="298" alt="Záznam upozornení SysDialu: upozornenia na pamäť pre pomocný proces Chrome pri 19,5 GB a výpadok DNS s poznámkou, že sieť funguje, ale názvy webových stránok sa nedajú preložiť">
+          <picture>
+            <source srcset="../images/app/alerts-card-light.webp" media="(prefers-color-scheme: light)">
+            <img src="../images/app/alerts-card.webp" width="922" height="298" alt="Záznam upozornení SysDialu: upozornenia na pamäť pre pomocný proces Chrome pri 19,5 GB a výpadok DNS s poznámkou, že sieť funguje, ale názvy webových stránok sa nedajú preložiť">
+          </picture>
         </figure>
         <figure class="pf-watch">
-          <img src="../images/app/watch-card.webp" width="518" height="252" alt="Sledovaná appka v SysDiale: Google Chrome Helper so 19,4 GB pamäte, nad limitom 19 GB, ktorý ste nastavili, s úrovňou upozornenia zobrazenou na karte">
+          <picture>
+            <source srcset="../images/app/watch-card-light.webp" media="(prefers-color-scheme: light)">
+            <img src="../images/app/watch-card.webp" width="518" height="252" alt="Sledovaná appka v SysDiale: Google Chrome Helper so 19,4 GB pamäte, nad limitom 19 GB, ktorý ste nastavili, s úrovňou upozornenia zobrazenou na karte">
+          </picture>
         </figure>
       </div>
     </div>
@@ -157,12 +166,18 @@
             </div>
 
             <div class="sc-win">
-              <img src="../images/app/sc-window.webp" width="1413" height="846" alt="" decoding="async">
+              <picture>
+                <source srcset="../images/app/sc-window-light.webp" media="(prefers-color-scheme: light)">
+                <img src="../images/app/sc-window.webp" width="1413" height="846" alt="" decoding="async">
+              </picture>
               <i class="sc-ring"></i>
             </div>
             <div class="sc-dim"></div>
 
-            <div class="sc-pan"><img src="../images/app/sc-panel.webp" width="922" height="1338" alt="" decoding="async"><i class="sc-ring2"></i></div>
+            <div class="sc-pan"><picture>
+              <source srcset="../images/app/sc-panel-light.webp" media="(prefers-color-scheme: light)">
+              <img src="../images/app/sc-panel.webp" width="922" height="1338" alt="" decoding="async">
+            </picture><i class="sc-ring2"></i></div>
 
             <div class="sc-mbar">
               <span class="sc-ml"><i></i><i></i><i></i><i></i></span>
@@ -183,9 +198,18 @@
             </div>
 
             <div class="sc-zoom">
-              <img class="sc-card" src="../images/app/sc-card.webp" width="566" height="150" alt="" decoding="async">
-              <img class="sc-mom" src="../images/app/sc-moment.webp" width="566" height="74" alt="" decoding="async">
-              <img class="sc-menu" src="../images/app/sc-menu.webp" width="209" height="119" alt="" decoding="async">
+              <picture>
+                <source srcset="../images/app/sc-card-light.webp" media="(prefers-color-scheme: light)">
+                <img class="sc-card" src="../images/app/sc-card.webp" width="566" height="150" alt="" decoding="async">
+              </picture>
+              <picture>
+                <img class="sc-mom" src="../images/app/sc-moment.webp" width="566" height="74" alt="" decoding="async">
+              </picture>
+              <div class="sc-mh" aria-hidden="true"><b>Notable moments</b><p><span class="t">15:52–15:57</span><span class="d">5 min</span><span class="pk">peak 93%</span><span class="n">mDNSResponder</span><i>LOAD</i></p></div>
+              <picture>
+                <img class="sc-menu" src="../images/app/sc-menu.webp" width="209" height="119" alt="" decoding="async">
+              </picture>
+              <div class="sc-cm" aria-hidden="true"><p class="hi">Quit “mDNSResponder”</p><p>Force Quit “mDNSResponder”…</p><hr><p>Copy PID</p><p>Copy Name</p></div>
               <i class="sc-sel"></i>
               <span class="sc-tag"><span class="sc-t1">Vinník, už nájdený</span><span class="sc-t2">Opäť v pokoji, uložené do Histórie</span></span>
             </div>
@@ -218,48 +242,90 @@
           <li class="step on" data-i="0">
             <h3><button type="button" class="step-btn" aria-current="true"><span class="n">01</span><span class="t">Pozrite sa späť až 30 dní</span></button></h3>
             <p>Procesor, pamäť, sieť a latencia internetu na jednej časovej osi, s vyznačenými upozorneniami tam, kde nastali. Prepínajte medzi 1 hodinou, 24 hodinami, 7 dňami alebo ľubovoľným obdobím a exportujte zobrazené dáta do CSV.</p>
-            <img class="step-img" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka História v SysDiale: grafy procesora a pamäte, rýchlosti siete a latencie internetu za 24 hodín">
+            <picture>
+              <source srcset="../images/app/history-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+              <img class="step-img" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka História v SysDiale: grafy procesora a pamäte, rýchlosti siete a latencie internetu za 24 hodín">
+            </picture>
           </li>
           <li class="step" data-i="1">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">02</span><span class="t">Výkyvy, už nájdené</span></button></h3>
             <p>Nekontrolované procesy a vrcholy záťaže sú uvedené s časom, dĺžkou trvania a appkou, ktorá ich spôsobila, takže ich nemusíte hľadať v grafe.</p>
-            <img class="step-img" src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Zoznam Významné momenty na stránke História s udalosťami nekontrolovaného behu a záťaže podľa času, dĺžky trvania a appky">
+            <picture>
+              <source srcset="../images/app/history-moments-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Zoznam Významné momenty na stránke História s udalosťami nekontrolovaného behu a záťaže podľa času, dĺžky trvania a appky">
+            </picture>
           </li>
           <li class="step" data-i="2">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">03</span><span class="t">Upozornenia vysvetlené zrozumiteľne</span></button></h3>
             <p>Prehľady vysvetlia, čo spomaľuje váš Mac, napríklad využitý swap a appky, ktoré ho využívajú najviac, s tlačidlom na uvoľnenie pamäte. Upozornenia uchovávajú sedemdňový záznam nekontrolovaných appiek, procesora, pamäte, disku a výpadkov internetu alebo DNS.</p>
-            <img class="step-img" src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stránka Upozornenia v SysDiale: prehľad o využití swapu a záznam výpadkov DNS a upozornení na pamäť">
+            <picture>
+              <source srcset="../images/app/alerts-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stránka Upozornenia v SysDiale: prehľad o využití swapu a záznam výpadkov DNS a upozornení na pamäť">
+            </picture>
           </li>
           <li class="step" data-i="3">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">04</span><span class="t">Sledujte ľubovoľný proces</span></button></h3>
             <p>Kliknite na ikonu oka vedľa ľubovoľného procesu a SysDial ho začne sledovať — až 12 appiek. Každá dostane kartu so živým procesorom a pamäťou, denným maximom pamäte a úrovňou upozornenia, pričom limit pamäte pre upozornenie si nastavíte sami. Vyhľadávajte, triedte, zobrazujte v Finderi a ukončujte priamo z toho istého zoznamu. SysDial tiež nájde zabudnuté vývojárske procesy, ako terraform, node a python, ktoré zostali bežať aj po zatvorení terminálu.</p>
-            <img class="step-img" src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stránka Procesy v SysDiale: karty sledovaných appiek a zoraditeľný zoznam všetkých bežiacich procesov">
+            <picture>
+              <source srcset="../images/app/processes-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+              <img class="step-img" src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stránka Procesy v SysDiale: karty sledovaných appiek a zoraditeľný zoznam všetkých bežiacich procesov">
+            </picture>
           </li>
           <li class="step" data-i="4">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">05</span><span class="t">Sledujte jednu appku celé dni dozadu</span></button></h3>
             <p>Každá sledovaná appka dostane vlastný graf pamäte a procesora na stránke História, s označeným každým spustením a nakresleným limitom pamäte ako čiarou, takže presne vidíte, kedy ho prekročila.</p>
-            <img class="step-img" src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Grafy jednotlivých appiek na stránke História: maximum pamäte a procesor pre Activity Monitor, Google Chrome Helper a Google Chrome, s hraničnou čiarou upozornenia pri 19 GB">
+            <picture>
+              <source srcset="../images/app/history-apps-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Grafy jednotlivých appiek na stránke História: maximum pamäte a procesor pre Activity Monitor, Google Chrome Helper a Google Chrome, s hraničnou čiarou upozornenia pri 19 GB">
+            </picture>
           </li>
           <li class="step" data-i="5">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">06</span><span class="t">Všetky karty v jednom okne</span></button></h3>
             <p>Karty z panela, plus priemerné zaťaženie a ventilátory, spolu v jednom okne, ktoré môžete nechať otvorené na druhom displeji.</p>
-            <img class="step-img" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Okno SysDialu na karte Prehľad: karty pre procesor, priemerné zaťaženie, disk, prenos dát siete, Wi-Fi, pamäť, batériu, upozornenia, kvalitu internetu, GPU, najvyťaženejšie procesy a ventilátory">
+            <picture>
+              <source srcset="../images/app/overview-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Okno SysDialu na karte Prehľad: karty pre procesor, priemerné zaťaženie, disk, prenos dát siete, Wi-Fi, pamäť, batériu, upozornenia, kvalitu internetu, GPU, najvyťaženejšie procesy a ventilátory">
+            </picture>
           </li>
           <li class="step" data-i="6">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">07</span><span class="t">Vyčistite, čo je bezpečné</span></button></h3>
             <p>Vyrovnávacie pamäte appiek, logy, cache simulátora a cache npm či Terraformu, s veľkosťou a vopred zaškrtnuté za vás. Položky idú do Koša, takže ich môžete vrátiť späť. Index Spotlight možno resetovať, keď príliš narastie.</p>
-            <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka Úložisko v SysDiale: bezpečne vyčistiteľné položky s veľkosťami, archívy Xcode na kontrolu a reset indexu Spotlight">
+            <picture>
+              <source srcset="../images/app/storage-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka Úložisko v SysDiale: bezpečne vyčistiteľné položky s veľkosťami, archívy Xcode na kontrolu a reset indexu Spotlight">
+            </picture>
           </li>
           </ol>
           <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka História v SysDiale: grafy procesora a pamäte, rýchlosti siete a latencie internetu za 24 hodín">
-          <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Zoznam Významné momenty na stránke História s udalosťami nekontrolovaného behu a záťaže podľa času, dĺžky trvania a appky">
-          <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stránka Upozornenia v SysDiale: prehľad o využití swapu a záznam výpadkov DNS a upozornení na pamäť">
-          <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stránka Procesy v SysDiale: karty sledovaných appiek a zoraditeľný zoznam všetkých bežiacich procesov">
-          <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Grafy jednotlivých appiek na stránke História: maximum pamäte a procesor pre Activity Monitor, Google Chrome Helper a Google Chrome, s hraničnou čiarou upozornenia pri 19 GB">
-          <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Okno SysDialu na karte Prehľad: karty pre procesor, priemerné zaťaženie, disk, prenos dát siete, Wi-Fi, pamäť, batériu, upozornenia, kvalitu internetu, GPU, najvyťaženejšie procesy a ventilátory">
-          <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka Úložisko v SysDiale: bezpečne vyčistiteľné položky s veľkosťami, archívy Xcode na kontrolu a reset indexu Spotlight">
+          <picture>
+            <source srcset="../images/app/history-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+            <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka História v SysDiale: grafy procesora a pamäte, rýchlosti siete a latencie internetu za 24 hodín">
+          </picture>
+          <picture>
+            <source srcset="../images/app/history-moments-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Zoznam Významné momenty na stránke História s udalosťami nekontrolovaného behu a záťaže podľa času, dĺžky trvania a appky">
+          </picture>
+          <picture>
+            <source srcset="../images/app/alerts-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stránka Upozornenia v SysDiale: prehľad o využití swapu a záznam výpadkov DNS a upozornení na pamäť">
+          </picture>
+          <picture>
+            <source srcset="../images/app/processes-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+            <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Stránka Procesy v SysDiale: karty sledovaných appiek a zoraditeľný zoznam všetkých bežiacich procesov">
+          </picture>
+          <picture>
+            <source srcset="../images/app/history-apps-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Grafy jednotlivých appiek na stránke História: maximum pamäte a procesor pre Activity Monitor, Google Chrome Helper a Google Chrome, s hraničnou čiarou upozornenia pri 19 GB">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Okno SysDialu na karte Prehľad: karty pre procesor, priemerné zaťaženie, disk, prenos dát siete, Wi-Fi, pamäť, batériu, upozornenia, kvalitu internetu, GPU, najvyťaženejšie procesy a ventilátory">
+          </picture>
+          <picture>
+            <source srcset="../images/app/storage-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Stránka Úložisko v SysDiale: bezpečne vyčistiteľné položky s veľkosťami, archívy Xcode na kontrolu a reset indexu Spotlight">
+          </picture>
           </div>
           </div>
         </div>
@@ -278,7 +344,10 @@
         </ul>
       </div>
       <figure class="shot gl-shot" data-reveal style="--d:140ms">
-        <img src="../images/panel.png" loading="lazy" decoding="async" alt="Panel SysDialu otvorený pod lištou ponuky, s kartami pre procesor, pamäť, sieť, batériu a disk">
+        <picture>
+          <source srcset="../images/panel-light.png" media="(prefers-color-scheme: light)">
+          <img src="../images/panel.png" loading="lazy" decoding="async" alt="Panel SysDialu otvorený pod lištou ponuky, s kartami pre procesor, pamäť, sieť, batériu a disk">
+        </picture>
       </figure>
     </div>
   </section>
@@ -298,7 +367,10 @@
         </figure>
       </div>
       <figure class="bld-panel" data-reveal style="--d:160ms">
-        <img src="../images/app/panel-settings.webp" width="922" height="1926" loading="lazy" decoding="async" alt="Nastavenia SysDialu: výber motívu, interval aktualizácie a moduly lišty ponuky a panela s úchytmi na presúvanie">
+        <picture>
+          <source srcset="../images/app/panel-settings-light.webp" media="(prefers-color-scheme: light)" width="922" height="1916">
+          <img src="../images/app/panel-settings.webp" width="922" height="1926" loading="lazy" decoding="async" alt="Nastavenia SysDialu: výber motívu, interval aktualizácie a moduly lišty ponuky a panela s úchytmi na presúvanie">
+        </picture>
       </figure>
     </div>
    </div></div>
@@ -313,15 +385,42 @@
       <div class="tstage" data-reveal style="--d:120ms">
         <div class="tglow" aria-hidden="true"></div>
         <div class="tshots">
-          <img data-t="amber"  src="../images/app/overview-amber.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Amber">
-          <img data-t="lime"   src="../images/app/overview-lime.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Lime">
-          <img data-t="ocean"  src="../images/app/overview-ocean.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Ocean">
-          <img data-t="coral"  src="../images/app/overview-coral.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Coral">
-          <img data-t="mint"   class="on" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Mint">
-          <img data-t="mono"   src="../images/app/overview-mono.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Mono">
-          <img data-t="neon"   src="../images/app/overview-neon.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Neon">
-          <img data-t="acid"   src="../images/app/overview-acid.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Acid">
-          <img data-t="violet" src="../images/app/overview-violet.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Violet">
+          <picture>
+            <source srcset="../images/app/overview-amber-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="amber"  src="../images/app/overview-amber.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Amber">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-lime-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="lime"   src="../images/app/overview-lime.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Lime">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-ocean-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="ocean"  src="../images/app/overview-ocean.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Ocean">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-coral-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="coral"  src="../images/app/overview-coral.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Coral">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-mint-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="mint"   class="on" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Mint">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-mono-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="mono"   src="../images/app/overview-mono.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Mono">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-neon-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="neon"   src="../images/app/overview-neon.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Neon">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-acid-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="acid"   src="../images/app/overview-acid.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Acid">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-violet-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="violet" src="../images/app/overview-violet.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Prehľad SysDialu v motíve Violet">
+          </picture>
         </div>
       </div>
       <div class="swatches" id="swatches" role="radiogroup" aria-label="Motív" data-reveal style="--d:160ms"></div>
@@ -345,8 +444,14 @@
         <p class="fine" data-reveal style="--d:200ms">Kliknite pravým tlačidlom na plochu, zvoľte Upraviť widgety a vyhľadajte SysDial. macOS aktualizuje widgety približne každých 15 minút.</p>
       </div>
       <div class="desk" id="desk" data-stagger aria-label="Widgety SysDialu na ploche Macu">
-        <div class="wgt wgt-s"><div class="par"><img src="../images/app/widget-small.webp" width="328" height="328" loading="lazy" decoding="async" alt="Malý widget SysDialu s ukazovateľmi procesora 16 % a pamäte 84 %"></div></div>
-        <div class="wgt wgt-m"><div class="par"><img src="../images/app/widget-medium.webp" width="688" height="328" loading="lazy" decoding="async" alt="Stredný widget SysDialu s ukazovateľmi procesora, pamäte, disku a batérie"></div></div>
+        <div class="wgt wgt-s"><div class="par"><picture>
+          <source srcset="../images/app/widget-small-light.webp" media="(prefers-color-scheme: light)">
+          <img src="../images/app/widget-small.webp" width="328" height="328" loading="lazy" decoding="async" alt="Malý widget SysDialu s ukazovateľmi procesora 16 % a pamäte 84 %">
+        </picture></div></div>
+        <div class="wgt wgt-m"><div class="par"><picture>
+          <source srcset="../images/app/widget-medium-light.webp" media="(prefers-color-scheme: light)">
+          <img src="../images/app/widget-medium.webp" width="688" height="328" loading="lazy" decoding="async" alt="Stredný widget SysDialu s ukazovateľmi procesora, pamäte, disku a batérie">
+        </picture></div></div>
       </div>
     </div>
   </section>
