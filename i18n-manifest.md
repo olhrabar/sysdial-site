@@ -72,6 +72,8 @@ A language-switcher component will be added to the nav of every page (English ro
 
 Everything that is **live HTML/JS text** gets translated. Everything **baked into a screenshot image** (`images/app/sc-*.webp`, `moments-card.webp`, `alerts-card.webp`, `watch-card.webp`, and all the big `.webp` screenshots in `#memory`/`#themes`) stays in English — the app itself is English-only, so an English screenshot under translated captions is normal and expected. Do not touch any image file.
 
+The same goes for two live-HTML stand-ins for app UI in the story scene: the context menu `<div class="sc-cm">` ("Quit “mDNSResponder”", "Force Quit “mDNSResponder”…", "Copy PID", "Copy Name") and the card `<div class="sc-mh">` ("Notable moments", "15:52–15:57", "5 min", "peak 93%", "mDNSResponder", "LOAD"). They replace screenshots of the app, so they stay in English in every language.
+
 Keep these **as literal English/brand terms in every language**, do not translate them:
 - The product name **SysDial**.
 - **Free** / **Pro** as the two tier/pill labels (`<em class="tier free">Free</em>` / `<em class="tier pro">Pro</em>`) — these are short badge labels that appear ~10 times across the page (tri cards, `#story` captions, `#plans` table header). Keep them as the English words "Free" and "Pro" everywhere, unchanged — do not translate these two words, so they read as a consistent product-tier brand pair in every locale. This is a hard rule, not a style preference.

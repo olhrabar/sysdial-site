@@ -105,15 +105,24 @@
       </div>
       <div class="proof">
         <figure class="pf-main">
-          <img src="../images/app/moments-card.webp" width="942" height="376" alt="Список помітних подій SysDial: випадки некерованого навантаження процесів і піки навантаження із зазначенням часу, тривалості та застосунку, що їх спричинив, наприклад mediaanalysisd протягом 3 хвилин на рівні 225 відсотків">
+          <picture>
+            <source srcset="../images/app/moments-card-light.webp" media="(prefers-color-scheme: light)">
+            <img src="../images/app/moments-card.webp" width="942" height="376" alt="Список помітних подій SysDial: випадки некерованого навантаження процесів і піки навантаження із зазначенням часу, тривалості та застосунку, що їх спричинив, наприклад mediaanalysisd протягом 3 хвилин на рівні 225 відсотків">
+          </picture>
           <i class="hl" aria-hidden="true"></i>
           <span class="tag" aria-hidden="true">Винного знайдено за вас</span>
         </figure>
         <figure class="pf-note">
-          <img src="../images/app/alerts-card.webp" width="922" height="298" alt="Журнал сповіщень SysDial: сповіщення про пам’ять для допоміжного процесу Chrome на рівні 19,5 ГБ і збій DNS із приміткою, що мережа працює, але імена сайтів не вдається розпізнати">
+          <picture>
+            <source srcset="../images/app/alerts-card-light.webp" media="(prefers-color-scheme: light)">
+            <img src="../images/app/alerts-card.webp" width="922" height="298" alt="Журнал сповіщень SysDial: сповіщення про пам’ять для допоміжного процесу Chrome на рівні 19,5 ГБ і збій DNS із приміткою, що мережа працює, але імена сайтів не вдається розпізнати">
+          </picture>
         </figure>
         <figure class="pf-watch">
-          <img src="../images/app/watch-card.webp" width="518" height="252" alt="Відстежуваний застосунок у SysDial: Google Chrome Helper використовує 19,4 ГБ пам’яті, що перевищує встановлену вами межу 19 ГБ, з рівнем сповіщення на картці">
+          <picture>
+            <source srcset="../images/app/watch-card-light.webp" media="(prefers-color-scheme: light)">
+            <img src="../images/app/watch-card.webp" width="518" height="252" alt="Відстежуваний застосунок у SysDial: Google Chrome Helper використовує 19,4 ГБ пам’яті, що перевищує встановлену вами межу 19 ГБ, з рівнем сповіщення на картці">
+          </picture>
         </figure>
       </div>
     </div>
@@ -158,12 +167,18 @@
             </div>
 
             <div class="sc-win">
-              <img src="../images/app/sc-window.webp" width="1413" height="846" alt="" decoding="async">
+              <picture>
+                <source srcset="../images/app/sc-window-light.webp" media="(prefers-color-scheme: light)">
+                <img src="../images/app/sc-window.webp" width="1413" height="846" alt="" decoding="async">
+              </picture>
               <i class="sc-ring"></i>
             </div>
             <div class="sc-dim"></div>
 
-            <div class="sc-pan"><img src="../images/app/sc-panel.webp" width="922" height="1338" alt="" decoding="async"><i class="sc-ring2"></i></div>
+            <div class="sc-pan"><picture>
+              <source srcset="../images/app/sc-panel-light.webp" media="(prefers-color-scheme: light)">
+              <img src="../images/app/sc-panel.webp" width="922" height="1338" alt="" decoding="async">
+            </picture><i class="sc-ring2"></i></div>
 
             <div class="sc-mbar">
               <span class="sc-ml"><i></i><i></i><i></i><i></i></span>
@@ -184,9 +199,18 @@
             </div>
 
             <div class="sc-zoom">
-              <img class="sc-card" src="../images/app/sc-card.webp" width="566" height="150" alt="" decoding="async">
-              <img class="sc-mom" src="../images/app/sc-moment.webp" width="566" height="74" alt="" decoding="async">
-              <img class="sc-menu" src="../images/app/sc-menu.webp" width="209" height="119" alt="" decoding="async">
+              <picture>
+                <source srcset="../images/app/sc-card-light.webp" media="(prefers-color-scheme: light)">
+                <img class="sc-card" src="../images/app/sc-card.webp" width="566" height="150" alt="" decoding="async">
+              </picture>
+              <picture>
+                <img class="sc-mom" src="../images/app/sc-moment.webp" width="566" height="74" alt="" decoding="async">
+              </picture>
+              <div class="sc-mh" aria-hidden="true"><b>Notable moments</b><p><span class="t">15:52–15:57</span><span class="d">5 min</span><span class="pk">peak 93%</span><span class="n">mDNSResponder</span><i>LOAD</i></p></div>
+              <picture>
+                <img class="sc-menu" src="../images/app/sc-menu.webp" width="209" height="119" alt="" decoding="async">
+              </picture>
+              <div class="sc-cm" aria-hidden="true"><p class="hi">Quit “mDNSResponder”</p><p>Force Quit “mDNSResponder”…</p><hr><p>Copy PID</p><p>Copy Name</p></div>
               <i class="sc-sel"></i>
               <span class="sc-tag"><span class="sc-t1">Винного вже знайдено</span><span class="sc-t2">Знову спокій, і збережено в Історії</span></span>
             </div>
@@ -219,48 +243,90 @@
           <li class="step on" data-i="0">
             <h3><button type="button" class="step-btn" aria-current="true"><span class="n">01</span><span class="t">Перегляньте останні 30 днів</span></button></h3>
             <p>Процесор, пам’ять, мережа та затримка інтернету на одній шкалі часу, зі сповіщеннями, позначеними там, де вони сталися. Перемикайтеся між 1 годиною, 24 годинами, 7 днями чи будь-яким обраним періодом і експортуйте побачене у CSV.</p>
-            <img class="step-img" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Історія в SysDial: графіки процесора й пам’яті, швидкості мережі та затримки інтернету за 24 години">
+            <picture>
+              <source srcset="../images/app/history-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+              <img class="step-img" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Історія в SysDial: графіки процесора й пам’яті, швидкості мережі та затримки інтернету за 24 години">
+            </picture>
           </li>
           <li class="step" data-i="1">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">02</span><span class="t">Сплески вже знайдено</span></button></h3>
             <p>Неконтрольовані процеси та піки навантаження перелічені з часом, тривалістю і застосунком-причиною, тож не доведеться самостійно шукати їх на графіку.</p>
-            <img class="step-img" src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Список помітних подій на сторінці Історія: випадки некерованого навантаження й піки за часом, тривалістю та застосунком">
+            <picture>
+              <source srcset="../images/app/history-moments-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Список помітних подій на сторінці Історія: випадки некерованого навантаження й піки за часом, тривалістю та застосунком">
+            </picture>
           </li>
           <li class="step" data-i="2">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">03</span><span class="t">Сповіщення, пояснені простими словами</span></button></h3>
             <p>Аналітика пояснює, що саме сповільнює ваш Mac, наприклад використання swap і застосунки, що споживають найбільше, із кнопкою для звільнення пам’яті. Сповіщення зберігають семиденний журнал неконтрольованих застосунків, процесора, пам’яті, диска та збоїв інтернету чи DNS.</p>
-            <img class="step-img" src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Сторінка Сповіщення в SysDial: аналітика про пам’ять swap і журнал збоїв DNS та сповіщень про пам’ять">
+            <picture>
+              <source srcset="../images/app/alerts-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Сторінка Сповіщення в SysDial: аналітика про пам’ять swap і журнал збоїв DNS та сповіщень про пам’ять">
+            </picture>
           </li>
           <li class="step" data-i="3">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">04</span><span class="t">Відстежуйте будь-який процес</span></button></h3>
             <p>Натисніть іконку ока біля будь-якого процесу — і SysDial почне його відстежувати, до 12 застосунків. Кожен отримує картку з живими показниками процесора й пам’яті, денним піком пам’яті та рівнем сповіщення, а ви самі задаєте межу пам’яті, що викликає сповіщення. Шукайте, сортуйте, показуйте у Finder і завершуйте процеси з того самого списку. SysDial також знаходить процеси розробки, що залишилися працювати, наприклад terraform, node і python, які не завершились після закриття термінала.</p>
-            <img class="step-img" src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Сторінка Процеси в SysDial: картки для відстежуваних застосунків і список усіх запущених процесів із можливістю сортування">
+            <picture>
+              <source srcset="../images/app/processes-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+              <img class="step-img" src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Сторінка Процеси в SysDial: картки для відстежуваних застосунків і список усіх запущених процесів із можливістю сортування">
+            </picture>
           </li>
           <li class="step" data-i="4">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">05</span><span class="t">Перегляньте історію одного застосунку за кілька днів</span></button></h3>
             <p>Кожен відстежуваний застосунок отримує власний графік пам’яті й процесора на сторінці Історія, з позначкою кожного запуску і лінією вашої межі пам’яті, щоб було видно, коли саме її перевищено.</p>
-            <img class="step-img" src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Графіки по застосунках на сторінці Історія: пік пам’яті та процесор для Activity Monitor, Google Chrome Helper і Google Chrome, з лінією сповіщення на рівні 19 ГБ">
+            <picture>
+              <source srcset="../images/app/history-apps-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Графіки по застосунках на сторінці Історія: пік пам’яті та процесор для Activity Monitor, Google Chrome Helper і Google Chrome, з лінією сповіщення на рівні 19 ГБ">
+            </picture>
           </li>
           <li class="step" data-i="5">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">06</span><span class="t">Усі картки в одному вікні</span></button></h3>
             <p>Картки з панелі разом із середнім навантаженням і вентиляторами — в одному вікні, яке можна лишити відкритим на другому дисплеї.</p>
-            <img class="step-img" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Вікно SysDial на вкладці Огляд: картки процесора, середнього навантаження, диска, передавання по мережі, Wi-Fi, пам’яті, батареї, сповіщень, якості інтернету, GPU, топ-процесів і вентиляторів">
+            <picture>
+              <source srcset="../images/app/overview-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Вікно SysDial на вкладці Огляд: картки процесора, середнього навантаження, диска, передавання по мережі, Wi-Fi, пам’яті, батареї, сповіщень, якості інтернету, GPU, топ-процесів і вентиляторів">
+            </picture>
           </li>
           <li class="step" data-i="6">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">07</span><span class="t">Очистіть те, що безпечно</span></button></h3>
             <p>Кеші застосунків, журнали, кеші симуляторів та npm чи Terraform — з розмірами і вже позначені для вас. Елементи переміщуються в Кошик, тож їх можна повернути. Індекс Spotlight можна скинути, якщо він розрісся занадто сильно.</p>
-            <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Сховище в SysDial: елементи, безпечні для очищення, з розмірами, архіви Xcode для перегляду та скидання індексу Spotlight">
+            <picture>
+              <source srcset="../images/app/storage-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Сховище в SysDial: елементи, безпечні для очищення, з розмірами, архіви Xcode для перегляду та скидання індексу Spotlight">
+            </picture>
           </li>
           </ol>
           <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Історія в SysDial: графіки процесора й пам’яті, швидкості мережі та затримки інтернету за 24 години">
-          <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Список помітних подій на сторінці Історія: випадки некерованого навантаження й піки за часом, тривалістю та застосунком">
-          <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Сторінка Сповіщення в SysDial: аналітика про пам’ять swap і журнал збоїв DNS та сповіщень про пам’ять">
-          <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Сторінка Процеси в SysDial: картки для відстежуваних застосунків і список усіх запущених процесів із можливістю сортування">
-          <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Графіки по застосунках на сторінці Історія: пік пам’яті та процесор для Activity Monitor, Google Chrome Helper і Google Chrome, з лінією сповіщення на рівні 19 ГБ">
-          <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Вікно SysDial на вкладці Огляд: картки процесора, середнього навантаження, диска, передавання по мережі, Wi-Fi, пам’яті, батареї, сповіщень, якості інтернету, GPU, топ-процесів і вентиляторів">
-          <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Сховище в SysDial: елементи, безпечні для очищення, з розмірами, архіви Xcode для перегляду та скидання індексу Spotlight">
+          <picture>
+            <source srcset="../images/app/history-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+            <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Історія в SysDial: графіки процесора й пам’яті, швидкості мережі та затримки інтернету за 24 години">
+          </picture>
+          <picture>
+            <source srcset="../images/app/history-moments-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Список помітних подій на сторінці Історія: випадки некерованого навантаження й піки за часом, тривалістю та застосунком">
+          </picture>
+          <picture>
+            <source srcset="../images/app/alerts-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Сторінка Сповіщення в SysDial: аналітика про пам’ять swap і журнал збоїв DNS та сповіщень про пам’ять">
+          </picture>
+          <picture>
+            <source srcset="../images/app/processes-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+            <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Сторінка Процеси в SysDial: картки для відстежуваних застосунків і список усіх запущених процесів із можливістю сортування">
+          </picture>
+          <picture>
+            <source srcset="../images/app/history-apps-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Графіки по застосунках на сторінці Історія: пік пам’яті та процесор для Activity Monitor, Google Chrome Helper і Google Chrome, з лінією сповіщення на рівні 19 ГБ">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Вікно SysDial на вкладці Огляд: картки процесора, середнього навантаження, диска, передавання по мережі, Wi-Fi, пам’яті, батареї, сповіщень, якості інтернету, GPU, топ-процесів і вентиляторів">
+          </picture>
+          <picture>
+            <source srcset="../images/app/storage-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Сторінка Сховище в SysDial: елементи, безпечні для очищення, з розмірами, архіви Xcode для перегляду та скидання індексу Spotlight">
+          </picture>
           </div>
           </div>
         </div>
@@ -279,7 +345,10 @@
         </ul>
       </div>
       <figure class="shot gl-shot" data-reveal style="--d:140ms">
-        <img src="../images/panel.png" loading="lazy" decoding="async" alt="Панель SysDial, відкрита під рядком меню, з картками процесора, пам’яті, мережі, батареї та диска">
+        <picture>
+          <source srcset="../images/panel-light.png" media="(prefers-color-scheme: light)">
+          <img src="../images/panel.png" loading="lazy" decoding="async" alt="Панель SysDial, відкрита під рядком меню, з картками процесора, пам’яті, мережі, батареї та диска">
+        </picture>
       </figure>
     </div>
   </section>
@@ -299,7 +368,10 @@
         </figure>
       </div>
       <figure class="bld-panel" data-reveal style="--d:160ms">
-        <img src="../images/app/panel-settings.webp" width="922" height="1926" loading="lazy" decoding="async" alt="Налаштування SysDial: вибір теми, інтервал оновлення та модулі рядка меню й панелі з елементами для перетягування">
+        <picture>
+          <source srcset="../images/app/panel-settings-light.webp" media="(prefers-color-scheme: light)" width="922" height="1916">
+          <img src="../images/app/panel-settings.webp" width="922" height="1926" loading="lazy" decoding="async" alt="Налаштування SysDial: вибір теми, інтервал оновлення та модулі рядка меню й панелі з елементами для перетягування">
+        </picture>
       </figure>
     </div>
    </div></div>
@@ -314,15 +386,42 @@
       <div class="tstage" data-reveal style="--d:120ms">
         <div class="tglow" aria-hidden="true"></div>
         <div class="tshots">
-          <img data-t="amber"  src="../images/app/overview-amber.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Amber">
-          <img data-t="lime"   src="../images/app/overview-lime.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Lime">
-          <img data-t="ocean"  src="../images/app/overview-ocean.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Ocean">
-          <img data-t="coral"  src="../images/app/overview-coral.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Coral">
-          <img data-t="mint"   class="on" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Mint">
-          <img data-t="mono"   src="../images/app/overview-mono.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Mono">
-          <img data-t="neon"   src="../images/app/overview-neon.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Neon">
-          <img data-t="acid"   src="../images/app/overview-acid.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Acid">
-          <img data-t="violet" src="../images/app/overview-violet.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Violet">
+          <picture>
+            <source srcset="../images/app/overview-amber-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="amber"  src="../images/app/overview-amber.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Amber">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-lime-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="lime"   src="../images/app/overview-lime.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Lime">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-ocean-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="ocean"  src="../images/app/overview-ocean.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Ocean">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-coral-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="coral"  src="../images/app/overview-coral.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Coral">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-mint-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="mint"   class="on" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Mint">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-mono-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="mono"   src="../images/app/overview-mono.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Mono">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-neon-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="neon"   src="../images/app/overview-neon.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Neon">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-acid-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="acid"   src="../images/app/overview-acid.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Acid">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-violet-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="violet" src="../images/app/overview-violet.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Огляд SysDial у темі Violet">
+          </picture>
         </div>
       </div>
       <div class="swatches" id="swatches" role="radiogroup" aria-label="Тема" data-reveal style="--d:160ms"></div>
@@ -346,8 +445,14 @@
         <p class="fine" data-reveal style="--d:200ms">Клацніть правою кнопкою на робочому столі, виберіть Редагувати віджети і знайдіть SysDial. macOS оновлює віджети приблизно кожні 15 хвилин.</p>
       </div>
       <div class="desk" id="desk" data-stagger aria-label="Віджети SysDial на робочому столі Mac">
-        <div class="wgt wgt-s"><div class="par"><img src="../images/app/widget-small.webp" width="328" height="328" loading="lazy" decoding="async" alt="Маленький віджет SysDial з індикаторами процесора 16% і пам’яті 84%"></div></div>
-        <div class="wgt wgt-m"><div class="par"><img src="../images/app/widget-medium.webp" width="688" height="328" loading="lazy" decoding="async" alt="Середній віджет SysDial з індикаторами процесора, пам’яті, диска та батареї"></div></div>
+        <div class="wgt wgt-s"><div class="par"><picture>
+          <source srcset="../images/app/widget-small-light.webp" media="(prefers-color-scheme: light)">
+          <img src="../images/app/widget-small.webp" width="328" height="328" loading="lazy" decoding="async" alt="Маленький віджет SysDial з індикаторами процесора 16% і пам’яті 84%">
+        </picture></div></div>
+        <div class="wgt wgt-m"><div class="par"><picture>
+          <source srcset="../images/app/widget-medium-light.webp" media="(prefers-color-scheme: light)">
+          <img src="../images/app/widget-medium.webp" width="688" height="328" loading="lazy" decoding="async" alt="Середній віджет SysDial з індикаторами процесора, пам’яті, диска та батареї">
+        </picture></div></div>
       </div>
     </div>
   </section>

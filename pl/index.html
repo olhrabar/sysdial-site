@@ -104,15 +104,24 @@
       </div>
       <div class="proof">
         <figure class="pf-main">
-          <img src="../images/app/moments-card.webp" width="942" height="376" alt="Lista Istotnych zdarzeń SysDial: rozpędzone procesy i szczyty obciążenia wraz z godziną, czasem trwania i aplikacją za nie odpowiedzialną, na przykład mediaanalysisd przez 3 minuty przy 225 procentach">
+          <picture>
+            <source srcset="../images/app/moments-card-light.webp" media="(prefers-color-scheme: light)">
+            <img src="../images/app/moments-card.webp" width="942" height="376" alt="Lista Istotnych zdarzeń SysDial: rozpędzone procesy i szczyty obciążenia wraz z godziną, czasem trwania i aplikacją za nie odpowiedzialną, na przykład mediaanalysisd przez 3 minuty przy 225 procentach">
+          </picture>
           <i class="hl" aria-hidden="true"></i>
           <span class="tag" aria-hidden="true">Winowajca znaleziony za Ciebie</span>
         </figure>
         <figure class="pf-note">
-          <img src="../images/app/alerts-card.webp" width="922" height="298" alt="Dziennik alertów SysDial: alerty pamięci dla procesu pomocniczego Chrome przy 19,5 GB oraz awaria DNS z informacją, że sieć działa, ale nazwy stron nie mogą zostać rozwiązane">
+          <picture>
+            <source srcset="../images/app/alerts-card-light.webp" media="(prefers-color-scheme: light)">
+            <img src="../images/app/alerts-card.webp" width="922" height="298" alt="Dziennik alertów SysDial: alerty pamięci dla procesu pomocniczego Chrome przy 19,5 GB oraz awaria DNS z informacją, że sieć działa, ale nazwy stron nie mogą zostać rozwiązane">
+          </picture>
         </figure>
         <figure class="pf-watch">
-          <img src="../images/app/watch-card.webp" width="518" height="252" alt="Śledzona aplikacja w SysDial: Google Chrome Helper przy 19,4 GB pamięci, powyżej ustawionego limitu 19 GB, z widocznym poziomem alertu na karcie">
+          <picture>
+            <source srcset="../images/app/watch-card-light.webp" media="(prefers-color-scheme: light)">
+            <img src="../images/app/watch-card.webp" width="518" height="252" alt="Śledzona aplikacja w SysDial: Google Chrome Helper przy 19,4 GB pamięci, powyżej ustawionego limitu 19 GB, z widocznym poziomem alertu na karcie">
+          </picture>
         </figure>
       </div>
     </div>
@@ -157,12 +166,18 @@
             </div>
 
             <div class="sc-win">
-              <img src="../images/app/sc-window.webp" width="1413" height="846" alt="" decoding="async">
+              <picture>
+                <source srcset="../images/app/sc-window-light.webp" media="(prefers-color-scheme: light)">
+                <img src="../images/app/sc-window.webp" width="1413" height="846" alt="" decoding="async">
+              </picture>
               <i class="sc-ring"></i>
             </div>
             <div class="sc-dim"></div>
 
-            <div class="sc-pan"><img src="../images/app/sc-panel.webp" width="922" height="1338" alt="" decoding="async"><i class="sc-ring2"></i></div>
+            <div class="sc-pan"><picture>
+              <source srcset="../images/app/sc-panel-light.webp" media="(prefers-color-scheme: light)">
+              <img src="../images/app/sc-panel.webp" width="922" height="1338" alt="" decoding="async">
+            </picture><i class="sc-ring2"></i></div>
 
             <div class="sc-mbar">
               <span class="sc-ml"><i></i><i></i><i></i><i></i></span>
@@ -183,9 +198,18 @@
             </div>
 
             <div class="sc-zoom">
-              <img class="sc-card" src="../images/app/sc-card.webp" width="566" height="150" alt="" decoding="async">
-              <img class="sc-mom" src="../images/app/sc-moment.webp" width="566" height="74" alt="" decoding="async">
-              <img class="sc-menu" src="../images/app/sc-menu.webp" width="209" height="119" alt="" decoding="async">
+              <picture>
+                <source srcset="../images/app/sc-card-light.webp" media="(prefers-color-scheme: light)">
+                <img class="sc-card" src="../images/app/sc-card.webp" width="566" height="150" alt="" decoding="async">
+              </picture>
+              <picture>
+                <img class="sc-mom" src="../images/app/sc-moment.webp" width="566" height="74" alt="" decoding="async">
+              </picture>
+              <div class="sc-mh" aria-hidden="true"><b>Notable moments</b><p><span class="t">15:52–15:57</span><span class="d">5 min</span><span class="pk">peak 93%</span><span class="n">mDNSResponder</span><i>LOAD</i></p></div>
+              <picture>
+                <img class="sc-menu" src="../images/app/sc-menu.webp" width="209" height="119" alt="" decoding="async">
+              </picture>
+              <div class="sc-cm" aria-hidden="true"><p class="hi">Quit “mDNSResponder”</p><p>Force Quit “mDNSResponder”…</p><hr><p>Copy PID</p><p>Copy Name</p></div>
               <i class="sc-sel"></i>
               <span class="sc-tag"><span class="sc-t1">Winowajca już znaleziony</span><span class="sc-t2">Znów spokój, zapisane w Historii</span></span>
             </div>
@@ -218,48 +242,90 @@
           <li class="step on" data-i="0">
             <h3><button type="button" class="step-btn" aria-current="true"><span class="n">01</span><span class="t">Cofnij się 30 dni wstecz</span></button></h3>
             <p>Procesor, pamięć, sieć i opóźnienie internetu na jednej osi czasu, z zaznaczonymi alertami tam, gdzie wystąpiły. Przełączaj się między 1 godziną, 24 godzinami, 7 dniami lub dowolnym wybranym okresem i eksportuj widok do CSV.</p>
-            <img class="step-img" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Historia w SysDial: wykresy procesora i pamięci, prędkości sieci i opóźnienia internetu w ciągu 24 godzin">
+            <picture>
+              <source srcset="../images/app/history-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+              <img class="step-img" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Historia w SysDial: wykresy procesora i pamięci, prędkości sieci i opóźnienia internetu w ciągu 24 godzin">
+            </picture>
           </li>
           <li class="step" data-i="1">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">02</span><span class="t">Skoki, już znalezione</span></button></h3>
             <p>Rozpędzone procesy i szczyty obciążenia są wymienione wraz z godziną, czasem trwania i aplikacją, która je spowodowała, więc nie musisz ich szukać na wykresie.</p>
-            <img class="step-img" src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Lista Istotnych zdarzeń na stronie Historia, ze zdarzeniami rozpędzonych procesów i obciążenia wraz z godziną, czasem trwania i aplikacją">
+            <picture>
+              <source srcset="../images/app/history-moments-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Lista Istotnych zdarzeń na stronie Historia, ze zdarzeniami rozpędzonych procesów i obciążenia wraz z godziną, czasem trwania i aplikacją">
+            </picture>
           </li>
           <li class="step" data-i="2">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">03</span><span class="t">Alerty, wyjaśnione prostymi słowami</span></button></h3>
             <p>Analizy wyjaśniają, co spowalnia Twojego Maca, na przykład użycie pamięci swap i aplikacje, które zużywają jej najwięcej, wraz z przyciskiem do zwolnienia pamięci. Alerty przechowują siedmiodniowy dziennik rozpędzonych aplikacji, procesora, pamięci, dysku oraz awarii internetu lub DNS.</p>
-            <img class="step-img" src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Strona Alerty w SysDial: analiza dotycząca pamięci swap oraz dziennik awarii DNS i alertów pamięci">
+            <picture>
+              <source srcset="../images/app/alerts-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Strona Alerty w SysDial: analiza dotycząca pamięci swap oraz dziennik awarii DNS i alertów pamięci">
+            </picture>
           </li>
           <li class="step" data-i="3">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">04</span><span class="t">Śledź dowolny proces</span></button></h3>
             <p>Kliknij ikonę oka przy dowolnym procesie, a SysDial zacznie go śledzić — do 12 aplikacji. Każda otrzymuje kartę z procesorem i pamięcią na żywo, dziennym szczytem pamięci i poziomem alertu, a Ty sam ustawiasz limit pamięci, który wyzwala alert. Wyszukuj, sortuj, pokazuj w Finderze i zamykaj z tej samej listy. SysDial znajduje też zapomniane procesy deweloperskie, takie jak terraform, node i python, które zostały uruchomione po zamknięciu terminala.</p>
-            <img class="step-img" src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Strona Procesy w SysDial: karty śledzonych aplikacji oraz sortowalna lista wszystkich uruchomionych procesów">
+            <picture>
+              <source srcset="../images/app/processes-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+              <img class="step-img" src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Strona Procesy w SysDial: karty śledzonych aplikacji oraz sortowalna lista wszystkich uruchomionych procesów">
+            </picture>
           </li>
           <li class="step" data-i="4">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">05</span><span class="t">Cofnij się w czasie dla jednej aplikacji</span></button></h3>
             <p>Każda śledzona aplikacja otrzymuje własny wykres pamięci i procesora na stronie Historia, z zaznaczonym każdym uruchomieniem i narysowanym limitem pamięci w postaci linii, dzięki czemu dokładnie widzisz, kiedy go przekroczyła.</p>
-            <img class="step-img" src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Wykresy dla poszczególnych aplikacji na stronie Historia: szczyt pamięci i procesor dla Monitora aktywności, Google Chrome Helper i Google Chrome, z linią alertu przy 19 GB">
+            <picture>
+              <source srcset="../images/app/history-apps-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Wykresy dla poszczególnych aplikacji na stronie Historia: szczyt pamięci i procesor dla Monitora aktywności, Google Chrome Helper i Google Chrome, z linią alertu przy 19 GB">
+            </picture>
           </li>
           <li class="step" data-i="5">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">06</span><span class="t">Każda karta, jedno okno</span></button></h3>
             <p>Karty z panelu, a także load average i wentylatory — razem w jednym oknie, które możesz zostawić otwarte na drugim ekranie.</p>
-            <img class="step-img" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Okno SysDial na karcie Przegląd: karty procesora, load average, dysku, transferu sieciowego, Wi-Fi, pamięci, baterii, alertów, jakości internetu, GPU, najbardziej obciążających procesów i wentylatorów">
+            <picture>
+              <source srcset="../images/app/overview-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Okno SysDial na karcie Przegląd: karty procesora, load average, dysku, transferu sieciowego, Wi-Fi, pamięci, baterii, alertów, jakości internetu, GPU, najbardziej obciążających procesów i wentylatorów">
+            </picture>
           </li>
           <li class="step" data-i="6">
             <h3><button type="button" class="step-btn" aria-current="false"><span class="n">07</span><span class="t">Posprzątaj to, co bezpieczne</span></button></h3>
             <p>Pamięć podręczna aplikacji, logi, pamięć podręczna symulatorów oraz pamięć podręczna npm lub Terraform — z podanym rozmiarem i gotowe do zaznaczenia. Elementy trafiają do Kosza, więc możesz je przywrócić. Indeks Spotlight można zresetować, gdy stanie się zbyt duży.</p>
-            <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Pamięć masowa w SysDial: elementy bezpieczne do usunięcia wraz z rozmiarami, archiwa Xcode do przejrzenia oraz reset indeksu Spotlight">
+            <picture>
+              <source srcset="../images/app/storage-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+              <img class="step-img" src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Pamięć masowa w SysDial: elementy bezpieczne do usunięcia wraz z rozmiarami, archiwa Xcode do przejrzenia oraz reset indeksu Spotlight">
+            </picture>
           </li>
           </ol>
           <div class="stage-shadow">
           <div class="stage" aria-hidden="true">
-          <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Historia w SysDial: wykresy procesora i pamięci, prędkości sieci i opóźnienia internetu w ciągu 24 godzin">
-          <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Lista Istotnych zdarzeń na stronie Historia, ze zdarzeniami rozpędzonych procesów i obciążenia wraz z godziną, czasem trwania i aplikacją">
-          <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Strona Alerty w SysDial: analiza dotycząca pamięci swap oraz dziennik awarii DNS i alertów pamięci">
-          <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Strona Procesy w SysDial: karty śledzonych aplikacji oraz sortowalna lista wszystkich uruchomionych procesów">
-          <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Wykresy dla poszczególnych aplikacji na stronie Historia: szczyt pamięci i procesor dla Monitora aktywności, Google Chrome Helper i Google Chrome, z linią alertu przy 19 GB">
-          <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Okno SysDial na karcie Przegląd: karty procesora, load average, dysku, transferu sieciowego, Wi-Fi, pamięci, baterii, alertów, jakości internetu, GPU, najbardziej obciążających procesów i wentylatorów">
-          <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Pamięć masowa w SysDial: elementy bezpieczne do usunięcia wraz z rozmiarami, archiwa Xcode do przejrzenia oraz reset indeksu Spotlight">
+          <picture>
+            <source srcset="../images/app/history-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+            <img class="on" src="../images/app/history.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Historia w SysDial: wykresy procesora i pamięci, prędkości sieci i opóźnienia internetu w ciągu 24 godzin">
+          </picture>
+          <picture>
+            <source srcset="../images/app/history-moments-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/history-moments.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Lista Istotnych zdarzeń na stronie Historia, ze zdarzeniami rozpędzonych procesów i obciążenia wraz z godziną, czasem trwania i aplikacją">
+          </picture>
+          <picture>
+            <source srcset="../images/app/alerts-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/alerts.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Strona Alerty w SysDial: analiza dotycząca pamięci swap oraz dziennik awarii DNS i alertów pamięci">
+          </picture>
+          <picture>
+            <source srcset="../images/app/processes-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1197">
+            <img src="../images/app/processes.webp" width="2000" height="1330" loading="lazy" decoding="async" alt="Strona Procesy w SysDial: karty śledzonych aplikacji oraz sortowalna lista wszystkich uruchomionych procesów">
+          </picture>
+          <picture>
+            <source srcset="../images/app/history-apps-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/history-apps.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Wykresy dla poszczególnych aplikacji na stronie Historia: szczyt pamięci i procesor dla Monitora aktywności, Google Chrome Helper i Google Chrome, z linią alertu przy 19 GB">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Okno SysDial na karcie Przegląd: karty procesora, load average, dysku, transferu sieciowego, Wi-Fi, pamięci, baterii, alertów, jakości internetu, GPU, najbardziej obciążających procesów i wentylatorów">
+          </picture>
+          <picture>
+            <source srcset="../images/app/storage-light.webp" media="(prefers-color-scheme: light)" width="2000" height="1196">
+            <img src="../images/app/storage.webp" width="2000" height="1357" loading="lazy" decoding="async" alt="Strona Pamięć masowa w SysDial: elementy bezpieczne do usunięcia wraz z rozmiarami, archiwa Xcode do przejrzenia oraz reset indeksu Spotlight">
+          </picture>
           </div>
           </div>
         </div>
@@ -278,7 +344,10 @@
         </ul>
       </div>
       <figure class="shot gl-shot" data-reveal style="--d:140ms">
-        <img src="../images/panel.png" loading="lazy" decoding="async" alt="Panel SysDial otwarty pod paskiem menu, z kartami procesora, pamięci, sieci, baterii i dysku">
+        <picture>
+          <source srcset="../images/panel-light.png" media="(prefers-color-scheme: light)">
+          <img src="../images/panel.png" loading="lazy" decoding="async" alt="Panel SysDial otwarty pod paskiem menu, z kartami procesora, pamięci, sieci, baterii i dysku">
+        </picture>
       </figure>
     </div>
   </section>
@@ -298,7 +367,10 @@
         </figure>
       </div>
       <figure class="bld-panel" data-reveal style="--d:160ms">
-        <img src="../images/app/panel-settings.webp" width="922" height="1926" loading="lazy" decoding="async" alt="Ustawienia SysDial: wybór motywu, interwał odświeżania oraz moduły paska menu i panelu z uchwytami do przeciągania">
+        <picture>
+          <source srcset="../images/app/panel-settings-light.webp" media="(prefers-color-scheme: light)" width="922" height="1916">
+          <img src="../images/app/panel-settings.webp" width="922" height="1926" loading="lazy" decoding="async" alt="Ustawienia SysDial: wybór motywu, interwał odświeżania oraz moduły paska menu i panelu z uchwytami do przeciągania">
+        </picture>
       </figure>
     </div>
    </div></div>
@@ -313,15 +385,42 @@
       <div class="tstage" data-reveal style="--d:120ms">
         <div class="tglow" aria-hidden="true"></div>
         <div class="tshots">
-          <img data-t="amber"  src="../images/app/overview-amber.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Amber">
-          <img data-t="lime"   src="../images/app/overview-lime.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Lime">
-          <img data-t="ocean"  src="../images/app/overview-ocean.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Ocean">
-          <img data-t="coral"  src="../images/app/overview-coral.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Coral">
-          <img data-t="mint"   class="on" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Mint">
-          <img data-t="mono"   src="../images/app/overview-mono.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Mono">
-          <img data-t="neon"   src="../images/app/overview-neon.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Neon">
-          <img data-t="acid"   src="../images/app/overview-acid.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Acid">
-          <img data-t="violet" src="../images/app/overview-violet.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Violet">
+          <picture>
+            <source srcset="../images/app/overview-amber-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="amber"  src="../images/app/overview-amber.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Amber">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-lime-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="lime"   src="../images/app/overview-lime.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Lime">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-ocean-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="ocean"  src="../images/app/overview-ocean.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Ocean">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-coral-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="coral"  src="../images/app/overview-coral.webp"  width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Coral">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-mint-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="mint"   class="on" src="../images/app/overview-mint.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Mint">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-mono-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="mono"   src="../images/app/overview-mono.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Mono">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-neon-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="neon"   src="../images/app/overview-neon.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Neon">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-acid-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="acid"   src="../images/app/overview-acid.webp"   width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Acid">
+          </picture>
+          <picture>
+            <source srcset="../images/app/overview-violet-light.webp" media="(prefers-color-scheme: light)">
+            <img data-t="violet" src="../images/app/overview-violet.webp" width="2000" height="1276" loading="lazy" decoding="async" alt="Przegląd SysDial w motywie Violet">
+          </picture>
         </div>
       </div>
       <div class="swatches" id="swatches" role="radiogroup" aria-label="Motyw" data-reveal style="--d:160ms"></div>
@@ -345,8 +444,14 @@
         <p class="fine" data-reveal style="--d:200ms">Kliknij pulpit prawym przyciskiem myszy, wybierz Edytuj widżety i wyszukaj SysDial. macOS odświeża widżety mniej więcej co 15 minut.</p>
       </div>
       <div class="desk" id="desk" data-stagger aria-label="Widżety SysDial na pulpicie Maca">
-        <div class="wgt wgt-s"><div class="par"><img src="../images/app/widget-small.webp" width="328" height="328" loading="lazy" decoding="async" alt="Mały widżet SysDial ze wskaźnikami procesora 16% i pamięci 84%"></div></div>
-        <div class="wgt wgt-m"><div class="par"><img src="../images/app/widget-medium.webp" width="688" height="328" loading="lazy" decoding="async" alt="Średni widżet SysDial ze wskaźnikami procesora, pamięci, dysku i baterii"></div></div>
+        <div class="wgt wgt-s"><div class="par"><picture>
+          <source srcset="../images/app/widget-small-light.webp" media="(prefers-color-scheme: light)">
+          <img src="../images/app/widget-small.webp" width="328" height="328" loading="lazy" decoding="async" alt="Mały widżet SysDial ze wskaźnikami procesora 16% i pamięci 84%">
+        </picture></div></div>
+        <div class="wgt wgt-m"><div class="par"><picture>
+          <source srcset="../images/app/widget-medium-light.webp" media="(prefers-color-scheme: light)">
+          <img src="../images/app/widget-medium.webp" width="688" height="328" loading="lazy" decoding="async" alt="Średni widżet SysDial ze wskaźnikami procesora, pamięci, dysku i baterii">
+        </picture></div></div>
       </div>
     </div>
   </section>
