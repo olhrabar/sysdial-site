@@ -97,7 +97,7 @@ Everything else — headings, body copy, button labels, alt text, figcaptions, a
 - `title="Processor"`, `title="Memory"`, `title="Disk"`, `title="Internet latency"` (four tooltip `title=` attributes on the little menu-bar mockup icons)
 
 ### Hero (`<section class="hero">`)
-- Eyebrow: "Watches · Follows · Warns · Remembers"
+- Eyebrow: "Watches · Warns · Follows · Remembers" (same order as the four `.hx-chip` buttons below it; since 12.11.2026 — use the same words as the chips)
 - The `<h1 aria-label="...">` — translate the `aria-label` attribute (the full sentence) **and** the word-by-word `<span class="w">`/`<span class="w acc">` markup inside it. The English version reveals the sentence word by word, with the back half in an accent colour (the "twist": "SysDial already knows why" is highlighted). Keep that same idea — split your translated sentence into a sensible number of `<span class="w" style="--i:N">` chunks (don't force exactly 8 words if your language's syntax doesn't split that way) and put `class="w acc"` on the back portion that carries the "aha" reveal, matching the English structure's intent, not its literal word count. Keep `style="--i:N"` indices sequential (0, 1, 2…) over however many spans you end up with.
 - Lede paragraph (long sentence about watching, following, warning, 30 days of history)
 - CTA button text: "Download for Mac"
@@ -125,7 +125,7 @@ Everything else — headings, body copy, button labels, alt text, figcaptions, a
 - h2: "And right now, at a glance"
 - Intro paragraph (mentions "Pro" and "free" in prose — translate naturally)
 - `aria-label="What SysDial reads"`
-- The 7-item tag list: Processor, Memory, GPU, Disk, Battery, Network speed, Data used — translate these as plain nouns (they're not in-app strings, just descriptive labels); keep the same translation choices for these words everywhere else they recur on the page (see the glossary note at the end of this file)
+- The 7-item tag list: Processor, Memory, GPU, Disk, Battery, Network speed, Data used — translate these as plain nouns (they're not in-app strings, just descriptive labels); since 2026-11-05 each tag shows only an icon, and the word lives twice per item — in `title="…"` and in `<span class="sr-only">…</span>` (translate both, keep them identical); keep the same translation choices for these words everywhere else they recur on the page (see the glossary note at the end of this file)
 - Figure `alt=` text
 
 ### `#menubar` section (static HTML part)
@@ -145,6 +145,7 @@ Also inside that same JS-built template (template-literal strings, still just te
 - Segmented control button labels: "Icon", "Compact info"
 - `aria-label="Menu bar style"`
 - Hint: "Press any button, try it yourself"
+- Demo button (`#bldPlay`): "Watch how it works" (since 2026-11-05 the demo plays only on this button; the section is no longer scroll-pinned, so the intro no longer has a "Scroll to watch how it works." sentence)
 - `aria-label="Menu bar modules"`
 - "Now it is yours" + "You took over, so the demo stopped. Keep tapping, drag ≡, or switch the style. Scroll on whenever you are done."
 - Hint paragraph: "Drag ≡ to change the order. From the keyboard, press Space to switch a module and Alt with an arrow key to move it."
@@ -155,7 +156,7 @@ Also inside that same JS-built template (template-literal strings, still just te
 - Nine `alt=` texts on the theme screenshots: "SysDial Overview in the {Theme} theme" — translate the sentence, **keep the theme proper name in English** (see hard rule above: Amber/Lime/Ocean/Coral/Mint/Mono/Neon/Acid/Violet stay as-is)
 - JS: the `T` array (`const T = [ ['amber', 'Amber', ...], ... ]`) — each inner array is `[id, name, color, color, color]`. Do **not** touch the `id` (first item) or the three hex colors; the `name` (second item, e.g. `'Amber'`) must also stay in English for the same reason (matches the real app's Settings screen) — so for this specific array, leave every string exactly as-is, there is nothing to translate here. (This is the one array in the whole file where you change nothing.)
 - `role="radiogroup" aria-label="Theme"` → translate "Theme" to the generic word for it in your language
-- Try-hint: "Tap any theme, try it yourself" + the extra bit shown on wide screens " · scroll flips through all nine"
+- Button (`#thNext`, cycles to the next theme): "Try the next theme" (since 2026-11-05; replaced the old "Tap any theme, try it yourself · scroll flips through all nine" hint — themes no longer change on scroll or by themselves)
 
 ### `#widgets` section
 - h2: "On your desktop, and in your shortcuts"
@@ -189,6 +190,12 @@ Also inside that same JS-built template (template-literal strings, still just te
 ### `privacy.html` full policy body
 Translate every heading and paragraph in the document: the `<h1>`, all `<h2>` headings, all body paragraphs, all `<li>` items, the full data-retention table (3 column headers + 5 rows × 3 cells), and the bold lead-in phrases inside list items (e.g. "**Public IP address.**", "**Direct edition:**" — keep the `<strong>` emphasis, translate the words). Do not translate: the product name SysDial, "Oleksandr Hrabar", "support@sysdial.app", "sysdial.app", "api.ipify.org", "1.1.1.1", "8.8.8.8", file paths like `~/Library/Application Support/app.sysdial.mac/`, or `app.sysdial.mac`. This is a legal/policy document — prioritize clarity and accuracy over flourish; if a legal term doesn't have a clean one-word equivalent in {{LANG_NAME}}, use the closest common phrase used in other software privacy policies in that language rather than inventing one.
 
+### Added 11.11.2026 (already translated in all 12 languages by the tech lead; keep in sync if the English changes)
+- `#glance`: the `.tags` icon pills were replaced by 7 `.gl-tile` buttons (name + one-line description of the panel card) and `aria-label` "Cards in the panel". Names reuse the glossary words for Processor, Memory, Battery, Disk, Data used; "Network" and "Alerts" use the words from `#plans`.
+- `.light`: timeline `.lt` — heading "What SysDial reads, second by second", 4 row labels, lock band "Screen locked: nothing is read", axis unit `s` (`с` in `uk`), and 4 facts (`<b>` lead + sentence). "Settings → This App" stays in English (it is app UI).
+- `#privacy`: diagram `.pv` — "Your Mac", 3 file descriptions (file names `history.json`/`watched.json`/`traffic.json` and "Application Support" stay in English), 3 destination descriptions (`api.ipify.org`, `1.1.1.1 · 8.8.8.8` stay as-is; "Your DNS server" is translated) and "Analytics, ads, accounts" / "None. Nothing else leaves your Mac."
+- Source of the translations: `scratchpad/i18n_blocks.py` of that session (temporary); the pages themselves are the source of truth.
+
 ## 3. Consistency glossary (use the same translation every time these recur)
 
 These technical nouns appear repeatedly across different sections (nav, hero tri-cards, `#glance` tags, `#menubar` MODS array, `#plans` table). Pick one natural translation per concept and reuse it everywhere on the page, so the site doesn't contradict itself with two different words for the same thing: Processor/CPU, Memory, GPU, Disk, Battery, Network, Network speed, Internet, Data used/Data today, Alerts, History, Storage, Settings, Overview, Processes, Theme(s), Widgets, Shortcuts.
@@ -202,3 +209,24 @@ These technical nouns appear repeatedly across different sections (nav, hero tri
 5. Report back: list of files changed, and explicitly flag anything you weren't confident translating, anything that didn't fit in the UI at 1440/390px, and anything in the glossary where you made a judgement call.
 
 Do not modify `style.css`, the English root `index.html`/`privacy.html`, or any file outside your own `{{LANG_CODE}}/` directory. Do not commit.
+
+## Added 12.11.2026: hero scenes (MacBook)
+The `.proof` cards and the `.tri-row` under the hero were replaced by the 3D MacBook scene (`[data-hx]`); `#story` was removed (its Dashboard, CPU and DNS banners now live in the hero's "Warns & fixes" scene).
+- Reused from the page itself: chip names (split from the `.eyebrow`), captions for Watches / Follows / Remembers (former `.tri` texts), the Dashboard window strings, CPU and DNS banners, "The culprit, already found" and "Calm again, and saved to History" (former `#story`).
+- New strings: memory banner title and body (Google Chrome Helper at 19.4 GB), tags "Live, in your menu bar", "Over the limit you set", "The app behind it, named", "One click, calm again", "Every spike, with the app behind it", the `sc-window` alt, the word "fixes" in the second chip, the combined "Warns & fixes" caption, `aria-label` "What SysDial does", Pause / Play.
+- Stay English: "Top processes", "Quit", "Overview", "Internet quality" (app UI), "Free" / "Pro" badges.
+
+
+## Added 12.11.2026: design-review fixes
+- Eyebrow order changed to Watches · Warns · Follows · Remembers in all 13 pages (words unchanged, only the order; same words as the hero chips).
+- **"Insights" must not share a word with "analytics" (the privacy section: "no analytics, ads, accounts").** `uk`: "Аналітика" -> "Підказки" / "Підказки пояснюють…" (plans row, hero note, `#memory` step 03, alt text of the Alerts screenshot); "Аналітика" stays in the privacy section. `ro`: "Analize/analiză" (Insights) -> "Indicii/indiciu" (privacy keeps "analize/Analiză"). Other languages use a different word already (de Einblicke, it approfondimenti, nl inzichten, pt insights, cs/sk/hr own words). **Close calls left unchanged, owner/native check welcome:** `fr` "analyses" (Insights) vs "analytique" (privacy); `es` "análisis" vs "analíticas"; `pl` "analizy" vs "analityka" — same root, different words. Suggested alternatives if wanted: fr "Explications", es "Explicaciones"/"Pistas", pl "Wskazówki".
+- No new or changed visible strings otherwise (the `#glance` tile descriptions are now visually hidden at <=560 px but stay in the DOM for screen readers).
+
+## Added 12.11.2026: header nav link "Panel" (`#glance`)
+New nav item between "Memory" and "Menu bar" in all 13 `index.html` (not in `privacy.html`, whose reduced nav stays Memory · Plans · Support). Use the page's own word for the SysDial panel (the word already used in the `#glance` aria-label and copy):
+en Panel · uk Панель · de Panel · fr Panneau · es Panel · it Pannello · nl Paneel · pt Painel · pl Panel · cs Panel · sk Panel · hr Panel · ro Panou.
+Nav is hidden at max-width 1130px (was 1040px) so the longest labels (uk, nl, fr) fit without overlapping the menu-bar modules.
+
+## Added 13.11.2026: `#glance` GPU tile (8th tile, `data-i="7"`)
+Title "GPU" (not translated); description EN "Load, memory used, renderer and tiler." ("renderer" and "tiler" stay English, as in the app UI). "Load" and "memory used" reuse each page's Processor / Memory tile words:
+uk Навантаження, використана пам’ять, renderer і tiler. · de Last, belegter Speicher, Renderer und Tiler. · fr Charge, mémoire utilisée, renderer et tiler. · es Carga, memoria usada, renderer y tiler. · it Carico, memoria usata, renderer e tiler. · nl Belasting, gebruikt geheugen, renderer en tiler. · pt Carga, memória usada, renderer e tiler. · pl Obciążenie, zajęta pamięć, renderer i tiler. · cs Zátěž, využitá paměť, renderer a tiler. · sk Záťaž, využitá pamäť, renderer a tiler. · hr Opterećenje, zauzeta memorija, renderer i tiler. · ro Încărcare, memorie folosită, renderer și tiler.
