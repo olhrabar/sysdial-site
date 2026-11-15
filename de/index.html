@@ -454,10 +454,10 @@
     <div class="wrap pv-wrap">
       <div class="pv-copy">
         <h2 data-reveal>Deine Daten bleiben auf deinem Mac</h2>
-        <p data-reveal style="--d:80ms">SysDial hat keine Konten, keine Analyse und kein Tracking. Messwerte, Verlauf und die von dir beobachteten Apps werden ausschließlich auf deinem Mac gespeichert. Online geht es nur für zwei Dinge: um deine öffentliche IP-Adresse anzuzeigen, was du abschalten kannst, und um die Internetqualität zu prüfen.</p>
+        <p data-reveal style="--d:80ms">SysDial hat keine Konten, keine Analyse und kein Tracking. Messwerte, Verlauf und die von dir beobachteten Apps werden ausschließlich auf deinem Mac gespeichert. Online geht es nur für drei Dinge: um deine öffentliche IP-Adresse anzuzeigen, was du abschalten kannst, um die Internetqualität zu prüfen und, in der Direct-Ausgabe, um deine Lizenz einmal am Tag zu überprüfen.</p>
         <p data-reveal style="--d:160ms"><a href="privacy.html">Datenschutzerklärung lesen</a></p>
       </div>
-      <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), HistoryStore/WatchStore/TrafficStore -->
+      <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), LicenseAPI (api.sysdial.app, раз на добу, Direct), HistoryStore/WatchStore/TrafficStore -->
       <div class="pv" data-pv data-reveal style="--d:200ms">
         <div class="pv-mac">
           <b class="pv-t">Dein Mac</b>
@@ -472,6 +472,7 @@
           <li style="--dur:7s;--dl:.6s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.ipify.org</b><span>Deine öffentliche IP, nur bei geöffnetem Panel: einmal, dann wieder nach 10 Minuten oder wenn sich dein Netzwerk ändert. Abschaltbar.</span></div></li>
           <li style="--dur:2.6s;--dl:0s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>1.1.1.1 · 8.8.8.8 <em class="tier pro">Pro</em></b><span>Internetqualität alle 30 Sekunden: wie lange ein Verbindungsaufbau dauert. Nichts über dich wird gesendet.</span></div></li>
           <li style="--dur:2.6s;--dl:1.3s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>Dein DNS-Server <em class="tier pro">Pro</em></b><span>Alle 30 Sekunden eine Abfrage eines zufälligen Namens, um einen DNS-Ausfall von einer toten Verbindung zu unterscheiden.</span></div></li>
+          <li style="--dur:7s;--dl:2.4s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.sysdial.app</b><span>Lizenzprüfung · Direct-Ausgabe, einmal am Tag</span></div></li>
           <li class="pv-no"><i class="pv-line" aria-hidden="true"></i><div class="pv-to"><b>Analyse, Werbung, Konten</b><span>Nichts davon. Sonst verlässt nichts deinen Mac.</span></div></li>
         </ul>
       </div>

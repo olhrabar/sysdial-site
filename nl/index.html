@@ -454,10 +454,10 @@
     <div class="wrap pv-wrap">
       <div class="pv-copy">
         <h2 data-reveal>Jouw gegevens blijven op je Mac</h2>
-        <p data-reveal style="--d:80ms">SysDial heeft geen accounts, geen analytics en geen tracking. Metingen, geschiedenis en de apps die je volgt worden alleen op je Mac bewaard. Het gaat alleen online voor twee dingen: om je publieke IP-adres te tonen, wat je kunt uitschakelen, en om de internetkwaliteit te controleren.</p>
+        <p data-reveal style="--d:80ms">SysDial heeft geen accounts, geen analytics en geen tracking. Metingen, geschiedenis en de apps die je volgt worden alleen op je Mac bewaard. Het gaat alleen online voor drie dingen: om je publieke IP-adres te tonen, wat je kunt uitschakelen, om de internetkwaliteit te controleren en, in de Direct-editie, om je licentie eenmaal per dag te controleren.</p>
         <p data-reveal style="--d:160ms"><a href="privacy.html">Lees het privacybeleid</a></p>
       </div>
-      <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), HistoryStore/WatchStore/TrafficStore -->
+      <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), LicenseAPI (api.sysdial.app, раз на добу, Direct), HistoryStore/WatchStore/TrafficStore -->
       <div class="pv" data-pv data-reveal style="--d:200ms">
         <div class="pv-mac">
           <b class="pv-t">Jouw Mac</b>
@@ -472,6 +472,7 @@
           <li style="--dur:7s;--dl:.6s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.ipify.org</b><span>Je publieke IP, alleen als het paneel open is: één keer, en opnieuw na 10 minuten of als je netwerk verandert. Uit te zetten.</span></div></li>
           <li style="--dur:2.6s;--dl:0s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>1.1.1.1 · 8.8.8.8 <em class="tier pro">Pro</em></b><span>Internetkwaliteit elke 30 seconden: hoe lang een verbinding duurt. Er wordt niets over jou verstuurd.</span></div></li>
           <li style="--dur:2.6s;--dl:1.3s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>Je DNS-server <em class="tier pro">Pro</em></b><span>Elke 30 seconden één opzoeking van een willekeurige naam, om een DNS-storing te onderscheiden van een dode verbinding.</span></div></li>
+          <li style="--dur:7s;--dl:2.4s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.sysdial.app</b><span>Licentiecontrole · Direct-editie, eenmaal per dag</span></div></li>
           <li class="pv-no"><i class="pv-line" aria-hidden="true"></i><div class="pv-to"><b>Analytics, advertenties, accounts</b><span>Geen. Verder verlaat niets je Mac.</span></div></li>
         </ul>
       </div>

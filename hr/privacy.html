@@ -67,7 +67,7 @@
 <li>Aplikacija nema računa, analitike, oglašavanja niti praćenja.</li>
 <li>Web-stranica sysdial.app broji posjete pomoću usluge Cloudflare Web Analytics, bez kolačića i bez prikupljanja osobnih podataka.</li>
 <li>Sve što SysDial mjeri ostaje na vašem Macu.</li>
-<li>SysDial ostvaruje samo nekoliko mrežnih veza, navedenih niže, i nijedna od njih ne šalje vaše podatke nama.</li>
+<li>SysDial ostvaruje samo nekoliko mrežnih veza, navedenih niže. Jedina koja dolazi do nas je provjera licencije u Direct inačici, i ona ne šalje nikakve osobne podatke.</li>
 </ul>
 <h2>Što SysDial čita na vašem Macu</h2>
 <p>Kako bi prikazao svoja očitanja, SysDial dok radi čita informacije iz macOS-a:</p>
@@ -109,9 +109,9 @@
 <td>Dok ih ne promijenite ili uklonite</td>
 </tr>
 <tr>
-<td>Licencni ključ (Direct inačica)</td>
-<td>Za otključavanje SysDial Pro</td>
-<td>Dok ga ne uklonite u Postavkama</td>
+<td>Datum početka besplatnog probnog razdoblja i vaša licencija (Direct inačica), u macOS privjesku ključeva na vašem Macu</td>
+<td>Za provođenje probnog razdoblja i otključavanje SysDial Pro</td>
+<td>Dok ne uklonite SysDial Pro u Postavkama</td>
 </tr>
 </tbody>
 </table>
@@ -126,8 +126,9 @@
 <ul>
 <li><strong>Javna IP adresa.</strong> Kako bi prikazao vašu javnu IP adresu na kartici Mreža, SysDial je zahtijeva od api.ipify.org. Kao i svaka web-stranica koju posjetite, ta usluga vidi vašu IP adresu u trenutku zahtjeva. To možete isključiti u Postavkama → Opće → Prikaži javnu IP adresu.</li>
 <li><strong>Provjere kvalitete interneta (SysDial Pro).</strong> Kako bi izmjerio latenciju i otkrio prekide, SysDial otvara kratke veze prema poznatim javnim poslužiteljima (Cloudflare 1.1.1.1 i Google 8.8.8.8) te putem vašeg DNS poslužitelja traži nasumično ime. Tijekom tih provjera ne šalju se nikakvi podaci o vama ili vašem Macu; operateri tih poslužitelja vide vezu s vaše IP adrese, kao i kod svake druge veze.</li>
+<li><strong>Aktivacija i provjera licencije (Direct inačica).</strong> Kada aktivirate SysDial Pro, a zatim otprilike jednom dnevno, SysDial se spaja na naš licencni poslužitelj na adresi api.sysdial.app. Šalje vaš aktivacijski kod ili licencni token, anonimni otisak vašeg Maca (jednosmjerni hash njegova hardverskog ID-a koji se ne može pretvoriti natrag u taj ID) i naziv modela vašeg Maca, na primjer „MacBook Pro (16-inch, Nov 2023)“, kako biste mogli razlikovati svoje Macove. To koristimo samo za brojanje koliko Macova koristi vašu licenciju i za isključivanje Pro ako se novac za kupnju vrati ili se licencija opozove. Ako ste izvan mreže, ništa se ne mijenja. Poslužitelj čuva vašu licenciju, njezine Macove i vrijeme kad se svaki Mac zadnji put javio, dokle god licencija postoji. Radi na Cloudflareu.</li>
 </ul>
-<p>SysDial ne šalje vaša očitanja, povijest, nazive aplikacija niti bilo koje druge podatke nama niti ikome drugome.</p>
+<p>Osim provjere licencije, SysDial ne šalje vaša očitanja, povijest, nazive aplikacija niti bilo koje druge podatke nama niti ikome drugome.</p>
 <h2>Dozvole koje SysDial može zatražiti</h2>
 <ul>
 <li><strong>Obavijesti:</strong> za prikaz upozorenja koja uključite. Obavijesti se stvaraju na vašem Macu.</li>
@@ -137,7 +138,7 @@
 <h2>Kupnje</h2>
 <ul>
 <li><strong>Mac App Store inačica:</strong> kupnje obrađuje Apple. Ne primamo podatke o vašem plaćanju. Primjenjuju se Appleova pravila privatnosti.</li>
-<li><strong>Direct inačica:</strong> kupnje obrađuje naš pružatelj usluga plaćanja, koji djeluje kao službeni prodavatelj. Primamo samo ono što je potrebno za izdavanje i podršku vaše licencije, poput vaše adrese e-pošte i podataka o licenciji. Na samo plaćanje primjenjuju se pravila privatnosti pružatelja usluga plaćanja.</li>
+<li><strong>Direct inačica:</strong> kupnje obrađuje naš pružatelj usluga plaćanja, koji djeluje kao službeni prodavatelj. Primamo samo ono što je potrebno za izdavanje i podršku vaše licencije, poput vaše adrese e-pošte i podataka o licenciji. Na samo plaćanje primjenjuju se pravila privatnosti pružatelja usluga plaćanja. Vašu adresu e-pošte koristimo za slanje poveznice za aktivaciju i, na vaš zahtjev, poveznice za upravljanje vašim Macovima. Te se poruke šalju putem usluge Resend.</li>
 </ul>
 <h2>Web-stranica sysdial.app</h2>
 <p>Kako bismo znali koliko je ljudi posjećuje i koje stranice čitaju, web-stranica koristi <strong>Cloudflare Web Analytics</strong>. Ta usluga ne koristi kolačiće, ne sprema ništa u vaš preglednik i ne prati vas na drugim web-stranicama. Bilježi stranicu koju otvorite, web-stranicu s koje dolazite, vrstu preglednika i uređaja, vašu državu i brzinu učitavanja stranice. Primjenjuju se pravila o privatnosti tvrtke Cloudflare.</p>
@@ -149,7 +150,7 @@
 <h2>Djeca</h2>
 <p>SysDial svjesno ne prikuplja osobne podatke ni od koga, uključujući djecu.</p>
 <h2>Izmjene ovih pravila</h2>
-<p>Ako SysDial počne drukčije postupati s podacima — primjerice, ako dodamo automatsku provjeru ažuriranja ili internetsku aktivaciju licencije — ažurirat ćemo ova pravila i gore navedeni datum stupanja na snagu prije nego što promjena bude objavljena.</p>
+<p>Ako SysDial počne drukčije postupati s podacima — primjerice, ako dodamo automatsku provjeru ažuriranja — ažurirat ćemo ova pravila i gore navedeni datum stupanja na snagu prije nego što promjena bude objavljena.</p>
 <h2>Kontakt</h2>
 <p>Oleksandr Hrabar
 E-pošta: support@sysdial.app

@@ -66,7 +66,7 @@
 <li>The app has no accounts, no analytics, no advertising and no tracking.</li>
 <li>The sysdial.app website counts visits with Cloudflare Web Analytics, which uses no cookies and collects no personal data.</li>
 <li>Everything SysDial measures stays on your Mac.</li>
-<li>SysDial makes only a few network connections, listed below, and none of them send your data to us.</li>
+<li>SysDial makes only a few network connections, listed below. The only one that reaches us is the license check in the Direct edition, and it sends no personal data.</li>
 </ul>
 <h2>What SysDial reads on your Mac</h2>
 <p>To show its readings, SysDial reads information from macOS while it runs:</p>
@@ -108,9 +108,9 @@
 <td>Until you change or remove them</td>
 </tr>
 <tr>
-<td>License key (Direct edition)</td>
-<td>To unlock SysDial Pro</td>
-<td>Until you remove it in Settings</td>
+<td>Free trial start date and your license (Direct edition), in the macOS Keychain on your Mac</td>
+<td>To run the trial and unlock SysDial Pro</td>
+<td>Until you remove SysDial Pro in Settings</td>
 </tr>
 </tbody>
 </table>
@@ -125,8 +125,9 @@
 <ul>
 <li><strong>Public IP address.</strong> To show your public IP in the Network card, SysDial requests it from api.ipify.org. Like any website you visit, that service sees your IP address when the request is made. You can turn this off in Settings → General → Show public IP.</li>
 <li><strong>Internet quality checks (SysDial Pro).</strong> To measure latency and detect outages, SysDial opens short connections to well-known public servers (Cloudflare 1.1.1.1 and Google 8.8.8.8) and looks up a random name through your DNS server. No data about you or your Mac is sent in these checks; the operators of those servers see a connection from your IP address, as with any connection.</li>
+<li><strong>License activation and check (Direct edition).</strong> When you activate SysDial Pro, and then about once a day, SysDial contacts our license server at api.sysdial.app. It sends your activation code or license token, an anonymous fingerprint of your Mac (a one-way hash of its hardware ID that can't be turned back into the ID) and your Mac's model name, such as “MacBook Pro (16-inch, Nov 2023)”, so you can tell your Macs apart. We use this only to count how many Macs use your license and to turn Pro off if a purchase is refunded or a license is revoked. If you're offline, nothing changes. The server keeps your license, its Macs and when each Mac last checked in for as long as the license exists. It runs on Cloudflare.</li>
 </ul>
-<p>SysDial doesn't send your readings, history, app names or any other data to us or to anyone else.</p>
+<p>Apart from the license check, SysDial doesn't send your readings, history, app names or any other data to us or to anyone else.</p>
 <h2>Permissions SysDial may ask for</h2>
 <ul>
 <li><strong>Notifications:</strong> to show the alerts you turn on. Notifications are created on your Mac.</li>
@@ -136,7 +137,7 @@
 <h2>Purchases</h2>
 <ul>
 <li><strong>Mac App Store edition:</strong> purchases are processed by Apple. We don't receive your payment details. Apple's privacy policy applies.</li>
-<li><strong>Direct edition:</strong> purchases are processed by our payment provider, which acts as the seller of record. We receive only what's needed to issue and support your license, such as your email address and license details. The payment provider's privacy policy applies to the payment itself.</li>
+<li><strong>Direct edition:</strong> purchases are processed by our payment provider, which acts as the seller of record. We receive only what's needed to issue and support your license, such as your email address and license details. The payment provider's privacy policy applies to the payment itself. We use your email address to send your activation link and, when you ask for it, a link to manage your Macs. These emails are sent through Resend.</li>
 </ul>
 <h2>The sysdial.app website</h2>
 <p>To see how many people visit and which pages they read, the website uses <strong>Cloudflare Web Analytics</strong>. It doesn't use cookies or store anything in your browser, and it doesn't follow you across websites. It records the page you open, the site you came from, your browser and device type, your country and how quickly the page loaded. Cloudflare's privacy policy applies.</p>
@@ -148,7 +149,7 @@
 <h2>Children</h2>
 <p>SysDial doesn't knowingly collect any personal data from anyone, including children.</p>
 <h2>Changes to this policy</h2>
-<p>If SysDial starts working differently with data — for example, if we add automatic update checks or online license activation — we'll update this policy and the effective date above before the change is released.</p>
+<p>If SysDial starts working differently with data — for example, if we add automatic update checks — we'll update this policy and the effective date above before the change is released.</p>
 <h2>Contact</h2>
 <p>Oleksandr Hrabar
 Email: support@sysdial.app

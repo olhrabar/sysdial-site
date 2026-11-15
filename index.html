@@ -454,10 +454,10 @@
     <div class="wrap pv-wrap">
       <div class="pv-copy">
         <h2 data-reveal>Your data stays on your Mac</h2>
-        <p data-reveal style="--d:80ms">SysDial has no accounts, no analytics and no tracking. Readings, history and the apps you watch are stored only on your Mac. It goes online for two things: to show your public IP, which you can turn off, and to check internet quality.</p>
+        <p data-reveal style="--d:80ms">SysDial has no accounts, no analytics and no tracking. Readings, history and the apps you watch are stored only on your Mac. It goes online for three things: to show your public IP, which you can turn off, to check internet quality, and, in the Direct edition, to check your license once a day.</p>
         <p data-reveal style="--d:160ms"><a href="privacy.html">Read the privacy policy</a></p>
       </div>
-      <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), HistoryStore/WatchStore/TrafficStore -->
+      <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), LicenseAPI (api.sysdial.app, раз на добу, Direct), HistoryStore/WatchStore/TrafficStore -->
       <div class="pv" data-pv data-reveal style="--d:200ms">
         <div class="pv-mac">
           <b class="pv-t">Your Mac</b>
@@ -472,6 +472,7 @@
           <li style="--dur:7s;--dl:.6s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.ipify.org</b><span>Your public IP, only while the panel is open: once, then again after 10 minutes or when your network changes. You can turn it off.</span></div></li>
           <li style="--dur:2.6s;--dl:0s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>1.1.1.1 · 8.8.8.8 <em class="tier pro">Pro</em></b><span>Internet quality every 30 seconds: how long a connection takes. Nothing about you is sent.</span></div></li>
           <li style="--dur:2.6s;--dl:1.3s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>Your DNS server <em class="tier pro">Pro</em></b><span>One lookup of a random name every 30 seconds, to tell a DNS failure from a dead connection.</span></div></li>
+          <li style="--dur:7s;--dl:2.4s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.sysdial.app</b><span>License check · Direct, once a day</span></div></li>
           <li class="pv-no"><i class="pv-line" aria-hidden="true"></i><div class="pv-to"><b>Analytics, ads, accounts</b><span>None. Nothing else leaves your Mac.</span></div></li>
         </ul>
       </div>

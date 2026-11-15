@@ -67,7 +67,7 @@
 <li>L’app n’a ni comptes, ni analytique, ni publicité, ni pistage.</li>
 <li>Le site sysdial.app compte les visites avec Cloudflare Web Analytics, sans cookies et sans collecter de données personnelles.</li>
 <li>Tout ce que SysDial mesure reste sur votre Mac.</li>
-<li>SysDial n’établit que quelques connexions réseau, listées ci-dessous, et aucune d’elles ne nous envoie vos données.</li>
+<li>SysDial n’établit que quelques connexions réseau, listées ci-dessous. La seule qui nous atteint est la vérification de licence de l’édition Direct, et elle n’envoie aucune donnée personnelle.</li>
 </ul>
 <h2>Ce que SysDial lit sur votre Mac</h2>
 <p>Pour afficher ses mesures, SysDial lit des informations depuis macOS pendant son fonctionnement :</p>
@@ -109,9 +109,9 @@
 <td>Jusqu’à ce que vous les modifiiez ou les supprimiez</td>
 </tr>
 <tr>
-<td>Clé de licence (édition Direct)</td>
-<td>Pour déverrouiller SysDial Pro</td>
-<td>Jusqu’à ce que vous la supprimiez dans les Réglages</td>
+<td>Date de début de l’essai gratuit et votre licence (édition Direct), dans le Trousseau macOS de votre Mac</td>
+<td>Pour gérer l’essai et déverrouiller SysDial Pro</td>
+<td>Jusqu’à ce que vous supprimiez SysDial Pro dans les Réglages</td>
 </tr>
 </tbody>
 </table>
@@ -126,8 +126,9 @@
 <ul>
 <li><strong>Adresse IP publique.</strong> Pour afficher votre IP publique dans la fiche Réseau, SysDial la demande à api.ipify.org. Comme n’importe quel site que vous visitez, ce service voit votre adresse IP au moment de la requête. Vous pouvez désactiver cette fonction dans Réglages → Général → Afficher l’IP publique.</li>
 <li><strong>Vérifications de la qualité Internet (SysDial Pro).</strong> Pour mesurer la latence et détecter les pannes, SysDial ouvre de courtes connexions vers des serveurs publics bien connus (Cloudflare 1.1.1.1 et Google 8.8.8.8) et recherche un nom aléatoire via votre serveur DNS. Aucune donnée vous concernant ou concernant votre Mac n’est envoyée lors de ces vérifications ; les opérateurs de ces serveurs voient une connexion depuis votre adresse IP, comme pour toute connexion.</li>
+<li><strong>Activation et vérification de la licence (édition Direct).</strong> Lorsque vous activez SysDial Pro, puis environ une fois par jour, SysDial contacte notre serveur de licences à l’adresse api.sysdial.app. Il envoie votre code d’activation ou jeton de licence, une empreinte anonyme de votre Mac (un hachage à sens unique de son identifiant matériel, impossible à reconvertir en identifiant) et le nom du modèle de votre Mac, par exemple « MacBook Pro (16-inch, Nov 2023) », afin que vous puissiez distinguer vos Mac. Nous l’utilisons uniquement pour compter combien de Mac utilisent votre licence et pour désactiver Pro si un achat est remboursé ou si une licence est révoquée. Si vous êtes hors ligne, rien ne change. Le serveur conserve votre licence, ses Mac et la date de la dernière connexion de chaque Mac tant que la licence existe. Il fonctionne sur Cloudflare.</li>
 </ul>
-<p>SysDial ne nous envoie, ni à nous ni à personne d’autre, vos mesures, votre historique, les noms de vos applications ou toute autre donnée.</p>
+<p>Hormis la vérification de la licence, SysDial ne nous envoie, ni à nous ni à personne d’autre, vos mesures, votre historique, les noms de vos applications ou toute autre donnée.</p>
 <h2>Autorisations que SysDial peut demander</h2>
 <ul>
 <li><strong>Notifications :</strong> pour afficher les alertes que vous activez. Les notifications sont créées sur votre Mac.</li>
@@ -137,7 +138,7 @@
 <h2>Achats</h2>
 <ul>
 <li><strong>Édition Mac App Store :</strong> les achats sont traités par Apple. Nous ne recevons pas vos informations de paiement. La politique de confidentialité d’Apple s’applique.</li>
-<li><strong>Édition Direct :</strong> les achats sont traités par notre prestataire de paiement, qui agit en tant que revendeur officiel. Nous ne recevons que ce qui est nécessaire pour émettre et prendre en charge votre licence, comme votre adresse e-mail et les détails de la licence. La politique de confidentialité du prestataire de paiement s’applique au paiement lui-même.</li>
+<li><strong>Édition Direct :</strong> les achats sont traités par notre prestataire de paiement, qui agit en tant que revendeur officiel. Nous ne recevons que ce qui est nécessaire pour émettre et prendre en charge votre licence, comme votre adresse e-mail et les détails de la licence. La politique de confidentialité du prestataire de paiement s’applique au paiement lui-même. Nous utilisons votre adresse e-mail pour vous envoyer votre lien d’activation et, à votre demande, un lien pour gérer vos Mac. Ces e-mails sont envoyés via Resend.</li>
 </ul>
 <h2>Le site web sysdial.app</h2>
 <p>Pour savoir combien de personnes le visitent et quelles pages elles lisent, le site utilise <strong>Cloudflare Web Analytics</strong>. Ce service n’utilise pas de cookies, n’enregistre rien dans votre navigateur et ne vous suit pas d’un site à l’autre. Il enregistre la page ouverte, le site d’où vous venez, le type de navigateur et d’appareil, votre pays et le temps de chargement de la page. La politique de confidentialité de Cloudflare s’applique.</p>
@@ -149,7 +150,7 @@
 <h2>Enfants</h2>
 <p>SysDial ne collecte sciemment aucune donnée personnelle, y compris auprès d’enfants.</p>
 <h2>Modifications de cette politique</h2>
-<p>Si le fonctionnement de SysDial change en matière de données — par exemple, si nous ajoutons des vérifications automatiques de mise à jour ou une activation de licence en ligne — nous mettrons à jour cette politique et la date d’entrée en vigueur ci-dessus avant la publication du changement.</p>
+<p>Si le fonctionnement de SysDial change en matière de données — par exemple, si nous ajoutons des vérifications automatiques de mise à jour — nous mettrons à jour cette politique et la date d’entrée en vigueur ci-dessus avant la publication du changement.</p>
 <h2>Contact</h2>
 <p>Oleksandr Hrabar
 E-mail : support@sysdial.app
