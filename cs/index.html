@@ -454,10 +454,10 @@
     <div class="wrap pv-wrap">
       <div class="pv-copy">
         <h2 data-reveal>Vaše data zůstávají na vašem Macu</h2>
-        <p data-reveal style="--d:80ms">SysDial nemá účty, analytiku ani sledování uživatelů. Naměřené hodnoty, historie a sledované aplikace se ukládají jen na vašem Macu. Na internet se připojuje jen kvůli dvěma věcem: aby zobrazil vaši veřejnou IP adresu, kterou můžete vypnout, a aby zkontroloval kvalitu internetového připojení.</p>
+        <p data-reveal style="--d:80ms">SysDial nemá účty, analytiku ani sledování uživatelů. Naměřené hodnoty, historie a sledované aplikace se ukládají jen na vašem Macu. Na internet se připojuje jen kvůli třem věcem: aby zobrazil vaši veřejnou IP adresu, kterou můžete vypnout, aby zkontroloval kvalitu internetového připojení a, v edici Direct, aby jednou denně zkontroloval vaši licenci.</p>
         <p data-reveal style="--d:160ms"><a href="privacy.html">Přečíst zásady ochrany soukromí</a></p>
       </div>
-      <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), HistoryStore/WatchStore/TrafficStore -->
+      <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), LicenseAPI (api.sysdial.app, раз на добу, Direct), HistoryStore/WatchStore/TrafficStore -->
       <div class="pv" data-pv data-reveal style="--d:200ms">
         <div class="pv-mac">
           <b class="pv-t">Váš Mac</b>
@@ -472,6 +472,7 @@
           <li style="--dur:7s;--dl:.6s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.ipify.org</b><span>Vaše veřejná IP, jen když je panel otevřený: jednou a znovu po 10 minutách nebo při změně sítě. Lze vypnout.</span></div></li>
           <li style="--dur:2.6s;--dl:0s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>1.1.1.1 · 8.8.8.8 <em class="tier pro">Pro</em></b><span>Kvalita internetu každých 30 sekund: jak dlouho trvá navázání spojení. Nic o vás se neodesílá.</span></div></li>
           <li style="--dur:2.6s;--dl:1.3s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>Váš DNS server <em class="tier pro">Pro</em></b><span>Jeden dotaz na náhodné jméno každých 30 sekund, aby šlo odlišit výpadek DNS od přerušeného spojení.</span></div></li>
+          <li style="--dur:7s;--dl:2.4s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.sysdial.app</b><span>Kontrola licence · edice Direct, jednou denně</span></div></li>
           <li class="pv-no"><i class="pv-line" aria-hidden="true"></i><div class="pv-to"><b>Analytika, reklamy, účty</b><span>Žádné. Nic dalšího váš Mac neopouští.</span></div></li>
         </ul>
       </div>

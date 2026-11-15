@@ -67,7 +67,7 @@
 <li>Aplikácia nemá žiadne účty, žiadnu analytiku, žiadnu reklamu ani sledovanie.</li>
 <li>Web sysdial.app počíta návštevy pomocou Cloudflare Web Analytics – bez cookies a bez zbierania osobných údajov.</li>
 <li>Všetko, čo SysDial meria, zostáva vo vašom Macu.</li>
-<li>SysDial vytvára len niekoľko sieťových pripojení, uvedených nižšie, a žiadne z nich nám neposiela vaše dáta.</li>
+<li>SysDial vytvára len niekoľko sieťových pripojení, uvedených nižšie. Jediné, ktoré sa dostane k nám, je kontrola licencie v edícii Direct, a neposiela žiadne osobné údaje.</li>
 </ul>
 <h2>Čo SysDial číta vo vašom Macu</h2>
 <p>Aby mohol zobrazovať namerané hodnoty, SysDial počas behu číta informácie zo systému macOS:</p>
@@ -109,9 +109,9 @@
 <td>Kým ich nezmeníte alebo neodstránite</td>
 </tr>
 <tr>
-<td>Licenčný kľúč (edícia Direct)</td>
-<td>Na odomknutie SysDial Pro</td>
-<td>Kým ho neodstránite v Nastaveniach</td>
+<td>Dátum začiatku bezplatnej skúšobnej doby a vaša licencia (edícia Direct), v kľúčenke macOS na vašom Macu</td>
+<td>Na chod skúšobnej doby a odomknutie SysDial Pro</td>
+<td>Kým SysDial Pro neodstránite v Nastaveniach</td>
 </tr>
 </tbody>
 </table>
@@ -126,8 +126,9 @@
 <ul>
 <li><strong>Verejná IP adresa.</strong> Na zobrazenie vašej verejnej IP adresy na karte Sieť si ju SysDial vyžiada zo služby api.ipify.org. Tak ako ktorákoľvek webová stránka, ktorú navštívite, táto služba pri požiadavke uvidí vašu IP adresu. Toto môžete vypnúť v Nastaveniach → Všeobecné → Zobraziť verejnú IP.</li>
 <li><strong>Kontroly kvality internetu (SysDial Pro).</strong> Na meranie latencie a zistenie výpadkov SysDial otvára krátke pripojenia k známym verejným serverom (Cloudflare 1.1.1.1 a Google 8.8.8.8) a cez váš DNS server vyhľadá náhodný názov. Pri týchto kontrolách sa neposielajú žiadne dáta o vás ani o vašom Macu; prevádzkovatelia týchto serverov vidia pripojenie z vašej IP adresy, tak ako pri každom pripojení.</li>
+<li><strong>Aktivácia a kontrola licencie (edícia Direct).</strong> Keď aktivujete SysDial Pro a potom približne raz denne, SysDial kontaktuje náš licenčný server na adrese api.sysdial.app. Odosiela váš aktivačný kód alebo licenčný token, anonymný odtlačok vášho Macu (jednosmerný hash jeho hardvérového ID, ktorý sa nedá previesť späť na toto ID) a názov modelu vášho Macu, napríklad „MacBook Pro (16-inch, Nov 2023)“, aby ste svoje Macy vedeli rozlíšiť. Používame to len na započítanie, koľko Macov vašu licenciu používa, a na vypnutie Pro, ak sa za nákup vrátia peniaze alebo sa licencia zruší. Ak ste offline, nič sa nemení. Server uchováva vašu licenciu, jej Macy a čas, kedy sa každý Mac naposledy ohlásil, pokiaľ licencia existuje. Beží na Cloudflare.</li>
 </ul>
-<p>SysDial neposiela vaše namerané hodnoty, históriu, názvy appiek ani žiadne iné dáta nám ani nikomu inému.</p>
+<p>Okrem kontroly licencie SysDial neposiela vaše namerané hodnoty, históriu, názvy appiek ani žiadne iné dáta nám ani nikomu inému.</p>
 <h2>Oprávnenia, o ktoré môže SysDial požiadať</h2>
 <ul>
 <li><strong>Upozornenia (notifikácie):</strong> na zobrazenie upozornení, ktoré zapnete. Notifikácie sa vytvárajú vo vašom Macu.</li>
@@ -137,7 +138,7 @@
 <h2>Nákupy</h2>
 <ul>
 <li><strong>Edícia Mac App Store:</strong> nákupy spracúva Apple. Nedostávame vaše platobné údaje. Platia zásady ochrany osobných údajov Apple.</li>
-<li><strong>Edícia Direct:</strong> nákupy spracúva náš poskytovateľ platieb, ktorý vystupuje ako oficiálny predajca. Dostávame iba to, čo je potrebné na vydanie a podporu vašej licencie, napríklad vašu e-mailovú adresu a údaje o licencii. Na samotnú platbu sa vzťahujú zásady ochrany osobných údajov poskytovateľa platieb.</li>
+<li><strong>Edícia Direct:</strong> nákupy spracúva náš poskytovateľ platieb, ktorý vystupuje ako oficiálny predajca. Dostávame iba to, čo je potrebné na vydanie a podporu vašej licencie, napríklad vašu e-mailovú adresu a údaje o licencii. Na samotnú platbu sa vzťahujú zásady ochrany osobných údajov poskytovateľa platieb. Vašu e-mailovú adresu používame na odoslanie aktivačného odkazu a, keď o to požiadate, odkazu na správu vašich Macov. Tieto e-maily sa odosielajú cez Resend.</li>
 </ul>
 <h2>Web sysdial.app</h2>
 <p>Aby sme vedeli, koľko ľudí web navštevuje a ktoré stránky čítajú, web používa <strong>Cloudflare Web Analytics</strong>. Táto služba nepoužíva cookies, nič neukladá do vášho prehliadača a nesleduje vás na iných weboch. Zaznamenáva otvorenú stránku, web, z ktorého prichádzate, typ prehliadača a zariadenia, vašu krajinu a rýchlosť načítania stránky. Platia zásady ochrany osobných údajov spoločnosti Cloudflare.</p>
@@ -149,7 +150,7 @@
 <h2>Deti</h2>
 <p>SysDial vedome nezhromažďuje osobné údaje od nikoho, vrátane detí.</p>
 <h2>Zmeny týchto zásad</h2>
-<p>Ak SysDial začne pracovať s dátami inak — napríklad ak pridáme automatickú kontrolu aktualizácií alebo online aktiváciu licencie — aktualizujeme tieto zásady aj uvedený dátum účinnosti skôr, než túto zmenu vydáme.</p>
+<p>Ak SysDial začne pracovať s dátami inak — napríklad ak pridáme automatickú kontrolu aktualizácií — aktualizujeme tieto zásady aj uvedený dátum účinnosti skôr, než túto zmenu vydáme.</p>
 <h2>Kontakt</h2>
 <p>Oleksandr Hrabar
 E-mail: support@sysdial.app

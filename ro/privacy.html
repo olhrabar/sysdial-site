@@ -67,7 +67,7 @@
 <li>Aplicația nu are conturi, analize, publicitate sau urmărire.</li>
 <li>Site-ul sysdial.app numără vizitele cu Cloudflare Web Analytics, fără cookie-uri și fără a colecta date personale.</li>
 <li>Tot ce măsoară SysDial rămâne pe Mac-ul tău.</li>
-<li>SysDial realizează doar câteva conexiuni de rețea, enumerate mai jos, și niciuna dintre ele nu ne trimite datele tale.</li>
+<li>SysDial realizează doar câteva conexiuni de rețea, enumerate mai jos. Singura care ajunge la noi este verificarea licenței în ediția Direct și nu trimite date personale.</li>
 </ul>
 <h2>Ce citește SysDial de pe Mac-ul tău</h2>
 <p>Pentru a-și afișa citirile, SysDial preia informații de la macOS în timp ce rulează:</p>
@@ -109,9 +109,9 @@
 <td>Până când le modifici sau le elimini</td>
 </tr>
 <tr>
-<td>Cheie de licență (ediția Direct)</td>
-<td>Pentru a debloca SysDial Pro</td>
-<td>Până când o elimini din Setări</td>
+<td>Data de început a perioadei de probă gratuite și licența ta (ediția Direct), în Keychain-ul macOS de pe Mac-ul tău</td>
+<td>Pentru a derula perioada de probă și a debloca SysDial Pro</td>
+<td>Până când elimini SysDial Pro din Setări</td>
 </tr>
 </tbody>
 </table>
@@ -126,8 +126,9 @@
 <ul>
 <li><strong>Adresa IP publică.</strong> Pentru a-ți afișa adresa IP publică în cardul Rețea, SysDial o solicită de la api.ipify.org. Ca orice site web pe care îl vizitezi, acel serviciu vede adresa ta IP în momentul solicitării. Poți dezactiva acest lucru din Setări → General → Afișează IP-ul public.</li>
 <li><strong>Verificări ale calității internetului (SysDial Pro).</strong> Pentru a măsura latența și a detecta întreruperile, SysDial deschide conexiuni scurte către servere publice cunoscute (Cloudflare 1.1.1.1 și Google 8.8.8.8) și caută un nume aleatoriu prin serverul tău DNS. Nicio informație despre tine sau Mac-ul tău nu este trimisă în aceste verificări; operatorii acelor servere văd o conexiune de la adresa ta IP, ca la orice conexiune.</li>
+<li><strong>Activarea și verificarea licenței (ediția Direct).</strong> Când activezi SysDial Pro, iar apoi cam o dată pe zi, SysDial contactează serverul nostru de licențe de la api.sysdial.app. Trimite codul tău de activare sau tokenul licenței, o amprentă anonimă a Mac-ului tău (un hash unidirecțional al ID-ului său hardware, care nu poate fi transformat înapoi în ID) și numele modelului Mac-ului tău, de exemplu „MacBook Pro (16-inch, Nov 2023)”, ca să îți poți deosebi Mac-urile. Folosim aceste date doar pentru a număra câte Mac-uri folosesc licența ta și pentru a dezactiva Pro dacă o achiziție este rambursată sau o licență este revocată. Dacă ești offline, nu se schimbă nimic. Serverul păstrează licența ta, Mac-urile ei și momentul ultimei verificări a fiecărui Mac, cât timp există licența. Rulează pe Cloudflare.</li>
 </ul>
-<p>SysDial nu trimite citirile, istoricul, numele aplicațiilor sau orice alte date către noi sau către altcineva.</p>
+<p>În afară de verificarea licenței, SysDial nu trimite citirile, istoricul, numele aplicațiilor sau orice alte date către noi sau către altcineva.</p>
 <h2>Permisiuni pe care SysDial le poate solicita</h2>
 <ul>
 <li><strong>Notificări:</strong> pentru a afișa alertele pe care le activezi. Notificările sunt create pe Mac-ul tău.</li>
@@ -137,7 +138,7 @@
 <h2>Achiziții</h2>
 <ul>
 <li><strong>Ediția Mac App Store:</strong> achizițiile sunt procesate de Apple. Nu primim detaliile tale de plată. Se aplică politica de confidențialitate a Apple.</li>
-<li><strong>Ediția Direct:</strong> achizițiile sunt procesate de furnizorul nostru de plăți, care acționează ca vânzător oficial. Primim doar informațiile necesare pentru a emite și susține licența ta, precum adresa ta de email și detaliile licenței. Politica de confidențialitate a furnizorului de plăți se aplică plății în sine.</li>
+<li><strong>Ediția Direct:</strong> achizițiile sunt procesate de furnizorul nostru de plăți, care acționează ca vânzător oficial. Primim doar informațiile necesare pentru a emite și susține licența ta, precum adresa ta de email și detaliile licenței. Politica de confidențialitate a furnizorului de plăți se aplică plății în sine. Folosim adresa ta de email pentru a-ți trimite linkul de activare și, la cererea ta, un link pentru gestionarea Mac-urilor tale. Aceste emailuri sunt trimise prin Resend.</li>
 </ul>
 <h2>Site-ul sysdial.app</h2>
 <p>Ca să știm câte persoane îl vizitează și ce pagini citesc, site-ul folosește <strong>Cloudflare Web Analytics</strong>. Serviciul nu folosește cookie-uri, nu salvează nimic în browserul tău și nu te urmărește pe alte site-uri. Înregistrează pagina pe care o deschizi, site-ul de pe care vii, tipul de browser și de dispozitiv, țara ta și cât de repede s-a încărcat pagina. Se aplică politica de confidențialitate Cloudflare.</p>
@@ -149,7 +150,7 @@
 <h2>Copii</h2>
 <p>SysDial nu colectează în mod conștient date personale de la nimeni, inclusiv de la copii.</p>
 <h2>Modificări ale acestei politici</h2>
-<p>Dacă SysDial începe să funcționeze diferit cu datele — de exemplu, dacă adăugăm verificări automate de actualizare sau activare online a licenței — vom actualiza această politică și data intrării în vigoare de mai sus înainte ca modificarea să fie lansată.</p>
+<p>Dacă SysDial începe să funcționeze diferit cu datele — de exemplu, dacă adăugăm verificări automate de actualizare — vom actualiza această politică și data intrării în vigoare de mai sus înainte ca modificarea să fie lansată.</p>
 <h2>Contact</h2>
 <p>Oleksandr Hrabar
 Email: support@sysdial.app

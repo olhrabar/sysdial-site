@@ -454,10 +454,10 @@
     <div class="wrap pv-wrap">
       <div class="pv-copy">
         <h2 data-reveal>Vos données restent sur votre Mac</h2>
-        <p data-reveal style="--d:80ms">SysDial n’a pas de comptes, pas d’analytique et pas de pistage. Les mesures, l’historique et les applications que vous suivez sont stockés uniquement sur votre Mac. Il se connecte en ligne pour deux choses seulement : afficher votre IP publique, que vous pouvez désactiver, et vérifier la qualité de la connexion Internet.</p>
+        <p data-reveal style="--d:80ms">SysDial n’a pas de comptes, pas d’analytique et pas de pistage. Les mesures, l’historique et les applications que vous suivez sont stockés uniquement sur votre Mac. Il se connecte en ligne pour trois choses seulement : afficher votre IP publique, que vous pouvez désactiver, vérifier la qualité de la connexion Internet et, dans l’édition Direct, vérifier votre licence une fois par jour.</p>
         <p data-reveal style="--d:160ms"><a href="privacy.html">Lire la politique de confidentialité</a></p>
       </div>
-      <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), HistoryStore/WatchStore/TrafficStore -->
+      <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), LicenseAPI (api.sysdial.app, раз на добу, Direct), HistoryStore/WatchStore/TrafficStore -->
       <div class="pv" data-pv data-reveal style="--d:200ms">
         <div class="pv-mac">
           <b class="pv-t">Votre Mac</b>
@@ -472,6 +472,7 @@
           <li style="--dur:7s;--dl:.6s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.ipify.org</b><span>Votre IP publique, seulement quand le panneau est ouvert : une fois, puis à nouveau après 10 minutes ou quand votre réseau change. Désactivable.</span></div></li>
           <li style="--dur:2.6s;--dl:0s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>1.1.1.1 · 8.8.8.8 <em class="tier pro">Pro</em></b><span>Qualité Internet toutes les 30 secondes : le temps que prend une connexion. Rien sur vous n’est envoyé.</span></div></li>
           <li style="--dur:2.6s;--dl:1.3s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>Votre serveur DNS <em class="tier pro">Pro</em></b><span>Une recherche d’un nom aléatoire toutes les 30 secondes, pour distinguer une panne DNS d’une connexion coupée.</span></div></li>
+          <li style="--dur:7s;--dl:2.4s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.sysdial.app</b><span>Vérification de licence · édition Direct, une fois par jour</span></div></li>
           <li class="pv-no"><i class="pv-line" aria-hidden="true"></i><div class="pv-to"><b>Statistiques, publicité, comptes</b><span>Aucun. Rien d’autre ne quitte votre Mac.</span></div></li>
         </ul>
       </div>
