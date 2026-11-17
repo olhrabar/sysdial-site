@@ -1,3 +1,18 @@
+/* Self-hosted fonts (SIL OFL 1.1, licences in /fonts). Instrument Sans has no Cyrillic: uk text uses the system fallback, as it did with Google Fonts. */
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/instrument-sans-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/instrument-sans-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/instrument-sans-latin-ext-500-normal.woff2") format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/instrument-sans-latin-500-normal.woff2") format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/instrument-sans-latin-ext-600-normal.woff2") format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/instrument-sans-latin-600-normal.woff2") format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/instrument-sans-latin-ext-700-normal.woff2") format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/instrument-sans-latin-700-normal.woff2") format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/jetbrains-mono-cyrillic-500-normal.woff2") format("woff2"); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/jetbrains-mono-latin-ext-500-normal.woff2") format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/jetbrains-mono-cyrillic-600-normal.woff2") format("woff2"); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/jetbrains-mono-latin-ext-600-normal.woff2") format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/jetbrains-mono-latin-600-normal.woff2") format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
 /* SysDial — сайт. Алюмінієве тло (корпус Mac), графітовий текст,
    бірюзовий і фіолетовий — кольори іконки, лише як акценти. */
 :root {
@@ -110,6 +125,19 @@ h2[tabindex="-1"]:focus { outline: none; }
 .nav-group { display: flex; align-items: center; }
 .nav-group .langsw { position: relative; margin-left: 14px; padding-left: 14px; border-left: 1px solid var(--line); }
 @media (max-width: 1130px) { .nav-group .langsw { margin-left: 0; padding-left: 0; border-left: 0; } }
+/* Підсторінки (без .modules) мають лише 3 короткі посилання: на вузьких екранах їх лишаємо,
+   притиснувши групу праворуч; на головній nav ховається свідомо (7 розділів не вміщаються). */
+@media (max-width: 1130px) {
+  .menubar:not(:has(.modules)) .nav-group { margin-left: auto; }
+  .menubar:not(:has(.modules)) .nav-group nav { display: flex; gap: 14px; }
+  .menubar:not(:has(.modules)) .nav-group .langsw { margin-left: 14px; padding-left: 14px; border-left: 1px solid var(--line); }
+  .menubar:not(:has(.modules)) .langsw .list { left: auto; right: 0; }
+}
+/* ≤560 px: лого вже веде на головну, тож «Features» зайве; лишаються Pricing/Support */
+@media (max-width: 560px) {
+  .menubar:not(:has(.modules)) .nav-group nav a:first-child { display: none; }
+  .menubar:not(:has(.modules)) .nav-group .langsw { margin-left: 12px; padding-left: 12px; }
+}
 .langsw summary {
   list-style: none;
   display: inline-flex; align-items: center; gap: 5px;
@@ -343,8 +371,8 @@ html:not(.js) .lt-fig { display: none; }
 .privacy p { max-width: 62ch; }
 /* куди SysDial ходить у мережу: Mac зліва, три адреси справа, «пакети» біжать лініями; решта лишається на Mac */
 .pv-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 600px); gap: 48px; align-items: center; }
-.pv { display: grid; grid-template-columns: 210px minmax(0, 1fr); align-items: center; }
-.pv-mac { position: relative; z-index: 1; padding: 16px 16px 14px; border-radius: 16px; background: var(--surface); box-shadow: 0 0 0 1px var(--line), 0 18px 40px -24px rgba(0, 0, 0, .5); }
+.pv { display: grid; grid-template-columns: 210px minmax(0, 1fr); align-items: stretch; }
+.pv-mac { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; padding: 16px 16px 14px; border-radius: 16px; background: var(--surface); box-shadow: 0 0 0 1px var(--line), 0 18px 40px -24px rgba(0, 0, 0, .5); }
 .pv-t { display: block; margin-bottom: 10px; font-size: 15px; }
 .pv-files { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
 .pv-files li { display: grid; gap: 2px; padding: 8px 10px; border-radius: 10px; background: color-mix(in srgb, var(--teal) 9%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--teal) 28%, transparent); }
@@ -378,7 +406,7 @@ html:not(.js) .lt-fig { display: none; }
 }
 footer { padding: 40px 0 56px; color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; }
-footer nav { display: flex; gap: 22px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 
 /* Сторінка Privacy */
 .doc { padding: 56px 0 72px; }
@@ -425,7 +453,7 @@ footer nav { display: flex; gap: 22px; }
 
 .seg { position: relative; display: inline-flex; margin: 0; padding: 3px; gap: 2px; border-radius: 10px; background: color-mix(in srgb, var(--ink) 7%, transparent); }
 .seg .thumb { position: absolute; z-index: 0; left: 0; top: 3px; bottom: 3px; width: 0; border-radius: 8px; background: var(--teal-ink); box-shadow: 0 2px 8px -2px color-mix(in srgb, var(--teal) 70%, transparent); transition: transform .55s var(--ease), width .55s var(--ease); }
-.seg button { position: relative; z-index: 1; font: 600 14px var(--font); color: var(--muted); background: none; border: 0; border-radius: 8px; padding: 7px 16px; cursor: pointer; transition: color .35s; }
+.seg button { position: relative; z-index: 1; font: 600 14px var(--font); color: color-mix(in srgb, var(--ink) 80%, transparent); background: none; border: 0; border-radius: 8px; padding: 7px 16px; cursor: pointer; transition: color .35s; }
 .seg button[aria-pressed="true"] { color: #fff; }
 @media (prefers-color-scheme: dark) { .seg button[aria-pressed="true"] { color: #0c1a18; } }
 
@@ -595,7 +623,7 @@ p.try { padding-left: 0; background: none; box-shadow: none; color: var(--muted)
 
 /* Великий екран: кроки зліва перемикаються натисканням, скрін справа плавно змінюється (без прикріплення до прокрутки) */
 @media (min-width: 901px) {
-  .js .show-grid { width: min(1200px, 100% - 48px); margin-left: max(24px, calc((100% - 1080px) / 2)); margin-right: 0; display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 40px; align-items: start; }
+  .js .show-grid { width: min(1200px, 100% - 48px); margin-left: max(24px, calc((100% - 1080px) / 2)); margin-right: 0; max-width: calc(100% - max(24px, (100% - 1080px) / 2)); display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 40px; align-items: start; }
   .js .step-img { display: none; }
   .js .stage-shadow { display: block; filter: var(--shadow); }
   .js .stage { display: block; position: relative; aspect-ratio: 2000 / 1357; overflow: hidden; }
@@ -653,8 +681,8 @@ p.try { padding-left: 0; background: none; box-shadow: none; color: var(--muted)
     .js .show.pinhead .intro { margin-bottom: 20px; }
     .js .builder, .js .themes, .js .glance, .js .story, .js .widgets, .js .light, .js .privacy { padding: 0; }
     /* таблиця тарифів (~1060 px) прилипає лише там, де вміщається повністю; нижче — просто гортається */
-    @media (min-height: 1130px) { .js #plans { padding: 0; } }
-    @media (max-height: 1129px) { .js #plans .hold { height: auto; } .js #plans .hold-pin { position: static; height: auto; } }
+    @media (min-height: 1230px) { .js #plans { padding: 0; } }
+    @media (max-height: 1229px) { .js #plans .hold { height: auto; } .js #plans .hold-pin { position: static; height: auto; } }
     /* плитки панелі й розклад читань у довгих мовах (uk, pt, it…) не влазять у низьке вікно — там секції просто гортаються */
     @media (max-height: 699px) { .js .glance .hold, .js .light .hold { height: auto; } .js .glance .hold-pin, .js .light .hold-pin { position: static; height: auto; }
       .js .glance, .js .light { padding: 64px 0; } }
@@ -1263,3 +1291,146 @@ html:not(.js) .hx-ctl { display: none; }
 
 /* reduced-motion: правило вище не діє на псевдоелементи — пульс eyebrow і блиск смужок лишаються статичними */
 @media (prefers-reduced-motion: reduce) { .eyebrow::before, .sc-mt u::after, .sc.ok .sc-mt u::after { animation: none !important; } }
+
+/* ---------- Блок «See pricing» під таблицею #plans ---------- */
+.plans-cta { margin-top: 28px; }
+.plans-cta .button { font-size: 16px; }
+
+/* ---------- Підсторінки: pricing, thanks, terms, refunds ---------- */
+.menubar nav a[aria-current="page"] { opacity: 1; }
+.menubar nav a[aria-current="page"]::before { background: color-mix(in srgb, var(--menubar-ink) 12%, transparent); }
+@media (prefers-color-scheme: dark) { .menubar nav a[aria-current="page"]::before { background: color-mix(in srgb, var(--menubar-ink) 14%, transparent); } }
+.pg section { padding: 64px 0; }
+.pg .pg-hero { padding: 56px 0 0; }
+.pg h1, .pg-h1 { font-size: clamp(32px, 4vw, 44px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 640; margin: 0 0 16px; text-wrap: balance; }
+.pg .lede { max-width: 56ch; margin: 0 0 32px; }
+.pg .btn-row { margin: 0; }
+.pg a.button { text-decoration: none; }
+
+/* смуга «з застосунку» (лише з ?claim=) */
+.claim-strip { display: none; margin: 0 0 28px; padding: 12px 16px; font-size: 15px; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--violet); border-radius: 10px; max-width: 56ch; }
+.has-claim .claim-strip { display: block; }
+
+/* ---------- Панель цін .pp: шапка (перемикач) + колонки + підвал (умови) ---------- */
+.pg .pp { position: relative; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-panel); }
+.pp-guard { height: 1px; margin-bottom: -1px; pointer-events: none; }
+.pp-head { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid var(--line); background: var(--surface); border-radius: var(--radius-panel) var(--radius-panel) 0 0; transition: box-shadow .2s; }
+/* перемикач: без JS схований, замість нього .pp-nojs і повна таблиця цін нижче */
+.pp .seg { display: none; }
+.js .pp .seg { display: inline-flex; }
+.pp .seg button { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.pp .seg button[aria-pressed="true"] .tier.free { background: rgba(0, 0, 0, .2); color: inherit; }
+@media (prefers-color-scheme: dark) { .pp .seg button[aria-pressed="true"] .tier.free { background: rgba(12, 26, 24, .16); } }
+.pp .seg .thumb { left: 0; }
+.pp-nojs { margin: 0; font-size: 15px; color: var(--ink); }
+.js .pp-nojs { display: none; }
+.pp-nojs a { color: var(--teal-ink); text-underline-offset: 3px; }
+/* «Launch price»: окремий елемент після шапки, щоб шапку можна було зробити sticky без нього */
+.pp-launch { position: absolute; top: 27px; right: 24px; margin: 0; }
+.pp-launch .tier.free { background: none; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--teal-ink) 45%, transparent); font-size: 12px; padding: 4px 11px; }
+.pp-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.js .pp-cols { transition: opacity .12s; }
+.js .pp-cols.out { opacity: 0; }
+.js .pp-cols.in .pc-swap { animation: pcIn .18s var(--ease) both; }
+@keyframes pcIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.pp-col { padding: 28px 24px; min-width: 0; }
+.pp-col + .pp-col { border-left: 1px solid var(--line); }
+.pp-col h3 { margin: 0 0 14px; font: 600 12.5px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.pc-price { display: flex; align-items: baseline; gap: 6px; margin: 0 0 14px; }
+.pc-price .num { font: 600 44px/1 var(--mono); font-variant-numeric: tabular-nums; color: var(--ink); }
+.pc-price .unit { font-size: 16px; color: var(--muted); }
+.pp-value { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; min-height: 24px; margin: 0 0 10px; font-size: 14px; color: var(--muted); }
+.pp-value .tier { white-space: nowrap; }
+.pp-save { font: 600 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; padding: 5px 9px; border-radius: 999px; white-space: nowrap; background: var(--teal-ink); color: #fff; }
+@media (prefers-color-scheme: dark) { .pp-save { background: var(--teal); color: #0c1a18; } }
+.pp-per { display: flex; align-items: baseline; gap: 8px; margin: 0; }
+.pp-per-l { font: 600 11px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.pp-per-v { font: 500 15px var(--mono); font-variant-numeric: tabular-nums; color: var(--ink); }
+.pp-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding: 18px 24px; border-top: 1px solid var(--line); }
+.pp-terms { max-width: 52ch; }
+.pp-terms p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.pp-terms p + p { margin-top: 4px; }
+.pp-prelaunch { display: flex; align-items: center; gap: 16px; }
+.pp-prelaunch p { margin: 0; font-size: 14px; color: var(--muted); }
+.pp-prelaunch .button, .pp-col .button { text-decoration: none; }
+/* після запуску: кнопки в колонках (.pc-buy), див. TODO(Paddle) у pricing.html */
+.pc-buy { margin-top: 24px; }
+.pc-buy .button { width: 100%; height: 46px; justify-content: center; font: 600 16px var(--font); border: 0; cursor: pointer; transition: opacity .2s; }
+.pc-buy .button:hover { opacity: .88; }
+.pp-col .button, .pp-foot a { scroll-margin-top: 108px; }
+
+.assure { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 40px; }
+.assure h3 { margin: 0 0 6px; font: 600 12.5px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--teal-ink); }
+.assure p { margin: 0; font-size: 15px; color: var(--muted); max-width: 34ch; }
+
+.pg .pro-sec .plans tbody tr.line td { border-top: 2px solid var(--line); }
+.req { margin: 16px 0 0; font-size: 14px; color: var(--muted); }
+
+.two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.two-col article { padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-panel); }
+.two-col h3 { margin: 0 0 12px; font: 600 12.5px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.two-col p { margin: 0; font-size: 16px; color: var(--ink); }
+.sub-note { margin: 16px 0 0; font-size: 15px; color: var(--muted); }
+
+.faq { max-width: 72ch; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { position: relative; list-style: none; cursor: pointer; padding: 16px 32px 16px 0; font-size: 17px; font-weight: 600; color: var(--ink); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary .ic { position: absolute; right: 4px; top: 50%; width: 10px; height: 6px; margin-top: -3px; transition: transform .2s; }
+.faq details[open] summary .ic { transform: rotate(180deg); }
+.faq details > p { margin: 0; padding: 12px 0 20px; font-size: 16px; line-height: 1.55; color: var(--muted); }
+
+.allprices .plans td:nth-child(n+2), .allprices .plans th:nth-child(n+2) { width: 120px; }
+.allprices .plans td:nth-child(n+2) { font: 500 16px var(--mono); font-variant-numeric: tabular-nums; }
+.allprices .plans { width: auto; min-width: 100%; }
+.fineprint { max-width: 72ch; margin-top: 16px; }
+.fineprint p { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+
+.checkout-error { display: none; margin-top: 16px; padding: 12px 16px; font-size: 15px; color: var(--ink); background: var(--surface); border-left: 3px solid #c2410c; border-radius: 10px; }
+@media (prefers-color-scheme: dark) { .checkout-error { border-left-color: #fb923c; } }
+
+/* thanks */
+.thanks { padding: 96px 0 120px; }
+.thanks .wrap > * { max-width: 56ch; }
+.thanks h1:focus { outline: none; }
+.thanks .lede { margin: 0; }
+.steps { margin: 32px 0 0; padding: 0; list-style: none; counter-reset: st; font-size: 16px; }
+.steps li { position: relative; margin: 0 0 12px; padding-left: 36px; counter-increment: st; }
+.steps li::before { content: counter(st, decimal-leading-zero); position: absolute; left: 0; top: 2px; font: 600 13px/1.5 var(--mono); color: var(--teal-ink); }
+.thanks .still { margin: 24px 0 0; font-size: 15px; color: var(--muted); }
+.thanks [hidden] { display: none; }
+
+/* terms / refunds */
+.doc .meta { color: var(--muted); font-size: 15px; margin: 0 0 8px; }
+
+@media (max-width: 900px) {
+  .assure { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .two-col { grid-template-columns: minmax(0, 1fr); }
+  .pp-cols { grid-template-columns: minmax(0, 1fr); }
+  .pp-col { padding: 24px 20px; }
+  .pp-col + .pp-col { border-left: 0; border-top: 1px solid var(--line); }
+  .pp-head { position: sticky; top: 30px; z-index: 2; }
+  .pp-head.stuck { box-shadow: 0 8px 12px -10px rgba(16, 20, 28, .35); }
+}
+@media (max-width: 900px) and (prefers-color-scheme: dark) { .pp-head.stuck { box-shadow: 0 8px 12px -10px rgba(0, 0, 0, .7); } }
+@media (max-width: 560px) {
+  .pp-head { padding: 12px 16px; }
+  .pp .seg { width: 100%; }
+  .js .pp .seg { display: flex; }
+  .pp .seg button { flex: 1; justify-content: center; padding-inline: 8px; }
+  .pp .seg .tier { display: none; }
+  .pp-launch { position: static; padding: 14px 20px 0; }
+  .pp-cols .pp-col:first-child { padding-top: 14px; }
+  .pc-price .num { font-size: 40px; }
+  .pp-foot { flex-direction: column; align-items: stretch; }
+  .pp-prelaunch { flex-direction: column; align-items: stretch; gap: 12px; }
+  .pp-prelaunch .button { height: 46px; justify-content: center; }
+  .allprices .plans { font-size: 15px; }
+  .allprices .plans th, .allprices .plans td { padding: 10px 6px; }
+  .allprices .plans td:nth-child(n+2), .allprices .plans th:nth-child(n+2) { width: 72px; }
+  .allprices .plans td:nth-child(n+2) { font-size: 15px; }
+  .thanks { padding: 64px 0 80px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pp-head, .pc-buy .button, .faq summary .ic { transition: none !important; }
+}

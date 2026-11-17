@@ -442,4 +442,13 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://sysdial.app/ro/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sysdial.app/privacy.html"/>
   </url>
+  <url>
+    <loc>https://sysdial.app/pricing.html</loc>
+  </url>
+  <url>
+    <loc>https://sysdial.app/terms.html</loc>
+  </url>
+  <url>
+    <loc>https://sysdial.app/refunds.html</loc>
+  </url>
 </urlset>

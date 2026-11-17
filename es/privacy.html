@@ -21,9 +21,8 @@
   <link rel="alternate" hreflang="ro" href="https://sysdial.app/ro/privacy.html">
   <link rel="alternate" hreflang="x-default" href="https://sysdial.app/privacy.html">
   <link rel="icon" href="../images/icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="../fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/instrument-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -31,7 +30,7 @@
   <a class="site" href="/es/"><img src="../images/icon.png" alt="" onerror="this.remove()">SysDial</a>
   <div class="nav-group">
     <nav aria-label="Secciones">
-      <a href="/es/#memory">Memoria</a>
+      <a href="/es/">Funciones</a>
       <a href="/es/#plans">Planes</a>
       <a href="mailto:support@sysdial.app">Soporte</a>
     </nav>
@@ -59,15 +58,15 @@
   <div class="wrap">
 <h1>Política de privacidad de SysDial</h1>
 <p><em>Esta traducción se ofrece por comodidad. La versión en inglés en <a href="https://sysdial.app/privacy.html">https://sysdial.app/privacy.html</a> es el texto que prevalece.</em></p>
-<p><strong>Fecha de entrada en vigor:</strong> 15 de noviembre de 2026</p>
+<p><strong>Fecha de entrada en vigor:</strong> 17 de noviembre de 2026</p>
 <p>SysDial es un monitor del sistema para la barra de menú de macOS, creado por Oleksandr Hrabar ("nosotros"). Esta política explica qué hace SysDial con la información en tu Mac. Se aplica a ambas ediciones: SysDial de sysdial.app (Direct) y SysDial de la Mac App Store. También se aplica al sitio web sysdial.app.</p>
 <h2>La versión breve</h2>
 <ul>
-<li>SysDial no recopila, vende ni comparte datos personales.</li>
+<li>SysDial no vende ni comparte datos personales, y solo recopila lo necesario para gestionar tu licencia.</li>
 <li>La app no tiene cuentas, ni analíticas, ni publicidad, ni seguimiento.</li>
-<li>El sitio sysdial.app cuenta las visitas con Cloudflare Web Analytics, sin cookies y sin recopilar datos personales.</li>
+<li>El sitio sysdial.app cuenta las visitas con Cloudflare Web Analytics, que no usa cookies y no te identifica.</li>
 <li>Todo lo que SysDial mide se queda en tu Mac.</li>
-<li>SysDial realiza solo unas pocas conexiones de red, detalladas más abajo. La única que llega hasta nosotros es la comprobación de licencia de la edición Direct, y no envía ningún dato personal.</li>
+<li>SysDial realiza solo unas pocas conexiones de red, detalladas más abajo. La única que llega hasta nosotros es la comprobación de licencia de la edición Direct, y solo envía lo necesario para comprobar tu licencia.</li>
 </ul>
 <h2>Qué lee SysDial en tu Mac</h2>
 <p>Para mostrar sus lecturas, SysDial lee información de macOS mientras se ejecuta:</p>
@@ -126,7 +125,7 @@
 <ul>
 <li><strong>Dirección IP pública.</strong> Para mostrar tu IP pública en la tarjeta de Red, SysDial la solicita a api.ipify.org. Como cualquier sitio web que visitas, ese servicio ve tu dirección IP cuando se hace la solicitud. Puedes desactivar esto en Ajustes → General → Mostrar IP pública.</li>
 <li><strong>Comprobaciones de calidad de Internet (SysDial Pro).</strong> Para medir la latencia y detectar interrupciones, SysDial abre conexiones breves a servidores públicos conocidos (Cloudflare 1.1.1.1 y Google 8.8.8.8) y resuelve un nombre aleatorio a través de tu servidor DNS. En estas comprobaciones no se envía ningún dato sobre ti ni sobre tu Mac; los operadores de esos servidores ven una conexión desde tu dirección IP, como con cualquier conexión.</li>
-<li><strong>Activación y comprobación de la licencia (edición Direct).</strong> Cuando activas SysDial Pro, y después aproximadamente una vez al día, SysDial se conecta a nuestro servidor de licencias en api.sysdial.app. Envía tu código de activación o token de licencia, una huella anónima de tu Mac (un hash unidireccional de su ID de hardware que no se puede convertir de nuevo en el ID) y el nombre del modelo de tu Mac, por ejemplo «MacBook Pro (16-inch, Nov 2023)», para que puedas distinguir tus Mac. Lo usamos solo para contar cuántos Mac usan tu licencia y para desactivar Pro si se reembolsa una compra o se revoca una licencia. Si no tienes conexión, no cambia nada. El servidor conserva tu licencia, sus Mac y la fecha en que cada Mac se conectó por última vez mientras exista la licencia. Funciona en Cloudflare.</li>
+<li><strong>Activación y comprobación de la licencia (edición Direct).</strong> Cuando activas SysDial Pro, y después aproximadamente una vez al día, SysDial se conecta a nuestro servidor de licencias en api.sysdial.app. Envía tu código de activación o token de licencia, una huella de tu Mac (un hash unidireccional de su ID de hardware que no se puede convertir de nuevo en el ID; como está vinculada a tu licencia, cuenta como dato personal) y el nombre del modelo de tu Mac, por ejemplo «MacBook Pro (16-inch, Nov 2023)», para que puedas distinguir tus Mac. Lo usamos solo para contar cuántos Mac usan tu licencia y para desactivar Pro si se reembolsa una compra o se revoca una licencia. Si no tienes conexión, no cambia nada. Funciona en Cloudflare, con la base de datos en la UE.</li>
 </ul>
 <p>Aparte de la comprobación de licencia, SysDial no nos envía tus lecturas, tu historial, los nombres de tus apps ni ningún otro dato, ni a nosotros ni a nadie más.</p>
 <h2>Permisos que SysDial puede solicitar</h2>
@@ -142,7 +141,33 @@
 </ul>
 <h2>El sitio web sysdial.app</h2>
 <p>Para saber cuántas personas lo visitan y qué páginas leen, el sitio usa <strong>Cloudflare Web Analytics</strong>. No usa cookies, no guarda nada en tu navegador y no te sigue por otros sitios. Registra la página que abres, el sitio del que vienes, el tipo de navegador y de dispositivo, tu país y cuánto tardó en cargar la página. Se aplica la política de privacidad de Cloudflare.</p>
-<p>El sitio está alojado en GitHub Pages y sus fuentes se cargan desde Google Fonts. Como en cualquier sitio web, GitHub, Cloudflare y Google ven tu dirección IP cuando tu navegador carga la página. El sitio no tiene publicidad, ni otros rastreadores, ni formularios.</p>
+<p>El sitio está alojado en GitHub Pages. Como en cualquier sitio web, GitHub y Cloudflare ven tu dirección IP cuando tu navegador carga la página. Cuando descargas SysDial, nuestro servidor cuenta la descarga por día, versión de la app y país; no guarda tu dirección IP. El sitio no tiene publicidad, ni otros rastreadores, ni formularios.</p>
+<h2>Proveedores de servicios</h2>
+<p>Usamos algunos servicios para hacer funcionar SysDial. Cada uno trata datos solo para prestarnos su servicio:</p>
+<ul>
+<li><strong>Cloudflare</strong> — gestiona el servidor de licencias y su base de datos (en la UE), el dominio del sitio y Web Analytics.</li>
+<li><strong>Resend</strong> — envía los correos de activación y de «gestionar tus Mac» (desde la UE).</li>
+<li><strong>GitHub</strong> — aloja el sitio web.</li>
+<li><strong>Paddle</strong> — vende SysDial Pro como merchant of record (vendedor oficial). Para los pagos, Paddle es un responsable del tratamiento independiente, con su propia política de privacidad.</li>
+</ul>
+<p>Algunas de estas empresas tienen su sede en Estados Unidos. Cuando los datos salen de la UE, se basan en el Marco de Privacidad de Datos UE-EE. UU. (EU–US Data Privacy Framework) o en las cláusulas contractuales tipo de la Comisión Europea.</p>
+<h2>Cuánto tiempo conservamos los datos</h2>
+<ul>
+<li><strong>Tu licencia</strong> (dirección de correo, plan, Mac y fecha en que cada Mac se conectó por última vez): mientras la licencia esté activa y durante 2 años después de que termine o se revoque, para poder ayudarte con el soporte y los reembolsos. Después se elimina automáticamente.</li>
+<li><strong>Copias de los correos que enviamos</strong>: el texto se elimina a los 30 días; la fecha, el asunto y el destinatario permanecen con tu licencia.</li>
+<li><strong>Enlaces de «gestionar tus Mac»</strong>: se eliminan cuando caducan (24 horas).</li>
+<li><strong>Correos de soporte</strong>: el tiempo necesario para responderte.</li>
+<li><strong>Registros de pagos e impuestos</strong>: los conserva Paddle como vendedor, según exige la ley.</li>
+<li><strong>Registros técnicos</strong> sin datos personales: identificadores de eventos de pago (90 días), compras dentro de la app sin finalizar (7 días) y nuestro registro de administración (2 años); se eliminan automáticamente.</li>
+</ul>
+<h2>Bases jurídicas</h2>
+<ul>
+<li><strong>Activación de la licencia, la comprobación diaria y los correos de licencia</strong>: para prestarte SysDial Pro, que compraste o te regalaron (ejecución de un contrato, RGPD, art. 6.1.b).</li>
+<li><strong>Estadísticas de visitas al sitio y respuestas a los correos de soporte</strong>: nuestro interés legítimo en gestionar y mejorar SysDial (art. 6.1.f).</li>
+</ul>
+<h2>Tus derechos</h2>
+<p>Puedes pedirnos que te mostremos los datos que tenemos sobre ti, que los corrijamos, que los eliminemos, que te los entreguemos en un formato portable, o que dejemos de usarlos o limitemos su uso. Escribe a support@sysdial.app desde la dirección con la que compraste y te responderemos en un plazo de un mes. Eliminar los datos de tu licencia desactiva SysDial Pro en tus Mac.</p>
+<p>También puedes presentar una reclamación ante una autoridad de protección de datos — en Polonia, el Presidente de la Oficina de Protección de Datos Personales (UODO, uodo.gov.pl) — o ante la autoridad del lugar donde vives.</p>
 <h2>Contactar con soporte</h2>
 <p>Si nos escribes por correo electrónico, recibimos tu dirección de correo y lo que nos escribas. Cuando usas el enlace de correo dentro de SysDial, el mensaje se rellena de antemano con tu versión de SysDial, tu versión de macOS y el modelo de tu Mac para ayudarnos a responder; puedes editar o borrar esto antes de enviarlo. Usamos esta información solo para responderte, y la conservamos únicamente el tiempo necesario para ello. Puedes pedirnos que eliminemos tus mensajes en cualquier momento.</p>
 <h2>Analíticas de Apple (edición de la Mac App Store)</h2>
@@ -151,8 +176,8 @@
 <p>SysDial no recopila conscientemente datos personales de nadie, incluidos los menores.</p>
 <h2>Cambios en esta política</h2>
 <p>Si SysDial empieza a funcionar de forma diferente con los datos —por ejemplo, si añadimos comprobaciones automáticas de actualizaciones—, actualizaremos esta política y la fecha de entrada en vigor indicada arriba antes de publicar el cambio.</p>
-<h2>Contacto</h2>
-<p>Oleksandr Hrabar
+<h2>Quién es el responsable</h2>
+<p>El responsable del tratamiento de tus datos personales es Oleksandr Hrabar, Polonia (NIP 8993044767, VAT EU PL8993044767).
 Correo electrónico: support@sysdial.app
 Sitio web: https://sysdial.app</p>
   </div>

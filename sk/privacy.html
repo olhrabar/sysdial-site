@@ -21,9 +21,8 @@
   <link rel="alternate" hreflang="ro" href="https://sysdial.app/ro/privacy.html">
   <link rel="alternate" hreflang="x-default" href="https://sysdial.app/privacy.html">
   <link rel="icon" href="../images/icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="../fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/instrument-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -31,7 +30,7 @@
   <a class="site" href="/sk/"><img src="../images/icon.png" alt="" onerror="this.remove()">SysDial</a>
   <div class="nav-group">
     <nav aria-label="Sekcie">
-      <a href="/sk/#memory">Pamäť</a>
+      <a href="/sk/">Funkcie</a>
       <a href="/sk/#plans">Plány</a>
       <a href="mailto:support@sysdial.app">Podpora</a>
     </nav>
@@ -59,15 +58,15 @@
   <div class="wrap">
 <h1>Zásady ochrany osobných údajov SysDial</h1>
 <p><em>Tento preklad slúži len pre pohodlie používateľov; záväzná je anglická verzia na https://sysdial.app/privacy.html.</em></p>
-<p><strong>Dátum účinnosti:</strong> 15. novembra 2026</p>
+<p><strong>Dátum účinnosti:</strong> 17. novembra 2026</p>
 <p>SysDial je monitor systému pre lištu ponuky macOS, ktorý vytvoril Oleksandr Hrabar („my“, „nás“). Tieto zásady vysvetľujú, ako SysDial narába s informáciami vo vašom Macu. Platia pre obe edície: SysDial zo sysdial.app (Direct) a SysDial z Mac App Store. Platia aj pre web sysdial.app.</p>
 <h2>Stručne</h2>
 <ul>
-<li>SysDial nezhromažďuje, nepredáva ani nezdieľa osobné údaje.</li>
+<li>SysDial nepredáva ani nezdieľa osobné údaje a zhromažďuje len to, čo je potrebné na prevádzku vašej licencie.</li>
 <li>Aplikácia nemá žiadne účty, žiadnu analytiku, žiadnu reklamu ani sledovanie.</li>
-<li>Web sysdial.app počíta návštevy pomocou Cloudflare Web Analytics – bez cookies a bez zbierania osobných údajov.</li>
+<li>Web sysdial.app počíta návštevy pomocou Cloudflare Web Analytics – bez cookies a bez vašej identifikácie.</li>
 <li>Všetko, čo SysDial meria, zostáva vo vašom Macu.</li>
-<li>SysDial vytvára len niekoľko sieťových pripojení, uvedených nižšie. Jediné, ktoré sa dostane k nám, je kontrola licencie v edícii Direct, a neposiela žiadne osobné údaje.</li>
+<li>SysDial vytvára len niekoľko sieťových pripojení, uvedených nižšie. Jediné, ktoré sa dostane k nám, je kontrola licencie v edícii Direct, a odosiela len to, čo je potrebné na kontrolu vašej licencie.</li>
 </ul>
 <h2>Čo SysDial číta vo vašom Macu</h2>
 <p>Aby mohol zobrazovať namerané hodnoty, SysDial počas behu číta informácie zo systému macOS:</p>
@@ -126,7 +125,7 @@
 <ul>
 <li><strong>Verejná IP adresa.</strong> Na zobrazenie vašej verejnej IP adresy na karte Sieť si ju SysDial vyžiada zo služby api.ipify.org. Tak ako ktorákoľvek webová stránka, ktorú navštívite, táto služba pri požiadavke uvidí vašu IP adresu. Toto môžete vypnúť v Nastaveniach → Všeobecné → Zobraziť verejnú IP.</li>
 <li><strong>Kontroly kvality internetu (SysDial Pro).</strong> Na meranie latencie a zistenie výpadkov SysDial otvára krátke pripojenia k známym verejným serverom (Cloudflare 1.1.1.1 a Google 8.8.8.8) a cez váš DNS server vyhľadá náhodný názov. Pri týchto kontrolách sa neposielajú žiadne dáta o vás ani o vašom Macu; prevádzkovatelia týchto serverov vidia pripojenie z vašej IP adresy, tak ako pri každom pripojení.</li>
-<li><strong>Aktivácia a kontrola licencie (edícia Direct).</strong> Keď aktivujete SysDial Pro a potom približne raz denne, SysDial kontaktuje náš licenčný server na adrese api.sysdial.app. Odosiela váš aktivačný kód alebo licenčný token, anonymný odtlačok vášho Macu (jednosmerný hash jeho hardvérového ID, ktorý sa nedá previesť späť na toto ID) a názov modelu vášho Macu, napríklad „MacBook Pro (16-inch, Nov 2023)“, aby ste svoje Macy vedeli rozlíšiť. Používame to len na započítanie, koľko Macov vašu licenciu používa, a na vypnutie Pro, ak sa za nákup vrátia peniaze alebo sa licencia zruší. Ak ste offline, nič sa nemení. Server uchováva vašu licenciu, jej Macy a čas, kedy sa každý Mac naposledy ohlásil, pokiaľ licencia existuje. Beží na Cloudflare.</li>
+<li><strong>Aktivácia a kontrola licencie (edícia Direct).</strong> Keď aktivujete SysDial Pro a potom približne raz denne, SysDial kontaktuje náš licenčný server na adrese api.sysdial.app. Odosiela váš aktivačný kód alebo licenčný token, odtlačok vášho Macu (jednosmerný hash jeho hardvérového ID, ktorý sa nedá previesť späť na toto ID; keďže je prepojený s vašou licenciou, považuje sa za osobný údaj) a názov modelu vášho Macu, napríklad „MacBook Pro (16-inch, Nov 2023)“, aby ste svoje Macy vedeli rozlíšiť. Používame to len na započítanie, koľko Macov vašu licenciu používa, a na vypnutie Pro, ak sa za nákup vrátia peniaze alebo sa licencia zruší. Ak ste offline, nič sa nemení. Beží na Cloudflare a databáza je v EÚ.</li>
 </ul>
 <p>Okrem kontroly licencie SysDial neposiela vaše namerané hodnoty, históriu, názvy appiek ani žiadne iné dáta nám ani nikomu inému.</p>
 <h2>Oprávnenia, o ktoré môže SysDial požiadať</h2>
@@ -142,7 +141,33 @@
 </ul>
 <h2>Web sysdial.app</h2>
 <p>Aby sme vedeli, koľko ľudí web navštevuje a ktoré stránky čítajú, web používa <strong>Cloudflare Web Analytics</strong>. Táto služba nepoužíva cookies, nič neukladá do vášho prehliadača a nesleduje vás na iných weboch. Zaznamenáva otvorenú stránku, web, z ktorého prichádzate, typ prehliadača a zariadenia, vašu krajinu a rýchlosť načítania stránky. Platia zásady ochrany osobných údajov spoločnosti Cloudflare.</p>
-<p>Web je hostovaný na GitHub Pages a jeho písma sa načítavajú z Google Fonts. Ako pri každom webe, GitHub, Cloudflare a Google vidia vašu IP adresu, keď prehliadač načítava stránku. Web nemá žiadnu reklamu, žiadne ďalšie sledovacie nástroje ani formuláre.</p>
+<p>Web je hostovaný na GitHub Pages. Ako pri každom webe, GitHub a Cloudflare vidia vašu IP adresu, keď prehliadač načítava stránku. Keď si sťahujete SysDial, náš server sťahovanie započíta podľa dňa, verzie aplikácie a krajiny – vašu IP adresu neukladá. Web nemá žiadnu reklamu, žiadne ďalšie sledovacie nástroje ani formuláre.</p>
+<h2>Poskytovatelia služieb</h2>
+<p>Na prevádzku SysDialu využívame niekoľko služieb. Každá spracúva údaje len preto, aby nám poskytla svoju službu:</p>
+<ul>
+<li><strong>Cloudflare</strong> — prevádzkuje licenčný server a jeho databázu (v EÚ), doménu webu a Web Analytics.</li>
+<li><strong>Resend</strong> — odosiela aktivačné e-maily a e-maily o „správe vašich Macov“ (z EÚ).</li>
+<li><strong>GitHub</strong> — hostuje web.</li>
+<li><strong>Paddle</strong> — predáva SysDial Pro ako merchant of record (oficiálny predajca). Pri platbách je Paddle samostatným prevádzkovateľom podľa vlastných zásad ochrany osobných údajov.</li>
+</ul>
+<p>Niektoré z týchto spoločností sídlia v Spojených štátoch. Ak údaje opúšťajú EÚ, opierajú sa o rámec EÚ–USA na ochranu údajov (EU–US Data Privacy Framework) alebo o štandardné zmluvné doložky Európskej komisie.</p>
+<h2>Ako dlho údaje uchovávame</h2>
+<ul>
+<li><strong>Vaša licencia</strong> (e-mailová adresa, plán, Macy a čas, kedy sa každý Mac naposledy ohlásil): počas platnosti licencie a 2 roky po jej skončení alebo zrušení, aby sme vám mohli pomôcť s podporou a vrátením peňazí. Potom sa automaticky vymaže.</li>
+<li><strong>Kópie e-mailov, ktoré odosielame</strong>: text sa vymaže po 30 dňoch; dátum, predmet a príjemca zostávajú pri vašej licencii.</li>
+<li><strong>Odkazy na „správu vašich Macov“</strong>: vymažú sa po uplynutí platnosti (24 hodín).</li>
+<li><strong>E-maily podpore</strong>: po dobu potrebnú na odpoveď vám.</li>
+<li><strong>Platobné a daňové záznamy</strong>: uchováva Paddle ako predajca, ako vyžaduje zákon.</li>
+<li><strong>Technické záznamy</strong> bez osobných údajov – ID platobných udalostí (90 dní), nedokončené nákupy v aplikácii (7 dní) a náš administrátorský log (2 roky) – sa mažú automaticky.</li>
+</ul>
+<h2>Právne základy</h2>
+<ul>
+<li><strong>Aktivácia licencie, denná kontrola a e-maily k licencii</strong>: aby sme vám poskytli SysDial Pro, ktorý ste si kúpili alebo dostali (plnenie zmluvy, GDPR čl. 6 ods. 1 písm. b).</li>
+<li><strong>Štatistiky návštevnosti webu a odpovedanie na e-maily podpore</strong>: náš oprávnený záujem na prevádzke a zlepšovaní SysDialu (čl. 6 ods. 1 písm. f).</li>
+</ul>
+<h2>Vaše práva</h2>
+<p>Môžete nás požiadať, aby sme vám ukázali údaje, ktoré o vás uchovávame, opravili ich, vymazali ich, odovzdali vám ich v prenosnom formáte alebo prestali či obmedzili ich používanie. Napíšte na support@sysdial.app z adresy, ktorú ste použili pri nákupe, a odpovieme do jedného mesiaca. Vymazaním údajov o vašej licencii sa SysDial Pro na vašich Macoch vypne.</p>
+<p>Môžete tiež podať sťažnosť orgánu na ochranu údajov — v Poľsku prezidentovi Úradu na ochranu osobných údajov (UODO, uodo.gov.pl) — alebo orgánu v mieste, kde žijete.</p>
 <h2>Kontaktovanie podpory</h2>
 <p>Ak nám napíšete e-mail, dostaneme vašu e-mailovú adresu a všetko, čo napíšete. Keď použijete odkaz na e-mail v SysDiale, správa sa vopred vyplní verziou SysDialu, verziou macOS a modelom Macu, aby sme vám mohli lepšie odpovedať; pred odoslaním ich môžete upraviť alebo odstrániť. Tieto údaje používame iba na odpoveď vám a uchovávame ich len tak dlho, ako je na to potrebné. Kedykoľvek nás môžete požiadať o vymazanie svojich správ.</p>
 <h2>Analytika Apple (edícia Mac App Store)</h2>
@@ -151,8 +176,8 @@
 <p>SysDial vedome nezhromažďuje osobné údaje od nikoho, vrátane detí.</p>
 <h2>Zmeny týchto zásad</h2>
 <p>Ak SysDial začne pracovať s dátami inak — napríklad ak pridáme automatickú kontrolu aktualizácií — aktualizujeme tieto zásady aj uvedený dátum účinnosti skôr, než túto zmenu vydáme.</p>
-<h2>Kontakt</h2>
-<p>Oleksandr Hrabar
+<h2>Kto je zodpovedný</h2>
+<p>Prevádzkovateľom vašich osobných údajov je Oleksandr Hrabar, Poľsko (NIP 8993044767, VAT EU PL8993044767).
 E-mail: support@sysdial.app
 Webová stránka: https://sysdial.app</p>
   </div>
