@@ -27,9 +27,8 @@
   <link rel="alternate" hreflang="x-default" href="https://sysdial.app/">
   <link rel="icon" href="images/icon.png">
   <link rel="apple-touch-icon" href="images/icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/instrument-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -101,7 +100,7 @@
           <span class="note">Coming soon for macOS 14 and later.
             <a href="mailto:support@sysdial.app?subject=Tell%20me%20when%20SysDial%20is%20out">Tell me when it's out</a></span>
         </div>
-        <p class="fine pro-note" data-hero style="--d:1000ms">Watching and alerts are free. Following apps, history and insights are part of SysDial Pro.</p>
+        <p class="fine pro-note" data-hero style="--d:1000ms">Watching and alerts are free. Following apps, history and insights are part of SysDial Pro. <a href="pricing.html">See pricing</a></p>
       </div>
       <div class="hx" data-hx>
         <div class="hx-box">
@@ -501,13 +500,17 @@
             <tr><td>Internet quality<small>Latency, jitter, packet loss, DNS checks and an outage log</small></td><td class="no">—</td><td class="yes">✓</td></tr>
             <tr><td>Process manager<small>Search, sort, reveal and quit any process</small></td><td class="no">—</td><td class="yes">✓</td></tr>
             <tr><td>Follow any process<small>Up to 12 apps across restarts, with history, launch markers and your own memory alert</small></td><td class="no">—</td><td class="yes">✓</td></tr>
-            <tr><td>Leftover dev process finder<small>Terraform, node, python and similar tools left running</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Zombie process hunter<small>Terraform, node, python and similar tools left running</small></td><td class="no">—</td><td class="yes">✓</td></tr>
             <tr><td>Temperatures and fan speeds</td><td class="no">—</td><td class="yes">✓</td></tr>
             <tr><td>Insights<small>Plain-language explanations of what's slowing your Mac</small></td><td class="no">—</td><td class="yes">✓</td></tr>
             <tr><td>Quit a runaway app straight from the alert</td><td class="no">—</td><td class="yes">✓</td></tr>
-            <tr><td>Cache and Spotlight cleanup</td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Cache and Spotlight cleanup<small>Move caches to the Trash, empty it, rebuild Spotlight</small></td><td class="no">—</td><td class="yes">✓</td></tr>
           </tbody>
         </table>
+      </div>
+      <div class="cta plans-cta">
+        <a class="button" href="pricing.html">See pricing</a>
+        <span class="note">From $19 a year or $39 once. 14 days of Pro free in the app.</span>
       </div>
     </div>
    </div></div>
@@ -519,6 +522,9 @@
     <span>© 2026 Oleksandr Hrabar. Requires macOS 14 Sonoma or later.</span>
     <nav aria-label="Footer">
       <a href="mailto:support@sysdial.app">support@sysdial.app</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="terms.html">Terms</a>
+      <a href="refunds.html">Refunds</a>
       <a href="privacy.html">Privacy</a>
     </nav>
   </div>

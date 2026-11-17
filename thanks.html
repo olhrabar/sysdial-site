@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment received — SysDial</title>
+  <meta name="description" content="Payment received. Open the activation link from your email on your Mac to turn on SysDial Pro.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://sysdial.app/thanks.html">
+  <link rel="icon" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+  <link rel="preload" href="fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/instrument-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pg">
+<header class="menubar">
+  <a class="site" href="/"><img src="images/icon.png" alt="" onerror="this.remove()">SysDial</a>
+  <div class="nav-group">
+    <nav aria-label="Sections">
+      <a href="/">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="mailto:support@sysdial.app">Support</a>
+    </nav>
+    <details class="langsw">
+      <summary><span class="label">English</span><svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="list">
+        <span class="now"><span class="ico"><svg class="ck" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>English</span>
+        <a href="/uk/"><span class="ico"></span>Українська</a>
+        <a href="/de/"><span class="ico"></span>Deutsch</a>
+        <a href="/fr/"><span class="ico"></span>Français</a>
+        <a href="/es/"><span class="ico"></span>Español</a>
+        <a href="/it/"><span class="ico"></span>Italiano</a>
+        <a href="/nl/"><span class="ico"></span>Nederlands</a>
+        <a href="/pt/"><span class="ico"></span>Português</a>
+        <a href="/pl/"><span class="ico"></span>Polski</a>
+        <a href="/cs/"><span class="ico"></span>Čeština</a>
+        <a href="/sk/"><span class="ico"></span>Slovenčina</a>
+        <a href="/hr/"><span class="ico"></span>Hrvatski</a>
+        <a href="/ro/"><span class="ico"></span>Română</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main class="thanks">
+  <div class="wrap">
+    <p class="eyebrow">Payment received</p>
+    <!-- Без JS видно версію «з сайту»; з ?from=app скрипт показує версію «з застосунку» і переносить фокус на h1 -->
+    <h1 tabindex="-1" data-v="site">Check your email</h1>
+    <h1 tabindex="-1" data-v="app" hidden>SysDial will activate in a few seconds</h1>
+    <p class="lede" data-v="site">Your activation link is on its way to the address you used at checkout. Open it on the Mac where SysDial is installed, and Pro turns on. There’s no key to copy.</p>
+    <p class="lede" data-v="app" hidden>You can close this page and go back to SysDial. Your receipt and a backup activation link are in your email.</p>
+    <ol class="steps" data-v="site">
+      <li>Don’t have SysDial yet? <a href="/#top">Download it</a> first, then open the link.</li>
+      <li>Nothing after 10 minutes? Check your spam folder, or write to <a href="mailto:support@sysdial.app">support@sysdial.app</a>.</li>
+      <li>Your receipt comes separately, from Paddle.</li>
+    </ol>
+    <p class="still" data-v="app" hidden>Still says Free after a minute? Open the link in the email, or write to <a href="mailto:support@sysdial.app">support@sysdial.app</a>.</p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Oleksandr Hrabar</span>
+    <nav aria-label="Footer"><a href="mailto:support@sysdial.app">support@sysdial.app</a><a href="/pricing.html">Pricing</a><a href="/terms.html">Terms</a><a href="/refunds.html">Refunds</a><a href="/privacy.html">Privacy</a></nav>
+  </div>
+</footer>
+<script>
+(() => {
+  const app = new URLSearchParams(location.search).get('from') === 'app';
+  document.querySelectorAll('[data-v]').forEach((el) => { el.hidden = (el.dataset.v === 'app') !== app; });
+  const h = document.querySelector('h1[data-v]:not([hidden])');
+  if (h) h.focus({ preventScroll: true });
+  // перемикач мови: клік поза межами і Escape закривають відкриту панель
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.langsw[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('.langsw[open]').forEach((d) => { d.open = false; d.querySelector('summary').focus(); });
+  });
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f223878484604962b7d84154f3f321d2"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
