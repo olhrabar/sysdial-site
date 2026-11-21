@@ -1279,7 +1279,7 @@ html:not(.js) .hx-ctl { display: none; }
     box-shadow: 0 0 0 .07em rgba(0, 0, 0, .14), inset 0 0 0 .07em rgba(255, 255, 255, .6), 0 1em 2.6em -.4em rgba(0, 0, 0, .35);
     opacity: 0; transform: scale(.96); transform-origin: 0 0; transition: opacity .16s ease, transform .22s var(--ease); }
   .hx-cm > span { display: block; padding: 0 .75em; border-radius: .42em; font: 400 1.36em/1.9 var(--font); overflow: hidden; text-overflow: ellipsis; transition: background-color .12s, color .12s; }
-  .hx-cm hr { margin: .4em .9em; border: 0; border-top: .08em solid rgba(0, 0, 0, .12); }
+  .hx-cm .hx-sep { display: block; height: 0; margin: .4em .9em; border: 0; border-top: .08em solid rgba(0, 0, 0, .12); }
   .hx.mn .hx-cm { opacity: 1; transform: none; }
   .hx.qh .hx-cm .hi { background: #0a60ff; color: #fff; }
   .hx.ok .hx-cm { opacity: 0; transition-duration: .3s; }
@@ -1434,3 +1434,11 @@ html:not(.js) .hx-ctl { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .pp-head, .pc-buy .button, .faq summary .ic { transition: none !important; }
 }
+
+/* "SysDial Pro" plan name: full brand, violet "Pro" */
+.brand-pro { font-weight: 600; color: var(--ink); white-space: nowrap; }
+.brand-pro > span { color: var(--violet-ink); }
+:is(h1, h2, h3, summary, th, strong) .brand-pro { font-weight: inherit; }
+/* У заголовках назва без фіолетового — колір заголовка (рішення власника) */
+:is(h1, h2, h3) .brand-pro, :is(h1, h2, h3) .brand-pro > span { color: inherit; }
+@media print { .brand-pro, .brand-pro > span { color: inherit; } }
