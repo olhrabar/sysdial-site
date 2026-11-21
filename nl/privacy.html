@@ -58,7 +58,7 @@
   <div class="wrap">
 <h1>Privacybeleid van SysDial</h1>
 <p><em>Deze vertaling wordt aangeboden voor het gemak van de lezer; de Engelse versie op <a href="https://sysdial.app/privacy.html">https://sysdial.app/privacy.html</a> is de gezaghebbende tekst.</em></p>
-<p><strong>Ingangsdatum:</strong> 17 november 2026</p>
+<p><strong>Ingangsdatum:</strong> 21 november 2026</p>
 <p>SysDial is een systeemmonitor voor de macOS-menubalk, gemaakt door Oleksandr Hrabar ("wij", "ons"). Dit beleid legt uit wat SysDial doet met informatie op je Mac. Het geldt voor beide edities: SysDial van sysdial.app (Direct) en SysDial uit de Mac App Store. Het geldt ook voor de website sysdial.app.</p>
 <h2>De korte versie</h2>
 <ul>
@@ -66,7 +66,7 @@
 <li>De app heeft geen accounts, geen analytics, geen advertenties en geen tracking.</li>
 <li>De website sysdial.app telt bezoeken met Cloudflare Web Analytics, zonder cookies en zonder je te identificeren.</li>
 <li>Alles wat SysDial meet, blijft op je Mac.</li>
-<li>SysDial maakt slechts een paar netwerkverbindingen, hieronder vermeld. De enige die ons bereikt is de licentiecontrole in de Direct-editie, en die stuurt alleen wat nodig is om je licentie te controleren.</li>
+<li>SysDial maakt slechts een paar netwerkverbindingen, hieronder vermeld. Alleen de licentiecontrole in de Direct-editie en – alleen als je ervoor kiest die te sturen – feedback bereiken ons; ze sturen alleen wat daarvoor nodig is.</li>
 </ul>
 <h2>Wat SysDial op je Mac uitleest</h2>
 <p>Om zijn metingen te tonen, leest SysDial informatie van macOS terwijl het draait:</p>
@@ -126,8 +126,9 @@
 <li><strong>Publiek IP-adres.</strong> Om je publieke IP-adres te tonen in de kaart Netwerk, vraagt SysDial dit op bij api.ipify.org. Net als elke website die je bezoekt, ziet die dienst je IP-adres op het moment van de aanvraag. Je kunt dit uitschakelen bij Instellingen → Algemeen → Toon publiek IP-adres.</li>
 <li><strong>Controles van internetkwaliteit (SysDial Pro).</strong> Om latentie te meten en storingen te detecteren, opent SysDial korte verbindingen met bekende publieke servers (Cloudflare 1.1.1.1 en Google 8.8.8.8) en zoekt het een willekeurige naam op via je DNS-server. Bij deze controles worden geen gegevens over jou of je Mac verzonden; de beheerders van die servers zien een verbinding vanaf jouw IP-adres, zoals bij elke verbinding.</li>
 <li><strong>Licentieactivering en -controle (Direct-editie).</strong> Wanneer je SysDial Pro activeert, en daarna ongeveer eenmaal per dag, maakt SysDial contact met onze licentieserver op api.sysdial.app. Daarbij worden je activeringscode of licentietoken, een vingerafdruk van je Mac (een eenrichtingshash van de hardware-ID die niet terug te herleiden is naar die ID; omdat deze aan je licentie is gekoppeld, geldt hij als persoonsgegeven) en de modelnaam van je Mac gestuurd, zoals “MacBook Pro (16-inch, Nov 2023)”, zodat je je Macs uit elkaar kunt houden. We gebruiken dit alleen om te tellen hoeveel Macs je licentie gebruiken en om Pro uit te zetten als een aankoop wordt terugbetaald of een licentie wordt ingetrokken. Als je offline bent, verandert er niets. De server draait op Cloudflare, met de database in de EU.</li>
+<li><strong>Feedback (alleen als je die verstuurt).</strong> Wanneer je in het feedbackformulier op “Send” drukt, stuurt SysDial je bericht naar api.sysdial.app/v1/feedback — zie het onderdeel “Feedback” hieronder. Anders wordt er niets verzonden.</li>
 </ul>
-<p>Afgezien van de licentiecontrole stuurt SysDial je metingen, geschiedenis, app-namen of andere gegevens niet naar ons of naar wie dan ook.</p>
+<p>Afgezien van de licentiecontrole en feedback die je ervoor kiest te sturen, stuurt SysDial je metingen, geschiedenis, app-namen of andere gegevens niet naar ons of naar wie dan ook.</p>
 <h2>Rechten die SysDial kan vragen</h2>
 <ul>
 <li><strong>Meldingen:</strong> om de waarschuwingen te tonen die je inschakelt. Meldingen worden op je Mac gemaakt.</li>
@@ -159,6 +160,7 @@
 <li><strong>Supportmails</strong>: zolang als nodig is om je te antwoorden.</li>
 <li><strong>Betalings- en belastinggegevens</strong>: worden door Paddle als verkoper bewaard, zoals de wet vereist.</li>
 <li><strong>Technische gegevens</strong> zonder persoonsgegevens – ID’s van betalingsgebeurtenissen (90 dagen), onvoltooide in-app-aankopen (7 dagen) en ons beheerlogboek (2 jaar) – worden automatisch verwijderd.</li>
+<li><strong>Feedback</strong> die je ervoor kiest te sturen: maximaal 365 dagen, daarna verwijderd.</li>
 </ul>
 <h2>Rechtsgronden</h2>
 <ul>
@@ -170,6 +172,8 @@
 <p>Je kunt ook een klacht indienen bij een gegevensbeschermingsautoriteit — in Polen de President van het Bureau voor de bescherming van persoonsgegevens (UODO, uodo.gov.pl) — of bij de autoriteit in jouw woonplaats.</p>
 <h2>Contact opnemen met support</h2>
 <p>Als je ons e-mailt, ontvangen we je e-mailadres en alles wat je schrijft. Wanneer je de e-maillink in SysDial gebruikt, wordt het bericht vooraf ingevuld met je SysDial-versie, macOS-versie en Mac-model om ons te helpen antwoorden; je kunt deze gegevens vóór het verzenden bewerken of verwijderen. We gebruiken dit alleen om je te antwoorden en bewaren het niet langer dan daarvoor nodig is. Je kunt ons op elk moment vragen je berichten te verwijderen.</p>
+<h2>Feedback</h2>
+<p>Er wordt niets verzonden, tenzij je zelf kiest om feedback vanuit de app te sturen. Feedback die je verstuurt (het bericht, je e-mailadres als je dat opgeeft, en optionele diagnostiek: appversie, build, editie, licentietype, Mac-model, chip en macOS-versie) wordt per e-mail naar onze supportinbox gestuurd en maximaal 365 dagen bewaard, daarna verwijderd. Je IP-adres wordt nooit opgeslagen — alleen een eenrichtings-hash met sleutel ervan, die wordt gebruikt om te beperken hoeveel berichten kunnen worden verstuurd. Diagnostiek wordt alleen meegestuurd als “Include app and Mac details” aangevinkt blijft. Je kunt ons op elk moment vragen je feedback te verwijderen via support@sysdial.app.</p>
 <h2>Analytics van Apple (Mac App Store-editie)</h2>
 <p>Als je ervoor kiest om analytics te delen met app-ontwikkelaars in de macOS-instellingen, kan Apple ons geaggregeerde, anonieme statistieken verstrekken, zoals crashrapporten. Dit wordt beheerd door Apple en door jouw instellingen, niet door SysDial.</p>
 <h2>Kinderen</h2>

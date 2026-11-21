@@ -58,7 +58,7 @@
   <div class="wrap">
 <h1>Zásady ochrany soukromí SysDialu</h1>
 <p><em>Tento překlad je poskytován pro usnadnění. Závazné je anglické znění na adrese <a href="https://sysdial.app/privacy.html">https://sysdial.app/privacy.html</a>.</em></p>
-<p><strong>Datum účinnosti:</strong> 17. listopadu 2026</p>
+<p><strong>Datum účinnosti:</strong> 21. listopadu 2026</p>
 <p>SysDial je systémový monitor pro lištu menu macOS, vytvořený Oleksandrem Hrabarem („my“, „nás“). Tyto zásady vysvětlují, jak SysDial nakládá s informacemi na vašem Macu. Platí pro obě edice: SysDial ze sysdial.app (Direct) a SysDial z Mac App Store. Platí také pro web sysdial.app.</p>
 <h2>Stručně</h2>
 <ul>
@@ -66,7 +66,7 @@
 <li>Aplikace nemá žádné účty, žádnou analytiku, žádnou reklamu ani sledování uživatelů.</li>
 <li>Web sysdial.app počítá návštěvy pomocí Cloudflare Web Analytics – bez cookies a bez vaší identifikace.</li>
 <li>Vše, co SysDial měří, zůstává na vašem Macu.</li>
-<li>SysDial navazuje jen několik síťových spojení, uvedených níže. Jediné, které se dostane k nám, je kontrola licence v edici Direct, a odesílá jen to, co je potřeba ke kontrole vaší licence.</li>
+<li>SysDial navazuje jen několik síťových spojení, uvedených níže. K nám se dostane jen kontrola licence v edici Direct a – jen pokud se rozhodnete ji odeslat – zpětná vazba; odesílají jen to, co je k tomu potřeba.</li>
 </ul>
 <h2>Co SysDial čte na vašem Macu</h2>
 <p>Aby mohl zobrazovat své hodnoty, SysDial za běhu čte informace z macOS:</p>
@@ -126,8 +126,9 @@
 <li><strong>Veřejná IP adresa.</strong> Aby zobrazil vaši veřejnou IP adresu na kartě Síť, SysDial si ji vyžádá z api.ipify.org. Stejně jako jakýkoli web, který navštívíte, tato služba vidí vaši IP adresu v okamžiku požadavku. Můžete to vypnout v Nastavení → Obecné → Zobrazit veřejnou IP.</li>
 <li><strong>Kontroly kvality internetu (SysDial Pro).</strong> Pro měření latence a zjišťování výpadků SysDial otevírá krátká spojení na známé veřejné servery (Cloudflare 1.1.1.1 a Google 8.8.8.8) a vyhledává náhodný název přes váš DNS server. Při těchto kontrolách se neodesílají žádná data o vás ani o vašem Macu; provozovatelé těchto serverů vidí spojení z vaší IP adresy, stejně jako u jakéhokoli jiného spojení.</li>
 <li><strong>Aktivace a kontrola licence (edice Direct).</strong> Když aktivujete SysDial Pro a poté zhruba jednou denně, SysDial kontaktuje náš licenční server na adrese api.sysdial.app. Odesílá váš aktivační kód nebo licenční token, otisk vašeho Macu (jednosměrný hash jeho hardwarového ID, který nelze převést zpět na toto ID; protože je propojen s vaší licencí, považuje se za osobní údaj) a název modelu vašeho Macu, například „MacBook Pro (16-inch, Nov 2023)“, abyste své Macy dokázali rozlišit. Používáme to pouze k započítání, kolik Maců vaši licenci používá, a k vypnutí Pro, pokud jsou za nákup vráceny peníze nebo je licence zrušena. Pokud jste offline, nic se nemění. Běží na Cloudflare a databáze je v EU.</li>
+<li><strong>Zpětná vazba (jen pokud ji odešlete).</strong> Když ve formuláři zpětné vazby stisknete „Send“, SysDial odešle vaši zprávu na api.sysdial.app/v1/feedback — viz část „Zpětná vazba“ níže. Jinak se nic neodesílá.</li>
 </ul>
-<p>Kromě kontroly licence SysDial neodesílá vaše naměřené hodnoty, historii, jména aplikací ani žádná jiná data nám ani nikomu jinému.</p>
+<p>Kromě kontroly licence a zpětné vazby, kterou se rozhodnete poslat, SysDial neodesílá vaše naměřené hodnoty, historii, jména aplikací ani žádná jiná data nám ani nikomu jinému.</p>
 <h2>Oprávnění, o která SysDial může požádat</h2>
 <ul>
 <li><strong>Oznámení:</strong> k zobrazení upozornění, která zapnete. Oznámení se vytvářejí na vašem Macu.</li>
@@ -159,6 +160,7 @@
 <li><strong>E-maily podpoře</strong>: po dobu potřebnou k odpovědi vám.</li>
 <li><strong>Platební a daňové záznamy</strong>: uchovává Paddle jako prodejce, jak vyžaduje zákon.</li>
 <li><strong>Technické záznamy</strong> bez osobních údajů – ID platebních událostí (90 dní), nedokončené nákupy v aplikaci (7 dní) a náš administrátorský log (2 roky) – se mažou automaticky.</li>
+<li><strong>Zpětná vazba</strong>, kterou se rozhodnete poslat: nejvýše 365 dní, poté se smaže.</li>
 </ul>
 <h2>Právní základy</h2>
 <ul>
@@ -170,6 +172,8 @@
 <p>Můžete také podat stížnost u úřadu pro ochranu osobních údajů — v Polsku u prezidenta Úřadu pro ochranu osobních údajů (UODO, uodo.gov.pl) — nebo u úřadu v místě, kde žijete.</p>
 <h2>Kontaktování podpory</h2>
 <p>Pokud nám napíšete e-mail, obdržíme vaši e-mailovou adresu a vše, co napíšete. Když použijete odkaz na e-mail v SysDialu, zpráva je předvyplněna verzí SysDialu, verzí macOS a modelem Macu, aby nám to pomohlo odpovědět; tyto údaje můžete před odesláním upravit nebo smazat. Používáme je jen k odpovědi vám a uchováváme je jen po dobu, která je k tomu potřeba. Kdykoli nás můžete požádat o smazání vašich zpráv.</p>
+<h2>Zpětná vazba</h2>
+<p>Nic se neodesílá, dokud sami nerozhodnete poslat zpětnou vazbu z aplikace. Zpětná vazba, kterou odešlete (zpráva, váš e-mail, pokud ho uvedete, a volitelné diagnostické údaje: verze aplikace, sestavení, edice, typ licence, model Macu, čip a verze macOS), je zaslána e-mailem do naší schránky podpory a uložena nejvýše 365 dní, poté je smazána. Vaše IP adresa se nikdy neukládá — pouze její jednosměrný klíčovaný hash, který slouží k omezení počtu zpráv, které lze odeslat. Diagnostické údaje se přiloží, jen pokud necháte zaškrtnuté „Include app and Mac details“. O smazání své zpětné vazby nás můžete kdykoli požádat na support@sysdial.app.</p>
 <h2>Analytika Applu (edice Mac App Store)</h2>
 <p>Pokud se v nastavení macOS rozhodnete sdílet analytiku s vývojáři aplikací, Apple nám může poskytnout souhrnné, anonymní statistiky, například zprávy o pádech. To je řízeno Applem a vaším nastavením, nikoli SysDialem.</p>
 <h2>Děti</h2>

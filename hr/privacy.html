@@ -58,7 +58,7 @@
   <div class="wrap">
 <h1>Pravila privatnosti za SysDial</h1>
 <p><em>Ovaj prijevod pravila privatnosti ponuđen je radi lakšeg snalaženja. Mjerodavna je isključivo engleska verzija na https://sysdial.app/privacy.html.</em></p>
-<p><strong>Datum stupanja na snagu:</strong> 17. studenoga 2026.</p>
+<p><strong>Datum stupanja na snagu:</strong> 21. studenoga 2026.</p>
 <p>SysDial je nadzornik sustava za traku izbornika macOS-a, koji izrađuje Oleksandr Hrabar ("mi", "nas"). Ova pravila objašnjavaju što SysDial radi s informacijama na vašem Macu. Odnose se na obje inačice: SysDial sa sysdial.app (Direct) i SysDial s Mac App Storea. Odnose se i na web-stranicu sysdial.app.</p>
 <h2>Kratka verzija</h2>
 <ul>
@@ -66,7 +66,7 @@
 <li>Aplikacija nema računa, analitike, oglašavanja niti praćenja.</li>
 <li>Web-stranica sysdial.app broji posjete pomoću usluge Cloudflare Web Analytics, bez kolačića i bez identificiranja vas.</li>
 <li>Sve što SysDial mjeri ostaje na vašem Macu.</li>
-<li>SysDial ostvaruje samo nekoliko mrežnih veza, navedenih niže. Jedina koja dolazi do nas je provjera licencije u Direct inačici, i ona šalje samo ono što je potrebno za provjeru vaše licencije.</li>
+<li>SysDial ostvaruje samo nekoliko mrežnih veza, navedenih niže. Do nas dolaze samo provjera licencije u Direct inačici i – samo ako ih odlučite poslati – povratne informacije; šalju samo ono što je za to potrebno.</li>
 </ul>
 <h2>Što SysDial čita na vašem Macu</h2>
 <p>Kako bi prikazao svoja očitanja, SysDial dok radi čita informacije iz macOS-a:</p>
@@ -126,8 +126,9 @@
 <li><strong>Javna IP adresa.</strong> Kako bi prikazao vašu javnu IP adresu na kartici Mreža, SysDial je zahtijeva od api.ipify.org. Kao i svaka web-stranica koju posjetite, ta usluga vidi vašu IP adresu u trenutku zahtjeva. To možete isključiti u Postavkama → Opće → Prikaži javnu IP adresu.</li>
 <li><strong>Provjere kvalitete interneta (SysDial Pro).</strong> Kako bi izmjerio latenciju i otkrio prekide, SysDial otvara kratke veze prema poznatim javnim poslužiteljima (Cloudflare 1.1.1.1 i Google 8.8.8.8) te putem vašeg DNS poslužitelja traži nasumično ime. Tijekom tih provjera ne šalju se nikakvi podaci o vama ili vašem Macu; operateri tih poslužitelja vide vezu s vaše IP adrese, kao i kod svake druge veze.</li>
 <li><strong>Aktivacija i provjera licencije (Direct inačica).</strong> Kada aktivirate SysDial Pro, a zatim otprilike jednom dnevno, SysDial se spaja na naš licencni poslužitelj na adresi api.sysdial.app. Šalje vaš aktivacijski kod ili licencni token, otisak vašeg Maca (jednosmjerni hash njegova hardverskog ID-a koji se ne može pretvoriti natrag u taj ID; budući da je povezan s vašom licencijom, smatra se osobnim podatkom) i naziv modela vašeg Maca, na primjer „MacBook Pro (16-inch, Nov 2023)“, kako biste mogli razlikovati svoje Macove. To koristimo samo za brojanje koliko Macova koristi vašu licenciju i za isključivanje Pro ako se novac za kupnju vrati ili se licencija opozove. Ako ste izvan mreže, ništa se ne mijenja. Radi na Cloudflareu, a baza podataka nalazi se u EU.</li>
+<li><strong>Povratne informacije (samo ako ih pošaljete).</strong> Kad u obrascu za povratne informacije pritisnete „Send”, SysDial šalje vašu poruku na api.sysdial.app/v1/feedback — vidi odjeljak „Povratne informacije” niže. Inače se ništa ne šalje.</li>
 </ul>
-<p>Osim provjere licencije, SysDial ne šalje vaša očitanja, povijest, nazive aplikacija niti bilo koje druge podatke nama niti ikome drugome.</p>
+<p>Osim provjere licencije i povratnih informacija koje odlučite poslati, SysDial ne šalje vaša očitanja, povijest, nazive aplikacija niti bilo koje druge podatke nama niti ikome drugome.</p>
 <h2>Dozvole koje SysDial može zatražiti</h2>
 <ul>
 <li><strong>Obavijesti:</strong> za prikaz upozorenja koja uključite. Obavijesti se stvaraju na vašem Macu.</li>
@@ -159,6 +160,7 @@
 <li><strong>E-poruke podršci</strong>: onoliko dugo koliko je potrebno da vam odgovorimo.</li>
 <li><strong>Zapisi o plaćanju i porezni zapisi</strong>: čuva ih Paddle kao prodavatelj, kako zahtijeva zakon.</li>
 <li><strong>Tehnički zapisi</strong> bez osobnih podataka – ID-jevi događaja plaćanja (90 dana), nedovršene kupnje u aplikaciji (7 dana) i naš administratorski zapisnik (2 godine) – brišu se automatski.</li>
+<li><strong>Povratne informacije</strong> koje odlučite poslati: do 365 dana, zatim se brišu.</li>
 </ul>
 <h2>Pravne osnove</h2>
 <ul>
@@ -170,6 +172,8 @@
 <p>Također možete podnijeti pritužbu tijelu za zaštitu podataka — u Poljskoj predsjedniku Ureda za zaštitu osobnih podataka (UODO, uodo.gov.pl) — ili tijelu u mjestu u kojem živite.</p>
 <h2>Kontaktiranje podrške</h2>
 <p>Ako nam pošaljete e-poštu, primamo vašu adresu e-pošte i sve što napišete. Kada u SysDialu koristite poveznicu za e-poštu, poruka je unaprijed ispunjena vašom inačicom SysDiala, inačicom macOS-a i modelom Maca kako bismo vam lakše odgovorili; te podatke možete urediti ili izbrisati prije slanja. Te podatke koristimo samo kako bismo vam odgovorili i čuvamo ih samo onoliko dugo koliko je za to potrebno. U bilo kojem trenutku možete zatražiti da izbrišemo vaše poruke.</p>
+<h2>Povratne informacije</h2>
+<p>Ništa se ne šalje osim ako sami odlučite poslati povratne informacije iz aplikacije. Povratne informacije koje pošaljete (poruka, vaša e-adresa ako je navedete te neobvezna dijagnostika: verzija aplikacije, build, inačica, vrsta licence, model Maca, čip i verzija macOS-a) šalju se e-poštom u naš pretinac podrške i pohranjuju najviše 365 dana, a zatim se brišu. Vaša IP adresa nikada se ne pohranjuje — samo njezin jednosmjerni hash s ključem, koji služi za ograničavanje broja poruka koje se mogu poslati. Dijagnostika se uključuje samo ako ostavite označeno „Include app and Mac details”. Brisanje svojih povratnih informacija možete zatražiti u bilo kojem trenutku na support@sysdial.app.</p>
 <h2>Appleova analitika (Mac App Store inačica)</h2>
 <p>Ako u postavkama macOS-a odaberete dijeliti analitiku s razvijateljima aplikacija, Apple nam može dostaviti zbirne, anonimne statistike poput izvještaja o padovima. Time upravljaju Apple i vaše postavke, a ne SysDial.</p>
 <h2>Djeca</h2>
