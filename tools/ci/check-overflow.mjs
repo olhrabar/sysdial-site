@@ -20,10 +20,12 @@ const base = 'http://127.0.0.1:' + server.address().port;
 const chromeBin = process.env.CHROME || ['google-chrome', 'google-chrome-stable', 'chromium', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'].find(c => c.startsWith('/') ? fs.existsSync(c) : true);
 const port = 9400 + Math.floor(Math.random() * 400);
 const prof = fs.mkdtempSync(path.join(os.tmpdir(), 'chrome-ci-'));
-const chrome = spawn(chromeBin, ['--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--remote-debugging-port=' + port, '--user-data-dir=' + prof, 'about:blank'], {stdio: 'ignore'});
+const chrome = spawn(chromeBin, ['--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--remote-debugging-port=' + port, '--user-data-dir=' + prof, 'about:blank'], {stdio: ['ignore', 'ignore', 'pipe']});
+let chromeErr = ''; chrome.stderr.on('data', d => { chromeErr += d; });
+chrome.on('error', e => { chromeErr += String(e); });
 const done = (code) => { try { chrome.kill(); } catch {} server.close(); process.exit(code); };
-let version; for (let i = 0; i < 50 && !version; i++) { try { version = await (await fetch(`http://127.0.0.1:${port}/json/version`)).json(); } catch { await new Promise(r => setTimeout(r, 200)); } }
-if (!version) { console.error('Chrome did not start'); done(2); }
+let version; for (let i = 0; i < 150 && !version; i++) { try { version = await (await fetch(`http://127.0.0.1:${port}/json/version`)).json(); } catch { await new Promise(r => setTimeout(r, 200)); } }
+if (!version) { console.error('Chrome did not start (' + chromeBin + ')\n' + chromeErr.slice(-2000)); done(2); }
 const tab = await (await fetch(`http://127.0.0.1:${port}/json/new?about:blank`, {method: 'PUT'})).json();
 const ws = new WebSocket(tab.webSocketDebuggerUrl); await new Promise(r => ws.onopen = r);
 let id = 0; const pend = {}; let errors = [];
