@@ -1,0 +1,61 @@
+name: Site CI
+
+# Checks only. Nothing here deploys: GitHub Pages publishes as before.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: site-ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  pricing-i18n:
+    name: Pricing pages are up to date
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/pricing-i18n/build.py --check
+
+  html-validate:
+    name: HTML validity
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: html-validate (all pages)
+        run: npx --yes html-validate@10 -c tools/ci/htmlvalidate.json ./*.html ./*/*.html
+
+  links-and-sitemap:
+    name: Internal links, sitemap, hreflang
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Internal links, assets and anchors
+        run: python3 tools/ci/check-links.py
+      - name: sitemap.xml and hreflang
+        run: python3 tools/ci/check-sitemap.py
+
+  overflow:
+    name: No horizontal overflow at 390 px
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Headless Chrome check (en and uk, light and dark)
+        env:
+          CHROME: google-chrome
+        run: node tools/ci/check-overflow.mjs
