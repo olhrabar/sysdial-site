@@ -58,7 +58,7 @@
   <div class="wrap">
 <h1>Política de privacidad de SysDial</h1>
 <p><em>Esta traducción se ofrece por comodidad. La versión en inglés en <a href="https://sysdial.app/privacy.html">https://sysdial.app/privacy.html</a> es el texto que prevalece.</em></p>
-<p><strong>Fecha de entrada en vigor:</strong> 17 de noviembre de 2026</p>
+<p><strong>Fecha de entrada en vigor:</strong> 21 de noviembre de 2026</p>
 <p>SysDial es un monitor del sistema para la barra de menú de macOS, creado por Oleksandr Hrabar ("nosotros"). Esta política explica qué hace SysDial con la información en tu Mac. Se aplica a ambas ediciones: SysDial de sysdial.app (Direct) y SysDial de la Mac App Store. También se aplica al sitio web sysdial.app.</p>
 <h2>La versión breve</h2>
 <ul>
@@ -66,7 +66,7 @@
 <li>La app no tiene cuentas, ni analíticas, ni publicidad, ni seguimiento.</li>
 <li>El sitio sysdial.app cuenta las visitas con Cloudflare Web Analytics, que no usa cookies y no te identifica.</li>
 <li>Todo lo que SysDial mide se queda en tu Mac.</li>
-<li>SysDial realiza solo unas pocas conexiones de red, detalladas más abajo. La única que llega hasta nosotros es la comprobación de licencia de la edición Direct, y solo envía lo necesario para comprobar tu licencia.</li>
+<li>SysDial realiza solo unas pocas conexiones de red, detalladas más abajo. Las únicas que llegan hasta nosotros son la comprobación de licencia de la edición Direct y, solo si eliges enviarlos, los comentarios; solo envían lo necesario para ello.</li>
 </ul>
 <h2>Qué lee SysDial en tu Mac</h2>
 <p>Para mostrar sus lecturas, SysDial lee información de macOS mientras se ejecuta:</p>
@@ -126,8 +126,9 @@
 <li><strong>Dirección IP pública.</strong> Para mostrar tu IP pública en la tarjeta de Red, SysDial la solicita a api.ipify.org. Como cualquier sitio web que visitas, ese servicio ve tu dirección IP cuando se hace la solicitud. Puedes desactivar esto en Ajustes → General → Mostrar IP pública.</li>
 <li><strong>Comprobaciones de calidad de Internet (SysDial Pro).</strong> Para medir la latencia y detectar interrupciones, SysDial abre conexiones breves a servidores públicos conocidos (Cloudflare 1.1.1.1 y Google 8.8.8.8) y resuelve un nombre aleatorio a través de tu servidor DNS. En estas comprobaciones no se envía ningún dato sobre ti ni sobre tu Mac; los operadores de esos servidores ven una conexión desde tu dirección IP, como con cualquier conexión.</li>
 <li><strong>Activación y comprobación de la licencia (edición Direct).</strong> Cuando activas SysDial Pro, y después aproximadamente una vez al día, SysDial se conecta a nuestro servidor de licencias en api.sysdial.app. Envía tu código de activación o token de licencia, una huella de tu Mac (un hash unidireccional de su ID de hardware que no se puede convertir de nuevo en el ID; como está vinculada a tu licencia, cuenta como dato personal) y el nombre del modelo de tu Mac, por ejemplo «MacBook Pro (16-inch, Nov 2023)», para que puedas distinguir tus Mac. Lo usamos solo para contar cuántos Mac usan tu licencia y para desactivar Pro si se reembolsa una compra o se revoca una licencia. Si no tienes conexión, no cambia nada. Funciona en Cloudflare, con la base de datos en la UE.</li>
+<li><strong>Comentarios (solo si los envías).</strong> Cuando pulsas «Send» en el formulario de comentarios, SysDial envía tu mensaje a api.sysdial.app/v1/feedback — consulta la sección «Comentarios» más abajo. De lo contrario, no se envía nada.</li>
 </ul>
-<p>Aparte de la comprobación de licencia, SysDial no nos envía tus lecturas, tu historial, los nombres de tus apps ni ningún otro dato, ni a nosotros ni a nadie más.</p>
+<p>Aparte de la comprobación de licencia y de los comentarios que elijas enviar, SysDial no nos envía tus lecturas, tu historial, los nombres de tus apps ni ningún otro dato, ni a nosotros ni a nadie más.</p>
 <h2>Permisos que SysDial puede solicitar</h2>
 <ul>
 <li><strong>Notificaciones:</strong> para mostrar las alertas que actives. Las notificaciones se crean en tu Mac.</li>
@@ -159,6 +160,7 @@
 <li><strong>Correos de soporte</strong>: el tiempo necesario para responderte.</li>
 <li><strong>Registros de pagos e impuestos</strong>: los conserva Paddle como vendedor, según exige la ley.</li>
 <li><strong>Registros técnicos</strong> sin datos personales: identificadores de eventos de pago (90 días), compras dentro de la app sin finalizar (7 días) y nuestro registro de administración (2 años); se eliminan automáticamente.</li>
+<li><strong>Comentarios</strong> que elijas enviar: hasta 365 días; después se eliminan.</li>
 </ul>
 <h2>Bases jurídicas</h2>
 <ul>
@@ -170,6 +172,8 @@
 <p>También puedes presentar una reclamación ante una autoridad de protección de datos — en Polonia, el Presidente de la Oficina de Protección de Datos Personales (UODO, uodo.gov.pl) — o ante la autoridad del lugar donde vives.</p>
 <h2>Contactar con soporte</h2>
 <p>Si nos escribes por correo electrónico, recibimos tu dirección de correo y lo que nos escribas. Cuando usas el enlace de correo dentro de SysDial, el mensaje se rellena de antemano con tu versión de SysDial, tu versión de macOS y el modelo de tu Mac para ayudarnos a responder; puedes editar o borrar esto antes de enviarlo. Usamos esta información solo para responderte, y la conservamos únicamente el tiempo necesario para ello. Puedes pedirnos que eliminemos tus mensajes en cualquier momento.</p>
+<h2>Comentarios</h2>
+<p>No se envía nada a menos que elijas enviar comentarios desde la app. Los comentarios que envíes (el mensaje, tu correo si lo indicas y diagnósticos opcionales: versión de la app, build, edición, tipo de licencia, modelo de Mac, chip y versión de macOS) se envían por correo a nuestra bandeja de soporte y se guardan hasta 365 días; después se eliminan. Tu dirección IP nunca se guarda — solo un hash unidireccional con clave de ella, que sirve para limitar cuántos mensajes se pueden enviar. Los diagnósticos solo se incluyen si dejas marcada la opción «Include app and Mac details». Puedes pedirnos que eliminemos tus comentarios en cualquier momento en support@sysdial.app.</p>
 <h2>Analíticas de Apple (edición de la Mac App Store)</h2>
 <p>Si eliges compartir analíticas con los desarrolladores de apps en los ajustes de macOS, Apple puede proporcionarnos estadísticas agregadas y anónimas, como informes de fallos. Esto lo controla Apple y tus propios ajustes, no SysDial.</p>
 <h2>Menores</h2>
