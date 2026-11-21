@@ -67,7 +67,7 @@
       </div>
     </details>
   </div>
-  <div class="modules" aria-label="Приклад SysDial у рядку меню">
+  <div class="modules" role="group" aria-label="Приклад SysDial у рядку меню">
     <span class="mod" title="Процесор">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="4" y="4" width="8" height="8" rx="1.5"/><path d="M6 1.5v2M10 1.5v2M6 12.5v2M10 12.5v2M1.5 6h2M1.5 10h2M12.5 6h2M12.5 10h2"/></svg>
       <span class="v" id="cpu">12%</span>
@@ -101,7 +101,7 @@
           <span class="note">Скоро вийде для macOS 14 і новіших версій.
             <a href="mailto:support@sysdial.app?subject=Tell%20me%20when%20SysDial%20is%20out">Повідомити, коли вийде</a></span>
         </div>
-        <p class="fine pro-note" data-hero style="--d:1000ms">Стеження та сповіщення безкоштовні. Відстеження застосунків, історія й підказки входять до SysDial Pro.</p>
+        <p class="fine pro-note" data-hero style="--d:1000ms">Стеження та сповіщення безкоштовні. Відстеження застосунків, історія й підказки — це функції <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span>.</p>
       </div>
       <div class="hx" data-hx>
         <div class="hx-box">
@@ -148,7 +148,7 @@
                 <div class="hx-lift l-ban" aria-hidden="true"><div class="sc-ban"><img src="../images/icon.png" alt="" width="72" height="72"><div><b>Високе навантаження процесора</b><span>Навантаження процесора перевищує 50% уже 1 хвилину. Найактивніший процес: mDNSResponder (93%).</span></div></div><span class="hx-tag">Із назвою застосунку-причини</span></div>
                 <div class="hx-lift l-cpu" aria-hidden="true"><div class="cr"><picture><source srcset="../images/app/sc-window-light.webp" media="(prefers-color-scheme: light)" width="1413" height="846"><img src="../images/app/sc-window.webp" alt=""></picture></div>
                   <span class="hx-rows"><span><picture><source srcset="../images/app/sc-window-light.webp" media="(prefers-color-scheme: light)" width="1413" height="846"><img src="../images/app/sc-window.webp" alt=""></picture></span></span>
-                  <img class="hx-menu" src="../images/app/sc-menu.webp" width="209" height="119" alt=""><i class="hx-sel"></i><span class="hx-cm"><span class="hi">Quit “mDNSResponder”</span><span>Force Quit “mDNSResponder”…</span><hr><span>Copy PID</span><span>Copy Name</span></span>
+                  <img class="hx-menu" src="../images/app/sc-menu.webp" width="209" height="119" alt=""><i class="hx-sel"></i><span class="hx-cm"><span class="hi">Quit “mDNSResponder”</span><span>Force Quit “mDNSResponder”…</span><i class="hx-sep"></i><span>Copy PID</span><span>Copy Name</span></span>
                   <span class="hx-cur"><svg viewBox="0 0 14 21"><path d="M.8.8v15.2l3.6-3.3 2.6 6 2.5-1.1-2.6-5.9h5.1z" fill="#fff" stroke="#14181f" stroke-width="1.3" stroke-linejoin="round"/></svg><i class="hx-rip"></i></span>
                   <span class="hx-tag"><span class="t1">Винного вже знайдено</span><span class="t2">Один клік — і знову спокій <em class="tier pro">Pro</em></span></span></div>
                 <div class="hx-lift l-mom" aria-hidden="true"><div class="cr"><picture><source srcset="../images/app/moments-card-light.webp" media="(prefers-color-scheme: light)" width="942" height="376"><img src="../images/app/moments-card.webp" width="942" height="376" alt=""></picture></div><span class="hx-tag">Кожен сплеск — із застосунком-причиною</span></div>
@@ -166,7 +166,7 @@
         </div>
         <div class="hx-caps" id="hxCap" aria-live="polite">
           <p class="on">Живі показники прямо в рядку меню, у зручному для вас порядку: процесор, пам’ять, GPU, диск, батарея, швидкість мережі та використані дані. Достатньо легкий, щоб тримати увімкненим цілий день.</p>
-          <p>Ліміти задаєте ви: застосунки-утікачі, високе навантаження процесора, тиск на пам’ять і мало місця на диску, і кожне сповіщення називає застосунок-причину. Pro додає сповіщення про збої інтернету й саме виправлення: винуватець уже вгорі в Top processes. Правий клік, Quit — і Mac знову спокійний.</p>
+          <p>Ліміти задаєте ви: застосунки-утікачі, високе навантаження процесора, тиск на пам’ять і мало місця на диску, і кожне сповіщення називає застосунок-причину. <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> додає сповіщення про збої інтернету й саме виправлення: винуватець уже вгорі в Top processes. Правий клік, Quit — і Mac знову спокійний.</p>
           <p>Натисніть іконку ока біля будь-якого процесу — і SysDial почне його відстежувати, до 12 застосунків одночасно, навіть після перезапуску. Процесор і пам’ять у часі, з позначкою кожного запуску.</p>
           <p>Тридцять днів історії, кожен сплеск знайдено з указанням часу й застосунку, що його спричинив, і пояснення звичайною мовою, що саме сповільнило ваш Mac.</p>
         </div>
@@ -178,7 +178,7 @@
   <section id="memory" class="show" data-show>
     <div class="wrap">
       <h2 data-reveal>Він пам’ятає, щоб не доводилося вам</h2>
-      <p class="intro" data-reveal style="--d:80ms">Рядок меню показує теперішній момент. Вікно Pro показує, що сталося, коли це сталося і який застосунок це спричинив.</p>
+      <p class="intro" data-reveal style="--d:80ms">Рядок меню показує теперішній момент. Вікно <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> показує, що сталося, коли це сталося і який застосунок це спричинив.</p>
     </div>
     <div class="hold"><div class="hold-pin">
         <div class="wrap show-grid">
@@ -282,7 +282,7 @@
     <div class="wrap gl">
       <div class="gl-copy">
         <h2 data-reveal>А просто зараз, одним поглядом</h2>
-        <p class="intro" data-reveal style="--d:80ms">Вікно вище — це Pro. А те, що ви бачитимете цілий день, безкоштовне: живі показники в рядку меню та панель карток на відстані одного кліка.</p>
+        <p class="intro" data-reveal style="--d:80ms">Вікно вище — це <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span>. А те, що ви бачитимете цілий день, безкоштовне: живі показники в рядку меню та панель карток на відстані одного кліка.</p>
         <!-- плитки повторюють розкладку панелі праворуч: натискання/наведення (і автоперебір) підсвічує ту саму картку на скріні -->
         <ul class="gl-tiles" data-stagger aria-label="Картки панелі">
           <li><button type="button" class="gl-tile" data-i="0"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="8" height="8" rx="1.5"/><path d="M6 1.5v2M10 1.5v2M6 12.5v2M10 12.5v2M1.5 6h2M1.5 10h2M12.5 6h2M12.5 10h2"/></svg><b>Процесор</b><span>Навантаження кожного ядра, енергоефективних і продуктивних, з коротким трендом.</span></button></li>
@@ -398,7 +398,7 @@
         </ul>
         <p class="fine" data-reveal style="--d:200ms">Клацніть правою кнопкою на робочому столі, виберіть Редагувати віджети і знайдіть SysDial. macOS оновлює віджети приблизно кожні 15 хвилин.</p>
       </div>
-      <div class="desk" id="desk" data-stagger aria-label="Віджети SysDial на робочому столі Mac">
+      <div class="desk" id="desk" data-stagger role="group" aria-label="Віджети SysDial на робочому столі Mac">
         <div class="wgt wgt-s"><div class="par"><picture>
           <source srcset="../images/app/widget-small-light.webp" media="(prefers-color-scheme: light)" width="328" height="328">
           <img src="../images/app/widget-small.webp" width="328" height="328" loading="lazy" decoding="async" alt="Маленький віджет SysDial з індикаторами процесора 16% і пам’яті 84%">
@@ -454,7 +454,7 @@
     <div class="wrap pv-wrap">
       <div class="pv-copy">
         <h2 data-reveal>Ваші дані залишаються на вашому Mac</h2>
-        <p data-reveal style="--d:80ms">SysDial не має акаунтів, аналітики чи відстеження. Показники, історія та відстежувані застосунки зберігаються лише на вашому Mac. Він виходить в інтернет лише для трьох речей: щоб показати вашу публічну IP-адресу, яку можна вимкнути, щоб перевіряти якість інтернету і, у прямій редакції, щоб раз на добу перевіряти вашу ліцензію.</p>
+        <p data-reveal style="--d:80ms">SysDial не має акаунтів, аналітики чи відстеження. Показники, історія та відстежувані застосунки зберігаються лише на вашому Mac. Він виходить в інтернет лише для трьох речей: щоб показати вашу публічну IP-адресу, яку можна вимкнути, щоб перевіряти якість інтернету і, у редакції Direct, щоб раз на добу перевіряти вашу ліцензію.</p>
         <p data-reveal style="--d:160ms"><a href="privacy.html">Прочитати політику конфіденційності</a></p>
       </div>
       <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), LicenseAPI (api.sysdial.app, раз на добу, Direct), HistoryStore/WatchStore/TrafficStore -->
@@ -472,7 +472,7 @@
           <li style="--dur:7s;--dl:.6s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.ipify.org</b><span>Ваша публічна IP — лише коли відкрита панель: один раз, потім знову через 10 хвилин або коли змінюється мережа. Можна вимкнути.</span></div></li>
           <li style="--dur:2.6s;--dl:0s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>1.1.1.1 · 8.8.8.8 <em class="tier pro">Pro</em></b><span>Якість інтернету кожні 30 секунд: скільки триває з’єднання. Нічого про вас не надсилається.</span></div></li>
           <li style="--dur:2.6s;--dl:1.3s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>Ваш DNS-сервер <em class="tier pro">Pro</em></b><span>Один запит випадкового імені кожні 30 секунд — щоб відрізнити збій DNS від обриву з’єднання.</span></div></li>
-          <li style="--dur:7s;--dl:2.4s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.sysdial.app</b><span>Перевірка ліцензії · пряма редакція, раз на добу</span></div></li>
+          <li style="--dur:7s;--dl:2.4s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.sysdial.app</b><span>Перевірка ліцензії · редакція Direct, раз на добу</span></div></li>
           <li class="pv-no"><i class="pv-line" aria-hidden="true"></i><div class="pv-to"><b>Аналітика, реклама, акаунти</b><span>Немає. Більше ніщо не покидає ваш Mac.</span></div></li>
         </ul>
       </div>
@@ -486,8 +486,8 @@
   <section id="plans">
    <div class="hold"><div class="hold-pin">
     <div class="wrap">
-      <h2 data-reveal>Безкоштовно, і Pro, коли потрібно більше</h2>
-      <p class="intro" data-reveal style="--d:80ms">Рядок меню, панель, сповіщення, віджети та Команди безкоштовні. Pro додає вікно, історію та інструменти на випадок, якщо щось піде не так.</p>
+      <h2 data-reveal>Безкоштовно, і <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span>, коли потрібно більше</h2>
+      <p class="intro" data-reveal style="--d:80ms">Рядок меню, панель, сповіщення, віджети та Команди безкоштовні. <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> додає вікно, історію та інструменти на випадок, якщо щось піде не так.</p>
       <div class="table-scroll" data-reveal style="--d:100ms">
         <table class="plans">
           <thead><tr><th scope="col">Функція</th><th scope="col">Free</th><th scope="col" class="pro">Pro</th></tr></thead>
@@ -508,6 +508,10 @@
             <tr><td>Очищення кешу та Spotlight</td><td class="no">—</td><td class="yes">✓</td></tr>
           </tbody>
         </table>
+      </div>
+      <div class="cta plans-cta">
+        <a class="button" href="pricing.html">Дивитися ціни</a>
+        <span class="note">Від $19 на рік або $39 одноразово. 14 днів <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> безкоштовно в застосунку.</span>
       </div>
     </div>
    </div></div>

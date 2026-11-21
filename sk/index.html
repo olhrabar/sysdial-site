@@ -66,7 +66,7 @@
       </div>
     </details>
   </div>
-  <div class="modules" aria-label="Príklad SysDialu v lište ponuky">
+  <div class="modules" role="group" aria-label="Príklad SysDialu v lište ponuky">
     <span class="mod" title="Procesor">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="4" y="4" width="8" height="8" rx="1.5"/><path d="M6 1.5v2M10 1.5v2M6 12.5v2M10 12.5v2M1.5 6h2M1.5 10h2M12.5 6h2M12.5 10h2"/></svg>
       <span class="v" id="cpu">12%</span>
@@ -100,7 +100,7 @@
           <span class="note">Čoskoro, pre macOS 14 a novší.
             <a href="mailto:support@sysdial.app?subject=Tell%20me%20when%20SysDial%20is%20out">Upozornite ma, keď to vyjde</a></span>
         </div>
-        <p class="fine pro-note" data-hero style="--d:1000ms">Stráženie a upozornenia sú zdarma. Sledovanie appiek, história a prehľady sú súčasťou SysDial Pro.</p>
+        <p class="fine pro-note" data-hero style="--d:1000ms">Stráženie a upozornenia sú zdarma. Sledovanie appiek, história a prehľady sú funkcie <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span>.</p>
       </div>
       <div class="hx" data-hx>
         <div class="hx-box">
@@ -147,7 +147,7 @@
                 <div class="hx-lift l-ban" aria-hidden="true"><div class="sc-ban"><img src="../images/icon.png" alt="" width="72" height="72"><div><b>Vysoké zaťaženie procesora</b><span>Zaťaženie procesora je už 1 minútu nad 50 %. Najvyťaženejší proces: mDNSResponder (93 %).</span></div></div><span class="hx-tag">S názvom appky, ktorá za tým stojí</span></div>
                 <div class="hx-lift l-cpu" aria-hidden="true"><div class="cr"><picture><source srcset="../images/app/sc-window-light.webp" media="(prefers-color-scheme: light)" width="1413" height="846"><img src="../images/app/sc-window.webp" alt=""></picture></div>
                   <span class="hx-rows"><span><picture><source srcset="../images/app/sc-window-light.webp" media="(prefers-color-scheme: light)" width="1413" height="846"><img src="../images/app/sc-window.webp" alt=""></picture></span></span>
-                  <img class="hx-menu" src="../images/app/sc-menu.webp" width="209" height="119" alt=""><i class="hx-sel"></i><span class="hx-cm"><span class="hi">Quit “mDNSResponder”</span><span>Force Quit “mDNSResponder”…</span><hr><span>Copy PID</span><span>Copy Name</span></span>
+                  <img class="hx-menu" src="../images/app/sc-menu.webp" width="209" height="119" alt=""><i class="hx-sel"></i><span class="hx-cm"><span class="hi">Quit “mDNSResponder”</span><span>Force Quit “mDNSResponder”…</span><i class="hx-sep"></i><span>Copy PID</span><span>Copy Name</span></span>
                   <span class="hx-cur"><svg viewBox="0 0 14 21"><path d="M.8.8v15.2l3.6-3.3 2.6 6 2.5-1.1-2.6-5.9h5.1z" fill="#fff" stroke="#14181f" stroke-width="1.3" stroke-linejoin="round"/></svg><i class="hx-rip"></i></span>
                   <span class="hx-tag"><span class="t1">Vinník, už nájdený</span><span class="t2">Jedno kliknutie a opäť pokoj <em class="tier pro">Pro</em></span></span></div>
                 <div class="hx-lift l-mom" aria-hidden="true"><div class="cr"><picture><source srcset="../images/app/moments-card-light.webp" media="(prefers-color-scheme: light)" width="942" height="376"><img src="../images/app/moments-card.webp" width="942" height="376" alt=""></picture></div><span class="hx-tag">Každá špička aj s appkou za ňou</span></div>
@@ -165,7 +165,7 @@
         </div>
         <div class="hx-caps" id="hxCap" aria-live="polite">
           <p class="on">Živé čísla v lište ponuky, v poradí, aké si vyberiete: procesor, pamäť, GPU, disk, batéria, rýchlosť siete a využité dáta. Dostatočne nenáročné na to, aby bežalo celý deň.</p>
-          <p>Limity nastavujete vy: appky, ktoré sa vymkli spod kontroly, vysoké zaťaženie procesora, tlak na pamäť a málo miesta na disku, a každé upozornenie pomenuje appku, ktorá za tým stojí. Pro pridáva upozornenia na výpadky internetu a riešenie: vinník je už navrchu v Top processes. Pravé kliknutie, Quit a Mac je opäť v pokoji.</p>
+          <p>Limity nastavujete vy: appky, ktoré sa vymkli spod kontroly, vysoké zaťaženie procesora, tlak na pamäť a málo miesta na disku, a každé upozornenie pomenuje appku, ktorá za tým stojí. <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> pridáva upozornenia na výpadky internetu a riešenie: vinník je už navrchu v Top processes. Pravé kliknutie, Quit a Mac je opäť v pokoji.</p>
           <p>Kliknite na ikonu oka vedľa ľubovoľného procesu a SysDial ho začne sledovať — až 12 appiek, aj naprieč reštartmi. Procesor a pamäť v čase, s označeným každým spustením.</p>
           <p>Tridsať dní histórie, každý výkyv nájdený s časom a appkou, ktorá za ním stojí, a zrozumiteľné prehľady o tom, čo spomalilo váš Mac.</p>
         </div>
@@ -177,7 +177,7 @@
   <section id="memory" class="show" data-show>
     <div class="wrap">
       <h2 data-reveal>Pamätá si to za vás</h2>
-      <p class="intro" data-reveal style="--d:80ms">Lišta ponuky ukazuje prítomnosť. Okno Pro ukazuje, čo sa stalo, kedy sa to stalo a ktorá appka za tým stála.</p>
+      <p class="intro" data-reveal style="--d:80ms">Lišta ponuky ukazuje prítomnosť. Okno <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> ukazuje, čo sa stalo, kedy sa to stalo a ktorá appka za tým stála.</p>
     </div>
     <div class="hold"><div class="hold-pin">
         <div class="wrap show-grid">
@@ -281,7 +281,7 @@
     <div class="wrap gl">
       <div class="gl-copy">
         <h2 data-reveal>A práve teraz, na prvý pohľad</h2>
-        <p class="intro" data-reveal style="--d:80ms">Okno vyššie je Pro. Časť, ktorú budete vidieť celý deň, je zdarma: živé čísla v lište ponuky a panel kariet na jedno kliknutie.</p>
+        <p class="intro" data-reveal style="--d:80ms">Okno vyššie je <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span>. Časť, ktorú budete vidieť celý deň, je zdarma: živé čísla v lište ponuky a panel kariet na jedno kliknutie.</p>
         <!-- плитки повторюють розкладку панелі праворуч: натискання/наведення (і автоперебір) підсвічує ту саму картку на скріні -->
         <ul class="gl-tiles" data-stagger aria-label="Karty v paneli">
           <li><button type="button" class="gl-tile" data-i="0"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="8" height="8" rx="1.5"/><path d="M6 1.5v2M10 1.5v2M6 12.5v2M10 12.5v2M1.5 6h2M1.5 10h2M12.5 6h2M12.5 10h2"/></svg><b>Procesor</b><span>Záťaž každého jadra, úsporných aj výkonných, s krátkym trendom.</span></button></li>
@@ -397,7 +397,7 @@
         </ul>
         <p class="fine" data-reveal style="--d:200ms">Kliknite pravým tlačidlom na plochu, zvoľte Upraviť widgety a vyhľadajte SysDial. macOS aktualizuje widgety približne každých 15 minút.</p>
       </div>
-      <div class="desk" id="desk" data-stagger aria-label="Widgety SysDialu na ploche Macu">
+      <div class="desk" id="desk" data-stagger role="group" aria-label="Widgety SysDialu na ploche Macu">
         <div class="wgt wgt-s"><div class="par"><picture>
           <source srcset="../images/app/widget-small-light.webp" media="(prefers-color-scheme: light)" width="328" height="328">
           <img src="../images/app/widget-small.webp" width="328" height="328" loading="lazy" decoding="async" alt="Malý widget SysDialu s ukazovateľmi procesora 16 % a pamäte 84 %">
@@ -485,8 +485,8 @@
   <section id="plans">
    <div class="hold"><div class="hold-pin">
     <div class="wrap">
-      <h2 data-reveal>Zdarma, s Pro, keď potrebujete viac</h2>
-      <p class="intro" data-reveal style="--d:80ms">Lišta ponuky, panel, upozornenia, widgety a Skratky sú zdarma. Pro pridáva okno, históriu a nástroje pre chvíle, keď niečo zlyhá.</p>
+      <h2 data-reveal>Zdarma, so <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span>, keď potrebujete viac</h2>
+      <p class="intro" data-reveal style="--d:80ms">Lišta ponuky, panel, upozornenia, widgety a Skratky sú zdarma. <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> pridáva okno, históriu a nástroje pre chvíle, keď niečo zlyhá.</p>
       <div class="table-scroll" data-reveal style="--d:100ms">
         <table class="plans">
           <thead><tr><th scope="col">Funkcia</th><th scope="col">Free</th><th scope="col" class="pro">Pro</th></tr></thead>
@@ -507,6 +507,10 @@
             <tr><td>Čistenie cache a Spotlight</td><td class="no">—</td><td class="yes">✓</td></tr>
           </tbody>
         </table>
+      </div>
+      <div class="cta plans-cta">
+        <a class="button" href="pricing.html">Pozrieť cenník</a>
+        <span class="note">Od $19 ročne alebo $39 jednorazovo. 14 dní <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> zadarmo v aplikácii.</span>
       </div>
     </div>
    </div></div>

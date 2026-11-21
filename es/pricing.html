@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Precios de SysDial Pro</title>
+  <meta name="description" content="SysDial es gratis. SysDial Pro añade la ventana, 30 días de historial y herramientas para cuando algo falla. Desde $19 al año o $39 de pago único, con 14 días gratis.">
+  <link rel="canonical" href="https://sysdial.app/es/pricing.html">
+  <link rel="alternate" hreflang="en" href="https://sysdial.app/pricing.html">
+  <link rel="alternate" hreflang="uk" href="https://sysdial.app/uk/pricing.html">
+  <link rel="alternate" hreflang="de" href="https://sysdial.app/de/pricing.html">
+  <link rel="alternate" hreflang="fr" href="https://sysdial.app/fr/pricing.html">
+  <link rel="alternate" hreflang="es" href="https://sysdial.app/es/pricing.html">
+  <link rel="alternate" hreflang="it" href="https://sysdial.app/it/pricing.html">
+  <link rel="alternate" hreflang="nl" href="https://sysdial.app/nl/pricing.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://sysdial.app/pt/pricing.html">
+  <link rel="alternate" hreflang="pl" href="https://sysdial.app/pl/pricing.html">
+  <link rel="alternate" hreflang="cs" href="https://sysdial.app/cs/pricing.html">
+  <link rel="alternate" hreflang="sk" href="https://sysdial.app/sk/pricing.html">
+  <link rel="alternate" hreflang="hr" href="https://sysdial.app/hr/pricing.html">
+  <link rel="alternate" hreflang="ro" href="https://sysdial.app/ro/pricing.html">
+  <link rel="alternate" hreflang="x-default" href="https://sysdial.app/pricing.html">
+  <link rel="icon" href="../images/icon.png">
+  <link rel="apple-touch-icon" href="../images/icon.png">
+  <link rel="preload" href="../fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/instrument-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add('js')</script>
+  <script>
+  /* claim=<код> приходить із застосунку. Тримаємо лише в пам'яті цього скрипта і ОДРАЗУ прибираємо з адреси
+     (до beacon.min.js у кінці body), щоб код не потрапив ні в історію, ні в аналітику. Ніде не показуємо й не пишемо в консоль.
+     TODO(Paddle): при відкритті checkout передати window.__sdClaim() як customData.claim. */
+  (() => {
+    let claim = '';
+    try {
+      const u = new URL(location.href);
+      claim = u.searchParams.get('claim') || '';
+      if (u.searchParams.has('claim')) {
+        u.searchParams.delete('claim');
+        history.replaceState(null, '', u.pathname + u.search + u.hash);
+      }
+    } catch (e) {}
+    if (claim) document.documentElement.classList.add('has-claim');
+    window.__sdClaim = () => claim;
+  })();
+  </script>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="pg">
+<header class="menubar">
+  <a class="site" href="/es/"><img src="../images/icon.png" alt="" onerror="this.remove()">SysDial</a>
+  <div class="nav-group">
+    <nav aria-label="Secciones">
+      <a href="/es/">Funciones</a>
+      <a href="/es/pricing.html" aria-current="page">Planes</a>
+      <a href="mailto:support@sysdial.app">Soporte</a>
+    </nav>
+    <details class="langsw">
+      <summary><span class="label">Español</span><svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="list">
+        <a href="/pricing.html"><span class="ico"></span>English</a>
+        <a href="/uk/pricing.html"><span class="ico"></span>Українська</a>
+        <a href="/de/pricing.html"><span class="ico"></span>Deutsch</a>
+        <a href="/fr/pricing.html"><span class="ico"></span>Français</a>
+        <span class="now"><span class="ico"><svg class="ck" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Español</span>
+        <a href="/it/pricing.html"><span class="ico"></span>Italiano</a>
+        <a href="/nl/pricing.html"><span class="ico"></span>Nederlands</a>
+        <a href="/pt/pricing.html"><span class="ico"></span>Português</a>
+        <a href="/pl/pricing.html"><span class="ico"></span>Polski</a>
+        <a href="/cs/pricing.html"><span class="ico"></span>Čeština</a>
+        <a href="/sk/pricing.html"><span class="ico"></span>Slovenčina</a>
+        <a href="/hr/pricing.html"><span class="ico"></span>Hrvatski</a>
+        <a href="/ro/pricing.html"><span class="ico"></span>Română</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main>
+  <section class="pg-hero">
+    <div class="wrap">
+      <h1>Cada plan incluye todo <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span></h1>
+      <p class="lede">La barra de menú y el panel son gratis. <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> añade la ventana, 30 días de historial y herramientas para cuando algo falla. Prueba <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> gratis durante 14 días.</p>
+      <p class="claim-strip">Estás comprando para el Mac desde el que has llegado. Tras el pago, <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> se activa por sí solo.</p>
+      <section class="pp" id="pp" aria-labelledby="pp-h">
+        <h2 id="pp-h" class="sr-only">Planes y precios</h2>
+        <div class="pp-guard" aria-hidden="true"></div>
+        <div class="pp-head">
+          <div class="seg" id="billing" role="group" aria-label="Periodo de facturación">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-billing="monthly" aria-pressed="false">Mensual</button>
+            <button type="button" data-billing="yearly" aria-pressed="true">Anual <span class="tier free">Ahorra hasta un 47 %</span></button>
+            <button type="button" data-billing="once" aria-pressed="false">Pago único</button>
+          </div>
+          <p class="pp-nojs">Precios anuales. Los precios mensuales y de pago único están en <a href="#all-prices">la tabla de abajo</a>.</p>
+        </div>
+        <p class="pp-launch"><span class="tier free">Precio de lanzamiento</span></p>
+        <div class="pp-cols">
+        <article class="pp-col" aria-labelledby="h-1" data-n="1" data-plan="pro-1-yearly">
+          <h3 id="h-1">1 Mac</h3>
+          <p class="pc-price" id="p-1"><span class="num pc-swap">$19<span class="sr-only"> dólares estadounidenses al año</span></span><span class="unit pc-swap" aria-hidden="true">/ año</span></p>
+          <p class="pp-value pc-swap"><span class="pp-save">Ahorra un 47 %</span><span class="pp-vs">frente a $35.88 pagando cada mes</span></p>
+          <p class="pp-per"><span class="pp-per-l">Por Mac</span><span class="pp-per-v pc-swap">$19</span></p>
+        </article>
+        <article class="pp-col" aria-labelledby="h-2" data-n="2" data-plan="pro-2-yearly">
+          <h3 id="h-2">2 Macs</h3>
+          <p class="pc-price" id="p-2"><span class="num pc-swap">$29<span class="sr-only"> dólares estadounidenses al año</span></span><span class="unit pc-swap" aria-hidden="true">/ año</span></p>
+          <p class="pp-value pc-swap"><span class="pp-save">Ahorra un 39 %</span><span class="pp-vs">frente a $47.88 pagando cada mes</span></p>
+          <p class="pp-per"><span class="pp-per-l">Por Mac</span><span class="pp-per-v pc-swap">$14.50</span></p>
+        </article>
+        <article class="pp-col" aria-labelledby="h-5" data-n="5" data-plan="pro-5-yearly">
+          <h3 id="h-5">5 Macs</h3>
+          <p class="pc-price" id="p-5"><span class="num pc-swap">$49<span class="sr-only"> dólares estadounidenses al año</span></span><span class="unit pc-swap" aria-hidden="true">/ año</span></p>
+          <p class="pp-value pc-swap"><span class="pp-save">Ahorra un 32 %</span><span class="pp-vs">frente a $71.88 pagando cada mes</span></p>
+          <p class="pp-per"><span class="pp-per-l">Por Mac</span><span class="pp-per-v pc-swap">$9.80</span></p>
+        </article>
+        </div>
+        <div class="pp-foot">
+          <div class="pp-terms" id="pp-terms">
+            <p class="pp-t" aria-live="polite"><span class="sr-only">Precios anuales. </span><span class="pp-tt">Se renueva cada año hasta que canceles. Todas las versiones futuras incluidas.</span></p>
+            <p>Precios en dólares estadounidenses. Tu moneda local, el IVA y el impuesto sobre las ventas se muestran al pagar.</p>
+          </div>
+          <!-- TODO(Paddle): ПІСЛЯ ЗАПУСКУ прибрати весь .pp-prelaunch нижче і в кінець кожного <article class="pp-col"> додати
+               <div class="pc-buy"><button type="button" class="button buy" data-plan="pro-N-yearly" data-price-id="" aria-describedby="p-N pp-terms">Subscribe for N Mac(s)</button></div>
+               (data-plan JS уже виставляє на самій колонці; текст кнопки: D[mode].btn + ' ' + N + ' Mac(s)', див. btnLabel() у скрипті;
+               data-price-id ← priceId від власника). Підвал лишається з умовами на всю ширину. -->
+          <div class="pp-prelaunch">
+            <p>La compra se abre con el lanzamiento.</p>
+            <a class="button" href="mailto:support@sysdial.app?subject=Tell%20me%20when%20SysDial%20is%20out">Avísame cuando esté disponible</a>
+          </div>
+        </div>
+      </section>
+      <div class="checkout-error" role="alert"></div>
+      <div class="assure" data-reveal>
+        <div><h3>14 días gratis</h3><p>Cada copia nueva de SysDial empieza con 14 días de <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span>. Sin tarjeta, sin cuenta.</p></div>
+        <div><h3>Reembolso de 30 días</h3><p>¿No es para ti? Pídelo en un plazo de 30 días y te devolvemos todo el dinero, sin preguntas.</p></div>
+        <div><h3>Sin cuenta</h3><p><span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> se activa desde un enlace en tu correo. Sin contraseña, sin inicio de sesión, sin analíticas en la app.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pro-sec" id="features">
+    <div class="wrap">
+      <h2 data-reveal>Todo lo que incluye <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span></h2>
+      <p class="intro" data-reveal>Free es la barra de menú y un panel de tarjetas. <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> añade todo lo que hay debajo de la línea.</p>
+      <div class="table-scroll" data-reveal>
+        <table class="plans">
+          <thead><tr><th scope="col">Función</th><th scope="col">Free</th><th scope="col" class="pro">Pro</th></tr></thead>
+          <tbody>
+            <tr><td>Cifras en vivo en la barra de menú, en tu orden</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Panel con procesador, memoria, GPU, disco, red, datos y batería</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Alertas de apps desbocadas, CPU, memoria y espacio en disco<small>Con los límites que tú defines</small></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Widgets de escritorio, Atajos y nueve temas de color</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr class="line"><td>Ventana con todas las tarjetas<small>Incluye carga promedio y ventiladores</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Historial<small>30 días de CPU, memoria y red, cualquier período, exportación a CSV</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Calidad de Internet<small>Latencia, jitter, pérdida de paquetes, comprobaciones de DNS y un registro de interrupciones</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Gestor de procesos<small>Busca, ordena, revela y cierra cualquier proceso</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Sigue cualquier proceso<small>Hasta 12 apps entre reinicios, con historial, marcadores de inicio y tu propia alerta de memoria</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Cazador de procesos zombi<small>Terraform, node, python y herramientas similares que siguen en ejecución</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Temperaturas y velocidad de los ventiladores</td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Análisis<small>Explicaciones en lenguaje sencillo de qué está ralentizando tu Mac</small></td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Cierra una app desbocada directamente desde la alerta</td><td class="no">—</td><td class="yes">✓</td></tr>
+            <tr><td>Limpieza de caché y de Spotlight</td><td class="no">—</td><td class="yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="req" data-reveal>Requiere macOS 14 Sonoma o posterior.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 data-reveal>¿Pago único o suscripción?</h2>
+      <div class="two-col" data-reveal>
+        <article><h3>Suscripción</h3><p>Mensual o anual. Recibes todas las versiones futuras, incluidas SysDial 2 y posteriores. Cancela cuando quieras: <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> sigue funcionando hasta el final del periodo pagado y después SysDial vuelve a Free.</p></article>
+        <article><h3>Pago único</h3><p>Paga una vez y conserva <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> 1.x con todas las actualizaciones 1.x. Cuando salga la próxima versión principal, podrás actualizar con descuento para quienes tienen 1.x o seguir usando 1.x.</p></article>
+      </div>
+      <p class="sub-note" data-reveal>Una licencia de pago único cuesta más o menos lo mismo que dos años del plan anual.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2 data-reveal>Preguntas</h2>
+      <div class="faq" data-reveal>
+      <details><summary>¿Qué pasa cuando termina la prueba?<svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>SysDial sigue funcionando como versión gratuita: cifras en vivo en la barra de menú y el panel de tarjetas. La ventana, el historial y las demás herramientas de <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> se ocultan, no se borran. El historial sigue grabándose: compra <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> y estará todo ahí.</p></details>
+      <details><summary>¿Necesito una cuenta?<svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>No. Pagas con tu dirección de correo y allí te enviamos el enlace de activación. No hay contraseña ni nada en lo que iniciar sesión.</p></details>
+      <details><summary>¿Qué cuenta como un Mac?<svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Cada Mac en el que <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> está activado. Reinstalar SysDial en el mismo Mac no consume otro.</p></details>
+      <details><summary>¿Cómo paso <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> a un Mac nuevo?<svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>En el Mac antiguo, abre los ajustes de SysDial (Settings → About) y elige Remove from this Mac. Luego abre tu correo de activación en el Mac nuevo. Si el Mac antiguo ya no está, escribe a support@sysdial.app y lo liberaremos.</p></details>
+      <details><summary>¿<span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> necesita internet?<svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Solo para activarlo. Después, SysDial comprueba tu licencia más o menos una vez al día. Si estás sin conexión, <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> sigue funcionando.</p></details>
+      <details><summary>¿Puedo cambiar de plan más adelante?<svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Las suscripciones se pueden cambiar en tu cuenta de Paddle, y Paddle recalcula el precio por el tiempo que te queda. Para añadir Macs a una licencia de pago único, escribe a support@sysdial.app y paga la diferencia.</p></details>
+      <details><summary>¿Cómo cancelo una suscripción?<svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Usa el enlace del correo de recibo de Paddle o escribe a support@sysdial.app. <span class="brand-pro">SysDial&nbsp;<span>Pro</span></span> sigue activo hasta el final del periodo pagado.</p></details>
+      <details><summary>¿Cómo funcionan los reembolsos?<svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Pídelo en un plazo de 30 días desde cualquier pago, incluida una renovación, y te devolvemos todo el dinero, sin preguntas. Responde a tu recibo o escribe a support@sysdial.app. Tras un reembolso, SysDial vuelve a Free en un día. Tus datos se quedan en tu Mac.</p></details>
+      <details><summary>¿Por qué el precio es distinto al pagar?<svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Los precios de aquí están en dólares estadounidenses. Al pagar, Paddle muestra el precio en tu moneda y añade el IVA o el impuesto sobre las ventas donde tu país lo exige. Las empresas pueden añadir un número de IVA al pagar.</p></details>
+      <details><summary>¿Quién vende SysDial?<svg class="ic" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Los pedidos los gestiona Paddle.com, nuestro revendedor y merchant of record. Paddle cobra el pago, se ocupa de los impuestos y emite los reembolsos. Nunca vemos los datos de tu tarjeta.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="allprices" id="all-prices">
+    <div class="wrap">
+      <h2 data-reveal>Todos los precios</h2>
+      <div class="table-scroll" data-reveal>
+        <table class="plans">
+          <thead><tr><th scope="col"><span class="sr-only">Macs</span></th><th scope="col">Mensual</th><th scope="col">Anual</th><th scope="col">Pago único</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">1 Mac</th><td>$2.99</td><td>$19</td><td>$39</td></tr>
+            <tr><th scope="row">2 Macs</th><td>$3.99</td><td>$29</td><td>$59</td></tr>
+            <tr><th scope="row">5 Macs</th><td>$5.99</td><td>$49</td><td>$99</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fineprint" data-reveal>
+        <p>Precios en dólares estadounidenses. Tu moneda local, el IVA y el impuesto sobre las ventas se muestran al pagar.</p>
+        <p>Los pedidos los procesa Paddle.com, nuestro revendedor en línea y merchant of record.</p>
+        <p><a href="../terms.html">Condiciones de venta (EN)</a> · <a href="../refunds.html">Política de reembolso (EN)</a> · <a href="privacy.html">Privacidad</a> · <a href="mailto:support@sysdial.app">support@sysdial.app</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Oleksandr Hrabar</span>
+    <nav aria-label="Pie de página"><a href="mailto:support@sysdial.app">support@sysdial.app</a><a href="/es/pricing.html">Planes</a><a href="/terms.html">Condiciones (EN)</a><a href="/refunds.html">Reembolsos (EN)</a><a href="/es/privacy.html">Privacidad</a></nav>
+  </div>
+</footer>
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const D = {
+    yearly: {
+      price: ['$19', '$29', '$49'], unit: '/ año', sr: ' dólares estadounidenses al año',
+      save: ['Ahorra un 47 %', 'Ahorra un 39 %', 'Ahorra un 32 %'], vs: ['frente a $35.88 pagando cada mes', 'frente a $47.88 pagando cada mes', 'frente a $71.88 pagando cada mes'],
+      per: ['$19', '$14.50', '$9.80'], btn: 'Suscribirse por', name: 'Precios anuales. ',
+      terms: 'Se renueva cada año hasta que canceles. Todas las versiones futuras incluidas.', sku: 'yearly' },
+    monthly: {
+      price: ['$2.99', '$3.99', '$5.99'], unit: '/ mes', sr: ' dólares estadounidenses al mes',
+      save: ['', '', ''], vs: ['$35.88 al año', '$47.88 al año', '$71.88 al año'],
+      per: ['$2.99', '$2.00', '$1.20'], btn: 'Suscribirse por', name: 'Precios mensuales. ',
+      terms: 'Se renueva cada mes hasta que canceles. Todas las versiones futuras incluidas.', sku: 'monthly' },
+    once: {
+      price: ['$39', '$59', '$99'], unit: 'una vez', sr: ' dólares estadounidenses, pago único',
+      save: ['Sin renovaciones', 'Sin renovaciones', 'Sin renovaciones'], vs: ['Unos 2 años del plan anual', 'Unos 2 años del plan anual', 'Unos 2 años del plan anual'],
+      per: ['$39', '$29.50', '$19.80'], btn: 'Comprar por', name: 'Precios de pago único. ',
+      terms: 'Paga una vez y conserva SysDial Pro 1.x con todas las actualizaciones 1.x. La próxima versión principal con descuento para quienes tienen 1.x.', sku: 'onetime' }
+  };
+  const N = [1, 2, 5];
+  const cols = $('.pp-cols'), seg = $('#billing');
+  const btns = [...seg.querySelectorAll('button')], thumb = $('.thumb', seg);
+  let mode = 'yearly';
+  // TODO(Paddle): після запуску текст кнопки в колонці: btnLabel(n); зараз кнопок у колонках немає (див. коментар у .pp-foot)
+  const btnLabel = (n) => D[mode].btn + ' ' + n + (n === 1 ? ' Mac' : ' Macs');
+
+  function place(animate) {
+    const b = btns.find((x) => x.getAttribute('aria-pressed') === 'true');
+    if (!b) return;
+    thumb.style.transition = animate ? '' : 'none';
+    thumb.style.width = b.offsetWidth + 'px';
+    thumb.style.transform = 'translateX(' + b.offsetLeft + 'px)';
+    if (!animate) { thumb.offsetWidth; thumb.style.transition = ''; }
+  }
+  function fill() {
+    const d = D[mode];
+    cols.querySelectorAll('.pp-col').forEach((c, i) => {
+      const n = N[i];
+      $('.num', c).firstChild.nodeValue = d.price[i];
+      $('.num .sr-only', c).textContent = d.sr;
+      $('.unit', c).textContent = d.unit;
+      const v = $('.pp-value', c);
+      v.textContent = '';
+      if (d.save[i]) {
+        const sv = document.createElement('span');
+        sv.className = mode === 'yearly' ? 'pp-save' : 'tier free';
+        sv.textContent = d.save[i];
+        v.appendChild(sv);
+      }
+      const vs = document.createElement('span');
+      vs.className = 'pp-vs';
+      vs.textContent = d.vs[i];
+      v.appendChild(vs);
+      $('.pp-per-v', c).textContent = d.per[i];
+      c.dataset.plan = 'pro-' + n + '-' + d.sku;
+    });
+    // умови в підвалі: aria-live. Шапка й підвал не блимають, змінюється лише текст
+    $('.pp-t .sr-only').textContent = d.name;
+    $('.pp-tt').textContent = d.terms;
+  }
+  function set(m, animate, fromUser) {
+    if (!D[m]) m = 'yearly';
+    mode = m;
+    btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.billing === m)));
+    place(animate);
+    if (animate && !reduce) {
+      cols.classList.add('out');
+      setTimeout(() => { fill(); cols.classList.remove('out'); cols.classList.add('in'); setTimeout(() => cols.classList.remove('in'), 220); }, 120);
+    } else fill();
+    if (fromUser) {
+      const u = new URL(location.href);
+      u.searchParams.set('billing', m);
+      history.replaceState(null, '', u.pathname + u.search + u.hash);
+    }
+  }
+  btns.forEach((b, i) => {
+    b.addEventListener('click', () => set(b.dataset.billing, true, true));
+    // стрілки лише переносять фокус між кнопками; вибір — Enter / Space
+    b.addEventListener('keydown', (e) => {
+      const k = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
+      if (!k) return;
+      e.preventDefault();
+      btns[(i + k + btns.length) % btns.length].focus();
+    });
+  });
+  const q = new URLSearchParams(location.search).get('billing');
+  set(q && D[q] ? q : 'yearly', false, false);
+  addEventListener('resize', () => place(false));
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => place(false));
+  // ≤ 900 px шапка панелі sticky; клас .stuck (тінь), коли вона прилипла (1-px сторож перед нею)
+  const guard = $('.pp-guard'), head = $('.pp-head');
+  if ('IntersectionObserver' in window && guard) {
+    new IntersectionObserver((es) => es.forEach((e) => {
+      head.classList.toggle('stuck', !e.isIntersecting && e.boundingClientRect.top < 31 && matchMedia('(max-width: 900px)').matches);
+    }), { rootMargin: '-31px 0px 0px 0px' }).observe(guard);
+  }
+
+  // TODO(Paddle): при першому pointerenter/focus на кнопці купівлі в колонці (або click) завантажити Paddle.js, на click відкрити checkout
+  // (priceId з data-price-id, customData.claim = window.__sdClaim(), settings.successUrl = '/thanks.html' або '/thanks.html?from=app'
+  // якщо __sdClaim() непорожній). Станів «Opening checkout…» і помилки (.checkout-error) зараз немає. Paddle.js НЕ вантажити.
+
+  // поява секцій 6-10 при прокрутці
+  const rv = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach((el) => io.observe(el));
+  } else rv.forEach((el) => el.classList.add('in'));
+  if (location.hash && $(location.hash)) $(location.hash).scrollIntoView();
+  // перемикач мови: клік поза межами і Escape закривають відкриту панель
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.langsw[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('.langsw[open]').forEach((d) => { d.open = false; d.querySelector('summary').focus(); });
+  });
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f223878484604962b7d84154f3f321d2"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
