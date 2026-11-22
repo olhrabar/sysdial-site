@@ -58,15 +58,15 @@
   <div class="wrap">
 <h1>SysDial Daten&shy;schutz&shy;erklärung</h1>
 <p><em>Diese Übersetzung dient nur zur Orientierung. Maßgeblich ist ausschließlich die englische Fassung unter <a href="https://sysdial.app/privacy.html">sysdial.app/privacy.html</a>.</em></p>
-<p><strong>Gültig ab:</strong> 21. November 2026</p>
+<p><strong>Gültig ab:</strong> 22. November 2026</p>
 <p>SysDial ist ein Systemmonitor für die macOS-Menüleiste von Oleksandr Hrabar („wir“, „uns“). Diese Erklärung beschreibt, wie SysDial mit Informationen auf deinem Mac umgeht. Sie gilt für beide Ausgaben: SysDial von sysdial.app (Direct) und SysDial aus dem Mac App Store. Sie gilt auch für die Website sysdial.app.</p>
 <h2>Kurz gefasst</h2>
 <ul>
-<li>SysDial verkauft oder teilt keine personenbezogenen Daten und erfasst nur, was zum Betrieb deiner Lizenz nötig ist.</li>
-<li>Die App hat keine Konten, keine Analyse, keine Werbung und kein Tracking.</li>
+<li>SysDial verkauft oder teilt keine personenbezogenen Daten. Es erhebt nur, was für den Betrieb deiner Lizenz nötig ist, und in der Direct-Ausgabe anonyme Nutzungszahlen, die du ausschalten kannst.</li>
+<li>Die App hat keine Konten, keine Werbung, keine Analyse durch Dritte und kein Tracking. Die einzige Ausnahme sind die unten beschriebenen anonymen Nutzungszahlen (nur Direct-Ausgabe), die du ausschalten kannst.</li>
 <li>Die Website sysdial.app zählt Besuche mit Cloudflare Web Analytics – ohne Cookies und ohne dich zu identifizieren.</li>
 <li>Alles, was SysDial misst, bleibt auf deinem Mac.</li>
-<li>SysDial baut nur wenige Netzwerkverbindungen auf, die unten aufgeführt sind. Uns erreichen nur die Lizenzprüfung in der Direct-Ausgabe und – nur wenn du es willst – Feedback; sie senden nur das, was dafür nötig ist.</li>
+<li>SysDial baut nur wenige Netzwerkverbindungen auf, die unten aufgeführt sind. Uns erreichen nur die Lizenzprüfung und die anonymen Nutzungszahlen in der Direct-Ausgabe (die Zahlen kannst du ausschalten) und – nur wenn du es willst – Feedback; sie senden nur das, was dafür nötig ist.</li>
 </ul>
 <h2>Was SysDial auf deinem Mac ausliest</h2>
 <p>Um seine Messwerte anzuzeigen, liest SysDial während der Laufzeit Informationen von macOS aus:</p>
@@ -108,6 +108,11 @@
 <td>Bis du sie änderst oder entfernst</td>
 </tr>
 <tr>
+<td>Installations-ID (zufällig, Direct-Ausgabe), in den Einstellungen der App</td>
+<td>Um erste Starts und Testergebnisse in Summen zu zählen</td>
+<td>Bis du „Share anonymous usage counts“ ausschaltest oder die Daten der App löschst</td>
+</tr>
+<tr>
 <td>Startdatum der kostenlosen Testphase und deine Lizenz (Direct-Ausgabe), im macOS-Schlüsselbund auf deinem Mac</td>
 <td>Um die Testphase laufen zu lassen und SysDial Pro freizuschalten</td>
 <td>Bis du SysDial Pro in den Einstellungen entfernst</td>
@@ -127,8 +132,9 @@
 <li><strong>Internetqualitätsprüfungen (SysDial Pro).</strong> Um Latenz zu messen und Ausfälle zu erkennen, öffnet SysDial kurze Verbindungen zu bekannten öffentlichen Servern (Cloudflare 1.1.1.1 und Google 8.8.8.8) und löst über deinen DNS-Server einen zufälligen Namen auf. Bei diesen Prüfungen werden keine Daten über dich oder deinen Mac gesendet; die Betreiber dieser Server sehen – wie bei jeder Verbindung – eine Verbindung von deiner IP-Adresse.</li>
 <li><strong>Lizenzaktivierung und -prüfung (Direct-Ausgabe).</strong> Wenn du SysDial Pro aktivierst und danach etwa einmal am Tag, verbindet sich SysDial mit unserem Lizenzserver unter api.sysdial.app. Dabei werden dein Aktivierungscode oder Lizenz-Token, ein Fingerabdruck deines Macs (ein Einweg-Hash seiner Hardware-ID, der sich nicht in die ID zurückverwandeln lässt; da er mit deiner Lizenz verknüpft ist, gilt er als personenbezogenes Datum) und der Modellname deines Macs gesendet, zum Beispiel „MacBook Pro (16-inch, Nov 2023)“, damit du deine Macs auseinanderhalten kannst. Wir nutzen das nur, um zu zählen, wie viele Macs deine Lizenz verwenden, und um Pro auszuschalten, wenn ein Kauf erstattet oder eine Lizenz widerrufen wird. Bist du offline, ändert sich nichts. Er läuft bei Cloudflare, die Datenbank befindet sich in der EU.</li>
 <li><strong>Feedback (nur wenn du es sendest).</strong> Wenn du im Feedback-Formular auf „Send“ klickst, sendet SysDial deine Nachricht an api.sysdial.app/v1/feedback — siehe den Abschnitt „Feedback“ unten. Sonst wird nichts gesendet.</li>
+<li><strong>Anonyme Nutzungszahlen (Direct-Ausgabe).</strong> Beim ersten Start und am Ende deiner kostenlosen Testphase sendet SysDial eine zufällige Installations-ID, die App-Version und die Build-Nummer an api.sysdial.app/v1/events — siehe „Anonyme Nutzungszahlen“ unten. Du kannst das in Settings → About → Share anonymous usage counts ausschalten.</li>
 </ul>
-<p>Abgesehen von der Lizenzprüfung und Feedback, das du senden möchtest, sendet SysDial deine Messwerte, deinen Verlauf, App-Namen oder sonstige Daten weder an uns noch an Dritte.</p>
+<p>Abgesehen von der Lizenzprüfung, den anonymen Nutzungszahlen, die du eingeschaltet lässt, und Feedback, das du senden möchtest, sendet SysDial deine Messwerte, deinen Verlauf, App-Namen oder sonstige Daten weder an uns noch an Dritte.</p>
 <h2>Berechtigungen, um die SysDial bitten kann</h2>
 <ul>
 <li><strong>Mitteilungen:</strong> um die von dir aktivierten Warnungen anzuzeigen. Mitteilungen werden auf deinem Mac erstellt.</li>
@@ -161,11 +167,13 @@
 <li><strong>Zahlungs- und Steuerunterlagen</strong>: werden von Paddle als Verkäufer aufbewahrt, wie es das Gesetz vorschreibt.</li>
 <li><strong>Technische Aufzeichnungen</strong> ohne personenbezogene Daten – IDs von Zahlungsereignissen (90 Tage), nicht abgeschlossene In-App-Käufe (7 Tage) und unser Admin-Protokoll (2 Jahre) – werden automatisch gelöscht.</li>
 <li><strong>Feedback</strong>, das du senden möchtest: bis zu 365 Tage, danach gelöscht.</li>
+<li><strong>Installationsdatensätze</strong> (anonyme Nutzungszahlen): ohne Verknüpfung mit einer Lizenz 400 Tage nach dem letzten Ereignis; mit einer Lizenz verknüpft so lange wie die Daten dieser Lizenz, und sie werden mit ihr gelöscht. Der Einweg-Hash deiner IP-Adresse zur Missbrauchsbegrenzung: etwa 25 Stunden.</li>
 </ul>
 <h2>Rechtsgrundlagen</h2>
 <ul>
 <li><strong>Lizenzaktivierung, die tägliche Prüfung und Lizenz-E-Mails</strong>: um dir das gekaufte oder geschenkte SysDial Pro bereitzustellen (Vertragserfüllung, Art. 6 Abs. 1 lit. b DSGVO).</li>
 <li><strong>Besuchsstatistiken der Website und Beantwortung von Support-E-Mails</strong>: unser berechtigtes Interesse am Betrieb und an der Verbesserung von SysDial (Art. 6 Abs. 1 lit. f DSGVO).</li>
+<li><strong>Anonyme Nutzungszahlen (Direct-Ausgabe)</strong>: unser berechtigtes Interesse, in Summen zu verstehen, wie viele Testphasen zu Käufen führen und welche App-Versionen am besten abschneiden, mit minimalen pseudonymen Daten und einfacher Abschaltmöglichkeit (Art. 6 Abs. 1 lit. f DSGVO).</li>
 </ul>
 <h2>Deine Rechte</h2>
 <p>Du kannst von uns verlangen, dir die über dich gespeicherten Daten zu zeigen, sie zu berichtigen, zu löschen, sie dir in einem übertragbaren Format zu geben oder ihre Verarbeitung einzustellen oder einzuschränken. Schreib an support@sysdial.app von der Adresse, mit der du gekauft hast, und wir antworten innerhalb eines Monats. Wenn deine Lizenzdaten gelöscht werden, wird SysDial Pro auf deinen Macs ausgeschaltet.</p>
@@ -174,6 +182,8 @@
 <p>Wenn du uns eine E-Mail schreibst, erhalten wir deine E-Mail-Adresse und alles, was du schreibst. Wenn du den E-Mail-Link in SysDial verwendest, wird die Nachricht mit deiner SysDial-Version, macOS-Version und deinem Mac-Modell vorausgefüllt, damit wir dir besser helfen können; du kannst diese Angaben vor dem Senden bearbeiten oder löschen. Wir verwenden dies nur, um dir zu antworten, und bewahren es nur so lange auf, wie dafür nötig. Du kannst uns jederzeit bitten, deine Nachrichten zu löschen.</p>
 <h2>Feedback</h2>
 <p>Es wird nichts gesendet, solange du nicht selbst Feedback aus der App sendest. Feedback, das du sendest (die Nachricht, deine E-Mail-Adresse, falls du eine angibst, und optionale Diagnosedaten: App-Version, Build, Ausgabe, Lizenztyp, Mac-Modell, Chip und macOS-Version), wird per E-Mail an unser Support-Postfach gesendet und bis zu 365 Tage gespeichert, danach gelöscht. Deine IP-Adresse wird nie gespeichert — nur ein Einweg-Hash mit Schlüssel davon, der dazu dient, die Zahl der sendbaren Nachrichten zu begrenzen. Diagnosedaten werden nur mitgesendet, wenn „Include app and Mac details“ angehakt bleibt. Du kannst jederzeit unter support@sysdial.app die Löschung deines Feedbacks verlangen.</p>
+<h2>Anonyme Nutzungszahlen (nur Direct-Ausgabe)</h2>
+<p>Wenn du die von sysdial.app heruntergeladene Version von SysDial zum ersten Mal öffnest, weist dich die App einmalig in einem Hinweis im Menüleisten-Panel auf die Nutzungszahlen hin und erzeugt eine zufällige Installations-ID. Sie wird weder von deinem Mac noch von dir abgeleitet. Die App sendet diese ID, die App-Version und die Build-Nummer zu zwei Zeitpunkten an unseren Server: beim ersten Start und am Ende deiner kostenlosen Testphase. Das Ereignis des ersten Starts wird erst gesendet, nachdem dieser Hinweis angezeigt wurde, spätestens aber 24 Stunden nach dem ersten Start. Aktivierst du später SysDial Pro auf diesem Mac, verknüpfen wir die Installations-ID mit deiner Lizenz, damit wir sehen, wie viele Testphasen zu Käufen führen. Mit diesen Ereignissen erheben wir weder deine IP-Adresse noch deine E-Mail oder dein Mac-Modell. Um Missbrauch zu begrenzen, speichert unser Server einen Einweg-Hash deiner IP-Adresse mit Schlüssel höchstens etwa 25 Stunden lang, in einem separaten Zähler, der nie mit der Installations-ID verknüpft wird. Wir nutzen das nur, um in Summen zu sehen, wie viele Downloads zu Starts, Testphasen und Käufen werden und welche App-Versionen am besten abschneiden. Installationsdatensätze ohne Verknüpfung mit einer Lizenz werden 400 Tage nach dem letzten Ereignis gelöscht. Mit einer Lizenz verknüpfte Datensätze werden so lange aufbewahrt wie die Daten dieser Lizenz und mit ihr gelöscht, auch wenn du uns bittest, deine Daten zu löschen. Du kannst das jederzeit in SysDial Settings → About → „Share anonymous usage counts“ ausschalten; die App löscht dann die Installations-ID und sendet nichts mehr. Die Mac-App-Store-Ausgabe sendet diese Ereignisse nie.</p>
 <h2>Apples Analysedaten (Mac-App-Store-Ausgabe)</h2>
 <p>Wenn du in den macOS-Einstellungen festlegst, Analysedaten mit App-Entwicklern zu teilen, kann Apple uns aggregierte, anonyme Statistiken wie Absturzberichte zur Verfügung stellen. Das wird von Apple und deinen Einstellungen gesteuert, nicht von SysDial.</p>
 <h2>Kinder</h2>

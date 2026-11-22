@@ -453,7 +453,7 @@
     <div class="wrap pv-wrap">
       <div class="pv-copy">
         <h2 data-reveal>Twoje dane zostają na Twoim Macu</h2>
-        <p data-reveal style="--d:80ms">SysDial nie ma kont, analityki ani śledzenia. Odczyty, historia i śledzone aplikacje są przechowywane wyłącznie na Twoim Macu. Łączy się z internetem tylko w trzech celach: aby pokazać Twój publiczny adres IP, co możesz wyłączyć, aby sprawdzić jakość internetu oraz, w wersji Direct, aby raz dziennie sprawdzić Twoją licencję.</p>
+        <p data-reveal style="--d:80ms">SysDial nie ma kont, reklam, analityki podmiotów trzecich ani śledzenia — tylko anonimowe liczniki użycia, które możesz wyłączyć. Odczyty, historia i śledzone aplikacje są przechowywane wyłącznie na Twoim Macu. Łączy się z internetem tylko w czterech celach: aby pokazać Twój publiczny adres IP, co możesz wyłączyć, aby sprawdzić jakość internetu oraz, w wersji Direct, aby raz dziennie sprawdzić Twoją licencję i wysłać te anonimowe liczniki użycia.</p>
         <p data-reveal style="--d:160ms"><a href="privacy.html">Przeczytaj politykę prywatności</a></p>
       </div>
       <!-- куди SysDial ходить у мережу — звірено з кодом: PublicIP (api.ipify.org), QualityMonitor (1.1.1.1, 8.8.8.8, DNS-перевірка), LicenseAPI (api.sysdial.app, раз на добу, Direct), HistoryStore/WatchStore/TrafficStore -->
@@ -472,7 +472,8 @@
           <li style="--dur:2.6s;--dl:0s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>1.1.1.1 · 8.8.8.8 <em class="tier pro">Pro</em></b><span>Jakość internetu co 30 sekund: ile trwa nawiązanie połączenia. Nic o Tobie nie jest wysyłane.</span></div></li>
           <li style="--dur:2.6s;--dl:1.3s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>Twój serwer DNS <em class="tier pro">Pro</em></b><span>Jedno zapytanie o losową nazwę co 30 sekund, by odróżnić awarię DNS od zerwanego połączenia.</span></div></li>
           <li style="--dur:7s;--dl:2.4s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.sysdial.app</b><span>Sprawdzanie licencji · wersja Direct, raz dziennie</span></div></li>
-          <li class="pv-no"><i class="pv-line" aria-hidden="true"></i><div class="pv-to"><b>Analityka, reklamy, konta</b><span>Brak. Nic więcej nie opuszcza Twojego Maca.</span></div></li>
+          <li style="--dur:7s;--dl:3.4s"><i class="pv-line" aria-hidden="true"><s></s></i><div class="pv-to"><b>api.sysdial.app</b><span>Anonimowe liczniki użycia · wersja Direct, przy pierwszym uruchomieniu i na koniec okresu próbnego. Możesz je wyłączyć.</span></div></li>
+          <li class="pv-no"><i class="pv-line" aria-hidden="true"></i><div class="pv-to"><b>Analityka podmiotów trzecich, reklamy, konta</b><span>Brak. Nic więcej nie opuszcza Twojego Maca.</span></div></li>
         </ul>
       </div>
     </div>

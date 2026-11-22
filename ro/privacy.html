@@ -58,15 +58,15 @@
   <div class="wrap">
 <h1>Politica de confidențialitate SysDial</h1>
 <p><em>Această traducere este oferită pentru confort; versiunea în limba engleză de la https://sysdial.app/privacy.html este textul de referință.</em></p>
-<p><strong>Data intrării în vigoare:</strong> 21 noiembrie 2026</p>
+<p><strong>Data intrării în vigoare:</strong> 22 noiembrie 2026</p>
 <p>SysDial este o aplicație de monitorizare a sistemului pentru bara de meniu macOS, realizată de Oleksandr Hrabar („noi”). Această politică explică ce face SysDial cu informațiile de pe Mac-ul tău. Se aplică ambelor ediții: SysDial de pe sysdial.app (Direct) și SysDial din Mac App Store. Se aplică și site-ului sysdial.app.</p>
 <h2>Pe scurt</h2>
 <ul>
-<li>SysDial nu vinde și nu partajează date personale și colectează doar ce este necesar pentru a-ți gestiona licența.</li>
-<li>Aplicația nu are conturi, analize, publicitate sau urmărire.</li>
+<li>SysDial nu vinde și nu partajează date personale. Colectează doar ce este necesar pentru a-ți gestiona licența și, în ediția Direct, contoare de utilizare anonime pe care le poți dezactiva.</li>
+<li>Aplicația nu are conturi, publicitate, analize ale unor terți sau urmărire. Singura excepție sunt contoarele de utilizare anonime descrise mai jos (doar ediția Direct), pe care le poți dezactiva.</li>
 <li>Site-ul sysdial.app numără vizitele cu Cloudflare Web Analytics, fără cookie-uri și fără a te identifica.</li>
 <li>Tot ce măsoară SysDial rămâne pe Mac-ul tău.</li>
-<li>SysDial realizează doar câteva conexiuni de rețea, enumerate mai jos. Singurele care ajung la noi sunt verificarea licenței în ediția Direct și, doar dacă alegi să-l trimiți, feedbackul; ele trimit doar ce este necesar pentru asta.</li>
+<li>SysDial realizează doar câteva conexiuni de rețea, enumerate mai jos. Singurele care ajung la noi sunt verificarea licenței și contoarele de utilizare anonime din ediția Direct (contoarele le poți dezactiva) și, doar dacă alegi să-l trimiți, feedbackul; ele trimit doar ce este necesar pentru asta.</li>
 </ul>
 <h2>Ce citește SysDial de pe Mac-ul tău</h2>
 <p>Pentru a-și afișa citirile, SysDial preia informații de la macOS în timp ce rulează:</p>
@@ -108,6 +108,11 @@
 <td>Până când le modifici sau le elimini</td>
 </tr>
 <tr>
+<td>ID de instalare (aleatoriu, ediția Direct), în setările aplicației</td>
+<td>Pentru a număra, în totaluri, primele porniri și rezultatele perioadei de probă</td>
+<td>Până dezactivezi „Share anonymous usage counts” sau ștergi datele aplicației</td>
+</tr>
+<tr>
 <td>Data de început a perioadei de probă gratuite și licența ta (ediția Direct), în Keychain-ul macOS de pe Mac-ul tău</td>
 <td>Pentru a derula perioada de probă și a debloca SysDial Pro</td>
 <td>Până când elimini SysDial Pro din Setări</td>
@@ -127,8 +132,9 @@
 <li><strong>Verificări ale calității internetului (SysDial Pro).</strong> Pentru a măsura latența și a detecta întreruperile, SysDial deschide conexiuni scurte către servere publice cunoscute (Cloudflare 1.1.1.1 și Google 8.8.8.8) și caută un nume aleatoriu prin serverul tău DNS. Nicio informație despre tine sau Mac-ul tău nu este trimisă în aceste verificări; operatorii acelor servere văd o conexiune de la adresa ta IP, ca la orice conexiune.</li>
 <li><strong>Activarea și verificarea licenței (ediția Direct).</strong> Când activezi SysDial Pro, iar apoi cam o dată pe zi, SysDial contactează serverul nostru de licențe de la api.sysdial.app. Trimite codul tău de activare sau tokenul licenței, o amprentă a Mac-ului tău (un hash unidirecțional al ID-ului său hardware, care nu poate fi transformat înapoi în ID; fiind legată de licența ta, este considerată dată personală) și numele modelului Mac-ului tău, de exemplu „MacBook Pro (16-inch, Nov 2023)”, ca să îți poți deosebi Mac-urile. Folosim aceste date doar pentru a număra câte Mac-uri folosesc licența ta și pentru a dezactiva Pro dacă o achiziție este rambursată sau o licență este revocată. Dacă ești offline, nu se schimbă nimic. Rulează pe Cloudflare, cu baza de date în UE.</li>
 <li><strong>Feedback (doar dacă îl trimiți).</strong> Când apeși „Send” în formularul de feedback, SysDial trimite mesajul tău la api.sysdial.app/v1/feedback — vezi secțiunea „Feedback” de mai jos. Altfel, nu se trimite nimic.</li>
+<li><strong>Contoare de utilizare anonime (ediția Direct).</strong> La prima pornire și la sfârșitul perioadei de probă gratuite, SysDial trimite un ID de instalare aleatoriu, versiunea aplicației și numărul build la api.sysdial.app/v1/events — vezi secțiunea „Contoare de utilizare anonime” de mai jos. Le poți dezactiva în Settings → About → Share anonymous usage counts.</li>
 </ul>
-<p>În afară de verificarea licenței și de feedbackul pe care alegi să-l trimiți, SysDial nu trimite citirile, istoricul, numele aplicațiilor sau orice alte date către noi sau către altcineva.</p>
+<p>În afară de verificarea licenței, de contoarele de utilizare anonime pe care le lași activate și de feedbackul pe care alegi să-l trimiți, SysDial nu trimite citirile, istoricul, numele aplicațiilor sau orice alte date către noi sau către altcineva.</p>
 <h2>Permisiuni pe care SysDial le poate solicita</h2>
 <ul>
 <li><strong>Notificări:</strong> pentru a afișa alertele pe care le activezi. Notificările sunt create pe Mac-ul tău.</li>
@@ -161,11 +167,13 @@
 <li><strong>Înregistrările de plată și fiscale</strong>: sunt păstrate de Paddle în calitate de vânzător, conform legii.</li>
 <li><strong>Înregistrările tehnice</strong> fără date cu caracter personal – ID-uri ale evenimentelor de plată (90 de zile), achiziții în aplicație nefinalizate (7 zile) și jurnalul nostru de administrare (2 ani) – sunt șterse automat.</li>
 <li><strong>Feedback</strong> pe care alegi să-l trimiți: până la 365 de zile, apoi este șters.</li>
+<li><strong>Înregistrări de instalare</strong> (contoare de utilizare anonime): neasociate unei licențe, 400 de zile după ultimul eveniment; asociate unei licențe, atât timp cât se păstrează datele acelei licențe, și șterse împreună cu ea. Hash-ul unidirecțional al adresei tale IP care limitează abuzul: aproximativ 25 de ore.</li>
 </ul>
 <h2>Temeiuri juridice</h2>
 <ul>
 <li><strong>Activarea licenței, verificarea zilnică și e-mailurile despre licență</strong>: pentru a-ți furniza SysDial Pro pe care l-ai cumpărat sau l-ai primit (executarea unui contract, GDPR, art. 6 alin. (1) lit. (b)).</li>
 <li><strong>Statisticile vizitelor pe site și răspunsurile la e-mailurile către suport</strong>: interesul nostru legitim de a rula și a îmbunătăți SysDial (art. 6 alin. (1) lit. (f)).</li>
+<li><strong>Contoare de utilizare anonime (ediția Direct)</strong>: interesul nostru legitim de a înțelege, în totaluri, câte perioade de probă se transformă în achiziții și care versiuni ale aplicației se comportă cel mai bine, cu date minime, pseudonimizate, și o dezactivare ușoară (art. 6 alin. (1) lit. (f)).</li>
 </ul>
 <h2>Drepturile tale</h2>
 <p>Ne poți cere să-ți arătăm datele pe care le deținem despre tine, să le rectificăm, să le ștergem, să ți le oferim într-un format portabil sau să încetăm ori să restrângem utilizarea lor. Scrie la support@sysdial.app de la adresa cu care ai cumpărat și îți vom răspunde în termen de o lună. Ștergerea datelor licenței tale dezactivează SysDial Pro pe Mac-urile tale.</p>
@@ -174,6 +182,8 @@
 <p>Dacă ne trimiți un email, primim adresa ta de email și tot ce scrii. Când folosești linkul de email din SysDial, mesajul este completat în prealabil cu versiunea SysDial, versiunea macOS și modelul Mac-ului tău, pentru a ne ajuta să-ți răspundem; poți edita sau șterge aceste informații înainte de a trimite. Folosim aceste date doar pentru a-ți răspunde și le păstrăm doar atât timp cât este necesar pentru acest scop. Poți cere oricând ștergerea mesajelor tale.</p>
 <h2>Feedback</h2>
 <p>Nu se trimite nimic decât dacă alegi tu să trimiți feedback din aplicație. Feedbackul pe care îl trimiți (mesajul, e-mailul tău dacă îl oferi și date de diagnosticare opționale: versiunea aplicației, build, ediția, tipul licenței, modelul de Mac, cipul și versiunea macOS) este trimis prin e-mail în căsuța noastră de suport și este păstrat până la 365 de zile, apoi este șters. Adresa ta IP nu este stocată niciodată — doar un hash unidirecțional cu cheie al acesteia, folosit pentru a limita câte mesaje pot fi trimise. Datele de diagnosticare sunt incluse doar dacă lași bifat „Include app and Mac details”. Ne poți cere oricând să-ți ștergem feedbackul, la support@sysdial.app.</p>
+<h2>Contoare de utilizare anonime (doar ediția Direct)</h2>
+<p>Când deschizi pentru prima dată versiunea SysDial descărcată de pe sysdial.app, aplicația te informează o singură dată despre contoarele de utilizare, printr-o notificare în panoul din bara de meniu, și creează un ID de instalare aleatoriu. Acesta nu este derivat din Mac-ul tău sau din tine. Aplicația trimite acest ID, versiunea aplicației și numărul build către serverul nostru în două momente: la prima pornire și la sfârșitul perioadei de probă gratuite. Evenimentul primei porniri este trimis abia după ce această notificare a fost afișată sau, cel târziu, la 24 de ore după prima pornire. Dacă ulterior activezi SysDial Pro pe acel Mac, asociem ID-ul de instalare cu licența ta, ca să vedem câte perioade de probă se transformă în achiziții. Cu aceste evenimente nu colectăm adresa ta IP, e-mailul sau modelul Mac-ului. Pentru a limita abuzul, serverul nostru păstrează un hash unidirecțional cu cheie al adresei tale IP cel mult aproximativ 25 de ore, într-un contor separat care nu este niciodată asociat cu ID-ul de instalare. Folosim acest lucru doar pentru a vedea, în totaluri, câte descărcări devin porniri, perioade de probă și achiziții și care versiuni ale aplicației se comportă cel mai bine. Înregistrările de instalare neasociate unei licențe sunt șterse la 400 de zile după ultimul eveniment. Înregistrările asociate unei licențe sunt păstrate atât timp cât se păstrează datele acelei licențe și sunt șterse odată cu ea, inclusiv atunci când ne ceri să-ți ștergem datele. Le poți dezactiva oricând în SysDial Settings → About → „Share anonymous usage counts”; aplicația șterge atunci ID-ul de instalare și nu mai trimite nimic. Ediția Mac App Store nu trimite niciodată aceste evenimente.</p>
 <h2>Analizele Apple (ediția Mac App Store)</h2>
 <p>Dacă alegi să partajezi analize cu dezvoltatorii de aplicații din setările macOS, Apple ne poate furniza statistici agregate și anonime, precum rapoartele de blocare. Acest lucru este controlat de Apple și de setările tale, nu de SysDial.</p>
 <h2>Copii</h2>

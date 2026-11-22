@@ -58,15 +58,15 @@
   <div class="wrap">
 <h1>Privacybeleid van SysDial</h1>
 <p><em>Deze vertaling wordt aangeboden voor het gemak van de lezer; de Engelse versie op <a href="https://sysdial.app/privacy.html">https://sysdial.app/privacy.html</a> is de gezaghebbende tekst.</em></p>
-<p><strong>Ingangsdatum:</strong> 21 november 2026</p>
+<p><strong>Ingangsdatum:</strong> 22 november 2026</p>
 <p>SysDial is een systeemmonitor voor de macOS-menubalk, gemaakt door Oleksandr Hrabar ("wij", "ons"). Dit beleid legt uit wat SysDial doet met informatie op je Mac. Het geldt voor beide edities: SysDial van sysdial.app (Direct) en SysDial uit de Mac App Store. Het geldt ook voor de website sysdial.app.</p>
 <h2>De korte versie</h2>
 <ul>
-<li>SysDial verkoopt of deelt geen persoonsgegevens en verzamelt alleen wat nodig is om je licentie te laten werken.</li>
-<li>De app heeft geen accounts, geen analytics, geen advertenties en geen tracking.</li>
+<li>SysDial verkoopt of deelt geen persoonsgegevens. Het verzamelt alleen wat nodig is om je licentie te laten werken en, in de Direct-editie, anonieme gebruikstellingen die je kunt uitzetten.</li>
+<li>De app heeft geen accounts, geen advertenties, geen analytics van derden en geen tracking. De enige uitzondering zijn de hieronder beschreven anonieme gebruikstellingen (alleen Direct-editie), die je kunt uitzetten.</li>
 <li>De website sysdial.app telt bezoeken met Cloudflare Web Analytics, zonder cookies en zonder je te identificeren.</li>
 <li>Alles wat SysDial meet, blijft op je Mac.</li>
-<li>SysDial maakt slechts een paar netwerkverbindingen, hieronder vermeld. Alleen de licentiecontrole in de Direct-editie en – alleen als je ervoor kiest die te sturen – feedback bereiken ons; ze sturen alleen wat daarvoor nodig is.</li>
+<li>SysDial maakt slechts een paar netwerkverbindingen, hieronder vermeld. Alleen de licentiecontrole en de anonieme gebruikstellingen in de Direct-editie (de tellingen kun je uitzetten) en – alleen als je ervoor kiest die te sturen – feedback bereiken ons; ze sturen alleen wat daarvoor nodig is.</li>
 </ul>
 <h2>Wat SysDial op je Mac uitleest</h2>
 <p>Om zijn metingen te tonen, leest SysDial informatie van macOS terwijl het draait:</p>
@@ -108,6 +108,11 @@
 <td>Totdat je ze wijzigt of verwijdert</td>
 </tr>
 <tr>
+<td>Installatie-ID (willekeurig, Direct-editie), in de instellingen van de app</td>
+<td>Om eerste starts en proefresultaten in totalen te tellen</td>
+<td>Tot je “Share anonymous usage counts” uitzet of de gegevens van de app verwijdert</td>
+</tr>
+<tr>
 <td>Startdatum van de gratis proefperiode en je licentie (Direct-editie), in de macOS-sleutelhanger op je Mac</td>
 <td>Om de proefperiode te laten lopen en SysDial Pro te ontgrendelen</td>
 <td>Totdat je SysDial Pro verwijdert in Instellingen</td>
@@ -127,8 +132,9 @@
 <li><strong>Controles van internetkwaliteit (SysDial Pro).</strong> Om latentie te meten en storingen te detecteren, opent SysDial korte verbindingen met bekende publieke servers (Cloudflare 1.1.1.1 en Google 8.8.8.8) en zoekt het een willekeurige naam op via je DNS-server. Bij deze controles worden geen gegevens over jou of je Mac verzonden; de beheerders van die servers zien een verbinding vanaf jouw IP-adres, zoals bij elke verbinding.</li>
 <li><strong>Licentieactivering en -controle (Direct-editie).</strong> Wanneer je SysDial Pro activeert, en daarna ongeveer eenmaal per dag, maakt SysDial contact met onze licentieserver op api.sysdial.app. Daarbij worden je activeringscode of licentietoken, een vingerafdruk van je Mac (een eenrichtingshash van de hardware-ID die niet terug te herleiden is naar die ID; omdat deze aan je licentie is gekoppeld, geldt hij als persoonsgegeven) en de modelnaam van je Mac gestuurd, zoals “MacBook Pro (16-inch, Nov 2023)”, zodat je je Macs uit elkaar kunt houden. We gebruiken dit alleen om te tellen hoeveel Macs je licentie gebruiken en om Pro uit te zetten als een aankoop wordt terugbetaald of een licentie wordt ingetrokken. Als je offline bent, verandert er niets. De server draait op Cloudflare, met de database in de EU.</li>
 <li><strong>Feedback (alleen als je die verstuurt).</strong> Wanneer je in het feedbackformulier op “Send” drukt, stuurt SysDial je bericht naar api.sysdial.app/v1/feedback — zie het onderdeel “Feedback” hieronder. Anders wordt er niets verzonden.</li>
+<li><strong>Anonieme gebruikstellingen (Direct-editie).</strong> Bij de eerste start en aan het einde van je gratis proefperiode stuurt SysDial een willekeurige installatie-ID, de appversie en het buildnummer naar api.sysdial.app/v1/events — zie “Anonieme gebruikstellingen” hieronder. Je kunt dit uitzetten in Settings → About → Share anonymous usage counts.</li>
 </ul>
-<p>Afgezien van de licentiecontrole en feedback die je ervoor kiest te sturen, stuurt SysDial je metingen, geschiedenis, app-namen of andere gegevens niet naar ons of naar wie dan ook.</p>
+<p>Afgezien van de licentiecontrole, de anonieme gebruikstellingen die je aan laat staan en feedback die je ervoor kiest te sturen, stuurt SysDial je metingen, geschiedenis, app-namen of andere gegevens niet naar ons of naar wie dan ook.</p>
 <h2>Rechten die SysDial kan vragen</h2>
 <ul>
 <li><strong>Meldingen:</strong> om de waarschuwingen te tonen die je inschakelt. Meldingen worden op je Mac gemaakt.</li>
@@ -161,11 +167,13 @@
 <li><strong>Betalings- en belastinggegevens</strong>: worden door Paddle als verkoper bewaard, zoals de wet vereist.</li>
 <li><strong>Technische gegevens</strong> zonder persoonsgegevens – ID’s van betalingsgebeurtenissen (90 dagen), onvoltooide in-app-aankopen (7 dagen) en ons beheerlogboek (2 jaar) – worden automatisch verwijderd.</li>
 <li><strong>Feedback</strong> die je ervoor kiest te sturen: maximaal 365 dagen, daarna verwijderd.</li>
+<li><strong>Installatiegegevens</strong> (anonieme gebruikstellingen): niet gekoppeld aan een licentie, 400 dagen na de laatste gebeurtenis; gekoppeld aan een licentie, zolang de gegevens van die licentie worden bewaard, en samen daarmee verwijderd. De eenrichtings-hash van je IP-adres die misbruik beperkt: ongeveer 25 uur.</li>
 </ul>
 <h2>Rechtsgronden</h2>
 <ul>
 <li><strong>Licentieactivering, de dagelijkse controle en licentiemails</strong>: om je het SysDial Pro te leveren dat je hebt gekocht of gekregen (uitvoering van een overeenkomst, AVG art. 6, lid 1, onder b).</li>
 <li><strong>Bezoekstatistieken van de website en het beantwoorden van supportmails</strong>: ons gerechtvaardigd belang bij het laten werken en verbeteren van SysDial (art. 6, lid 1, onder f).</li>
+<li><strong>Anonieme gebruikstellingen (Direct-editie)</strong>: ons gerechtvaardigd belang bij inzicht in totalen over hoeveel proefperiodes in een aankoop eindigen en welke appversies het best presteren, met minimale gepseudonimiseerde gegevens en een eenvoudige opt-out (art. 6, lid 1, onder f).</li>
 </ul>
 <h2>Je rechten</h2>
 <p>Je kunt ons vragen om je de gegevens te tonen die we over je bewaren, ze te corrigeren, te verwijderen, ze in een overdraagbaar formaat aan je te geven, of het gebruik ervan te stoppen of te beperken. Mail naar support@sysdial.app vanaf het adres waarmee je hebt gekocht, dan antwoorden we binnen een maand. Als je licentiegegevens worden verwijderd, wordt SysDial Pro op je Macs uitgezet.</p>
@@ -174,6 +182,8 @@
 <p>Als je ons e-mailt, ontvangen we je e-mailadres en alles wat je schrijft. Wanneer je de e-maillink in SysDial gebruikt, wordt het bericht vooraf ingevuld met je SysDial-versie, macOS-versie en Mac-model om ons te helpen antwoorden; je kunt deze gegevens vóór het verzenden bewerken of verwijderen. We gebruiken dit alleen om je te antwoorden en bewaren het niet langer dan daarvoor nodig is. Je kunt ons op elk moment vragen je berichten te verwijderen.</p>
 <h2>Feedback</h2>
 <p>Er wordt niets verzonden, tenzij je zelf kiest om feedback vanuit de app te sturen. Feedback die je verstuurt (het bericht, je e-mailadres als je dat opgeeft, en optionele diagnostiek: appversie, build, editie, licentietype, Mac-model, chip en macOS-versie) wordt per e-mail naar onze supportinbox gestuurd en maximaal 365 dagen bewaard, daarna verwijderd. Je IP-adres wordt nooit opgeslagen — alleen een eenrichtings-hash met sleutel ervan, die wordt gebruikt om te beperken hoeveel berichten kunnen worden verstuurd. Diagnostiek wordt alleen meegestuurd als “Include app and Mac details” aangevinkt blijft. Je kunt ons op elk moment vragen je feedback te verwijderen via support@sysdial.app.</p>
+<h2>Anonieme gebruikstellingen (alleen Direct-editie)</h2>
+<p>Wanneer je de van sysdial.app gedownloade versie van SysDial voor het eerst opent, informeert de app je eenmalig over de gebruikstellingen, in een melding in het paneel van de menubalk, en maakt ze een willekeurige installatie-ID aan. Die is niet afgeleid van je Mac of van jou. De app stuurt deze ID, de appversie en het buildnummer op twee momenten naar onze server: de eerste start en het einde van je gratis proefperiode. De gebeurtenis van de eerste start wordt pas verstuurd nadat die melding is getoond, of uiterlijk 24 uur na de eerste start. Als je later SysDial Pro op die Mac activeert, koppelen we de installatie-ID aan je licentie, zodat we kunnen zien hoeveel proefperiodes in een aankoop eindigen. Bij deze gebeurtenissen verzamelen we je IP-adres, e-mailadres of Mac-model niet. Om misbruik te beperken bewaart onze server een eenrichtings-hash met sleutel van je IP-adres hooguit ongeveer 25 uur, in een aparte teller die nooit aan de installatie-ID wordt gekoppeld. We gebruiken dit alleen om in totalen te zien hoeveel downloads leiden tot starts, proefperiodes en aankopen, en welke appversies het best presteren. Installatiegegevens die niet aan een licentie zijn gekoppeld, worden 400 dagen na de laatste gebeurtenis verwijderd. Gegevens die aan een licentie zijn gekoppeld, worden bewaard zolang de gegevens van die licentie worden bewaard en samen daarmee verwijderd, ook wanneer je ons vraagt je gegevens te verwijderen. Je kunt dit op elk moment uitzetten in SysDial Settings → About → “Share anonymous usage counts”; de app verwijdert dan de installatie-ID en stuurt niets meer. De Mac App Store-editie stuurt deze gebeurtenissen nooit.</p>
 <h2>Analytics van Apple (Mac App Store-editie)</h2>
 <p>Als je ervoor kiest om analytics te delen met app-ontwikkelaars in de macOS-instellingen, kan Apple ons geaggregeerde, anonieme statistieken verstrekken, zoals crashrapporten. Dit wordt beheerd door Apple en door jouw instellingen, niet door SysDial.</p>
 <h2>Kinderen</h2>
